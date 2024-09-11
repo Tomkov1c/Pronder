@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="Pronder.Views.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:helpers="using:Pronder.Helpers"
+    xmlns:xaml="using:Microsoft.UI.Xaml"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <helpers:EnumToBooleanConverter x:Key="EnumToBooleanConverter" />
+    </Page.Resources>
+    <ScrollViewer VerticalAlignment="Top">
+        <StackPanel>
+            <TextBlock Text="Settings" Style="{StaticResource TitleTextBlockStyle}"/>
+            <TextBlock Style="{StaticResource BodyStrongTextBlockStyle}" Text="General" Margin="0, 16, 0, 8"/>
+            <Grid Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Padding="24, 16" CornerRadius="{StaticResource ControlCornerRadius}" Margin="0, 0, 0, 16" Height="70">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Canvas Margin="0, 0, 16, 0" Grid.Column="0" Width="25" Height="25">
+                    <Viewbox Width="25" Height="25">
+                        <Path Fill="{ThemeResource TextFillColorPrimaryBrush}" StrokeThickness="1" Tag="theme" Loaded="loadGeometryPath" />
+                    </Viewbox>
+                </Canvas>
+                <StackPanel Orientation="Vertical" Margin="8, 0, 0, 0" Grid.Column="1" VerticalAlignment="Center">
+                    <TextBlock Text="App theme" Style="{StaticResource BodyTextBlockStyle}" />
+                    <TextBlock Text="Prefer not to be blasted by light?" Style="{StaticResource CaptionTextBlockStyle}" x:Name="TemplateText" Foreground="{ThemeResource TextFillColorTertiaryBrush}" />
+                </StackPanel>
+                <ComboBox x:Uid="Settings_Theme" x:Name="Settings_Theme_ComboBox" SelectedItem="{x:Bind ViewModel.ElementTheme, Mode=OneWay}" SelectionChanged="themeChange" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Right" Width="250" Grid.Column="2">
+                    <ComboBoxItem x:Uid="Settings_Theme_Light">
+                        <xaml:ElementTheme>Light</xaml:ElementTheme>
+                    </ComboBoxItem>
+                    <ComboBoxItem x:Uid="Settings_Theme_Dark">
+                        <xaml:ElementTheme>Dark</xaml:ElementTheme>
+                    </ComboBoxItem>
+                    <ComboBoxItem x:Uid="Settings_Theme_Default">
+                        <xaml:ElementTheme>Default</xaml:ElementTheme>
+                    </ComboBoxItem>
+                </ComboBox>
+            </Grid>
+
+
+            <TextBlock Text="Related information" Style="{StaticResource BodyStrongTextBlockStyle}" Margin="0, 40, 0 , 8"/>
+            <StackPanel Orientation="Horizontal">
+                <HyperlinkButton Content="Documentation" Margin="0, 0, 12, 0" HorizontalAlignment="Left" />
+                <HyperlinkButton Content="Report a bug" Margin="0, 0, 12, 0" HorizontalAlignment="Left" />
+                <HyperlinkButton Content="Request a feature" Margin="0, 0, 12, 0" HorizontalAlignment="Left" />
+            </StackPanel>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>

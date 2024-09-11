@@ -1,0 +1,91 @@
+﻿<Page
+    x:Class="Pronder.Views.ProjectToDoPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <StackPanel x:Name="TodoContentToDoTitle"
+                Width="auto" 
+                Orientation="Vertical" 
+                VerticalAlignment="Top">
+            <InfoBar x:Name="ToDoInfoBar"
+                 IsOpen="False"
+                 Severity="Error"
+                 Title=""
+                 Message=""
+                 IsClosable="False"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="To-Do" 
+                       Style="{StaticResource BodyStrongTextBlockStyle}"
+                       Grid.Column="0"
+                       HorizontalAlignment="Stretch"
+                       VerticalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal"
+                        Grid.Column="1"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center">
+                    <Button Padding="13, 8">
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon Glyph="&#xE710;" FontSize="15"/>
+                            <TextBlock Text="Add" 
+                                   Style="{StaticResource BodyTextBlockStyle}"
+                                   Margin="8, 0, 0, 0"/>
+                        </StackPanel>
+                        <Button.Flyout>
+                            <Flyout x:Name="NewTodoFlyout">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBox x:Name="NewTodoTextBox" KeyDown="enterPressed" PlaceholderText="Name" Width="300" Margin="0, 0, 16, 0"/>
+                                    <Button Style="{StaticResource AccentButtonStyle}" Content="Add" Click="toDoAdd"/>
+                                </StackPanel>
+                            </Flyout>
+                        </Button.Flyout>
+
+                    </Button>
+                </StackPanel>
+            </Grid>
+            <StackPanel x:Name="TodoContentToDo">
+                <StackPanel.ChildrenTransitions>
+                    <TransitionCollection>
+                        <ContentThemeTransition />
+
+                    </TransitionCollection>
+                </StackPanel.ChildrenTransitions>
+                <StackPanel.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </StackPanel.Transitions>
+            </StackPanel>
+            <StackPanel x:Name="TemplateToDo" Loaded="setBackgroundColor" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" 
+                    BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" Visibility="Collapsed"/>
+
+            <TextBlock x:Name="TodoContentDoneTitle"
+                   Text="Done" 
+                   Style="{StaticResource BodyStrongTextBlockStyle}"
+                   Grid.Column="0"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Center"
+                   Margin="0, 48, 0, 0"/>
+            <StackPanel x:Name="TodoContentDone" Opacity="0.4">
+                <StackPanel.ChildrenTransitions>
+                    <TransitionCollection>
+                        <ContentThemeTransition />
+
+                    </TransitionCollection>
+                </StackPanel.ChildrenTransitions>
+                <StackPanel.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </StackPanel.Transitions>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

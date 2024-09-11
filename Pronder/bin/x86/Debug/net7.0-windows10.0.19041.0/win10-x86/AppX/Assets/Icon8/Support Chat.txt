@@ -1,0 +1,71 @@
+Conversation with Icons8
+Started on August 14, 2024 at 01:37 PM Istanbul time +03 (GMT+0300)
+
+---
+
+01:37 PM | tomkliner9@gmail.com: So, I am currently developing a UWP open-source application and was wondering if I can use your icons, even if I am asking for donations?
+
+01:37 PM | Alex from Icons8: Hello there,
+
+Sure, you can use our icons. Just make sure to add a link to us. Here's how to do it: 
+ [App: Article Inserter]
+
+01:39 PM | tomkliner9@gmail.com: Is there a way I can get icons in higher resolution?
+
+01:41 PM | Alex from Icons8: Sure! Could you send a link to your GitHub project? I'll see what I can do.
+
+01:42 PM | tomkliner9@gmail.com: https://github.com/Tomkov1c/Pronder
+
+01:44 PM | Alex from Icons8: Thanks! Let me check that.
+
+01:44 PM | tomkliner9@gmail.com: work in progress btw
+
+01:45 PM | Alex from Icons8: You can find high-quality icons in the following categories: 
+ - Characters (https://icons8.com/icons/set/characters); 
+- Logos (https://icons8.com/icons/set/logos); 
+- Popular (https://icons8.com/icons/set/popular).
+
+01:46 PM | tomkliner9@gmail.com: what about Windows Color
+
+01:47 PM | Alex from Icons8: Here are the free icons in the Windows Color style: https://icons8.com/icon/set/popular/fluency (https://icons8.com/icon/set/popular/fluency)
+
+01:48 PM | tomkliner9@gmail.com: so I need to buy a license if I want to use the other ones?
+
+01:50 PM | Alex from Icons8: I have added a 3-month unlimited plan to your account under tomkliner9@gmail.com. Please, don't forget to add attribution to us.
+
+01:53 PM | tomkliner9@gmail.com: Thanks. So do i have to buy a license after those 3 months?
+
+01:55 PM | Alex from Icons8: If you want to download new icons in paid formats after those 3 months, then you will have to purchase one of the paid plans: https://icons8.com/icons/pricing (https://icons8.com/icons/pricing)
+
+01:56 PM | tomkliner9@gmail.com: so i wont have to pay for those that are already used in the project?
+
+01:59 PM | tomkliner9@gmail.com: is it ok if i download them as png and put them in a project's assets folder?
+
+02:00 PM | Alex from Icons8: You can still use every asset you downloaded throughout the 3-month period even after you canceled it. You can upload our icons on the condition that you add a disclaimer for your users that it's prohibited to resell or redistribute them.
+
+02:03 PM | tomkliner9@gmail.com: ok. Is it ok if i add attribution to the gihub's README and the project's settings page becouse i dont have an about page / popup like on the website
+
+02:03 PM | tomkliner9@gmail.com: [Image "image.png?expires=1723635000&signature=3cce969284f975f8ce14ce49679ce40e2b617eea51b2510fef83649c1c2f8955&req=dSEjE8t8noZfWPMW1HO4zd3%2BFBkqSnVPK%2F28SRERKL55o%2F9kghIp1Xl6wuuQ%0A%2FA%3D%3D%0A"]
+
+02:04 PM | Alex from Icons8: Sure, this will work!
+
+02:04 PM | tomkliner9@gmail.com: ok. Thank you so much.
+
+02:05 PM | Alex from Icons8: No problem, I'm glad to help! Is there anything else that I can do for you?
+
+02:08 PM | tomkliner9@gmail.com: just realized. Is it ok if the icons i downloaded (high quality png/svg) get used in other projects after that premium plan expires?
+
+02:09 PM | tomkliner9@gmail.com: open sourced as well
+
+02:09 PM | Alex from Icons8: Icons downloaded under the 3-month free plan can only be used for one specific project.
+
+02:11 PM | tomkliner9@gmail.com: Noted
+
+02:12 PM | tomkliner9@gmail.com: Thank you. That would be all
+
+02:12 PM | Alex from Icons8: Have a nice day!
+
+02:12 PM | tomkliner9@gmail.com: you too man
+
+---
+Exported from Icons8 on August 14, 2024 at 02:13 PM Istanbul time +03 (GMT+0300)

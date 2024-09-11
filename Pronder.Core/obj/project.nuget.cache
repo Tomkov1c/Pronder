@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "yyW4uP3A4k2vO3fpiOxiXj9FZdMw+GxoRzBHSobhvoPkEM7BEZvZIuOMgT0V7+rAhC9TzJ5Z3JunVpt/c1qG3w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder.Core\\Pronder.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gamin\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
