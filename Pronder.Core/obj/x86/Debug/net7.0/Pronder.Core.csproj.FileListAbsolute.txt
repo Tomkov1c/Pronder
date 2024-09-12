@@ -10,3 +10,4 @@ C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder.Cor
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder.Core\obj\x86\Debug\net7.0\refint\Pronder.Core.dll
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder.Core\obj\x86\Debug\net7.0\Pronder.Core.pdb
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder.Core\obj\x86\Debug\net7.0\ref\Pronder.Core.dll
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder.Core\obj\x86\Debug\net7.0\Pronder.Core.sourcelink.json

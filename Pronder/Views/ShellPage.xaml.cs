@@ -16,8 +16,7 @@ using Microsoft.UI.Xaml.Media;
 
 using Newtonsoft.Json;
 using Windows.Storage;
-using NavigationServiceWorkspace;
-using ProjectWorkspace;
+using Pronder.Classes;
 using Microsoft.UI.Xaml.Media.Imaging;
 using ExternalLinkIconListWorkspace;
 using Microsoft.UI.Input;

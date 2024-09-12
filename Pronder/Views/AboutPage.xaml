@@ -6,7 +6,66 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid x:Name="ContentArea">
-        
-    </Grid>
+    <ScrollViewer>
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="About" Style="{StaticResource TitleTextBlockStyle}" Margin="0, 0, 0 ,36"/>
+            <StackPanel Orientation="Horizontal" Height="auto">
+                <Border Padding="6, 16" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" BorderThickness="1" BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" CornerRadius="{StaticResource OverlayCornerRadius}">
+                    <Image Source="ms-appx:///Assets/Icon.png" Height="100"/>
+                </Border>
+                <StackPanel Orientation="Vertical" Margin="24, 0, 0, 0" VerticalAlignment="Stretch">
+                    <TextBlock Style="{StaticResource BodyTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" 
+                           Text="Made with passion for creative work and hate for unorganization." />
+                    <StackPanel Orientation="Horizontal" Margin="0, 20">
+                        <HyperlinkButton NavigateUri="https://github.com/Tomkov1c/Pronder" Margin="0, 0, 24, 0">
+                            <HyperlinkButton.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <ImageIcon Source="ms-appx:///Assets/Icon8/Color/Brands/icons8-github-512.png" Margin="0, 0, 8, 0" Width="20" VerticalAlignment="Center"/>
+                                    <TextBlock Text="GitHub" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </HyperlinkButton.Content>
+                        </HyperlinkButton>
+                        <HyperlinkButton NavigateUri="https://ko-fi.com/tomkliner" Margin="0, 0, 24, 0">
+                            <HyperlinkButton.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <ImageIcon Source="ms-appx:///Assets/Icon8/Color/Brands/icons8-ko-fi-512.png" Margin="0, 0, 8, 0" Width="20" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Ko-Fi" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </HyperlinkButton.Content>
+                        </HyperlinkButton>
+                    </StackPanel>
+                    <TextBlock Style="{StaticResource BodyTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Text="Version: 0. 1. 0. 0." VerticalAlignment="Bottom"/>
+                </StackPanel>
+            </StackPanel>
+            <TextBlock Text="Contributors" Style="{StaticResource BodyStrongTextBlockStyle}" Margin="0, 40, 0 , 8"/>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="300" Padding="24, 16" Margin="0, 0, 6, 0" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" BorderThickness="1" BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" CornerRadius="{StaticResource ControlCornerRadius}">
+                    <Border CornerRadius="9999">
+                        <Image Source="https://avatars.githubusercontent.com/u/83597418?v=4" Width="50"/>
+                    </Border>
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="12, 0, 24, 0" Width="auto">
+                        <TextBlock Foreground="{ThemeResource TextFillColorPrimaryBrush}" Style="{StaticResource BodyStrongTextBlockStyle}" Text="Tom Kliner" />
+                        <TextBlock Foreground="{ThemeResource TextFillColorSecondaryBrush}" Style="{StaticResource CaptionTextBlockStyle}" Text="Owner" />
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <TextBlock Text="Special thanks" Style="{StaticResource BodyStrongTextBlockStyle}" Margin="0, 40, 0 , 8"/>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="300" Padding="24, 16" Margin="0, 0, 6, 0" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" BorderThickness="1" BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" CornerRadius="{StaticResource ControlCornerRadius}">
+                    <Border CornerRadius="9999">
+                        <Image Source="ms-appx:///Assets/Icon8/Icons8-icons8-1024.png" Width="50"/>
+                    </Border>
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="12, 0" Width="auto">
+                        <TextBlock Foreground="{ThemeResource TextFillColorPrimaryBrush}" Style="{StaticResource BodyStrongTextBlockStyle}" Text="Icon8" />
+                        <TextBlock Foreground="{ThemeResource TextFillColorSecondaryBrush}" Style="{StaticResource CaptionTextBlockStyle}" Text="Icons" />
+                    </StackPanel>
+                    <HyperlinkButton Padding="8" Margin="0, 0, 0, 0" VerticalAlignment="Center" HorizontalAlignment="Right" NavigateUri="https://icons8.com/icons">
+                        <HyperlinkButton.Content>
+                            <FontIcon Glyph="&#xE71B;" />
+                        </HyperlinkButton.Content>
+                    </HyperlinkButton>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
 </Page>

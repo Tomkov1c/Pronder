@@ -7,11 +7,11 @@
     mc:Ignorable="d">
 
     <ScrollViewer>
-        <StackPanel x:Name="TodoContentToDoTitle"
+        <StackPanel x:ConnectionId='2' x:Name="TodoContentToDoTitle"
                 Width="auto" 
                 Orientation="Vertical" 
                 VerticalAlignment="Top">
-            <InfoBar x:Name="ToDoInfoBar"
+            <InfoBar x:ConnectionId='3' x:Name="ToDoInfoBar"
                  IsOpen="False"
                  Severity="Error"
                  Title=""
@@ -39,10 +39,10 @@
                                    Margin="8, 0, 0, 0"/>
                         </StackPanel>
                         <Button.Flyout>
-                            <Flyout x:Name="NewTodoFlyout">
+                            <Flyout x:ConnectionId='8' x:Name="NewTodoFlyout">
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBox x:Name="NewTodoTextBox" KeyDown="enterPressed" PlaceholderText="Name" Width="300" Margin="0, 0, 16, 0"/>
-                                    <Button Style="{StaticResource AccentButtonStyle}" Content="Add" Click="toDoAdd"/>
+                                    <TextBox x:ConnectionId='9' x:Name="NewTodoTextBox"                        PlaceholderText="Name" Width="300" Margin="0, 0, 16, 0"/>
+                                    <Button x:ConnectionId='10' Style="{StaticResource AccentButtonStyle}" Content="Add"                />
                                 </StackPanel>
                             </Flyout>
                         </Button.Flyout>
@@ -50,7 +50,7 @@
                     </Button>
                 </StackPanel>
             </Grid>
-            <StackPanel x:Name="TodoContentToDo">
+            <StackPanel x:ConnectionId='4' x:Name="TodoContentToDo">
                 <StackPanel.ChildrenTransitions>
                     <TransitionCollection>
                         <ContentThemeTransition />
@@ -63,17 +63,17 @@
                     </TransitionCollection>
                 </StackPanel.Transitions>
             </StackPanel>
-            <StackPanel x:Name="TemplateToDo" Loaded="setBackgroundColor" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" 
+            <StackPanel x:ConnectionId='5' x:Name="TemplateToDo"                             Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" 
                     BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" Visibility="Collapsed"/>
 
-            <TextBlock x:Name="TodoContentDoneTitle"
+            <TextBlock x:ConnectionId='6' x:Name="TodoContentDoneTitle"
                    Text="Done" 
                    Style="{StaticResource BodyStrongTextBlockStyle}"
                    Grid.Column="0"
                    HorizontalAlignment="Stretch"
                    VerticalAlignment="Center"
                    Margin="0, 48, 0, 0"/>
-            <StackPanel x:Name="TodoContentDone" Opacity="0.4">
+            <StackPanel x:ConnectionId='7' x:Name="TodoContentDone" Opacity="0.4">
                 <StackPanel.ChildrenTransitions>
                     <TransitionCollection>
                         <ContentThemeTransition />
@@ -89,3 +89,4 @@
         </StackPanel>
     </ScrollViewer>
 </Page>
+

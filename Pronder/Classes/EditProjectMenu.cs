@@ -11,12 +11,12 @@ using Microsoft.UI.Xaml;
 using System.ComponentModel;
 using Microsoft.UI.Xaml.Markup;
 using Newtonsoft.Json;
-using ProjectWorkspace;
+using Pronder.Classes;
 using Pronder;
 using Windows.Storage.Pickers;
 using Windows.Storage;
 
-namespace EditProjectMenuWorkspace
+namespace Pronder.Classes
 {
     public sealed class EditDataContentDialog : ContentDialog
     {

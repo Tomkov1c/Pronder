@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.UI.Xaml.Controls;
 
-namespace NavigationServiceWorkspace
+namespace Pronder.Classes
 {
     class NavigationService
     {
