@@ -6,7 +6,7 @@ using Microsoft.UI.Xaml.Media.Animation;
 using Microsoft.UI.Xaml.Media.Imaging;
 using Pronder.Classes;
 using Newtonsoft.Json;
-using Pronder.Interfaces.PerPageHelpButtonAction;
+using Pronder.Interfaces;
 using Pronder.ViewModels;
 using Windows.Storage;
 using Windows.Storage.Streams;
@@ -44,7 +44,7 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
     {
         ToggleThemeTeachingTip1.IsOpen = true;
     }
-
+    
     private void TabSwitch(SelectorBar sender, SelectorBarSelectionChangedEventArgs args)
     {
         SelectorBarItem selectedItem = sender.SelectedItem;
@@ -288,6 +288,8 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
     {
         ContentDialog editDialog = new EditDataContentDialog();
         editDialog.XamlRoot = this.XamlRoot;
+        editDialog.Resources["ContentDialogMaxWidth"] = 12000;
+        editDialog.Width = 12000;
         var result = await editDialog.ShowAsync();
         if (result == ContentDialogResult.Primary)
         {

@@ -130,7 +130,8 @@
 
             <Frame IsNavigationStackEnabled="False"
                x:Name="ContentFrame"
-               CornerRadius="{StaticResource ControlCornerRadius}">
+               CornerRadius="{StaticResource ControlCornerRadius}"
+               MinHeight="550">
                 <Frame.ContentTransitions>
                     <TransitionCollection>
                         <NavigationThemeTransition  />

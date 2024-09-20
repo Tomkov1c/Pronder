@@ -30,7 +30,7 @@ using Microsoft.UI;
 using Windows.ApplicationModel.Core;
 using Windows.ApplicationModel;
 using Windows.UI.WindowManagement;
-using Pronder.Interfaces.PerPageHelpButtonAction;
+using Pronder.Interfaces;
 using AppWindow = Windows.UI.WindowManagement.AppWindow;
 using Microsoft.UI.Xaml.Hosting;
 
@@ -200,6 +200,7 @@ public sealed partial class ShellPage : Page
         Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
 
         storageFolder.CreateFolderAsync("Projects", Windows.Storage.CreationCollisionOption.FailIfExists);
+        storageFolder.CreateFolderAsync("Pages", Windows.Storage.CreationCollisionOption.FailIfExists);
 
 
     }

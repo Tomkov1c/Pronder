@@ -1,0 +1,52 @@
+{
+	"Icons": [
+	  {
+		"contains": "github",
+		"path": "icons8-github-512.png"
+	  },
+	  {
+		"contains": "behance",
+		"path": "icons8-behance-512.png"
+	  },
+	  {
+		"contains": "facebook",
+		"path": "icons8-facebook-512.png"
+	  },
+	  {
+		"contains": "music.apple",
+		"path": "icons8-apple-music-512.png"
+	  },
+	  {
+		"contains": "instagram",
+		"path": "icons8-instagram-512.png"
+	  },
+	  {
+		"contains": "soundcloud",
+		"path": "icons8-soundcloud-512.png"
+	  },
+	  {
+		"contains": "spotify",
+		"path": "icons8-spotify-512.png"
+	  },
+	  {
+		"contains": "twitter",
+		"path": "icons8-x-512.png"
+	  },
+	  {
+		"contains": "x",
+		"path": "icons8-x-512.png"
+	  },
+	  {
+		"contains": "youtube",
+		"path": "icons8-youtube-512.png"
+	  },
+	  {
+		"contains": "music.youtube",
+		"path": "icons8-youtube-music-512.png"
+	  },
+	  {
+		"contains": "ko-fi",
+		"path": "icons8-ko-fi-512.png"
+	  }
+	]
+  }

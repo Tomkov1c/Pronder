@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SK1cQP9I/whKNV/VkIZvbQEPiSEbYWq9gIZ2krc11Z6UDxduCM82S8I1OYA6rNsjdmTW9ZVOKnAPF3rUuk1Rdw==",
+  "dgSpecHash": "mNfeh+azwp3Jj4WM3QquCCbWlu8g6WWMdm47iV0/YcK3txQSE0Yaz6nN1MAkM6XcnT37ZvesIUXxEYap/gv+wQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Pronder.csproj",
   "expectedPackageFiles": [
@@ -42,6 +42,7 @@
     "C:\\Users\\gamin\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
     "C:\\Users\\gamin\\.nuget\\packages\\winuiex\\2.3.4\\winuiex.2.3.4.nupkg.sha512",
     "C:\\Users\\gamin\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\7.0.15\\microsoft.netcore.app.runtime.win-x86.7.0.15.nupkg.sha512",
+    "C:\\Users\\gamin\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\7.0.15\\microsoft.netcore.app.crossgen2.win-x64.7.0.15.nupkg.sha512",
     "C:\\Users\\gamin\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.31\\microsoft.windows.sdk.net.ref.10.0.19041.31.nupkg.sha512",
     "C:\\Users\\gamin\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\7.0.15\\microsoft.aspnetcore.app.runtime.win-x86.7.0.15.nupkg.sha512",
     "C:\\Users\\gamin\\.nuget\\packages\\microsoft.netcore.app.runtime.win-arm64\\7.0.15\\microsoft.netcore.app.runtime.win-arm64.7.0.15.nupkg.sha512",

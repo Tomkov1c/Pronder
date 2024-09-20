@@ -1,0 +1,14 @@
+App.xbf
+MainWindow.xbf
+Styles\FontSizes.xbf
+Styles\TextBlock.xbf
+Styles\Thickness.xbf
+Views\AboutPage.xbf
+Views\BlankPage.xbf
+Views\HomePage.xbf
+Views\InbuildProjectDisplayPages\GeneralProjectDisplayPage.xbf
+Views\InbuildProjectDisplaySubPages\ProjectAboutPage.xbf
+Views\InbuildProjectDisplaySubPages\ProjectToDoPage.xbf
+Views\NewProjectPage.xbf
+Views\SettingsPage.xbf
+Views\ShellPage.xbf

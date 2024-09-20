@@ -1,0 +1,13 @@
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder.Core\bin\x86\Release\net7.0\Pronder.Core.deps.json
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder.Core\bin\x86\Release\net7.0\Pronder.Core.dll
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder.Core\bin\x86\Release\net7.0\Pronder.Core.pdb
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder.Core\obj\x86\Release\net7.0\Pronder.Core.csproj.AssemblyReference.cache
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder.Core\obj\x86\Release\net7.0\Pronder.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder.Core\obj\x86\Release\net7.0\Pronder.Core.AssemblyInfoInputs.cache
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder.Core\obj\x86\Release\net7.0\Pronder.Core.AssemblyInfo.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder.Core\obj\x86\Release\net7.0\Pronder.Core.csproj.CoreCompileInputs.cache
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder.Core\obj\x86\Release\net7.0\Pronder.Core.sourcelink.json
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder.Core\obj\x86\Release\net7.0\Pronder.Core.dll
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder.Core\obj\x86\Release\net7.0\refint\Pronder.Core.dll
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder.Core\obj\x86\Release\net7.0\Pronder.Core.pdb
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder.Core\obj\x86\Release\net7.0\ref\Pronder.Core.dll

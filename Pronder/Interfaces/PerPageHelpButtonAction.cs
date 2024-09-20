@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.UI.Xaml;
 
-namespace Pronder.Interfaces.PerPageHelpButtonAction
+namespace Pronder.Interfaces
 {
     public interface IPerPageHelpButtonAction
     {
