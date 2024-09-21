@@ -15,6 +15,26 @@ namespace Pronder.Classes
         public string DateLastViewd { get; set; }
         public string DateLastEdited { get; set; }
 
+        public List<Link> Links
+        {
+            get; set;
+        }
+        public class Link
+        {
+            public string Name
+            {
+                get; set;
+            }
+            public string Type
+            {
+                get; set;
+            }
+            public string Href
+            {
+                get; set;
+            }
+        }
+
         public string PageID { get; set; }
 
         public PageClass pageClass = new PageClass();
