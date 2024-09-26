@@ -60,7 +60,8 @@ namespace Pronder.Classes
             var scrollViewer = new ScrollViewer
             {
                 VerticalScrollBarVisibility = ScrollBarVisibility.Hidden,
-                CornerRadius = (CornerRadius)Application.Current.Resources["OverlayCornerRadius"]
+                CornerRadius = (CornerRadius)Application.Current.Resources["OverlayCornerRadius"],
+                Name = "Scroll",
             };
 
             var stackPanel = new StackPanel { Orientation = Orientation.Vertical, Width = 490, Margin = new Thickness(0, 8, 0, 0) };

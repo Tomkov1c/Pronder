@@ -33,12 +33,16 @@ using Windows.UI.WindowManagement;
 using Pronder.Interfaces;
 using AppWindow = Windows.UI.WindowManagement.AppWindow;
 using Microsoft.UI.Xaml.Hosting;
+using Newtonsoft.Json.Linq;
+using System.Reflection;
+using Windows.Services.Maps;
 
 namespace Pronder.Views;
 
 // TODO: Update NavigationViewItem titles and icons in ShellPage.xaml.
 public sealed partial class ShellPage : Page
 {
+
     public ShellViewModel ViewModel
     {
         get;
@@ -182,17 +186,46 @@ public sealed partial class ShellPage : Page
 
     }
 
-    private void ItemClicked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
+    private async void ItemClicked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
     {
         NavigationService.Instance.ActiveItem = args.InvokedItemContainer as NavigationViewItem;
 
+        /*
         if (args.InvokedItemContainer.Tag != null)
         {
             string pageTag = args.InvokedItemContainer.Tag.ToString();
-            NavigationFrame.Navigate(typeof(GeneralProjectDisplayPage));
-        }
-    }
 
+            Uri fileUri = new Uri($"ms-appx:///Assets/pagesList.json");
+            StorageFile jsonFile = await StorageFile.GetFileFromApplicationUriAsync(fileUri);
+
+            string jsonContent = await FileIO.ReadTextAsync(jsonFile);
+                List<PageList> pages = JsonConvert.DeserializeObject<List<PageList>>(jsonContent);
+
+                // Step 2: Find the matching page based on PageID (which is the pageTag here)
+                PageList matchingPage = pages.FirstOrDefault(p => p.PageID == pageTag);
+
+                if (matchingPage == null)
+                {
+                    throw new Exception("Matching page not found in the JSON.");
+                }
+
+                // Step 3: Get the Page Type from the assembly based on the ClassName
+                // We assume all pages are within the same assembly (the app's main assembly)
+                Assembly currentAssembly = typeof(App).GetTypeInfo().Assembly;
+                Type pageType = currentAssembly.GetType(matchingPage.ClassName);
+
+                if (pageType == null)
+                {
+                    throw new Exception($"Page type '{matchingPage.ClassName}' not found.");
+                }
+
+                // Step 4: Navigate to the found page
+        */
+        
+                NavigationFrame.Navigate(typeof(GeneralProjectDisplayPage));
+        /*}
+        */
+    }
     public async void CreateDirectoryAsync()
     {
         //C:\Users\gamin\AppData\Local\Packages\90d93993-b7aa-4fff-9757-12ef0c6c27e0_1116rh51nqx02\LocalState
@@ -228,7 +261,6 @@ public sealed partial class ShellPage : Page
             }
         }
         catch (Exception ex) { }
-
         Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
         string projectFolderName = "Projects";
         StorageFolder projectFolder = await storageFolder.GetFolderAsync(projectFolderName);

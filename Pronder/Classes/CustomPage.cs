@@ -14,6 +14,7 @@ namespace Pronder.Classes
         public string Version { get; set; }
         public string PageDefaultIcon { get; set; }
         public string DllFile { get; set; }
+        public string MainClassName { get; set; }
 
 
     }

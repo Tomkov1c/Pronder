@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pronder.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2c05ce2f65742aa667cb3395ce97d9fdc904ba5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d104b1b54999f8a43d263dc169949339922f69a2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pronder.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pronder.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

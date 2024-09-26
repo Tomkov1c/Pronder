@@ -87,6 +87,7 @@
         </Grid>
         <NavigationView
         x:Name="NavigationViewControl"
+        ItemInvoked="ItemClicked"
         Canvas.ZIndex="0"
         IsBackButtonVisible="Collapsed"
         IsBackEnabled="{x:Bind ViewModel.IsBackEnabled, Mode=OneWay}"

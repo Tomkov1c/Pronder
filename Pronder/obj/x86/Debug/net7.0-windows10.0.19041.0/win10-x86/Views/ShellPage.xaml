@@ -87,6 +87,7 @@
         </Grid>
         <NavigationView x:ConnectionId='3'
         x:Name="NavigationViewControl"
+                                 
         Canvas.ZIndex="0"
         IsBackButtonVisible="Collapsed"
                                                                      

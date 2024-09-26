@@ -37,6 +37,6 @@ namespace Pronder.Classes
 
         public string PageID { get; set; }
 
-        public PageClass pageClass = new PageClass();
+        //public PageClass pageClass = new PageClass();
     }
 }
