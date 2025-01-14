@@ -1,0 +1,94 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="Pronder.Views.EditProjectPagesGeneralPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:CommunityToolkit.WinUI.Controls"
+    xmlns:ui="using:CommunityToolkit.WinUI"
+    mc:Ignorable="d"
+                   
+    Background="Transparent">
+
+    <ScrollViewer x:ConnectionId='2' x:Name="ContentArea" Padding="10, 32, 18, 10">
+        <StackPanel Orientation="Vertical" Padding="0, 42, 0, 12" Spacing="12">
+            <TextBlock x:ConnectionId='3' Text="General" x:Name="idk" Style="{StaticResource TitleTextBlockStyle}" Padding="0, 0, 0, 24"/>
+
+            <controls:SettingsCard Header="Name" HeaderIcon="{ui:FontIcon Glyph=&#xE8AC;}" IsEnabled="True">
+                <TextBox x:ConnectionId='15' Width="300" PlaceholderText="E.g., Pronder" x:Name="NameTextBox" 
+                                                       Text="{Binding Name, Mode=TwoWay}"/>
+            </controls:SettingsCard>
+            <controls:SettingsCard x:ConnectionId='4' Header="Description" x:Name="DescriptionSettingsCard" Description="Describe your project." 
+                                   HeaderIcon="{ui:FontIcon Glyph=&#xE8E4;}" 
+                                   IsEnabled="True" ContentAlignment="Vertical">
+                <TextBox x:ConnectionId='14' AutomationProperties.Name="multi-line TextBox" TextWrapping="Wrap"  HorizontalAlignment="Stretch"
+                             AcceptsReturn="True" IsSpellCheckEnabled="True" PlaceholderText="E.g., a project manager."
+                             x:Name="DescriptionTextBox"                                
+                             Text="{Binding Description, Mode=TwoWay}"/>
+            </controls:SettingsCard>
+            <controls:SettingsCard Header="Tag" Description="Quickly categorize your project." HeaderIcon="{ui:FontIcon Glyph=&#xE8EC;}" 
+                                   IsEnabled="True">
+                <TextBox x:ConnectionId='13' Width="300" PlaceholderText="E.g., app development" x:Name="TagTextBox" 
+                                                        Text="{Binding Tag, Mode=TwoWay}"/>
+            </controls:SettingsCard>
+
+
+            <controls:SettingsExpander x:ConnectionId='5' Header="Icon" IsExpanded="{Binding IsIconExpanderExpanded, Mode=TwoWay}" 
+                                       Description="Leave empty if your project doesnt have an icon yet." 
+                                       HeaderIcon="{ui:FontIcon Glyph=&#xE91B;}"
+                                       IsEnabled="True" x:Name="IconExpander" >
+                <Button x:ConnectionId='10' Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right"                     >
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal" Spacing="8">
+                            <FontIcon Glyph="&#xEC50;" FontSize="14"/>
+                            <TextBlock Text="Choose an image" />
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+                <controls:SettingsExpander.Items>
+                    <controls:SettingsCard Header="Preview">
+                        <Border CornerRadius="{StaticResource OverlayCornerRadius}" Height="130" Width="130"
+                                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1"
+                                Background="{ThemeResource LayerFillColorAltBrush}" Margin="0, 10">
+                            <Image x:ConnectionId='12' Source="{Binding IconPath, Mode=TwoWay}"  HorizontalAlignment="Stretch" 
+                                   VerticalAlignment="Stretch" Margin="16" x:Name="IconFilePreviewImage" ToolTipService.ToolTip="{Binding IconPath, Mode=TwoWay}"/>
+                        </Border>
+                    </controls:SettingsCard>
+                    <controls:SettingsCard Header="Actions">
+                        <Button x:ConnectionId='11' Content="Delete"                   />
+                    </controls:SettingsCard>
+                </controls:SettingsExpander.Items>
+            </controls:SettingsExpander>
+            <controls:SettingsExpander x:ConnectionId='6' Header="Banner" IsExpanded="{Binding IsBannerExpanderExpanded, Mode=TwoWay}" 
+                           Description="Leave empty if your project doesnt have a banner yet." 
+                           HeaderIcon="{ui:FontIcon Glyph=&#xE91B;}"
+                           IsEnabled="True" x:Name="BannerExpander">
+                <Button x:ConnectionId='7' Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right"                      >
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal" Spacing="8">
+                            <FontIcon Glyph="&#xEC50;" FontSize="14"/>
+                            <TextBlock Text="Choose an image" />
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+                <controls:SettingsExpander.Items>
+                    <controls:SettingsCard Header="Preview">
+                        <Border CornerRadius="{StaticResource OverlayCornerRadius}" Height="130" Width="260"
+                                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1"
+                                Background="{ThemeResource LayerFillColorAltBrush}" Margin="0, 10">
+                            <Image x:ConnectionId='9' Source="{Binding BannerPath, Mode=TwoWay}"  HorizontalAlignment="Stretch" 
+                                   VerticalAlignment="Stretch" Margin="16" x:Name="BannerFilePreviewImage" 
+                                   ToolTipService.ToolTip="{Binding BannerPath, Mode=TwoWay}"/>
+                        </Border>
+                    </controls:SettingsCard>
+                    <controls:SettingsCard Header="Actions">
+                        <Button x:ConnectionId='8' Content="Delete"                     />
+                    </controls:SettingsCard>
+                </controls:SettingsExpander.Items>
+            </controls:SettingsExpander>
+
+            
+        </StackPanel>
+    </ScrollViewer>
+</Page>
+

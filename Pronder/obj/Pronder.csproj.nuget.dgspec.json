@@ -39,7 +39,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net7.0": {
@@ -66,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -88,7 +94,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net7.0-windows10.0.19041.0"
+          "net8.0-windows10.0.26100.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -96,8 +102,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0-windows10.0.19041": {
-            "targetAlias": "net7.0-windows10.0.19041.0",
+          "net8.0-windows10.0.26100": {
+            "targetAlias": "net8.0-windows10.0.26100.0",
             "projectReferences": {
               "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder.Core\\Pronder.Core.csproj": {
                 "projectPath": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder.Core\\Pronder.Core.csproj"
@@ -109,15 +115,25 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
-        "net7.0-windows10.0.19041": {
-          "targetAlias": "net7.0-windows10.0.19041.0",
+        "net8.0-windows10.0.26100": {
+          "targetAlias": "net8.0-windows10.0.26100.0",
           "dependencies": {
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.2, )"
+            },
+            "CommunityToolkit.WinUI.Controls.SettingsControls": {
+              "target": "Package",
+              "version": "[8.1.240916, )"
             },
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
@@ -154,58 +170,61 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-arm64",
-              "version": "[7.0.15, 7.0.15]"
+              "version": "[8.0.11, 8.0.11]"
             },
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[7.0.15, 7.0.15]"
+              "version": "[8.0.11, 8.0.11]"
             },
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x86",
-              "version": "[7.0.15, 7.0.15]"
+              "version": "[8.0.11, 8.0.11]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-arm64",
-              "version": "[7.0.15, 7.0.15]"
+              "version": "[8.0.11, 8.0.11]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[7.0.15, 7.0.15]"
+              "version": "[8.0.11, 8.0.11]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x86",
-              "version": "[7.0.15, 7.0.15]"
+              "version": "[8.0.11, 8.0.11]"
             },
             {
               "name": "Microsoft.Windows.SDK.NET.Ref",
-              "version": "[10.0.19041.31, 10.0.19041.31]"
+              "version": "[10.0.26100.54, 10.0.26100.54]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-arm64",
-              "version": "[7.0.15, 7.0.15]"
+              "version": "[8.0.11, 8.0.11]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-              "version": "[7.0.15, 7.0.15]"
+              "version": "[8.0.11, 8.0.11]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x86",
-              "version": "[7.0.15, 7.0.15]"
+              "version": "[8.0.11, 8.0.11]"
             }
           ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             },
-            "Microsoft.Windows.SDK.NET.Ref": {
+            "Microsoft.Windows.SDK.NET.Ref.Windows": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
-        "win10-arm64": {
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x86": {
           "#import": []
         },
         "win10-x64": {

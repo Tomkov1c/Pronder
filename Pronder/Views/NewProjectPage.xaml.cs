@@ -1,7 +1,7 @@
 ﻿using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Newtonsoft.Json;
-using Pronder.Classes;
+using Pronder.Models;
 using Pronder.ViewModels;
 using Windows.Storage;
 

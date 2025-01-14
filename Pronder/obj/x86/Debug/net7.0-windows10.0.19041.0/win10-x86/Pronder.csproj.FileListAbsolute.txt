@@ -1,13 +1,88 @@
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Pronder.csproj.AssemblyReference.cache
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\App.g.i.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\App.g.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Custom\BiggerCard.g.i.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Custom\BiggerCard.g.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Custom\Card.g.i.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Custom\Card.g.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\MainWindow.g.i.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\MainWindow.g.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\AboutPage.g.i.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\AboutPage.g.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\BlankPage.g.i.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\BlankPage.g.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\Edit project pages\EditProjectPagesGeneralPage.g.i.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\Edit project pages\EditProjectPagesGeneralPage.g.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\HomePage.g.i.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\HomePage.g.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\Inbuild project pages\GeneralProjectDisplayPage.g.i.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\Inbuild project pages\GeneralProjectDisplayPage.g.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\Inbuild project sub pages\ProjectAboutPage.g.i.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\Inbuild project sub pages\ProjectAboutPage.g.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\Inbuild project sub pages\ProjectToDoPage.g.i.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\Inbuild project sub pages\ProjectToDoPage.g.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\NewProjectPage.g.i.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\NewProjectPage.g.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\SettingsPage.g.i.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\SettingsPage.g.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\ShellPage.g.i.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\ShellPage.g.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\XamlTypeInfo.g.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\App.xaml
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Custom\BiggerCard.xaml
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Custom\Card.xaml
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\MainWindow.xaml
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Styles\FontSizes.xaml
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Styles\Icon8Icon.xaml
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Styles\TextBlock.xaml
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Styles\Thickness.xaml
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\AboutPage.xaml
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\BlankPage.xaml
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\Edit project pages\EditProjectPagesGeneralPage.xaml
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\HomePage.xaml
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\Inbuild project pages\GeneralProjectDisplayPage.xaml
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\Inbuild project sub pages\ProjectAboutPage.xaml
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\Inbuild project sub pages\ProjectToDoPage.xaml
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\NewProjectPage.xaml
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\SettingsPage.xaml
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\ShellPage.xaml
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\App.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Custom\BiggerCard.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Custom\Card.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\MainWindow.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Styles\FontSizes.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Styles\Icon8Icon.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Styles\TextBlock.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Styles\Thickness.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\AboutPage.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\BlankPage.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\Edit project pages\EditProjectPagesGeneralPage.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\HomePage.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\Inbuild project pages\GeneralProjectDisplayPage.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\Inbuild project sub pages\ProjectAboutPage.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\Inbuild project sub pages\ProjectToDoPage.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\NewProjectPage.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\SettingsPage.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\ShellPage.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\XamlSaveStateFile.xml
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Pronder.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Pronder.exe
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\appsettings.json
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\App.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Custom\BiggerCard.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Custom\Card.xbf
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\MainWindow.xbf
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Styles\FontSizes.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Styles\Icon8Icon.xbf
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Styles\TextBlock.xbf
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Styles\Thickness.xbf
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\AboutPage.xbf
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\BlankPage.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\Edit project pages\EditProjectPagesGeneralPage.xbf
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\HomePage.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\Inbuild project pages\GeneralProjectDisplayPage.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\Inbuild project sub pages\ProjectAboutPage.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\Inbuild project sub pages\ProjectToDoPage.xbf
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\NewProjectPage.xbf
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\SettingsPage.xbf
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\ShellPage.xbf
@@ -245,7 +320,7 @@ C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\hostfxr.dll
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\hostpolicy.dll
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\mscordaccore.dll
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\mscordaccore_x86_x86_7.0.1523.57226.dll
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\mscordaccore_x86_x86_7.0.2024.26716.dll
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\mscordbi.dll
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\mscorrc.dll
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\msquic.dll
@@ -253,52 +328,11 @@ C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\WinRT.Runtime.dll
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Pronder.Core.dll
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Pronder.Core.pdb
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Pronder.csproj.AssemblyReference.cache
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\App.g.i.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\App.g.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\MainWindow.g.i.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\MainWindow.g.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\AboutPage.g.i.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\AboutPage.g.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\BlankPage.g.i.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\BlankPage.g.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\HomePage.g.i.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\HomePage.g.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\NewProjectPage.g.i.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\NewProjectPage.g.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\SettingsPage.g.i.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\SettingsPage.g.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\ShellPage.g.i.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\ShellPage.g.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\XamlTypeInfo.g.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\App.xaml
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\MainWindow.xaml
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Styles\FontSizes.xaml
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Styles\TextBlock.xaml
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Styles\Thickness.xaml
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\AboutPage.xaml
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\BlankPage.xaml
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\HomePage.xaml
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\NewProjectPage.xaml
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\SettingsPage.xaml
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\ShellPage.xaml
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\App.xbf
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\MainWindow.xbf
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Styles\FontSizes.xbf
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Styles\TextBlock.xbf
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Styles\Thickness.xbf
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\AboutPage.xbf
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\BlankPage.xbf
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\HomePage.xbf
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\NewProjectPage.xbf
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\SettingsPage.xbf
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\ShellPage.xbf
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\XamlSaveStateFile.xml
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Pronder.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Pronder.AssemblyInfoInputs.cache
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Pronder.AssemblyInfo.cs
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Pronder.csproj.CoreCompileInputs.cache
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Pronder.csproj.CopyComplete
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Pronder.sourcelink.json
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Pronder.csproj.Up2Date
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Pronder.dll
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\refint\Pronder.dll
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Pronder.pdb
@@ -320,19 +354,3 @@ C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\qualifiers.txt.intermediate
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\MultipleQualifiersPerDimensionFound.txt
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\ProjectArchitectures.txt
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Pronder.sourcelink.json
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\InbuildProjectDisplayPages\GeneralProjectDisplayPage.xbf
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\InbuildProjectDisplaySubPages\ProjectAboutPage.xbf
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\InbuildProjectDisplaySubPages\ProjectToDoPage.xbf
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\InbuildProjectDisplayPages\GeneralProjectDisplayPage.g.i.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\InbuildProjectDisplayPages\GeneralProjectDisplayPage.g.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\InbuildProjectDisplaySubPages\ProjectAboutPage.g.i.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\InbuildProjectDisplaySubPages\ProjectAboutPage.g.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\InbuildProjectDisplaySubPages\ProjectToDoPage.g.i.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\InbuildProjectDisplaySubPages\ProjectToDoPage.g.cs
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\InbuildProjectDisplayPages\GeneralProjectDisplayPage.xaml
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\InbuildProjectDisplaySubPages\ProjectAboutPage.xaml
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\InbuildProjectDisplaySubPages\ProjectToDoPage.xaml
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\InbuildProjectDisplayPages\GeneralProjectDisplayPage.xbf
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\InbuildProjectDisplaySubPages\ProjectAboutPage.xbf
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\InbuildProjectDisplaySubPages\ProjectToDoPage.xbf

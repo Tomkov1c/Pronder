@@ -30,10 +30,7 @@
                     </Button.Content>
                     <Button.Flyout>
                         <MenuFlyout Placement="BottomEdgeAlignedLeft">
-                            <MenuFlyoutItem Text="New project" Width="250" Click="openNewProject">
-                                <MenuFlyoutItem.Icon>
-                                    <FontIcon Glyph="&#xE710;"/>
-                                </MenuFlyoutItem.Icon>
+                            <MenuFlyoutItem Text="New project" Width="250" Click="openNewProject" Icon="Add">
                                 <ToolTipService.ToolTip>
                                     <ToolTip Content="Create a new project." />
                                 </ToolTipService.ToolTip>
@@ -44,16 +41,13 @@
                             <MenuFlyoutSeparator />
                             <MenuFlyoutItem Text="About" Click="openAbout">
                                 <MenuFlyoutItem.Icon>
-                                    <FontIcon Glyph="&#xE946;"/>
+                                    <FontIcon Glyph="&#xE946;" />
                                 </MenuFlyoutItem.Icon>
                                 <ToolTipService.ToolTip>
                                     <ToolTip Content="About the app." />
                                 </ToolTipService.ToolTip>
                             </MenuFlyoutItem>
-                            <MenuFlyoutItem Text="Help" Click="ActivatePageHelp">
-                                <MenuFlyoutItem.Icon>
-                                    <FontIcon Glyph="&#xE897;"/>
-                                </MenuFlyoutItem.Icon>
+                            <MenuFlyoutItem Text="Help" Click="ActivatePageHelp" Icon="Help">
                                 <ToolTipService.ToolTip>
                                     <ToolTip Content="Get more inforamtion about the current page." />
                                 </ToolTipService.ToolTip>
@@ -62,10 +56,7 @@
                                 </MenuFlyoutItem.KeyboardAccelerators>
                             </MenuFlyoutItem>
                             <MenuFlyoutSeparator />
-                            <MenuFlyoutItem Text="Settings" Click="openSettings">
-                                <MenuFlyoutItem.Icon>
-                                    <FontIcon Glyph="&#xE713;"/>
-                                </MenuFlyoutItem.Icon>
+                            <MenuFlyoutItem Text="Settings" Click="openSettings" Icon="Setting">
                                 <ToolTipService.ToolTip>
                                     <ToolTip Content="Open settings." />
                                 </ToolTipService.ToolTip>
@@ -96,6 +87,11 @@
         ExpandedModeThresholdWidth="1280"
         DisplayModeChanged="NavigationViewControl_DisplayModeChanged"
         Header="{x:Bind ((ContentControl)ViewModel.Selected).Content, Mode=OneWay}">
+            <NavigationView.Transitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition IsStaggeringEnabled="True" />
+                </TransitionCollection>
+            </NavigationView.Transitions>
             <NavigationView.MenuItems>
                 <NavigationViewItem x:Uid="Shell_Home" helpers:NavigationHelper.NavigateTo="Pronder.ViewModels.HomeViewModel">
                     <NavigationViewItem.Icon>

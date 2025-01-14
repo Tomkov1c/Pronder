@@ -1,0 +1,124 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|c:\\users\\gamin\\onedrive - tomkovic\\backup\\pc\\dokumenti\\works\\pronder\\pronder\\views\\inbuild project pages\\generalprojectdisplaypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|solutionrelative:pronder\\views\\inbuild project pages\\generalprojectdisplaypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|c:\\users\\gamin\\onedrive - tomkovic\\backup\\pc\\dokumenti\\works\\pronder\\pronder\\views\\shellpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|solutionrelative:pronder\\views\\shellpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|c:\\users\\gamin\\onedrive - tomkovic\\backup\\pc\\dokumenti\\works\\pronder\\pronder\\views\\shellpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|solutionrelative:pronder\\views\\shellpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|c:\\users\\gamin\\onedrive - tomkovic\\backup\\pc\\dokumenti\\works\\pronder\\pronder\\assets\\pageslist.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|solutionrelative:pronder\\assets\\pageslist.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|c:\\users\\gamin\\onedrive - tomkovic\\backup\\pc\\dokumenti\\works\\pronder\\pronder\\classes\\editprojectmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|solutionrelative:pronder\\classes\\editprojectmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|c:\\users\\gamin\\onedrive - tomkovic\\backup\\pc\\dokumenti\\works\\pronder\\pronder\\views\\inbuildprojectdisplaypages\\generalprojectdisplaypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|solutionrelative:pronder\\views\\inbuildprojectdisplaypages\\generalprojectdisplaypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GeneralProjectDisplayPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Views\\Inbuild project pages\\GeneralProjectDisplayPage.xaml.cs",
+              "RelativeDocumentMoniker": "Pronder\\Views\\Inbuild project pages\\GeneralProjectDisplayPage.xaml.cs",
+              "ToolTip": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Views\\Inbuild project pages\\GeneralProjectDisplayPage.xaml.cs",
+              "RelativeToolTip": "Pronder\\Views\\Inbuild project pages\\GeneralProjectDisplayPage.xaml.cs",
+              "ViewState": "AgIAABEBAAAAAAAAAAAqwCYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T07:38:02.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GeneralProjectDisplayPage.xaml",
+              "DocumentMoniker": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Views\\InbuildProjectDisplayPages\\GeneralProjectDisplayPage.xaml",
+              "RelativeDocumentMoniker": "Pronder\\Views\\InbuildProjectDisplayPages\\GeneralProjectDisplayPage.xaml",
+              "ToolTip": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Views\\InbuildProjectDisplayPages\\GeneralProjectDisplayPage.xaml",
+              "RelativeToolTip": "Pronder\\Views\\InbuildProjectDisplayPages\\GeneralProjectDisplayPage.xaml",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAAADsAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-13T10:15:53.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ShellPage.xaml",
+              "DocumentMoniker": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Views\\ShellPage.xaml",
+              "RelativeDocumentMoniker": "Pronder\\Views\\ShellPage.xaml",
+              "ToolTip": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Views\\ShellPage.xaml",
+              "RelativeToolTip": "Pronder\\Views\\ShellPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-22T10:37:15.805Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "pagesList.json",
+              "DocumentMoniker": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Assets\\pagesList.json",
+              "RelativeDocumentMoniker": "Pronder\\Assets\\pagesList.json",
+              "ToolTip": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Assets\\pagesList.json",
+              "RelativeToolTip": "Pronder\\Assets\\pagesList.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-22T11:36:05.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ShellPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Views\\ShellPage.xaml.cs",
+              "RelativeDocumentMoniker": "Pronder\\Views\\ShellPage.xaml.cs",
+              "ToolTip": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Views\\ShellPage.xaml.cs",
+              "RelativeToolTip": "Pronder\\Views\\ShellPage.xaml.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAgwEYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T13:29:38.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EditProjectMenu.cs",
+              "DocumentMoniker": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Classes\\EditProjectMenu.cs",
+              "RelativeDocumentMoniker": "Pronder\\Classes\\EditProjectMenu.cs",
+              "ToolTip": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Classes\\EditProjectMenu.cs",
+              "RelativeToolTip": "Pronder\\Classes\\EditProjectMenu.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAUwIAAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T06:31:17.074Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

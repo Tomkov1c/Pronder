@@ -31,11 +31,13 @@ using Windows.ApplicationModel.Core;
 using Windows.ApplicationModel;
 using Windows.UI.WindowManagement;
 using Pronder.Interfaces;
+using Pronder.Models;
 using AppWindow = Windows.UI.WindowManagement.AppWindow;
 using Microsoft.UI.Xaml.Hosting;
 using Newtonsoft.Json.Linq;
 using System.Reflection;
 using Windows.Services.Maps;
+using Pronder.Custom;
 
 namespace Pronder.Views;
 
@@ -63,6 +65,8 @@ public sealed partial class ShellPage : Page
 
         NavigationService.Instance.NavigationView = NavigationViewControl;
         NavigationViewControl.ItemInvoked += ItemClicked;
+
+        EditProjectPopup.OnProjectEdited += importProjects;
 
         ViewModel.NavigationService.Frame = NavigationFrame;
         ViewModel.NavigationViewService.Initialize(NavigationViewControl);
@@ -282,7 +286,7 @@ public sealed partial class ShellPage : Page
                     Content = deserialized.Name
                 };
 
-                if ((deserialized.Icon != null) || (deserialized.Icon == ""))
+                if (!string.IsNullOrEmpty(deserialized.Icon))
                 {
                     BitmapIcon bitmapIcon = new BitmapIcon
                     {
