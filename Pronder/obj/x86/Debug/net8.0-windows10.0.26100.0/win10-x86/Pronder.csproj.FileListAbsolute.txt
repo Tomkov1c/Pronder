@@ -255,7 +255,6 @@ C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\hostfxr.dll
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\hostpolicy.dll
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\mscordaccore.dll
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\mscordaccore_x86_x86_8.0.1124.51707.dll
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\mscordbi.dll
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\mscorrc.dll
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\msquic.dll
@@ -349,3 +348,12 @@ C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\qualifiers.txt.intermediate
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\MultipleQualifiersPerDimensionFound.txt
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\ProjectArchitectures.txt
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\Views\Edit project pages\EditProjectPagesExternalLinksPage.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\Views\Edit project pages\EditProjectPagesExternalLinksPage.xaml
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\Views\Edit project pages\EditProjectPagesExternalLinksPage.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\Views\EditProjectPagesExternalLinksPage.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\Views\EditProjectPagesExternalLinksPage.g.i.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\Views\EditProjectPagesExternalLinksPage.g.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\Views\EditProjectPagesExternalLinksPage.xaml
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\Views\EditProjectPagesExternalLinksPage.xbf
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\mscordaccore_x86_x86_8.0.1224.60305.dll

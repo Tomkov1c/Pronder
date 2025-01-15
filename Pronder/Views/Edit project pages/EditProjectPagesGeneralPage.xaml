@@ -12,7 +12,7 @@
 
     <ScrollViewer x:Name="ContentArea" Padding="10, 32, 18, 10">
         <StackPanel Orientation="Vertical" Padding="0, 42, 0, 12" Spacing="12">
-            <TextBlock Text="General" x:Name="idk" Style="{StaticResource TitleTextBlockStyle}" Padding="0, 0, 0, 24"/>
+            <TextBlock Text="General" Style="{StaticResource TitleTextBlockStyle}" Padding="0, 0, 0, 24"/>
 
             <controls:SettingsCard Header="Name" HeaderIcon="{ui:FontIcon Glyph=&#xE8AC;}" IsEnabled="True">
                 <TextBox Width="300" PlaceholderText="E.g., Pronder" x:Name="NameTextBox" 

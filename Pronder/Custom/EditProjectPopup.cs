@@ -186,6 +186,7 @@ namespace Pronder.Custom
                 Type pageType = pageTag switch
                 {
                     "General" => typeof(EditProjectPagesGeneralPage),
+                    "External links" => typeof(EditProjectPagesExternalLinksPage),
                     _ => null
                 };
 

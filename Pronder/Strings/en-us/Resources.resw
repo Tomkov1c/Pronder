@@ -118,4 +118,7 @@
   <data name="Shell_EditProjectPagesGeneral.Content" xml:space="preserve">
     <value>EditProjectPagesGeneral</value>
   </data>
+  <data name="Shell_EditProjectPagesExternalLinks.Content" xml:space="preserve">
+    <value>EditProjectPagesExternalLinks</value>
+  </data>
 </root>

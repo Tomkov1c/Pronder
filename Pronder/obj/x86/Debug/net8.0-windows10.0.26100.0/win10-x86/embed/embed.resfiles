@@ -6,7 +6,9 @@ Styles\TextBlock.xbf
 Styles\Thickness.xbf
 Views\AboutPage.xbf
 Views\BlankPage.xbf
+Views\Edit project pages\EditProjectPagesExternalLinksPage.xbf
 Views\Edit project pages\EditProjectPagesGeneralPage.xbf
+Views\EditProjectPagesExternalLinksPage.xbf
 Views\HomePage.xbf
 Views\Inbuild project pages\GeneralProjectDisplayPage.xbf
 Views\Inbuild project sub pages\ProjectAboutPage.xbf
