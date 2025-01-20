@@ -3,36 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|c:\\users\\gamin\\onedrive - tomkovic\\backup\\pc\\dokumenti\\works\\pronder\\pronder\\views\\editprojectpagesexternallinkspage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|Form",
-      "RelativeMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|solutionrelative:pronder\\views\\editprojectpagesexternallinkspage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|Form"
+      "AbsoluteMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|c:\\users\\gamin\\onedrive - tomkovic\\backup\\pc\\dokumenti\\works\\pronder\\pronder\\custom\\externallinklistitem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|solutionrelative:pronder\\custom\\externallinklistitem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|c:\\users\\gamin\\onedrive - tomkovic\\backup\\pc\\dokumenti\\works\\pronder\\pronder\\views\\edit project pages\\editprojectpagesexternallinkspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|solutionrelative:pronder\\views\\edit project pages\\editprojectpagesexternallinkspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|c:\\users\\gamin\\onedrive - tomkovic\\backup\\pc\\dokumenti\\works\\pronder\\pronder\\views\\edit project pages\\editprojectpagesexternallinkspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|solutionrelative:pronder\\views\\edit project pages\\editprojectpagesexternallinkspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|c:\\users\\gamin\\onedrive - tomkovic\\backup\\pc\\dokumenti\\works\\pronder\\pronder\\views\\edit project pages\\editprojectpagesgeneralpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|solutionrelative:pronder\\views\\edit project pages\\editprojectpagesgeneralpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|c:\\users\\gamin\\onedrive - tomkovic\\backup\\pc\\dokumenti\\works\\pronder\\pronder\\views\\edit project pages\\editprojectpagesexternallinkspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|solutionrelative:pronder\\views\\edit project pages\\editprojectpagesexternallinkspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|c:\\users\\gamin\\onedrive - tomkovic\\backup\\pc\\dokumenti\\works\\pronder\\pronder\\custom\\externallinklistitem.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|solutionrelative:pronder\\custom\\externallinklistitem.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|c:\\users\\gamin\\onedrive - tomkovic\\backup\\pc\\dokumenti\\works\\pronder\\pronder\\views\\edit project pages\\editprojectpagesgeneralpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|solutionrelative:pronder\\views\\edit project pages\\editprojectpagesgeneralpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|c:\\users\\gamin\\onedrive - tomkovic\\backup\\pc\\dokumenti\\works\\pronder\\pronder\\custom\\editprojectpopup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|solutionrelative:pronder\\custom\\editprojectpopup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|c:\\users\\gamin\\onedrive - tomkovic\\backup\\pc\\dokumenti\\works\\pronder\\pronder\\viewmodels\\edit project pages\\editprojectpagesgeneralviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|solutionrelative:pronder\\viewmodels\\edit project pages\\editprojectpagesgeneralviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|c:\\users\\gamin\\onedrive - tomkovic\\backup\\pc\\dokumenti\\works\\pronder\\pronder\\viewmodels\\edit project pages\\editprojectpagesexternallinksviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|solutionrelative:pronder\\viewmodels\\edit project pages\\editprojectpagesexternallinksviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|c:\\users\\gamin\\onedrive - tomkovic\\backup\\pc\\dokumenti\\works\\pronder\\pronder\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|solutionrelative:pronder\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|c:\\users\\gamin\\onedrive - tomkovic\\backup\\pc\\dokumenti\\works\\pronder\\pronder\\viewmodels\\editprojectpagesexternallinksviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB97FBBE-02C1-4224-9928-5194C1858BDF}|Pronder\\Pronder.csproj|solutionrelative:pronder\\viewmodels\\editprojectpagesexternallinksviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,19 +47,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EditProjectPagesExternalLinksPage.xaml",
-              "DocumentMoniker": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Views\\EditProjectPagesExternalLinksPage.xaml",
-              "RelativeDocumentMoniker": "Pronder\\Views\\EditProjectPagesExternalLinksPage.xaml",
-              "ToolTip": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Views\\EditProjectPagesExternalLinksPage.xaml",
-              "RelativeToolTip": "Pronder\\Views\\EditProjectPagesExternalLinksPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAATAAAAAAAAAA==",
+              "Title": "ExternalLinkListItem.xaml",
+              "DocumentMoniker": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Custom\\ExternalLinkListItem.xaml",
+              "RelativeDocumentMoniker": "Pronder\\Custom\\ExternalLinkListItem.xaml",
+              "ToolTip": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Custom\\ExternalLinkListItem.xaml",
+              "RelativeToolTip": "Pronder\\Custom\\ExternalLinkListItem.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-15T08:03:03.475Z",
+              "WhenOpened": "2025-01-20T13:02:33.847Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "EditProjectPagesExternalLinksPage.xaml",
+              "DocumentMoniker": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Views\\Edit project pages\\EditProjectPagesExternalLinksPage.xaml",
+              "RelativeDocumentMoniker": "Pronder\\Views\\Edit project pages\\EditProjectPagesExternalLinksPage.xaml",
+              "ToolTip": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Views\\Edit project pages\\EditProjectPagesExternalLinksPage.xaml",
+              "RelativeToolTip": "Pronder\\Views\\Edit project pages\\EditProjectPagesExternalLinksPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-20T12:31:53.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ExternalLinkListItem.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Custom\\ExternalLinkListItem.xaml.cs",
+              "RelativeDocumentMoniker": "Pronder\\Custom\\ExternalLinkListItem.xaml.cs",
+              "ToolTip": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Custom\\ExternalLinkListItem.xaml.cs",
+              "RelativeToolTip": "Pronder\\Custom\\ExternalLinkListItem.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T13:05:44.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "EditProjectPagesExternalLinksPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Views\\Edit project pages\\EditProjectPagesExternalLinksPage.xaml.cs",
               "RelativeDocumentMoniker": "Pronder\\Views\\Edit project pages\\EditProjectPagesExternalLinksPage.xaml.cs",
@@ -72,15 +98,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "EditProjectPagesExternalLinksViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\ViewModels\\EditProjectPagesExternalLinksViewModel.cs",
-              "RelativeDocumentMoniker": "Pronder\\ViewModels\\EditProjectPagesExternalLinksViewModel.cs",
-              "ToolTip": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\ViewModels\\EditProjectPagesExternalLinksViewModel.cs",
-              "RelativeToolTip": "Pronder\\ViewModels\\EditProjectPagesExternalLinksViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\ViewModels\\Edit project pages\\EditProjectPagesExternalLinksViewModel.cs",
+              "RelativeDocumentMoniker": "Pronder\\ViewModels\\Edit project pages\\EditProjectPagesExternalLinksViewModel.cs",
+              "ToolTip": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\ViewModels\\Edit project pages\\EditProjectPagesExternalLinksViewModel.cs",
+              "RelativeToolTip": "Pronder\\ViewModels\\Edit project pages\\EditProjectPagesExternalLinksViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T08:03:01.351Z"
+              "WhenOpened": "2025-01-15T08:03:01.351Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -90,49 +117,27 @@
               "RelativeDocumentMoniker": "Pronder\\Views\\Edit project pages\\EditProjectPagesGeneralPage.xaml",
               "ToolTip": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Views\\Edit project pages\\EditProjectPagesGeneralPage.xaml",
               "RelativeToolTip": "Pronder\\Views\\Edit project pages\\EditProjectPagesGeneralPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-14T07:37:11.542Z"
+              "WhenOpened": "2025-01-14T07:37:11.542Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "EditProjectPagesGeneralPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Views\\Edit project pages\\EditProjectPagesGeneralPage.xaml.cs",
               "RelativeDocumentMoniker": "Pronder\\Views\\Edit project pages\\EditProjectPagesGeneralPage.xaml.cs",
               "ToolTip": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Views\\Edit project pages\\EditProjectPagesGeneralPage.xaml.cs",
               "RelativeToolTip": "Pronder\\Views\\Edit project pages\\EditProjectPagesGeneralPage.xaml.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAuwHUAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAmwHUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T15:39:35.287Z"
+              "WhenOpened": "2025-01-01T15:39:35.287Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EditProjectPagesGeneralViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\ViewModels\\Edit project pages\\EditProjectPagesGeneralViewModel.cs",
-              "RelativeDocumentMoniker": "Pronder\\ViewModels\\Edit project pages\\EditProjectPagesGeneralViewModel.cs",
-              "ToolTip": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\ViewModels\\Edit project pages\\EditProjectPagesGeneralViewModel.cs",
-              "RelativeToolTip": "Pronder\\ViewModels\\Edit project pages\\EditProjectPagesGeneralViewModel.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowDUAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T18:18:11.556Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EditProjectPopup.cs",
-              "DocumentMoniker": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Custom\\EditProjectPopup.cs",
-              "RelativeDocumentMoniker": "Pronder\\Custom\\EditProjectPopup.cs",
-              "ToolTip": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Custom\\EditProjectPopup.cs",
-              "RelativeToolTip": "Pronder\\Custom\\EditProjectPopup.cs",
-              "ViewState": "AgIAALMAAAAAAAAAAAD4v7wAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T18:01:55.93Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Project.cs",
               "DocumentMoniker": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Models\\Project.cs",
               "RelativeDocumentMoniker": "Pronder\\Models\\Project.cs",

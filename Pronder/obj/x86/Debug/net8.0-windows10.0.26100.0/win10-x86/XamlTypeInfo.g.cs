@@ -224,259 +224,261 @@ namespace Pronder.Pronder_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[124];
+            _typeNameTable = new string[125];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
             _typeNameTable[3] = "Boolean";
-            _typeNameTable[4] = "WinUIEx.WindowEx";
-            _typeNameTable[5] = "Microsoft.UI.Xaml.Window";
-            _typeNameTable[6] = "Double";
-            _typeNameTable[7] = "String";
-            _typeNameTable[8] = "Microsoft.UI.Windowing.AppWindow";
-            _typeNameTable[9] = "WinUIEx.Icon";
-            _typeNameTable[10] = "WinUIEx.WindowState";
-            _typeNameTable[11] = "System.Enum";
-            _typeNameTable[12] = "System.ValueType";
-            _typeNameTable[13] = "Microsoft.UI.Windowing.AppWindowPresenter";
-            _typeNameTable[14] = "Microsoft.UI.Windowing.AppWindowPresenterKind";
-            _typeNameTable[15] = "WinUIEx.SystemBackdrop";
-            _typeNameTable[16] = "Microsoft.UI.Xaml.Media.MicaBackdrop";
-            _typeNameTable[17] = "Microsoft.UI.Xaml.Media.SystemBackdrop";
-            _typeNameTable[18] = "Microsoft.UI.Composition.SystemBackdrops.MicaKind";
-            _typeNameTable[19] = "Pronder.MainWindow";
-            _typeNameTable[20] = "Microsoft.UI.Xaml.Thickness";
-            _typeNameTable[21] = "Microsoft.UI.Xaml.CornerRadius";
-            _typeNameTable[22] = "Microsoft.UI.Xaml.Controls.ImageIcon";
-            _typeNameTable[23] = "Microsoft.UI.Xaml.Controls.IconElement";
-            _typeNameTable[24] = "Microsoft.UI.Xaml.Media.ImageSource";
-            _typeNameTable[25] = "Pronder.Views.AboutPage";
-            _typeNameTable[26] = "Microsoft.UI.Xaml.Controls.Page";
-            _typeNameTable[27] = "Microsoft.UI.Xaml.Controls.UserControl";
-            _typeNameTable[28] = "Pronder.ViewModels.AboutViewModel";
-            _typeNameTable[29] = "CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient";
-            _typeNameTable[30] = "CommunityToolkit.Mvvm.ComponentModel.ObservableObject";
-            _typeNameTable[31] = "Pronder.Views.BlankPage";
-            _typeNameTable[32] = "Pronder.ViewModels.BlankViewModel";
-            _typeNameTable[33] = "Pronder.Views.EditProjectPagesExternalLinksPage";
-            _typeNameTable[34] = "Pronder.ViewModels.EditProjectPagesExternalLinksViewModel";
-            _typeNameTable[35] = "CommunityToolkit.WinUI.Controls.SettingsCard";
-            _typeNameTable[36] = "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase";
-            _typeNameTable[37] = "Microsoft.UI.Xaml.Controls.ContentControl";
-            _typeNameTable[38] = "CommunityToolkit.WinUI.Controls.ContentAlignment";
-            _typeNameTable[39] = "CommunityToolkit.WinUI.Controls.SettingsExpander";
-            _typeNameTable[40] = "Microsoft.UI.Xaml.Controls.Control";
-            _typeNameTable[41] = "System.Collections.Generic.IList`1<Object>";
-            _typeNameTable[42] = "Microsoft.UI.Xaml.Controls.StyleSelector";
-            _typeNameTable[43] = "Microsoft.UI.Xaml.UIElement";
-            _typeNameTable[44] = "CommunityToolkit.WinUI.FontIconExtension";
-            _typeNameTable[45] = "CommunityToolkit.WinUI.TextIconExtension";
-            _typeNameTable[46] = "Microsoft.UI.Xaml.Markup.MarkupExtension";
-            _typeNameTable[47] = "Microsoft.UI.Xaml.Media.FontFamily";
-            _typeNameTable[48] = "Windows.UI.Text.FontWeight";
-            _typeNameTable[49] = "Windows.UI.Text.FontStyle";
-            _typeNameTable[50] = "Microsoft.UI.Xaml.Media.Brush";
-            _typeNameTable[51] = "Pronder.Views.EditProjectPagesGeneralPage";
-            _typeNameTable[52] = "Pronder.Views.HomePage";
-            _typeNameTable[53] = "Pronder.ViewModels.HomeViewModel";
-            _typeNameTable[54] = "Microsoft.UI.Xaml.Controls.SelectorBar";
-            _typeNameTable[55] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.SelectorBarItem>";
-            _typeNameTable[56] = "Microsoft.UI.Xaml.Controls.SelectorBarItem";
-            _typeNameTable[57] = "Microsoft.UI.Xaml.Controls.ItemContainer";
-            _typeNameTable[58] = "Microsoft.UI.Xaml.Controls.TeachingTip";
-            _typeNameTable[59] = "Microsoft.UI.Xaml.FrameworkElement";
-            _typeNameTable[60] = "Microsoft.UI.Xaml.Controls.IconSource";
-            _typeNameTable[61] = "System.Windows.Input.ICommand";
-            _typeNameTable[62] = "Microsoft.UI.Xaml.Style";
-            _typeNameTable[63] = "Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode";
-            _typeNameTable[64] = "Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode";
-            _typeNameTable[65] = "Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility";
-            _typeNameTable[66] = "Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings";
-            _typeNameTable[67] = "Microsoft.UI.Xaml.DependencyObject";
-            _typeNameTable[68] = "Pronder.Views.GeneralProjectDisplayPage";
-            _typeNameTable[69] = "Pronder.ViewModels.GeneralProjectDisplayViewModel";
-            _typeNameTable[70] = "Pronder.Views.ProjectAboutPage";
-            _typeNameTable[71] = "Pronder.ViewModels.ProjectAboutViewModel";
-            _typeNameTable[72] = "Microsoft.UI.Xaml.Controls.InfoBar";
-            _typeNameTable[73] = "Microsoft.UI.Xaml.Controls.InfoBarSeverity";
-            _typeNameTable[74] = "Microsoft.UI.Xaml.DataTemplate";
-            _typeNameTable[75] = "Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings";
-            _typeNameTable[76] = "Pronder.Views.ProjectToDoPage";
-            _typeNameTable[77] = "Pronder.ViewModels.ProjectToDoViewModel";
-            _typeNameTable[78] = "Pronder.Views.NewProjectPage";
-            _typeNameTable[79] = "Pronder.ViewModels.NewProjectViewModel";
-            _typeNameTable[80] = "Pronder.Helpers.EnumToBooleanConverter";
-            _typeNameTable[81] = "Pronder.Views.SettingsPage";
-            _typeNameTable[82] = "Pronder.ViewModels.SettingsViewModel";
-            _typeNameTable[83] = "Microsoft.UI.Xaml.Controls.NavigationView";
-            _typeNameTable[84] = "Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible";
-            _typeNameTable[85] = "Microsoft.UI.Xaml.Controls.AutoSuggestBox";
-            _typeNameTable[86] = "Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode";
-            _typeNameTable[87] = "Microsoft.UI.Xaml.Controls.DataTemplateSelector";
-            _typeNameTable[88] = "Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode";
-            _typeNameTable[89] = "Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode";
-            _typeNameTable[90] = "Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus";
-            _typeNameTable[91] = "Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled";
-            _typeNameTable[92] = "Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings";
-            _typeNameTable[93] = "Microsoft.Xaml.Interactivity.Interaction";
-            _typeNameTable[94] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
-            _typeNameTable[95] = "Microsoft.UI.Xaml.DependencyObjectCollection";
-            _typeNameTable[96] = "Microsoft.UI.Xaml.Controls.NavigationViewItem";
-            _typeNameTable[97] = "Microsoft.UI.Xaml.Controls.NavigationViewItemBase";
-            _typeNameTable[98] = "Microsoft.UI.Xaml.Controls.InfoBadge";
-            _typeNameTable[99] = "Pronder.Helpers.NavigationHelper";
-            _typeNameTable[100] = "Microsoft.UI.Xaml.Controls.NavigationViewItemSeparator";
-            _typeNameTable[101] = "Pronder.Behaviors.NavigationViewHeaderBehavior";
-            _typeNameTable[102] = "Microsoft.Xaml.Interactivity.Behavior`1<Microsoft.UI.Xaml.Controls.NavigationView>";
-            _typeNameTable[103] = "Microsoft.Xaml.Interactivity.Behavior";
-            _typeNameTable[104] = "Pronder.Behaviors.NavigationViewHeaderMode";
-            _typeNameTable[105] = "Microsoft.UI.Xaml.Controls.ScrollView";
-            _typeNameTable[106] = "Microsoft.UI.Xaml.Visibility";
-            _typeNameTable[107] = "Microsoft.UI.Xaml.Controls.ScrollingScrollMode";
-            _typeNameTable[108] = "Microsoft.UI.Xaml.Controls.ScrollingContentOrientation";
-            _typeNameTable[109] = "Microsoft.UI.Composition.CompositionPropertySet";
-            _typeNameTable[110] = "Microsoft.UI.Composition.CompositionObject";
-            _typeNameTable[111] = "Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility";
-            _typeNameTable[112] = "Microsoft.UI.Xaml.Controls.ScrollingChainMode";
-            _typeNameTable[113] = "Microsoft.UI.Xaml.Controls.ScrollingRailMode";
-            _typeNameTable[114] = "Microsoft.UI.Xaml.Controls.ScrollingInputKinds";
-            _typeNameTable[115] = "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter";
-            _typeNameTable[116] = "Microsoft.UI.Xaml.Controls.ScrollingInteractionState";
-            _typeNameTable[117] = "Single";
-            _typeNameTable[118] = "Microsoft.UI.Xaml.Controls.ScrollingZoomMode";
-            _typeNameTable[119] = "Pronder.Views.ShellPage";
-            _typeNameTable[120] = "Pronder.ViewModels.ShellViewModel";
-            _typeNameTable[121] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[122] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
-            _typeNameTable[123] = "Int32";
+            _typeNameTable[4] = "Pronder.Custom.ExternalLinkListItem";
+            _typeNameTable[5] = "Microsoft.UI.Xaml.Controls.UserControl";
+            _typeNameTable[6] = "WinUIEx.WindowEx";
+            _typeNameTable[7] = "Microsoft.UI.Xaml.Window";
+            _typeNameTable[8] = "Double";
+            _typeNameTable[9] = "String";
+            _typeNameTable[10] = "Microsoft.UI.Windowing.AppWindow";
+            _typeNameTable[11] = "WinUIEx.Icon";
+            _typeNameTable[12] = "WinUIEx.WindowState";
+            _typeNameTable[13] = "System.Enum";
+            _typeNameTable[14] = "System.ValueType";
+            _typeNameTable[15] = "Microsoft.UI.Windowing.AppWindowPresenter";
+            _typeNameTable[16] = "Microsoft.UI.Windowing.AppWindowPresenterKind";
+            _typeNameTable[17] = "WinUIEx.SystemBackdrop";
+            _typeNameTable[18] = "Microsoft.UI.Xaml.Media.MicaBackdrop";
+            _typeNameTable[19] = "Microsoft.UI.Xaml.Media.SystemBackdrop";
+            _typeNameTable[20] = "Microsoft.UI.Composition.SystemBackdrops.MicaKind";
+            _typeNameTable[21] = "Pronder.MainWindow";
+            _typeNameTable[22] = "Microsoft.UI.Xaml.Thickness";
+            _typeNameTable[23] = "Microsoft.UI.Xaml.CornerRadius";
+            _typeNameTable[24] = "Microsoft.UI.Xaml.Controls.ImageIcon";
+            _typeNameTable[25] = "Microsoft.UI.Xaml.Controls.IconElement";
+            _typeNameTable[26] = "Microsoft.UI.Xaml.Media.ImageSource";
+            _typeNameTable[27] = "Pronder.Views.AboutPage";
+            _typeNameTable[28] = "Microsoft.UI.Xaml.Controls.Page";
+            _typeNameTable[29] = "Pronder.ViewModels.AboutViewModel";
+            _typeNameTable[30] = "CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient";
+            _typeNameTable[31] = "CommunityToolkit.Mvvm.ComponentModel.ObservableObject";
+            _typeNameTable[32] = "Pronder.Views.BlankPage";
+            _typeNameTable[33] = "Pronder.ViewModels.BlankViewModel";
+            _typeNameTable[34] = "Pronder.Views.EditProjectPagesExternalLinksPage";
+            _typeNameTable[35] = "Pronder.ViewModels.EditProjectPagesExternalLinksViewModel";
+            _typeNameTable[36] = "CommunityToolkit.WinUI.Controls.SettingsCard";
+            _typeNameTable[37] = "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase";
+            _typeNameTable[38] = "Microsoft.UI.Xaml.Controls.ContentControl";
+            _typeNameTable[39] = "CommunityToolkit.WinUI.Controls.ContentAlignment";
+            _typeNameTable[40] = "CommunityToolkit.WinUI.Controls.SettingsExpander";
+            _typeNameTable[41] = "Microsoft.UI.Xaml.Controls.Control";
+            _typeNameTable[42] = "System.Collections.Generic.IList`1<Object>";
+            _typeNameTable[43] = "Microsoft.UI.Xaml.Controls.StyleSelector";
+            _typeNameTable[44] = "Microsoft.UI.Xaml.UIElement";
+            _typeNameTable[45] = "CommunityToolkit.WinUI.FontIconExtension";
+            _typeNameTable[46] = "CommunityToolkit.WinUI.TextIconExtension";
+            _typeNameTable[47] = "Microsoft.UI.Xaml.Markup.MarkupExtension";
+            _typeNameTable[48] = "Microsoft.UI.Xaml.Media.FontFamily";
+            _typeNameTable[49] = "Windows.UI.Text.FontWeight";
+            _typeNameTable[50] = "Windows.UI.Text.FontStyle";
+            _typeNameTable[51] = "Microsoft.UI.Xaml.Media.Brush";
+            _typeNameTable[52] = "Pronder.Views.EditProjectPagesGeneralPage";
+            _typeNameTable[53] = "Pronder.Views.HomePage";
+            _typeNameTable[54] = "Pronder.ViewModels.HomeViewModel";
+            _typeNameTable[55] = "Microsoft.UI.Xaml.Controls.SelectorBar";
+            _typeNameTable[56] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.SelectorBarItem>";
+            _typeNameTable[57] = "Microsoft.UI.Xaml.Controls.SelectorBarItem";
+            _typeNameTable[58] = "Microsoft.UI.Xaml.Controls.ItemContainer";
+            _typeNameTable[59] = "Microsoft.UI.Xaml.Controls.TeachingTip";
+            _typeNameTable[60] = "Microsoft.UI.Xaml.FrameworkElement";
+            _typeNameTable[61] = "Microsoft.UI.Xaml.Controls.IconSource";
+            _typeNameTable[62] = "System.Windows.Input.ICommand";
+            _typeNameTable[63] = "Microsoft.UI.Xaml.Style";
+            _typeNameTable[64] = "Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode";
+            _typeNameTable[65] = "Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode";
+            _typeNameTable[66] = "Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility";
+            _typeNameTable[67] = "Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings";
+            _typeNameTable[68] = "Microsoft.UI.Xaml.DependencyObject";
+            _typeNameTable[69] = "Pronder.Views.GeneralProjectDisplayPage";
+            _typeNameTable[70] = "Pronder.ViewModels.GeneralProjectDisplayViewModel";
+            _typeNameTable[71] = "Pronder.Views.ProjectAboutPage";
+            _typeNameTable[72] = "Pronder.ViewModels.ProjectAboutViewModel";
+            _typeNameTable[73] = "Microsoft.UI.Xaml.Controls.InfoBar";
+            _typeNameTable[74] = "Microsoft.UI.Xaml.Controls.InfoBarSeverity";
+            _typeNameTable[75] = "Microsoft.UI.Xaml.DataTemplate";
+            _typeNameTable[76] = "Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings";
+            _typeNameTable[77] = "Pronder.Views.ProjectToDoPage";
+            _typeNameTable[78] = "Pronder.ViewModels.ProjectToDoViewModel";
+            _typeNameTable[79] = "Pronder.Views.NewProjectPage";
+            _typeNameTable[80] = "Pronder.ViewModels.NewProjectViewModel";
+            _typeNameTable[81] = "Pronder.Helpers.EnumToBooleanConverter";
+            _typeNameTable[82] = "Pronder.Views.SettingsPage";
+            _typeNameTable[83] = "Pronder.ViewModels.SettingsViewModel";
+            _typeNameTable[84] = "Microsoft.UI.Xaml.Controls.NavigationView";
+            _typeNameTable[85] = "Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible";
+            _typeNameTable[86] = "Microsoft.UI.Xaml.Controls.AutoSuggestBox";
+            _typeNameTable[87] = "Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode";
+            _typeNameTable[88] = "Microsoft.UI.Xaml.Controls.DataTemplateSelector";
+            _typeNameTable[89] = "Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode";
+            _typeNameTable[90] = "Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode";
+            _typeNameTable[91] = "Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus";
+            _typeNameTable[92] = "Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled";
+            _typeNameTable[93] = "Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings";
+            _typeNameTable[94] = "Microsoft.Xaml.Interactivity.Interaction";
+            _typeNameTable[95] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
+            _typeNameTable[96] = "Microsoft.UI.Xaml.DependencyObjectCollection";
+            _typeNameTable[97] = "Microsoft.UI.Xaml.Controls.NavigationViewItem";
+            _typeNameTable[98] = "Microsoft.UI.Xaml.Controls.NavigationViewItemBase";
+            _typeNameTable[99] = "Microsoft.UI.Xaml.Controls.InfoBadge";
+            _typeNameTable[100] = "Pronder.Helpers.NavigationHelper";
+            _typeNameTable[101] = "Microsoft.UI.Xaml.Controls.NavigationViewItemSeparator";
+            _typeNameTable[102] = "Pronder.Behaviors.NavigationViewHeaderBehavior";
+            _typeNameTable[103] = "Microsoft.Xaml.Interactivity.Behavior`1<Microsoft.UI.Xaml.Controls.NavigationView>";
+            _typeNameTable[104] = "Microsoft.Xaml.Interactivity.Behavior";
+            _typeNameTable[105] = "Pronder.Behaviors.NavigationViewHeaderMode";
+            _typeNameTable[106] = "Microsoft.UI.Xaml.Controls.ScrollView";
+            _typeNameTable[107] = "Microsoft.UI.Xaml.Visibility";
+            _typeNameTable[108] = "Microsoft.UI.Xaml.Controls.ScrollingScrollMode";
+            _typeNameTable[109] = "Microsoft.UI.Xaml.Controls.ScrollingContentOrientation";
+            _typeNameTable[110] = "Microsoft.UI.Composition.CompositionPropertySet";
+            _typeNameTable[111] = "Microsoft.UI.Composition.CompositionObject";
+            _typeNameTable[112] = "Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility";
+            _typeNameTable[113] = "Microsoft.UI.Xaml.Controls.ScrollingChainMode";
+            _typeNameTable[114] = "Microsoft.UI.Xaml.Controls.ScrollingRailMode";
+            _typeNameTable[115] = "Microsoft.UI.Xaml.Controls.ScrollingInputKinds";
+            _typeNameTable[116] = "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter";
+            _typeNameTable[117] = "Microsoft.UI.Xaml.Controls.ScrollingInteractionState";
+            _typeNameTable[118] = "Single";
+            _typeNameTable[119] = "Microsoft.UI.Xaml.Controls.ScrollingZoomMode";
+            _typeNameTable[120] = "Pronder.Views.ShellPage";
+            _typeNameTable[121] = "Pronder.ViewModels.ShellViewModel";
+            _typeNameTable[122] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[123] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[124] = "Int32";
 
-            _typeTable = new global::System.Type[124];
+            _typeTable = new global::System.Type[125];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
             _typeTable[3] = typeof(global::System.Boolean);
-            _typeTable[4] = typeof(global::WinUIEx.WindowEx);
-            _typeTable[5] = typeof(global::Microsoft.UI.Xaml.Window);
-            _typeTable[6] = typeof(global::System.Double);
-            _typeTable[7] = typeof(global::System.String);
-            _typeTable[8] = typeof(global::Microsoft.UI.Windowing.AppWindow);
-            _typeTable[9] = typeof(global::WinUIEx.Icon);
-            _typeTable[10] = typeof(global::WinUIEx.WindowState);
-            _typeTable[11] = typeof(global::System.Enum);
-            _typeTable[12] = typeof(global::System.ValueType);
-            _typeTable[13] = typeof(global::Microsoft.UI.Windowing.AppWindowPresenter);
-            _typeTable[14] = typeof(global::Microsoft.UI.Windowing.AppWindowPresenterKind);
+            _typeTable[4] = typeof(global::Pronder.Custom.ExternalLinkListItem);
+            _typeTable[5] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
+            _typeTable[6] = typeof(global::WinUIEx.WindowEx);
+            _typeTable[7] = typeof(global::Microsoft.UI.Xaml.Window);
+            _typeTable[8] = typeof(global::System.Double);
+            _typeTable[9] = typeof(global::System.String);
+            _typeTable[10] = typeof(global::Microsoft.UI.Windowing.AppWindow);
+            _typeTable[11] = typeof(global::WinUIEx.Icon);
+            _typeTable[12] = typeof(global::WinUIEx.WindowState);
+            _typeTable[13] = typeof(global::System.Enum);
+            _typeTable[14] = typeof(global::System.ValueType);
+            _typeTable[15] = typeof(global::Microsoft.UI.Windowing.AppWindowPresenter);
+            _typeTable[16] = typeof(global::Microsoft.UI.Windowing.AppWindowPresenterKind);
 #pragma warning disable 0618  //   Warning on Deprecated usage
-            _typeTable[15] = typeof(global::WinUIEx.SystemBackdrop);
+            _typeTable[17] = typeof(global::WinUIEx.SystemBackdrop);
 #pragma warning restore 0618
-            _typeTable[16] = typeof(global::Microsoft.UI.Xaml.Media.MicaBackdrop);
-            _typeTable[17] = typeof(global::Microsoft.UI.Xaml.Media.SystemBackdrop);
-            _typeTable[18] = typeof(global::Microsoft.UI.Composition.SystemBackdrops.MicaKind);
-            _typeTable[19] = typeof(global::Pronder.MainWindow);
-            _typeTable[20] = typeof(global::Microsoft.UI.Xaml.Thickness);
-            _typeTable[21] = typeof(global::Microsoft.UI.Xaml.CornerRadius);
-            _typeTable[22] = typeof(global::Microsoft.UI.Xaml.Controls.ImageIcon);
-            _typeTable[23] = typeof(global::Microsoft.UI.Xaml.Controls.IconElement);
-            _typeTable[24] = typeof(global::Microsoft.UI.Xaml.Media.ImageSource);
-            _typeTable[25] = typeof(global::Pronder.Views.AboutPage);
-            _typeTable[26] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
-            _typeTable[27] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
-            _typeTable[28] = typeof(global::Pronder.ViewModels.AboutViewModel);
-            _typeTable[29] = typeof(global::CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient);
-            _typeTable[30] = typeof(global::CommunityToolkit.Mvvm.ComponentModel.ObservableObject);
-            _typeTable[31] = typeof(global::Pronder.Views.BlankPage);
-            _typeTable[32] = typeof(global::Pronder.ViewModels.BlankViewModel);
-            _typeTable[33] = typeof(global::Pronder.Views.EditProjectPagesExternalLinksPage);
-            _typeTable[34] = typeof(global::Pronder.ViewModels.EditProjectPagesExternalLinksViewModel);
-            _typeTable[35] = typeof(global::CommunityToolkit.WinUI.Controls.SettingsCard);
-            _typeTable[36] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase);
-            _typeTable[37] = typeof(global::Microsoft.UI.Xaml.Controls.ContentControl);
-            _typeTable[38] = typeof(global::CommunityToolkit.WinUI.Controls.ContentAlignment);
-            _typeTable[39] = typeof(global::CommunityToolkit.WinUI.Controls.SettingsExpander);
-            _typeTable[40] = typeof(global::Microsoft.UI.Xaml.Controls.Control);
-            _typeTable[41] = typeof(global::System.Collections.Generic.IList<global::System.Object>);
-            _typeTable[42] = typeof(global::Microsoft.UI.Xaml.Controls.StyleSelector);
-            _typeTable[43] = typeof(global::Microsoft.UI.Xaml.UIElement);
-            _typeTable[44] = typeof(global::CommunityToolkit.WinUI.FontIconExtension);
-            _typeTable[45] = typeof(global::CommunityToolkit.WinUI.TextIconExtension);
-            _typeTable[46] = typeof(global::Microsoft.UI.Xaml.Markup.MarkupExtension);
-            _typeTable[47] = typeof(global::Microsoft.UI.Xaml.Media.FontFamily);
-            _typeTable[48] = typeof(global::Windows.UI.Text.FontWeight);
-            _typeTable[49] = typeof(global::Windows.UI.Text.FontStyle);
-            _typeTable[50] = typeof(global::Microsoft.UI.Xaml.Media.Brush);
-            _typeTable[51] = typeof(global::Pronder.Views.EditProjectPagesGeneralPage);
-            _typeTable[52] = typeof(global::Pronder.Views.HomePage);
-            _typeTable[53] = typeof(global::Pronder.ViewModels.HomeViewModel);
-            _typeTable[54] = typeof(global::Microsoft.UI.Xaml.Controls.SelectorBar);
-            _typeTable[55] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.SelectorBarItem>);
-            _typeTable[56] = typeof(global::Microsoft.UI.Xaml.Controls.SelectorBarItem);
-            _typeTable[57] = typeof(global::Microsoft.UI.Xaml.Controls.ItemContainer);
-            _typeTable[58] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTip);
-            _typeTable[59] = typeof(global::Microsoft.UI.Xaml.FrameworkElement);
-            _typeTable[60] = typeof(global::Microsoft.UI.Xaml.Controls.IconSource);
-            _typeTable[61] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[62] = typeof(global::Microsoft.UI.Xaml.Style);
-            _typeTable[63] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode);
-            _typeTable[64] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode);
-            _typeTable[65] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility);
-            _typeTable[66] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings);
-            _typeTable[67] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
-            _typeTable[68] = typeof(global::Pronder.Views.GeneralProjectDisplayPage);
-            _typeTable[69] = typeof(global::Pronder.ViewModels.GeneralProjectDisplayViewModel);
-            _typeTable[70] = typeof(global::Pronder.Views.ProjectAboutPage);
-            _typeTable[71] = typeof(global::Pronder.ViewModels.ProjectAboutViewModel);
-            _typeTable[72] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBar);
-            _typeTable[73] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBarSeverity);
-            _typeTable[74] = typeof(global::Microsoft.UI.Xaml.DataTemplate);
-            _typeTable[75] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings);
-            _typeTable[76] = typeof(global::Pronder.Views.ProjectToDoPage);
-            _typeTable[77] = typeof(global::Pronder.ViewModels.ProjectToDoViewModel);
-            _typeTable[78] = typeof(global::Pronder.Views.NewProjectPage);
-            _typeTable[79] = typeof(global::Pronder.ViewModels.NewProjectViewModel);
-            _typeTable[80] = typeof(global::Pronder.Helpers.EnumToBooleanConverter);
-            _typeTable[81] = typeof(global::Pronder.Views.SettingsPage);
-            _typeTable[82] = typeof(global::Pronder.ViewModels.SettingsViewModel);
-            _typeTable[83] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationView);
-            _typeTable[84] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible);
-            _typeTable[85] = typeof(global::Microsoft.UI.Xaml.Controls.AutoSuggestBox);
-            _typeTable[86] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode);
-            _typeTable[87] = typeof(global::Microsoft.UI.Xaml.Controls.DataTemplateSelector);
-            _typeTable[88] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode);
-            _typeTable[89] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode);
-            _typeTable[90] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus);
-            _typeTable[91] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled);
-            _typeTable[92] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings);
-            _typeTable[93] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
-            _typeTable[94] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
-            _typeTable[95] = typeof(global::Microsoft.UI.Xaml.DependencyObjectCollection);
-            _typeTable[96] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewItem);
-            _typeTable[97] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewItemBase);
-            _typeTable[98] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBadge);
-            _typeTable[99] = typeof(global::Pronder.Helpers.NavigationHelper);
-            _typeTable[100] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewItemSeparator);
-            _typeTable[101] = typeof(global::Pronder.Behaviors.NavigationViewHeaderBehavior);
-            _typeTable[102] = typeof(global::Microsoft.Xaml.Interactivity.Behavior<global::Microsoft.UI.Xaml.Controls.NavigationView>);
-            _typeTable[103] = typeof(global::Microsoft.Xaml.Interactivity.Behavior);
-            _typeTable[104] = typeof(global::Pronder.Behaviors.NavigationViewHeaderMode);
-            _typeTable[105] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollView);
-            _typeTable[106] = typeof(global::Microsoft.UI.Xaml.Visibility);
-            _typeTable[107] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingScrollMode);
-            _typeTable[108] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingContentOrientation);
-            _typeTable[109] = typeof(global::Microsoft.UI.Composition.CompositionPropertySet);
-            _typeTable[110] = typeof(global::Microsoft.UI.Composition.CompositionObject);
-            _typeTable[111] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility);
-            _typeTable[112] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingChainMode);
-            _typeTable[113] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingRailMode);
-            _typeTable[114] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingInputKinds);
-            _typeTable[115] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter);
-            _typeTable[116] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingInteractionState);
-            _typeTable[117] = typeof(global::System.Single);
-            _typeTable[118] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingZoomMode);
-            _typeTable[119] = typeof(global::Pronder.Views.ShellPage);
-            _typeTable[120] = typeof(global::Pronder.ViewModels.ShellViewModel);
-            _typeTable[121] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[122] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
-            _typeTable[123] = typeof(global::System.Int32);
+            _typeTable[18] = typeof(global::Microsoft.UI.Xaml.Media.MicaBackdrop);
+            _typeTable[19] = typeof(global::Microsoft.UI.Xaml.Media.SystemBackdrop);
+            _typeTable[20] = typeof(global::Microsoft.UI.Composition.SystemBackdrops.MicaKind);
+            _typeTable[21] = typeof(global::Pronder.MainWindow);
+            _typeTable[22] = typeof(global::Microsoft.UI.Xaml.Thickness);
+            _typeTable[23] = typeof(global::Microsoft.UI.Xaml.CornerRadius);
+            _typeTable[24] = typeof(global::Microsoft.UI.Xaml.Controls.ImageIcon);
+            _typeTable[25] = typeof(global::Microsoft.UI.Xaml.Controls.IconElement);
+            _typeTable[26] = typeof(global::Microsoft.UI.Xaml.Media.ImageSource);
+            _typeTable[27] = typeof(global::Pronder.Views.AboutPage);
+            _typeTable[28] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
+            _typeTable[29] = typeof(global::Pronder.ViewModels.AboutViewModel);
+            _typeTable[30] = typeof(global::CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient);
+            _typeTable[31] = typeof(global::CommunityToolkit.Mvvm.ComponentModel.ObservableObject);
+            _typeTable[32] = typeof(global::Pronder.Views.BlankPage);
+            _typeTable[33] = typeof(global::Pronder.ViewModels.BlankViewModel);
+            _typeTable[34] = typeof(global::Pronder.Views.EditProjectPagesExternalLinksPage);
+            _typeTable[35] = typeof(global::Pronder.ViewModels.EditProjectPagesExternalLinksViewModel);
+            _typeTable[36] = typeof(global::CommunityToolkit.WinUI.Controls.SettingsCard);
+            _typeTable[37] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase);
+            _typeTable[38] = typeof(global::Microsoft.UI.Xaml.Controls.ContentControl);
+            _typeTable[39] = typeof(global::CommunityToolkit.WinUI.Controls.ContentAlignment);
+            _typeTable[40] = typeof(global::CommunityToolkit.WinUI.Controls.SettingsExpander);
+            _typeTable[41] = typeof(global::Microsoft.UI.Xaml.Controls.Control);
+            _typeTable[42] = typeof(global::System.Collections.Generic.IList<global::System.Object>);
+            _typeTable[43] = typeof(global::Microsoft.UI.Xaml.Controls.StyleSelector);
+            _typeTable[44] = typeof(global::Microsoft.UI.Xaml.UIElement);
+            _typeTable[45] = typeof(global::CommunityToolkit.WinUI.FontIconExtension);
+            _typeTable[46] = typeof(global::CommunityToolkit.WinUI.TextIconExtension);
+            _typeTable[47] = typeof(global::Microsoft.UI.Xaml.Markup.MarkupExtension);
+            _typeTable[48] = typeof(global::Microsoft.UI.Xaml.Media.FontFamily);
+            _typeTable[49] = typeof(global::Windows.UI.Text.FontWeight);
+            _typeTable[50] = typeof(global::Windows.UI.Text.FontStyle);
+            _typeTable[51] = typeof(global::Microsoft.UI.Xaml.Media.Brush);
+            _typeTable[52] = typeof(global::Pronder.Views.EditProjectPagesGeneralPage);
+            _typeTable[53] = typeof(global::Pronder.Views.HomePage);
+            _typeTable[54] = typeof(global::Pronder.ViewModels.HomeViewModel);
+            _typeTable[55] = typeof(global::Microsoft.UI.Xaml.Controls.SelectorBar);
+            _typeTable[56] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.SelectorBarItem>);
+            _typeTable[57] = typeof(global::Microsoft.UI.Xaml.Controls.SelectorBarItem);
+            _typeTable[58] = typeof(global::Microsoft.UI.Xaml.Controls.ItemContainer);
+            _typeTable[59] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTip);
+            _typeTable[60] = typeof(global::Microsoft.UI.Xaml.FrameworkElement);
+            _typeTable[61] = typeof(global::Microsoft.UI.Xaml.Controls.IconSource);
+            _typeTable[62] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[63] = typeof(global::Microsoft.UI.Xaml.Style);
+            _typeTable[64] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode);
+            _typeTable[65] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode);
+            _typeTable[66] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility);
+            _typeTable[67] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings);
+            _typeTable[68] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
+            _typeTable[69] = typeof(global::Pronder.Views.GeneralProjectDisplayPage);
+            _typeTable[70] = typeof(global::Pronder.ViewModels.GeneralProjectDisplayViewModel);
+            _typeTable[71] = typeof(global::Pronder.Views.ProjectAboutPage);
+            _typeTable[72] = typeof(global::Pronder.ViewModels.ProjectAboutViewModel);
+            _typeTable[73] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBar);
+            _typeTable[74] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBarSeverity);
+            _typeTable[75] = typeof(global::Microsoft.UI.Xaml.DataTemplate);
+            _typeTable[76] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings);
+            _typeTable[77] = typeof(global::Pronder.Views.ProjectToDoPage);
+            _typeTable[78] = typeof(global::Pronder.ViewModels.ProjectToDoViewModel);
+            _typeTable[79] = typeof(global::Pronder.Views.NewProjectPage);
+            _typeTable[80] = typeof(global::Pronder.ViewModels.NewProjectViewModel);
+            _typeTable[81] = typeof(global::Pronder.Helpers.EnumToBooleanConverter);
+            _typeTable[82] = typeof(global::Pronder.Views.SettingsPage);
+            _typeTable[83] = typeof(global::Pronder.ViewModels.SettingsViewModel);
+            _typeTable[84] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationView);
+            _typeTable[85] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible);
+            _typeTable[86] = typeof(global::Microsoft.UI.Xaml.Controls.AutoSuggestBox);
+            _typeTable[87] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode);
+            _typeTable[88] = typeof(global::Microsoft.UI.Xaml.Controls.DataTemplateSelector);
+            _typeTable[89] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode);
+            _typeTable[90] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode);
+            _typeTable[91] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus);
+            _typeTable[92] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled);
+            _typeTable[93] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings);
+            _typeTable[94] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
+            _typeTable[95] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
+            _typeTable[96] = typeof(global::Microsoft.UI.Xaml.DependencyObjectCollection);
+            _typeTable[97] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewItem);
+            _typeTable[98] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewItemBase);
+            _typeTable[99] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBadge);
+            _typeTable[100] = typeof(global::Pronder.Helpers.NavigationHelper);
+            _typeTable[101] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewItemSeparator);
+            _typeTable[102] = typeof(global::Pronder.Behaviors.NavigationViewHeaderBehavior);
+            _typeTable[103] = typeof(global::Microsoft.Xaml.Interactivity.Behavior<global::Microsoft.UI.Xaml.Controls.NavigationView>);
+            _typeTable[104] = typeof(global::Microsoft.Xaml.Interactivity.Behavior);
+            _typeTable[105] = typeof(global::Pronder.Behaviors.NavigationViewHeaderMode);
+            _typeTable[106] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollView);
+            _typeTable[107] = typeof(global::Microsoft.UI.Xaml.Visibility);
+            _typeTable[108] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingScrollMode);
+            _typeTable[109] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingContentOrientation);
+            _typeTable[110] = typeof(global::Microsoft.UI.Composition.CompositionPropertySet);
+            _typeTable[111] = typeof(global::Microsoft.UI.Composition.CompositionObject);
+            _typeTable[112] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility);
+            _typeTable[113] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingChainMode);
+            _typeTable[114] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingRailMode);
+            _typeTable[115] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingInputKinds);
+            _typeTable[116] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter);
+            _typeTable[117] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingInteractionState);
+            _typeTable[118] = typeof(global::System.Single);
+            _typeTable[119] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingZoomMode);
+            _typeTable[120] = typeof(global::Pronder.Views.ShellPage);
+            _typeTable[121] = typeof(global::Pronder.ViewModels.ShellViewModel);
+            _typeTable[122] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[123] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[124] = typeof(global::System.Int32);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -512,50 +514,51 @@ namespace Pronder.Pronder_XamlTypeInfo
         }
 
         private object Activate_0_XamlControlsResources() { return new global::Microsoft.UI.Xaml.Controls.XamlControlsResources(); }
-        private object Activate_4_WindowEx() { return new global::WinUIEx.WindowEx(); }
-        private object Activate_16_MicaBackdrop() { return new global::Microsoft.UI.Xaml.Media.MicaBackdrop(); }
-        private object Activate_19_MainWindow() { return new global::Pronder.MainWindow(); }
-        private object Activate_22_ImageIcon() { return new global::Microsoft.UI.Xaml.Controls.ImageIcon(); }
-        private object Activate_25_AboutPage() { return new global::Pronder.Views.AboutPage(); }
-        private object Activate_28_AboutViewModel() { return new global::Pronder.ViewModels.AboutViewModel(); }
-        private object Activate_31_BlankPage() { return new global::Pronder.Views.BlankPage(); }
-        private object Activate_32_BlankViewModel() { return new global::Pronder.ViewModels.BlankViewModel(); }
-        private object Activate_33_EditProjectPagesExternalLinksPage() { return new global::Pronder.Views.EditProjectPagesExternalLinksPage(); }
-        private object Activate_34_EditProjectPagesExternalLinksViewModel() { return new global::Pronder.ViewModels.EditProjectPagesExternalLinksViewModel(); }
-        private object Activate_35_SettingsCard() { return new global::CommunityToolkit.WinUI.Controls.SettingsCard(); }
-        private object Activate_39_SettingsExpander() { return new global::CommunityToolkit.WinUI.Controls.SettingsExpander(); }
-        private object Activate_44_FontIconExtension() { return new global::CommunityToolkit.WinUI.FontIconExtension(); }
-        private object Activate_51_EditProjectPagesGeneralPage() { return new global::Pronder.Views.EditProjectPagesGeneralPage(); }
-        private object Activate_52_HomePage() { return new global::Pronder.Views.HomePage(); }
-        private object Activate_53_HomeViewModel() { return new global::Pronder.ViewModels.HomeViewModel(); }
-        private object Activate_54_SelectorBar() { return new global::Microsoft.UI.Xaml.Controls.SelectorBar(); }
-        private object Activate_56_SelectorBarItem() { return new global::Microsoft.UI.Xaml.Controls.SelectorBarItem(); }
-        private object Activate_57_ItemContainer() { return new global::Microsoft.UI.Xaml.Controls.ItemContainer(); }
-        private object Activate_58_TeachingTip() { return new global::Microsoft.UI.Xaml.Controls.TeachingTip(); }
-        private object Activate_66_TeachingTipTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings(); }
-        private object Activate_68_GeneralProjectDisplayPage() { return new global::Pronder.Views.GeneralProjectDisplayPage(); }
-        private object Activate_69_GeneralProjectDisplayViewModel() { return new global::Pronder.ViewModels.GeneralProjectDisplayViewModel(); }
-        private object Activate_70_ProjectAboutPage() { return new global::Pronder.Views.ProjectAboutPage(); }
-        private object Activate_71_ProjectAboutViewModel() { return new global::Pronder.ViewModels.ProjectAboutViewModel(); }
-        private object Activate_72_InfoBar() { return new global::Microsoft.UI.Xaml.Controls.InfoBar(); }
-        private object Activate_75_InfoBarTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings(); }
-        private object Activate_76_ProjectToDoPage() { return new global::Pronder.Views.ProjectToDoPage(); }
-        private object Activate_77_ProjectToDoViewModel() { return new global::Pronder.ViewModels.ProjectToDoViewModel(); }
-        private object Activate_78_NewProjectPage() { return new global::Pronder.Views.NewProjectPage(); }
-        private object Activate_79_NewProjectViewModel() { return new global::Pronder.ViewModels.NewProjectViewModel(); }
-        private object Activate_80_EnumToBooleanConverter() { return new global::Pronder.Helpers.EnumToBooleanConverter(); }
-        private object Activate_81_SettingsPage() { return new global::Pronder.Views.SettingsPage(); }
-        private object Activate_83_NavigationView() { return new global::Microsoft.UI.Xaml.Controls.NavigationView(); }
-        private object Activate_92_NavigationViewTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings(); }
-        private object Activate_94_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
-        private object Activate_96_NavigationViewItem() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewItem(); }
-        private object Activate_98_InfoBadge() { return new global::Microsoft.UI.Xaml.Controls.InfoBadge(); }
-        private object Activate_99_NavigationHelper() { return new global::Pronder.Helpers.NavigationHelper(); }
-        private object Activate_100_NavigationViewItemSeparator() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewItemSeparator(); }
-        private object Activate_101_NavigationViewHeaderBehavior() { return new global::Pronder.Behaviors.NavigationViewHeaderBehavior(); }
-        private object Activate_105_ScrollView() { return new global::Microsoft.UI.Xaml.Controls.ScrollView(); }
-        private object Activate_115_ScrollPresenter() { return new global::Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter(); }
-        private object Activate_121_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_4_ExternalLinkListItem() { return new global::Pronder.Custom.ExternalLinkListItem(); }
+        private object Activate_6_WindowEx() { return new global::WinUIEx.WindowEx(); }
+        private object Activate_18_MicaBackdrop() { return new global::Microsoft.UI.Xaml.Media.MicaBackdrop(); }
+        private object Activate_21_MainWindow() { return new global::Pronder.MainWindow(); }
+        private object Activate_24_ImageIcon() { return new global::Microsoft.UI.Xaml.Controls.ImageIcon(); }
+        private object Activate_27_AboutPage() { return new global::Pronder.Views.AboutPage(); }
+        private object Activate_29_AboutViewModel() { return new global::Pronder.ViewModels.AboutViewModel(); }
+        private object Activate_32_BlankPage() { return new global::Pronder.Views.BlankPage(); }
+        private object Activate_33_BlankViewModel() { return new global::Pronder.ViewModels.BlankViewModel(); }
+        private object Activate_34_EditProjectPagesExternalLinksPage() { return new global::Pronder.Views.EditProjectPagesExternalLinksPage(); }
+        private object Activate_35_EditProjectPagesExternalLinksViewModel() { return new global::Pronder.ViewModels.EditProjectPagesExternalLinksViewModel(); }
+        private object Activate_36_SettingsCard() { return new global::CommunityToolkit.WinUI.Controls.SettingsCard(); }
+        private object Activate_40_SettingsExpander() { return new global::CommunityToolkit.WinUI.Controls.SettingsExpander(); }
+        private object Activate_45_FontIconExtension() { return new global::CommunityToolkit.WinUI.FontIconExtension(); }
+        private object Activate_52_EditProjectPagesGeneralPage() { return new global::Pronder.Views.EditProjectPagesGeneralPage(); }
+        private object Activate_53_HomePage() { return new global::Pronder.Views.HomePage(); }
+        private object Activate_54_HomeViewModel() { return new global::Pronder.ViewModels.HomeViewModel(); }
+        private object Activate_55_SelectorBar() { return new global::Microsoft.UI.Xaml.Controls.SelectorBar(); }
+        private object Activate_57_SelectorBarItem() { return new global::Microsoft.UI.Xaml.Controls.SelectorBarItem(); }
+        private object Activate_58_ItemContainer() { return new global::Microsoft.UI.Xaml.Controls.ItemContainer(); }
+        private object Activate_59_TeachingTip() { return new global::Microsoft.UI.Xaml.Controls.TeachingTip(); }
+        private object Activate_67_TeachingTipTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings(); }
+        private object Activate_69_GeneralProjectDisplayPage() { return new global::Pronder.Views.GeneralProjectDisplayPage(); }
+        private object Activate_70_GeneralProjectDisplayViewModel() { return new global::Pronder.ViewModels.GeneralProjectDisplayViewModel(); }
+        private object Activate_71_ProjectAboutPage() { return new global::Pronder.Views.ProjectAboutPage(); }
+        private object Activate_72_ProjectAboutViewModel() { return new global::Pronder.ViewModels.ProjectAboutViewModel(); }
+        private object Activate_73_InfoBar() { return new global::Microsoft.UI.Xaml.Controls.InfoBar(); }
+        private object Activate_76_InfoBarTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings(); }
+        private object Activate_77_ProjectToDoPage() { return new global::Pronder.Views.ProjectToDoPage(); }
+        private object Activate_78_ProjectToDoViewModel() { return new global::Pronder.ViewModels.ProjectToDoViewModel(); }
+        private object Activate_79_NewProjectPage() { return new global::Pronder.Views.NewProjectPage(); }
+        private object Activate_80_NewProjectViewModel() { return new global::Pronder.ViewModels.NewProjectViewModel(); }
+        private object Activate_81_EnumToBooleanConverter() { return new global::Pronder.Helpers.EnumToBooleanConverter(); }
+        private object Activate_82_SettingsPage() { return new global::Pronder.Views.SettingsPage(); }
+        private object Activate_84_NavigationView() { return new global::Microsoft.UI.Xaml.Controls.NavigationView(); }
+        private object Activate_93_NavigationViewTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings(); }
+        private object Activate_95_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
+        private object Activate_97_NavigationViewItem() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewItem(); }
+        private object Activate_99_InfoBadge() { return new global::Microsoft.UI.Xaml.Controls.InfoBadge(); }
+        private object Activate_100_NavigationHelper() { return new global::Pronder.Helpers.NavigationHelper(); }
+        private object Activate_101_NavigationViewItemSeparator() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewItemSeparator(); }
+        private object Activate_102_NavigationViewHeaderBehavior() { return new global::Pronder.Behaviors.NavigationViewHeaderBehavior(); }
+        private object Activate_106_ScrollView() { return new global::Microsoft.UI.Xaml.Controls.ScrollView(); }
+        private object Activate_116_ScrollPresenter() { return new global::Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter(); }
+        private object Activate_122_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -563,25 +566,25 @@ namespace Pronder.Pronder_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newKey, newItem);
         }
-        private void VectorAdd_41_IList(object instance, object item)
+        private void VectorAdd_42_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::System.Object>)instance;
             var newItem = (global::System.Object)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_55_IList(object instance, object item)
+        private void VectorAdd_56_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.SelectorBarItem>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.SelectorBarItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_94_BehaviorCollection(object instance, object item)
+        private void VectorAdd_95_BehaviorCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Microsoft.UI.Xaml.DependencyObject)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_122_IList(object instance, object item)
+        private void VectorAdd_123_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -618,9 +621,20 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 4:   //  WinUIEx.WindowEx
+            case 4:   //  Pronder.Custom.ExternalLinkListItem
+                userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_4_ExternalLinkListItem;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  Microsoft.UI.Xaml.Controls.UserControl
+                xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 6:   //  WinUIEx.WindowEx
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
-                userType.Activator = Activate_4_WindowEx;
+                userType.Activator = Activate_6_WindowEx;
                 userType.SetContentPropertyName("WinUIEx.WindowEx.WindowContent");
                 userType.AddMemberName("WindowContent");
                 userType.AddMemberName("MinWidth");
@@ -646,32 +660,32 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 5:   //  Microsoft.UI.Xaml.Window
+            case 7:   //  Microsoft.UI.Xaml.Window
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 6:   //  Double
+            case 8:   //  Double
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 7:   //  String
+            case 9:   //  String
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 8:   //  Microsoft.UI.Windowing.AppWindow
+            case 10:   //  Microsoft.UI.Windowing.AppWindow
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 9:   //  WinUIEx.Icon
+            case 11:   //  WinUIEx.Icon
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.CreateFromStringMethod = global::WinUIEx.Icon.FromFile;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 10:   //  WinUIEx.WindowState
+            case 12:   //  WinUIEx.WindowState
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Normal", global::WinUIEx.WindowState.Normal);
                 userType.AddEnumValue("Minimized", global::WinUIEx.WindowState.Minimized);
@@ -679,23 +693,23 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 11:   //  System.Enum
+            case 13:   //  System.Enum
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 xamlType = userType;
                 break;
 
-            case 12:   //  System.ValueType
+            case 14:   //  System.ValueType
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 13:   //  Microsoft.UI.Windowing.AppWindowPresenter
+            case 15:   //  Microsoft.UI.Windowing.AppWindowPresenter
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 14:   //  Microsoft.UI.Windowing.AppWindowPresenterKind
+            case 16:   //  Microsoft.UI.Windowing.AppWindowPresenterKind
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Default", global::Microsoft.UI.Windowing.AppWindowPresenterKind.Default);
                 userType.AddEnumValue("CompactOverlay", global::Microsoft.UI.Windowing.AppWindowPresenterKind.CompactOverlay);
@@ -704,39 +718,39 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 15:   //  WinUIEx.SystemBackdrop
+            case 17:   //  WinUIEx.SystemBackdrop
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 16:   //  Microsoft.UI.Xaml.Media.MicaBackdrop
+            case 18:   //  Microsoft.UI.Xaml.Media.MicaBackdrop
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Media.SystemBackdrop"));
-                userType.Activator = Activate_16_MicaBackdrop;
+                userType.Activator = Activate_18_MicaBackdrop;
                 userType.AddMemberName("Kind");
                 xamlType = userType;
                 break;
 
-            case 17:   //  Microsoft.UI.Xaml.Media.SystemBackdrop
+            case 19:   //  Microsoft.UI.Xaml.Media.SystemBackdrop
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 18:   //  Microsoft.UI.Composition.SystemBackdrops.MicaKind
+            case 20:   //  Microsoft.UI.Composition.SystemBackdrops.MicaKind
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Base", global::Microsoft.UI.Composition.SystemBackdrops.MicaKind.Base);
                 userType.AddEnumValue("BaseAlt", global::Microsoft.UI.Composition.SystemBackdrops.MicaKind.BaseAlt);
                 xamlType = userType;
                 break;
 
-            case 19:   //  Pronder.MainWindow
+            case 21:   //  Pronder.MainWindow
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("WinUIEx.WindowEx"));
-                userType.Activator = Activate_19_MainWindow;
+                userType.Activator = Activate_21_MainWindow;
                 userType.SetContentPropertyName("WinUIEx.WindowEx.WindowContent");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 20:   //  Microsoft.UI.Xaml.Thickness
+            case 22:   //  Microsoft.UI.Xaml.Thickness
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.AddMemberName("Left");
                 userType.AddMemberName("Top");
@@ -745,7 +759,7 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 21:   //  Microsoft.UI.Xaml.CornerRadius
+            case 23:   //  Microsoft.UI.Xaml.CornerRadius
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.AddMemberName("TopLeft");
                 userType.AddMemberName("TopRight");
@@ -754,87 +768,83 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 22:   //  Microsoft.UI.Xaml.Controls.ImageIcon
+            case 24:   //  Microsoft.UI.Xaml.Controls.ImageIcon
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.IconElement"));
-                userType.Activator = Activate_22_ImageIcon;
+                userType.Activator = Activate_24_ImageIcon;
                 userType.AddMemberName("Source");
                 xamlType = userType;
                 break;
 
-            case 23:   //  Microsoft.UI.Xaml.Controls.IconElement
+            case 25:   //  Microsoft.UI.Xaml.Controls.IconElement
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 24:   //  Microsoft.UI.Xaml.Media.ImageSource
+            case 26:   //  Microsoft.UI.Xaml.Media.ImageSource
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 25:   //  Pronder.Views.AboutPage
+            case 27:   //  Pronder.Views.AboutPage
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_25_AboutPage;
+                userType.Activator = Activate_27_AboutPage;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 26:   //  Microsoft.UI.Xaml.Controls.Page
+            case 28:   //  Microsoft.UI.Xaml.Controls.Page
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 27:   //  Microsoft.UI.Xaml.Controls.UserControl
-                xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 28:   //  Pronder.ViewModels.AboutViewModel
+            case 29:   //  Pronder.ViewModels.AboutViewModel
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 29:   //  CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient
+            case 30:   //  CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableObject"));
                 xamlType = userType;
                 break;
 
-            case 30:   //  CommunityToolkit.Mvvm.ComponentModel.ObservableObject
+            case 31:   //  CommunityToolkit.Mvvm.ComponentModel.ObservableObject
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 31:   //  Pronder.Views.BlankPage
+            case 32:   //  Pronder.Views.BlankPage
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_31_BlankPage;
+                userType.Activator = Activate_32_BlankPage;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 32:   //  Pronder.ViewModels.BlankViewModel
+            case 33:   //  Pronder.ViewModels.BlankViewModel
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 33:   //  Pronder.Views.EditProjectPagesExternalLinksPage
+            case 34:   //  Pronder.Views.EditProjectPagesExternalLinksPage
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_33_EditProjectPagesExternalLinksPage;
+                userType.Activator = Activate_34_EditProjectPagesExternalLinksPage;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 34:   //  Pronder.ViewModels.EditProjectPagesExternalLinksViewModel
+            case 35:   //  Pronder.ViewModels.EditProjectPagesExternalLinksViewModel
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 35:   //  CommunityToolkit.WinUI.Controls.SettingsCard
+            case 36:   //  CommunityToolkit.WinUI.Controls.SettingsCard
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.ButtonBase"));
-                userType.Activator = Activate_35_SettingsCard;
+                userType.Activator = Activate_36_SettingsCard;
                 userType.AddMemberName("Header");
                 userType.AddMemberName("HeaderIcon");
                 userType.AddMemberName("Description");
@@ -846,15 +856,15 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 36:   //  Microsoft.UI.Xaml.Controls.Primitives.ButtonBase
+            case 37:   //  Microsoft.UI.Xaml.Controls.Primitives.ButtonBase
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 37:   //  Microsoft.UI.Xaml.Controls.ContentControl
+            case 38:   //  Microsoft.UI.Xaml.Controls.ContentControl
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 38:   //  CommunityToolkit.WinUI.Controls.ContentAlignment
+            case 39:   //  CommunityToolkit.WinUI.Controls.ContentAlignment
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Right", global::CommunityToolkit.WinUI.Controls.ContentAlignment.Right);
                 userType.AddEnumValue("Left", global::CommunityToolkit.WinUI.Controls.ContentAlignment.Left);
@@ -862,9 +872,9 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 39:   //  CommunityToolkit.WinUI.Controls.SettingsExpander
+            case 40:   //  CommunityToolkit.WinUI.Controls.SettingsExpander
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_39_SettingsExpander;
+                userType.Activator = Activate_40_SettingsExpander;
                 userType.SetContentPropertyName("CommunityToolkit.WinUI.Controls.SettingsExpander.Content");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Header");
@@ -880,35 +890,35 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 40:   //  Microsoft.UI.Xaml.Controls.Control
+            case 41:   //  Microsoft.UI.Xaml.Controls.Control
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 41:   //  System.Collections.Generic.IList`1<Object>
+            case 42:   //  System.Collections.Generic.IList`1<Object>
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_41_IList;
+                userType.CollectionAdd = VectorAdd_42_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 42:   //  Microsoft.UI.Xaml.Controls.StyleSelector
+            case 43:   //  Microsoft.UI.Xaml.Controls.StyleSelector
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 43:   //  Microsoft.UI.Xaml.UIElement
+            case 44:   //  Microsoft.UI.Xaml.UIElement
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 44:   //  CommunityToolkit.WinUI.FontIconExtension
+            case 45:   //  CommunityToolkit.WinUI.FontIconExtension
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.WinUI.TextIconExtension"));
-                userType.Activator = Activate_44_FontIconExtension;
+                userType.Activator = Activate_45_FontIconExtension;
                 userType.AddMemberName("Glyph");
                 userType.AddMemberName("FontFamily");
                 userType.SetIsMarkupExtension();
                 xamlType = userType;
                 break;
 
-            case 45:   //  CommunityToolkit.WinUI.TextIconExtension
+            case 46:   //  CommunityToolkit.WinUI.TextIconExtension
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Markup.MarkupExtension"));
                 userType.AddMemberName("FontSize");
                 userType.AddMemberName("FontWeight");
@@ -920,21 +930,21 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 46:   //  Microsoft.UI.Xaml.Markup.MarkupExtension
+            case 47:   //  Microsoft.UI.Xaml.Markup.MarkupExtension
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 47:   //  Microsoft.UI.Xaml.Media.FontFamily
+            case 48:   //  Microsoft.UI.Xaml.Media.FontFamily
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 48:   //  Windows.UI.Text.FontWeight
+            case 49:   //  Windows.UI.Text.FontWeight
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 49:   //  Windows.UI.Text.FontStyle
+            case 50:   //  Windows.UI.Text.FontStyle
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Normal", global::Windows.UI.Text.FontStyle.Normal);
                 userType.AddEnumValue("Oblique", global::Windows.UI.Text.FontStyle.Oblique);
@@ -942,69 +952,69 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 50:   //  Microsoft.UI.Xaml.Media.Brush
+            case 51:   //  Microsoft.UI.Xaml.Media.Brush
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 51:   //  Pronder.Views.EditProjectPagesGeneralPage
+            case 52:   //  Pronder.Views.EditProjectPagesGeneralPage
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_51_EditProjectPagesGeneralPage;
+                userType.Activator = Activate_52_EditProjectPagesGeneralPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 52:   //  Pronder.Views.HomePage
+            case 53:   //  Pronder.Views.HomePage
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_52_HomePage;
+                userType.Activator = Activate_53_HomePage;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 53:   //  Pronder.ViewModels.HomeViewModel
+            case 54:   //  Pronder.ViewModels.HomeViewModel
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 54:   //  Microsoft.UI.Xaml.Controls.SelectorBar
+            case 55:   //  Microsoft.UI.Xaml.Controls.SelectorBar
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_54_SelectorBar;
+                userType.Activator = Activate_55_SelectorBar;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.SelectorBar.Items");
                 userType.AddMemberName("Items");
                 userType.AddMemberName("SelectedItem");
                 xamlType = userType;
                 break;
 
-            case 55:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.SelectorBarItem>
+            case 56:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.SelectorBarItem>
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_55_IList;
+                userType.CollectionAdd = VectorAdd_56_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 56:   //  Microsoft.UI.Xaml.Controls.SelectorBarItem
+            case 57:   //  Microsoft.UI.Xaml.Controls.SelectorBarItem
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemContainer"));
-                userType.Activator = Activate_56_SelectorBarItem;
+                userType.Activator = Activate_57_SelectorBarItem;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.ItemContainer.Child");
                 userType.AddMemberName("Text");
                 userType.AddMemberName("Icon");
                 xamlType = userType;
                 break;
 
-            case 57:   //  Microsoft.UI.Xaml.Controls.ItemContainer
+            case 58:   //  Microsoft.UI.Xaml.Controls.ItemContainer
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_57_ItemContainer;
+                userType.Activator = Activate_58_ItemContainer;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.ItemContainer.Child");
                 userType.AddMemberName("Child");
                 userType.AddMemberName("IsSelected");
                 xamlType = userType;
                 break;
 
-            case 58:   //  Microsoft.UI.Xaml.Controls.TeachingTip
+            case 59:   //  Microsoft.UI.Xaml.Controls.TeachingTip
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl"));
-                userType.Activator = Activate_58_TeachingTip;
+                userType.Activator = Activate_59_TeachingTip;
                 userType.AddMemberName("Target");
                 userType.AddMemberName("Title");
                 userType.AddMemberName("Subtitle");
@@ -1029,25 +1039,25 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 59:   //  Microsoft.UI.Xaml.FrameworkElement
+            case 60:   //  Microsoft.UI.Xaml.FrameworkElement
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 60:   //  Microsoft.UI.Xaml.Controls.IconSource
+            case 61:   //  Microsoft.UI.Xaml.Controls.IconSource
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 61:   //  System.Windows.Input.ICommand
+            case 62:   //  System.Windows.Input.ICommand
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 62:   //  Microsoft.UI.Xaml.Style
+            case 63:   //  Microsoft.UI.Xaml.Style
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 63:   //  Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode
+            case 64:   //  Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode.Auto);
                 userType.AddEnumValue("Top", global::Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode.Top);
@@ -1055,7 +1065,7 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 64:   //  Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode
+            case 65:   //  Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode.Auto);
                 userType.AddEnumValue("Top", global::Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode.Top);
@@ -1074,7 +1084,7 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 65:   //  Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility
+            case 66:   //  Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility.Auto);
                 userType.AddEnumValue("Visible", global::Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility.Visible);
@@ -1082,49 +1092,49 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 66:   //  Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings
+            case 67:   //  Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 67:   //  Microsoft.UI.Xaml.DependencyObject
+            case 68:   //  Microsoft.UI.Xaml.DependencyObject
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 68:   //  Pronder.Views.GeneralProjectDisplayPage
+            case 69:   //  Pronder.Views.GeneralProjectDisplayPage
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_68_GeneralProjectDisplayPage;
+                userType.Activator = Activate_69_GeneralProjectDisplayPage;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 69:   //  Pronder.ViewModels.GeneralProjectDisplayViewModel
+            case 70:   //  Pronder.ViewModels.GeneralProjectDisplayViewModel
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 70:   //  Pronder.Views.ProjectAboutPage
+            case 71:   //  Pronder.Views.ProjectAboutPage
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_70_ProjectAboutPage;
+                userType.Activator = Activate_71_ProjectAboutPage;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 71:   //  Pronder.ViewModels.ProjectAboutViewModel
+            case 72:   //  Pronder.ViewModels.ProjectAboutViewModel
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 72:   //  Microsoft.UI.Xaml.Controls.InfoBar
+            case 73:   //  Microsoft.UI.Xaml.Controls.InfoBar
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_72_InfoBar;
+                userType.Activator = Activate_73_InfoBar;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.InfoBar.Content");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("IsOpen");
@@ -1143,7 +1153,7 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 73:   //  Microsoft.UI.Xaml.Controls.InfoBarSeverity
+            case 74:   //  Microsoft.UI.Xaml.Controls.InfoBarSeverity
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Informational", global::Microsoft.UI.Xaml.Controls.InfoBarSeverity.Informational);
                 userType.AddEnumValue("Success", global::Microsoft.UI.Xaml.Controls.InfoBarSeverity.Success);
@@ -1152,71 +1162,71 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 74:   //  Microsoft.UI.Xaml.DataTemplate
+            case 75:   //  Microsoft.UI.Xaml.DataTemplate
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 75:   //  Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings
+            case 76:   //  Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 76:   //  Pronder.Views.ProjectToDoPage
+            case 77:   //  Pronder.Views.ProjectToDoPage
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_76_ProjectToDoPage;
+                userType.Activator = Activate_77_ProjectToDoPage;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 77:   //  Pronder.ViewModels.ProjectToDoViewModel
+            case 78:   //  Pronder.ViewModels.ProjectToDoViewModel
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 78:   //  Pronder.Views.NewProjectPage
+            case 79:   //  Pronder.Views.NewProjectPage
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_78_NewProjectPage;
+                userType.Activator = Activate_79_NewProjectPage;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 79:   //  Pronder.ViewModels.NewProjectViewModel
+            case 80:   //  Pronder.ViewModels.NewProjectViewModel
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 80:   //  Pronder.Helpers.EnumToBooleanConverter
+            case 81:   //  Pronder.Helpers.EnumToBooleanConverter
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_80_EnumToBooleanConverter;
+                userType.Activator = Activate_81_EnumToBooleanConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 81:   //  Pronder.Views.SettingsPage
+            case 82:   //  Pronder.Views.SettingsPage
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_81_SettingsPage;
+                userType.Activator = Activate_82_SettingsPage;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 82:   //  Pronder.ViewModels.SettingsViewModel
+            case 83:   //  Pronder.ViewModels.SettingsViewModel
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 83:   //  Microsoft.UI.Xaml.Controls.NavigationView
+            case 84:   //  Microsoft.UI.Xaml.Controls.NavigationView
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl"));
-                userType.Activator = Activate_83_NavigationView;
+                userType.Activator = Activate_84_NavigationView;
                 userType.AddMemberName("IsBackButtonVisible");
                 userType.AddMemberName("IsBackEnabled");
                 userType.AddMemberName("SelectedItem");
@@ -1257,7 +1267,7 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 84:   //  Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible
+            case 85:   //  Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Collapsed", global::Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible.Collapsed);
                 userType.AddEnumValue("Visible", global::Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible.Visible);
@@ -1265,11 +1275,11 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 85:   //  Microsoft.UI.Xaml.Controls.AutoSuggestBox
+            case 86:   //  Microsoft.UI.Xaml.Controls.AutoSuggestBox
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 86:   //  Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode
+            case 87:   //  Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Minimal", global::Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode.Minimal);
                 userType.AddEnumValue("Compact", global::Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode.Compact);
@@ -1277,18 +1287,18 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 87:   //  Microsoft.UI.Xaml.Controls.DataTemplateSelector
+            case 88:   //  Microsoft.UI.Xaml.Controls.DataTemplateSelector
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 88:   //  Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode
+            case 89:   //  Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("MoreLabel", global::Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode.MoreLabel);
                 userType.AddEnumValue("NoLabel", global::Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode.NoLabel);
                 xamlType = userType;
                 break;
 
-            case 89:   //  Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode
+            case 90:   //  Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode.Auto);
                 userType.AddEnumValue("Left", global::Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode.Left);
@@ -1298,14 +1308,14 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 90:   //  Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus
+            case 91:   //  Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Disabled", global::Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus.Disabled);
                 userType.AddEnumValue("Enabled", global::Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus.Enabled);
                 xamlType = userType;
                 break;
 
-            case 91:   //  Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled
+            case 92:   //  Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("WhenSelectionFollowsFocus", global::Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled.WhenSelectionFollowsFocus);
                 userType.AddEnumValue("Always", global::Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled.Always);
@@ -1313,32 +1323,32 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 92:   //  Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings
+            case 93:   //  Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 93:   //  Microsoft.Xaml.Interactivity.Interaction
+            case 94:   //  Microsoft.Xaml.Interactivity.Interaction
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.AddMemberName("Behaviors");
                 xamlType = userType;
                 break;
 
-            case 94:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
+            case 95:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_94_BehaviorCollection;
+                userType.CollectionAdd = VectorAdd_95_BehaviorCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 95:   //  Microsoft.UI.Xaml.DependencyObjectCollection
+            case 96:   //  Microsoft.UI.Xaml.DependencyObjectCollection
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 96:   //  Microsoft.UI.Xaml.Controls.NavigationViewItem
+            case 97:   //  Microsoft.UI.Xaml.Controls.NavigationViewItem
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationViewItemBase"));
-                userType.Activator = Activate_96_NavigationViewItem;
+                userType.Activator = Activate_97_NavigationViewItem;
                 userType.AddMemberName("Icon");
                 userType.AddMemberName("CompactPaneLength");
                 userType.AddMemberName("HasUnrealizedChildren");
@@ -1351,35 +1361,35 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 97:   //  Microsoft.UI.Xaml.Controls.NavigationViewItemBase
+            case 98:   //  Microsoft.UI.Xaml.Controls.NavigationViewItemBase
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl"));
                 userType.AddMemberName("IsSelected");
                 xamlType = userType;
                 break;
 
-            case 98:   //  Microsoft.UI.Xaml.Controls.InfoBadge
+            case 99:   //  Microsoft.UI.Xaml.Controls.InfoBadge
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 99:   //  Pronder.Helpers.NavigationHelper
+            case 100:   //  Pronder.Helpers.NavigationHelper
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_99_NavigationHelper;
+                userType.Activator = Activate_100_NavigationHelper;
                 userType.AddMemberName("NavigateTo");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 100:   //  Microsoft.UI.Xaml.Controls.NavigationViewItemSeparator
+            case 101:   //  Microsoft.UI.Xaml.Controls.NavigationViewItemSeparator
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationViewItemBase"));
-                userType.Activator = Activate_100_NavigationViewItemSeparator;
+                userType.Activator = Activate_101_NavigationViewItemSeparator;
                 xamlType = userType;
                 break;
 
-            case 101:   //  Pronder.Behaviors.NavigationViewHeaderBehavior
+            case 102:   //  Pronder.Behaviors.NavigationViewHeaderBehavior
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Xaml.Interactivity.Behavior`1<Microsoft.UI.Xaml.Controls.NavigationView>"));
-                userType.Activator = Activate_101_NavigationViewHeaderBehavior;
+                userType.Activator = Activate_102_NavigationViewHeaderBehavior;
                 userType.AddMemberName("DefaultHeader");
                 userType.AddMemberName("DefaultHeaderTemplate");
                 userType.AddMemberName("HeaderMode");
@@ -1389,18 +1399,18 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 102:   //  Microsoft.Xaml.Interactivity.Behavior`1<Microsoft.UI.Xaml.Controls.NavigationView>
+            case 103:   //  Microsoft.Xaml.Interactivity.Behavior`1<Microsoft.UI.Xaml.Controls.NavigationView>
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Xaml.Interactivity.Behavior"));
                 userType.AddMemberName("AssociatedObject");
                 xamlType = userType;
                 break;
 
-            case 103:   //  Microsoft.Xaml.Interactivity.Behavior
+            case 104:   //  Microsoft.Xaml.Interactivity.Behavior
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 xamlType = userType;
                 break;
 
-            case 104:   //  Pronder.Behaviors.NavigationViewHeaderMode
+            case 105:   //  Pronder.Behaviors.NavigationViewHeaderMode
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Always", global::Pronder.Behaviors.NavigationViewHeaderMode.Always);
                 userType.AddEnumValue("Never", global::Pronder.Behaviors.NavigationViewHeaderMode.Never);
@@ -1409,9 +1419,9 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 105:   //  Microsoft.UI.Xaml.Controls.ScrollView
+            case 106:   //  Microsoft.UI.Xaml.Controls.ScrollView
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_105_ScrollView;
+                userType.Activator = Activate_106_ScrollView;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.ScrollView.Content");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("ComputedHorizontalScrollBarVisibility");
@@ -1450,11 +1460,11 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 106:   //  Microsoft.UI.Xaml.Visibility
+            case 107:   //  Microsoft.UI.Xaml.Visibility
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 107:   //  Microsoft.UI.Xaml.Controls.ScrollingScrollMode
+            case 108:   //  Microsoft.UI.Xaml.Controls.ScrollingScrollMode
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Enabled", global::Microsoft.UI.Xaml.Controls.ScrollingScrollMode.Enabled);
                 userType.AddEnumValue("Disabled", global::Microsoft.UI.Xaml.Controls.ScrollingScrollMode.Disabled);
@@ -1462,7 +1472,7 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 108:   //  Microsoft.UI.Xaml.Controls.ScrollingContentOrientation
+            case 109:   //  Microsoft.UI.Xaml.Controls.ScrollingContentOrientation
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Vertical", global::Microsoft.UI.Xaml.Controls.ScrollingContentOrientation.Vertical);
                 userType.AddEnumValue("Horizontal", global::Microsoft.UI.Xaml.Controls.ScrollingContentOrientation.Horizontal);
@@ -1471,18 +1481,18 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 109:   //  Microsoft.UI.Composition.CompositionPropertySet
+            case 110:   //  Microsoft.UI.Composition.CompositionPropertySet
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Composition.CompositionObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 110:   //  Microsoft.UI.Composition.CompositionObject
+            case 111:   //  Microsoft.UI.Composition.CompositionObject
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 111:   //  Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility
+            case 112:   //  Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility.Auto);
                 userType.AddEnumValue("Visible", global::Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility.Visible);
@@ -1490,7 +1500,7 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 112:   //  Microsoft.UI.Xaml.Controls.ScrollingChainMode
+            case 113:   //  Microsoft.UI.Xaml.Controls.ScrollingChainMode
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Controls.ScrollingChainMode.Auto);
                 userType.AddEnumValue("Always", global::Microsoft.UI.Xaml.Controls.ScrollingChainMode.Always);
@@ -1498,14 +1508,14 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 113:   //  Microsoft.UI.Xaml.Controls.ScrollingRailMode
+            case 114:   //  Microsoft.UI.Xaml.Controls.ScrollingRailMode
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Enabled", global::Microsoft.UI.Xaml.Controls.ScrollingRailMode.Enabled);
                 userType.AddEnumValue("Disabled", global::Microsoft.UI.Xaml.Controls.ScrollingRailMode.Disabled);
                 xamlType = userType;
                 break;
 
-            case 114:   //  Microsoft.UI.Xaml.Controls.ScrollingInputKinds
+            case 115:   //  Microsoft.UI.Xaml.Controls.ScrollingInputKinds
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::Microsoft.UI.Xaml.Controls.ScrollingInputKinds.None);
                 userType.AddEnumValue("Touch", global::Microsoft.UI.Xaml.Controls.ScrollingInputKinds.Touch);
@@ -1517,7 +1527,7 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 115:   //  Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter
+            case 116:   //  Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement"));
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter.Content");
                 userType.AddMemberName("Content");
@@ -1525,7 +1535,7 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 116:   //  Microsoft.UI.Xaml.Controls.ScrollingInteractionState
+            case 117:   //  Microsoft.UI.Xaml.Controls.ScrollingInteractionState
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Idle", global::Microsoft.UI.Xaml.Controls.ScrollingInteractionState.Idle);
                 userType.AddEnumValue("Interaction", global::Microsoft.UI.Xaml.Controls.ScrollingInteractionState.Interaction);
@@ -1534,34 +1544,34 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 117:   //  Single
+            case 118:   //  Single
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 118:   //  Microsoft.UI.Xaml.Controls.ScrollingZoomMode
+            case 119:   //  Microsoft.UI.Xaml.Controls.ScrollingZoomMode
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Enabled", global::Microsoft.UI.Xaml.Controls.ScrollingZoomMode.Enabled);
                 userType.AddEnumValue("Disabled", global::Microsoft.UI.Xaml.Controls.ScrollingZoomMode.Disabled);
                 xamlType = userType;
                 break;
 
-            case 119:   //  Pronder.Views.ShellPage
+            case 120:   //  Pronder.Views.ShellPage
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 120:   //  Pronder.ViewModels.ShellViewModel
+            case 121:   //  Pronder.ViewModels.ShellViewModel
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 121:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 122:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_121_TreeViewNode;
+                userType.Activator = Activate_122_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -1573,14 +1583,14 @@ namespace Pronder.Pronder_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 122:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 123:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::Pronder.Pronder_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_122_IList;
+                userType.CollectionAdd = VectorAdd_123_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 123:   //  Int32
+            case 124:   //  Int32
                 xamlType = new global::Pronder.Pronder_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }

@@ -19,6 +19,9 @@
   <ItemGroup>
 	<Content Remove="Assets\pagesList.json" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Custom\ExternalLinkListItem.xaml" />
+  </ItemGroup>
 
   <ItemGroup>
 	<Manifest Include="$(ApplicationManifest)" />
@@ -41,6 +44,9 @@
 	<None Update="appsettings.json">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
+	<Page Update="Custom\ExternalLinkListItem.xaml">
+	  <Generator>MSBuild:Compile</Generator>
+	</Page>
   </ItemGroup>
 
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
