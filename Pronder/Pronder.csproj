@@ -54,6 +54,7 @@
   </ItemGroup>
 
   <ItemGroup>
+	<Folder Include="Helpers\NewFolder\" />
 	<Folder Include="Views\InbuildProjectDisplayPages\" />
 	<Folder Include="Views\InbuildProjectDisplaySubPages\" />
   </ItemGroup>

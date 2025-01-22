@@ -10,27 +10,27 @@
     mc:Ignorable="d">
 
 	<ScrollViewer x:ConnectionId='2' x:Name="ContentArea" Padding="10, 32, 18, 10">
-		<StackPanel Orientation="Vertical" Padding="0, 42, 0, 12" Spacing="12">
+		<StackPanel x:ConnectionId='3' Orientation="Vertical" Padding="0, 42, 0, 12" Spacing="12" x:Name="StackPanel">
 			<TextBlock Text="External links" Style="{StaticResource TitleTextBlockStyle}" Margin="0, 0, 0, -6"/>
             <CommandBar Background="Transparent" IsOpen="False" DefaultLabelPosition="Right" HorizontalAlignment="Left" Margin="-5, 0, 0, 0">
                 <AppBarButton Icon="Add" Label="Add">
                     <AppBarButton.Flyout>
                         <Flyout Placement="BottomEdgeAlignedLeft">
-                            <StackPanel Orientation="Horizontal" Spacing="12">
-                                <ComboBox MinWidth="100" Header="Type">
+                            <StackPanel Orientation="Vertical" Spacing="12">
+                                <ComboBox MinWidth="300" Header="Type">
                                     <x:String>Web link</x:String>
                                     <x:String>File path</x:String>
                                 </ComboBox>
-                                <TextBox Header="Content" MinWidth="300"/>
+                                <TextBox Header="Name" MinWidth="300"/>
+                                <TextBox  AcceptsReturn="True" IsSpellCheckEnabled="True" TextWrapping="Wrap" 
+                                          Header="Path" MinWidth="300"/>
+                                <Button Style="{StaticResource AccentButtonStyle}" Content="Add" MinWidth="300"/>
                             </StackPanel>
                         </Flyout>
                     </AppBarButton.Flyout>
                 </AppBarButton>
                 <AppBarButton Icon="Delete" Label="Delete all"/>
             </CommandBar>
-            <mine:ExternalLinkListItem>
-                
-            </mine:ExternalLinkListItem>
         </StackPanel>
 	</ScrollViewer>
 </Page>

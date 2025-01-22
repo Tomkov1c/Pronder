@@ -17,6 +17,7 @@ using Windows.UI;
 using System.Drawing;
 using Microsoft.UI;
 using Pronder.Custom;
+using Pronder.Helpers.Mine;
 
 namespace Pronder.Views;
 
@@ -185,57 +186,14 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
                     };
                     if (deserialized.Links[i].Type == "link")
                     {
-                        StorageFile jsonFile = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///Assets/Icon8/Color/Brands/list.json"));
-
-                        using (IRandomAccessStream stream = await jsonFile.OpenAsync(FileAccessMode.Read))
-                        using (StreamReader reader = new StreamReader(stream.AsStreamForRead()))
-                        {
-                            // Read the contents of the file
-                            string json = await reader.ReadToEndAsync();
-
-                            // Output the JSON content to debug
-                            System.Diagnostics.Debug.WriteLine(json);  // This will output to the debug console
-
-                            // Deserialize the JSON to the object
-                            ExternalLinkIconList icons = JsonConvert.DeserializeObject<ExternalLinkIconList>(json);
-
-                            for (int j = 0; icons.Icons.Count > j; j++)
-                            {
-                                if (deserialized.Links[i].Href.Contains(icons.Icons[j].Contains) || deserialized.Links[i].Name.ToLower() == icons.Icons[j].Contains)
-                                {
-                                    StorageFile iconFile = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///Assets/Icon8/Color/Brands/" + icons.Icons[j].Path));
-
-                                    // Create a BitmapImage from the StorageFile URI
-                                    BitmapImage bitmapImage = new BitmapImage(new Uri(iconFile.Path));
-
-                                    // Set the newItem's icon to the BitmapImage
-                                    newItem.Icon = new ImageIcon { Source = bitmapImage };
-                                    break;
-
-                                }
-                                else
-                                {
-                                    newItem.Icon = new ImageIcon { Source = new BitmapImage(new Uri(base.BaseUri, @"ms-appx:///Assets/Icon8/Color/icons8-website-512.png")), };
-                                }
-                            }
-                            newItem.Click += externalLinksClickLink;
-                        }
+                        newItem.Click += externalLinksClickLink;
                     }
                     else if (deserialized.Links[i].Type == "path")
                     {
-
-                        if (deserialized.Links[i].Name == "File Directory")
-                        {
-                            newItem.Icon = new ImageIcon { Source = new BitmapImage(new Uri(base.BaseUri, @"/Assets/Icon8/Color/icons8-folder-512.png")), };
-                        }
-                        else
-                        {
-                            newItem.Icon = new FontIcon { Glyph = "\uE8B7", };
-                        }
                         newItem.Click += externalLinksClickPath;
                     }
-                    else
-                        newItem.Icon = new FontIcon { Glyph = "\uE897", };
+
+                    newItem.Icon = new ImageIcon { Source = new BitmapImage(new Uri(await new ExternalLinkHelper().GetIconPath(deserialized.Links[i]))), };
 
                     newItem.Tag = deserialized.Links[i].Href;
                     ProjectExternalLinksInsert.Items.Add(newItem);

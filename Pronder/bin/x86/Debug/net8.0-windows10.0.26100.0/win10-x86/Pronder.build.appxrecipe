@@ -814,6 +814,9 @@
     <AppxPackagedFile Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\Assets\Icon8\Color\Brands\icons8-spotify-512.png">
       <PackagePath>Assets\Icon8\Color\Brands\icons8-spotify-512.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\Assets\Icon8\Color\Brands\icons8-website-512.png">
+      <PackagePath>Assets\Icon8\Color\Brands\icons8-website-512.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\Assets\Icon8\Color\Brands\icons8-x-512.png">
       <PackagePath>Assets\Icon8\Color\Brands\icons8-x-512.png</PackagePath>
     </AppxPackagedFile>
