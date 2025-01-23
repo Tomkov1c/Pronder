@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Pronder.Models
 {
 
-    // Path PC: C:\Users\gamin\AppData\Local\Packages\90d93993-b7aa-4fff-9757-12ef0c6c27e0_1116rh51nqx02\LocalState\Projects
+    // Path: C:\Users\gamin\AppData\Local\Packages\90d93993-b7aa-4fff-9757-12ef0c6c27e0_1116rh51nqx02\LocalState\Projects
 
     public class Project
     {

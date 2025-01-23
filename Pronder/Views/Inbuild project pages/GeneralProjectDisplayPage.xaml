@@ -54,10 +54,8 @@
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="2">
 
                     <!--    Links   -->
-                    <Button x:Name="ProjectExternalLinks"
-                        HorizontalAlignment="Right" 
-                        Margin="0, 0, 10, 0"
-                        Padding="8">
+                    <Button x:Name="ProjectExternalLinks" HorizontalAlignment="Right" Margin="0, 0, 10, 0"
+                            Padding="8">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
                                 <FontIcon Glyph="&#xE71B;" FontSize="15"/>
@@ -67,36 +65,22 @@
                             </StackPanel>
                         </Button.Content>
                         <Button.Flyout>
-                            <MenuFlyout x:Name="ProjectExternalLinksInsert"
-                                    Placement="Bottom">
-
-                            </MenuFlyout>
+                            <MenuFlyout x:Name="ProjectExternalLinksInsert" Placement="BottomEdgeAlignedRight" />
                         </Button.Flyout>
                     </Button>
+                    
                     <!--    More    -->
-                    <Button HorizontalAlignment="Right"
-                        Padding="8"
-                        x:Name="row">
+                    <Button HorizontalAlignment="Right" Padding="8" x:Name="row">
                         <Button.Content>
                             <FontIcon Glyph="&#xE712;"/>
                         </Button.Content>
                         <Button.Flyout>
-                            <MenuFlyout Placement="Bottom">
+                            <MenuFlyout Placement="BottomEdgeAlignedRight">
                                 <MenuFlyoutItem Text="Edit" Click="editData" Icon="Edit">
                                     <MenuFlyoutItem.KeyboardAccelerators>
                                         <KeyboardAccelerator Modifiers="Control" Key="E" />
                                     </MenuFlyoutItem.KeyboardAccelerators>
                                 </MenuFlyoutItem>
-                                <!-- 
-                            <MenuFlyoutSeparator/>
-                                <MenuFlyoutItem Text="Favourite">
-                                    <MenuFlyoutItem.Icon>
-                                        <FontIcon Glyph="&#xE734;"/>
-                                    </MenuFlyoutItem.Icon>
-                                </MenuFlyoutItem>
-                            <MenuFlyoutSeparator/> -->
-
-
                                 <MenuFlyoutItem Text="Delete" Click="deleteProject" Icon="Delete" />
                             </MenuFlyout>
                         </Button.Flyout>
