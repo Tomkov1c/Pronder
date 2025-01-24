@@ -12,6 +12,8 @@ using Windows.ApplicationModel.Calls;
 using Windows.Storage.Pickers;
 using Microsoft.UI.Xaml;
 using CommunityToolkit.WinUI.Controls;
+using Windows.Security.Cryptography.Core;
+using Windows.UI.Text;
 
 namespace Pronder.Views;
 
@@ -53,10 +55,43 @@ public sealed partial class EditProjectPagesExternalLinksPage : Page
             Description = link.Href,
         };
 
-        linkDisplay.Items.Add(new SettingsCard()
+        SettingsCard type = new SettingsCard()
         {
-            Header = "Type"
-        });
+            Header = "Type",
+            Description = "An external link can lead to a specific folder on your computer or a website."
+        };
+        ComboBox types = new ComboBox();
+        types.Items.Add("Link");
+        types.Items.Add("Path");
+        types.SelectedIndex = link.Type == "link" ? 0 : 1;
+        type.Content = types;
+        linkDisplay.Items.Add(type);
+
+        SettingsCard name = new SettingsCard()
+        {
+            Header = "Name",
+        };
+        TextBox nameTextBox = new TextBox() { Text = link.Name, MinWidth = 200};
+        name.Content = nameTextBox;
+        linkDisplay.Items.Add(name);
+
+        SettingsCard path = new SettingsCard()
+        {
+            Header = "Path",
+        };
+        TextBox pathTextBox = new TextBox() { Text = link.Href, MinWidth = 300 };
+        path.Content = pathTextBox;
+        linkDisplay.Items.Add(path);
+
+        SettingsCard delete = new SettingsCard()
+        {
+            Header = "Options",
+            Foreground = (SolidColorBrush)Application.Current.Resources["SystemFillColorCriticalBrush"],
+            Background = (SolidColorBrush)Application.Current.Resources["SystemFillColorCriticalBackgroundBrush"],
+        };
+        Button deleteButton = new Button() { Content = "Delete"};
+        delete.Content = deleteButton;
+        linkDisplay.Items.Add(delete);
 
         return linkDisplay;
     }

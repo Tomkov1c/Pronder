@@ -139,17 +139,28 @@ namespace Pronder.Custom
             content.Width = Math.Max(App.MainWindow.Bounds.Width, 300);
             content.Height = Math.Max(App.MainWindow.Bounds.Height, 200);
 
-            border.Width = Math.Max(App.MainWindow.Bounds.Width - 500, 300);
-            border.Height = Math.Max(App.MainWindow.Bounds.Height - 150, 200);
-
-            mainStackPanel.Width = Math.Max(App.MainWindow.Bounds.Width - 500, 300);
-            mainStackPanel.Height = Math.Max(App.MainWindow.Bounds.Height - 150, 200);
-
-            this.stackPanel.Width = Math.Max(App.MainWindow.Bounds.Width - 500, 300);
-            this.stackPanel.Height = Math.Max(App.MainWindow.Bounds.Height - 150 - (2 * 24 + 32), 200);
-
-            this.frame.Width = Math.Max(App.MainWindow.Bounds.Width - 500 - 200, 300);
-            this.frame.Height = Math.Max(this.stackPanel.Height, 200);
+            if (App.MainWindow.Bounds.Width <= 1400 && App.MainWindow.Bounds.Height <= 800)
+            {
+                border.Width = Math.Max(App.MainWindow.Bounds.Width - 100, 300);
+                border.Height = Math.Max(App.MainWindow.Bounds.Height - 50, 200);
+                mainStackPanel.Width = Math.Max(App.MainWindow.Bounds.Width - 100, 300);
+                mainStackPanel.Height = Math.Max(App.MainWindow.Bounds.Height - 50, 200);
+                this.frame.Width = Math.Max(App.MainWindow.Bounds.Width - 100 - 200, 300);
+                this.frame.Height = Math.Max(this.stackPanel.Height, 200);
+                this.stackPanel.Width = Math.Max(App.MainWindow.Bounds.Width - 100, 300);
+                this.stackPanel.Height = Math.Max(App.MainWindow.Bounds.Height - 50 - (2 * 24 + 32), 200);
+            }
+            else
+            {
+                border.Width = Math.Max(App.MainWindow.Bounds.Width - 500, 300);
+                border.Height = Math.Max(App.MainWindow.Bounds.Height - 150, 200);
+                mainStackPanel.Width = Math.Max(App.MainWindow.Bounds.Width - 500, 300);
+                mainStackPanel.Height = Math.Max(App.MainWindow.Bounds.Height - 150, 200);
+                this.frame.Width = Math.Max(App.MainWindow.Bounds.Width - 500 - 200, 300);
+                this.frame.Height = Math.Max(this.stackPanel.Height, 200);
+                this.stackPanel.Width = Math.Max(App.MainWindow.Bounds.Width - 500, 300);
+                this.stackPanel.Height = Math.Max(App.MainWindow.Bounds.Height - 150 - (2 * 24 + 32), 200);
+            }
 
             navView.Height = stackPanel.Height;
 

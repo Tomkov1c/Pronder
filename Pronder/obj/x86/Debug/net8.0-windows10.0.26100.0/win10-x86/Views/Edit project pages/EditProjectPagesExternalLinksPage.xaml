@@ -14,7 +14,14 @@
 			<TextBlock Text="External links" Style="{StaticResource TitleTextBlockStyle}" Margin="0, 0, 0, -6"/>
             <CommandBar Background="Transparent" IsOpen="False" DefaultLabelPosition="Right" HorizontalAlignment="Left" 
                         Margin="-5, 0, 0, 0">
-                <AppBarButton Icon="Add" Label="Add" />
+                <AppBarButton Icon="Add" Label="Add">
+                    <AppBarButton.Flyout>
+                        <MenuFlyout Placement="BottomEdgeAlignedLeft">
+                            <MenuFlyoutItem Text="Link" />
+                            <MenuFlyoutItem Text="Path" />
+                        </MenuFlyout>
+                    </AppBarButton.Flyout>
+                </AppBarButton>
                 <AppBarButton Icon="Delete" Label="Delete all"/>
             </CommandBar>
         </StackPanel>
