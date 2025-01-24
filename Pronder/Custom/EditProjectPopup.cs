@@ -131,36 +131,49 @@ namespace Pronder.Custom
             popup.Child = content;
 
             App.MainWindow.SizeChanged += UpdatePopupSize;
+            UpdatePopupSize(null, null);
         }
 
         //TODO: Fix this shit
         private void UpdatePopupSize(object sender, WindowSizeChangedEventArgs e)
         {
-            content.Width = Math.Max(App.MainWindow.Bounds.Width, 300);
-            content.Height = Math.Max(App.MainWindow.Bounds.Height, 200);
+            var windowsWidth = Math.Max(App.MainWindow.Bounds.Width, 300);
+            var windowsHeight = Math.Max(App.MainWindow.Bounds.Height, 200);
+            content.Width = windowsWidth;
+            content.Height = windowsHeight;
 
-            if (App.MainWindow.Bounds.Width <= 1400 && App.MainWindow.Bounds.Height <= 800)
+            var widthDecrease = 0;
+            var heightDecrease = 0;
+
+            if (windowsWidth <= 1500 && windowsHeight <= 900)
             {
-                border.Width = Math.Max(App.MainWindow.Bounds.Width - 100, 300);
-                border.Height = Math.Max(App.MainWindow.Bounds.Height - 50, 200);
-                mainStackPanel.Width = Math.Max(App.MainWindow.Bounds.Width - 100, 300);
-                mainStackPanel.Height = Math.Max(App.MainWindow.Bounds.Height - 50, 200);
-                this.frame.Width = Math.Max(App.MainWindow.Bounds.Width - 100 - 200, 300);
-                this.frame.Height = Math.Max(this.stackPanel.Height, 200);
-                this.stackPanel.Width = Math.Max(App.MainWindow.Bounds.Width - 100, 300);
-                this.stackPanel.Height = Math.Max(App.MainWindow.Bounds.Height - 50 - (2 * 24 + 32), 200);
+                widthDecrease = 100;
+                heightDecrease = 50;
+            }
+            else if (windowsWidth <= 1700 && windowsHeight <= 1000)
+            {
+                widthDecrease = 150;
+                heightDecrease = 100;
+            }
+            else if (windowsWidth <= 1800 && windowsHeight <= 1000)
+            {
+                widthDecrease = 200;
+                heightDecrease = 1;
             }
             else
             {
-                border.Width = Math.Max(App.MainWindow.Bounds.Width - 500, 300);
-                border.Height = Math.Max(App.MainWindow.Bounds.Height - 150, 200);
-                mainStackPanel.Width = Math.Max(App.MainWindow.Bounds.Width - 500, 300);
-                mainStackPanel.Height = Math.Max(App.MainWindow.Bounds.Height - 150, 200);
-                this.frame.Width = Math.Max(App.MainWindow.Bounds.Width - 500 - 200, 300);
-                this.frame.Height = Math.Max(this.stackPanel.Height, 200);
-                this.stackPanel.Width = Math.Max(App.MainWindow.Bounds.Width - 500, 300);
-                this.stackPanel.Height = Math.Max(App.MainWindow.Bounds.Height - 150 - (2 * 24 + 32), 200);
+                widthDecrease = 500;
+                heightDecrease = 150;
             }
+
+            border.Width = windowsWidth - widthDecrease;
+            border.Height = windowsHeight - heightDecrease;
+            mainStackPanel.Width = windowsWidth - widthDecrease;
+            mainStackPanel.Height = windowsHeight - heightDecrease;
+            this.frame.Width = windowsWidth - widthDecrease - 200;
+            this.frame.Height = this.stackPanel.Height;
+            this.stackPanel.Width = windowsWidth - widthDecrease;
+            this.stackPanel.Height = windowsHeight - heightDecrease - (2 * 24 + 32);
 
             navView.Height = stackPanel.Height;
 
