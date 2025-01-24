@@ -30,7 +30,7 @@
     <AppXManifest Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-01-23T13:26:55.296</Modified>
+      <Modified>2025-01-24T13:55:19.823</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -44,7 +44,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\Pronder.dll">
       <PackagePath>Pronder.dll</PackagePath>
-      <Modified>2025-01-23T13:26:54.561</Modified>
+      <Modified>2025-01-24T13:55:18.666</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\appsettings.json">
       <PackagePath>appsettings.json</PackagePath>
@@ -52,7 +52,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\apphost.exe">
       <PackagePath>Pronder.exe</PackagePath>
-      <Modified>2025-01-23T13:26:54.581</Modified>
+      <Modified>2025-01-24T13:55:18.692</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\Pronder.deps.json">
       <PackagePath>Pronder.deps.json</PackagePath>
