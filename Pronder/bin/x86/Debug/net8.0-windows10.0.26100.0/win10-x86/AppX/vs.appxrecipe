@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>TOM-LAPTOP</Machine>
+    <Machine>TOM-PC</Machine>
     <WindowsUser>gamin</WindowsUser>
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetOsVersion>0.0</TargetOsVersion>
@@ -30,21 +30,21 @@
     <AppXManifest Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-01-24T18:33:10.192</Modified>
+      <Modified>2025-01-25T13:38:44.797</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-01-24T18:31:31.790</Modified>
+      <Modified>2025-01-25T13:38:44.232</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\Pronder.runtimeconfig.json">
       <PackagePath>Pronder.runtimeconfig.json</PackagePath>
-      <Modified>2025-01-24T18:31:31.100</Modified>
+      <Modified>2025-01-25T12:51:51.149</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\Pronder.dll">
       <PackagePath>Pronder.dll</PackagePath>
-      <Modified>2025-01-24T18:33:08.521</Modified>
+      <Modified>2025-01-25T13:38:44.045</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\appsettings.json">
       <PackagePath>appsettings.json</PackagePath>
@@ -52,11 +52,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\apphost.exe">
       <PackagePath>Pronder.exe</PackagePath>
-      <Modified>2025-01-24T18:33:08.664</Modified>
+      <Modified>2025-01-25T13:38:44.052</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\Pronder.deps.json">
       <PackagePath>Pronder.deps.json</PackagePath>
-      <Modified>2025-01-24T18:31:30.660</Modified>
+      <Modified>2025-01-25T12:51:50.314</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\gamin\.nuget\packages\microsoft.netcore.app.runtime.win-x86\8.0.12\runtimes\win-x86\lib\net8.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -786,11 +786,11 @@
       <PackagePath>msquic.dll</PackagePath>
       <Modified>2024-03-12T16:41:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gamin\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.26100.57\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
+    <AppxPackagedFile Include="C:\Users\gamin\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.26100.56\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
       <Modified>2024-11-11T17:23:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gamin\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.26100.57\lib\net8.0\WinRT.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\gamin\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.26100.56\lib\net8.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
       <Modified>2024-11-11T17:23:04.000</Modified>
     </AppxPackagedFile>
@@ -1016,7 +1016,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder.Core\bin\x86\Debug\net7.0\Pronder.Core.dll">
       <PackagePath>Pronder.Core.dll</PackagePath>
-      <Modified>2025-01-22T14:02:34.364</Modified>
+      <Modified>2025-01-25T12:51:24.885</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\gamin\.nuget\packages\communitytoolkit.winui.controls.settingscontrols\8.1.240916\lib\net8.0-windows10.0.22621\CommunityToolkit.WinUI.Controls.SettingsControls.pri">
       <PackagePath>CommunityToolkit.WinUI.Controls.SettingsControls.pri</PackagePath>

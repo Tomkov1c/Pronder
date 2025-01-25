@@ -18,7 +18,7 @@
           "Pronder.Core": "1.0.0",
           "WinUIEx": "2.3.4",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x86": "8.0.12",
-          "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.26100.57"
+          "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.26100.56"
         },
         "runtime": {
           "Pronder.dll": {}
@@ -744,7 +744,7 @@
           }
         }
       },
-      "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.26100.57": {
+      "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.26100.56": {
         "runtime": {
           "Microsoft.Windows.SDK.NET.dll": {
             "assemblyVersion": "10.0.26100.38",
@@ -1337,7 +1337,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.26100.57": {
+    "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.26100.56": {
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""

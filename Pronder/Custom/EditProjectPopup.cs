@@ -73,7 +73,7 @@ namespace Pronder.Custom
 
             frame.VerticalAlignment = VerticalAlignment.Stretch;
             frame.Width = stackPanel.Width - 200;
-            frame.Padding = new Thickness(0, -32, 0, -10);
+            frame.Padding = new Thickness(0, -30, 0, -10);
 
             navView = new()
             {
@@ -170,10 +170,10 @@ namespace Pronder.Custom
             border.Height = windowsHeight - heightDecrease;
             mainStackPanel.Width = windowsWidth - widthDecrease;
             mainStackPanel.Height = windowsHeight - heightDecrease;
-            this.frame.Width = windowsWidth - widthDecrease - 200;
-            this.frame.Height = this.stackPanel.Height;
             this.stackPanel.Width = windowsWidth - widthDecrease;
             this.stackPanel.Height = windowsHeight - heightDecrease - (2 * 24 + 32);
+            this.frame.Width = windowsWidth - widthDecrease - 200;
+            this.frame.Height = this.stackPanel.Height;
 
             navView.Height = stackPanel.Height;
 
