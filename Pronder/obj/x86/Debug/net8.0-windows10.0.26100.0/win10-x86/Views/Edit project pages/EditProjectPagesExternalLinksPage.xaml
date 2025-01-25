@@ -14,7 +14,7 @@
 			<TextBlock Text="External links" Style="{StaticResource TitleTextBlockStyle}" Margin="0, 0, 0, -6"/>
             <CommandBar Background="Transparent" IsOpen="False" DefaultLabelPosition="Right" HorizontalAlignment="Left" 
                         Margin="-5, 0, 0, 0">
-                <AppBarButton x:ConnectionId='4' Icon="Link" Label="Add a website"                           >
+                <AppBarButton Icon="Link" Label="Add a website">
                     <AppBarButton.Flyout>
                         <Flyout Placement="BottomEdgeAlignedLeft">
                             <StackPanel Orientation="Vertical" Spacing="12" Width="400">
@@ -30,8 +30,16 @@
                 <AppBarButton Icon="Folder" Label="Add a directory">
                     <AppBarButton.Flyout>
                         <Flyout Placement="BottomEdgeAlignedLeft">
-                            <StackPanel Orientation="Vertical" Spacing="12">
-
+                            <StackPanel Orientation="Vertical" Spacing="12" Width="400">
+                                <StackPanel Orientation="Vertical">
+                                    <TextBox Header="Path" PlaceholderText="C:\User\" AllowFocusOnInteraction="True"/>
+                                    <TextBlock Text="or" Padding="12, 0"/>
+                                    <Button Content="Select directory" />
+                                </StackPanel>
+                                <TextBox Header="Name" Description="Will be coppied from link if left empty." 
+                                         PlaceholderText="idk" AllowFocusOnInteraction="True"/>
+                                <Button Style="{StaticResource AccentButtonStyle}" HorizontalAlignment="Stretch"
+                                        Content="Create" />
                             </StackPanel>
                         </Flyout>
                     </AppBarButton.Flyout>

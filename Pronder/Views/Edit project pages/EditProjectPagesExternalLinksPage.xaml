@@ -14,7 +14,7 @@
 			<TextBlock Text="External links" Style="{StaticResource TitleTextBlockStyle}" Margin="0, 0, 0, -6"/>
             <CommandBar Background="Transparent" IsOpen="False" DefaultLabelPosition="Right" HorizontalAlignment="Left" 
                         Margin="-5, 0, 0, 0">
-                <AppBarButton Icon="Link" Label="Add a website" Click="AppBarButton_Click">
+                <AppBarButton Icon="Link" Label="Add a website">
                     <AppBarButton.Flyout>
                         <Flyout Placement="BottomEdgeAlignedLeft">
                             <StackPanel Orientation="Vertical" Spacing="12" Width="400">
