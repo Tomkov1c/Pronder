@@ -34,13 +34,55 @@ public sealed partial class EditProjectPagesExternalLinksPage : Page
             _viewModel = new EditProjectPagesExternalLinksViewModel(path);
             DataContext = _viewModel;
 
-            List<Link> links = _viewModel._project.Links;
+            LoadData();
+        }
+    }
 
-            if(links != null)
-            foreach (Link link in links)
-            {
-                StackPanel.Children.Add(await LinkListItemHelper(link));
-            }
+
+    private void NewLinkClicked(object sender, RoutedEventArgs e)
+    {
+        Link link = new()
+        {
+            Name = NameTextBox.Text,
+            Href = LinkTextBox.Text,
+            Type = "link",
+        };
+        _viewModel._project.Links.Add(link);
+        SaveData();
+    }
+
+    private void NewPathClicked(object sender, RoutedEventArgs e)
+    {
+        Link path = new()
+        {
+            Name = NameTextBox2.Text,
+            Href = LinkTextBox.Text,
+            Type = "path",
+        };
+        _viewModel._project.Links.Add(path);
+        SaveData();
+    }
+
+    void SaveData()
+    {
+        StackPanel.Children.Clear();
+        if (!string.IsNullOrEmpty(_viewModel.ProjectPath))
+        {
+            File.WriteAllText(_viewModel.ProjectPath, JsonConvert.SerializeObject(_viewModel._project, Formatting.Indented));
+
+            LoadData();
+        }
+    }
+
+
+    async void LoadData()
+    {
+        List<Link> links = _viewModel._project.Links;
+
+        if (links != null)
+        foreach (Link link in links)
+        {
+            StackPanel.Children.Add(await LinkListItemHelper(link));
         }
     }
 
@@ -54,18 +96,6 @@ public sealed partial class EditProjectPagesExternalLinksPage : Page
             Header = link.Name,
             Description = link.Href,
         };
-
-        SettingsCard type = new SettingsCard()
-        {
-            Header = "Type",
-            Description = "An external link can lead to a specific folder on your computer or a website."
-        };
-        ComboBox types = new ComboBox();
-        types.Items.Add("Link");
-        types.Items.Add("Path");
-        types.SelectedIndex = link.Type == "link" ? 0 : 1;
-        type.Content = types;
-        linkDisplay.Items.Add(type);
 
         SettingsCard name = new SettingsCard()
         {

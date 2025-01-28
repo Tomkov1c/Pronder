@@ -10,19 +10,20 @@
     mc:Ignorable="d">
 
 	<ScrollViewer x:ConnectionId='2' x:Name="ContentArea" Padding="10, 32, 18, 10">
-		<StackPanel x:ConnectionId='3' Orientation="Vertical" Padding="0, 42, 0, 12" Spacing="12" x:Name="StackPanel">
+		<StackPanel Orientation="Vertical" Padding="0, 42, 0, 12">
 			<TextBlock Text="External links" Style="{StaticResource TitleTextBlockStyle}" Margin="0, 0, 0, -6"/>
             <CommandBar Background="Transparent" IsOpen="False" DefaultLabelPosition="Right" HorizontalAlignment="Left" 
-                        Margin="-5, 0, 0, 0">
+                        Margin="-5, 12, 0, 8">
                 <AppBarButton Icon="Link" Label="Add a website">
                     <AppBarButton.Flyout>
                         <Flyout Placement="BottomEdgeAlignedLeft">
                             <StackPanel Orientation="Vertical" Spacing="12" Width="400">
-                                <TextBox Header="Link" PlaceholderText="https://www." AllowFocusOnInteraction="True"/>
-                                <TextBox Header="Name" Description="Will be coppied from link if left empty." 
-                                         PlaceholderText="idk" AllowFocusOnInteraction="True"/>
-                                <Button Style="{StaticResource AccentButtonStyle}" HorizontalAlignment="Stretch"
-                                        Content="Create" />
+                                <TextBox x:ConnectionId='7' Header="Link" PlaceholderText="https://www." AllowFocusOnInteraction="True" 
+                                         x:Name="LinkTextBox"/>
+                                <TextBox x:ConnectionId='8' Header="Name" Description="Will be coppied from link if left empty." 
+                                         PlaceholderText="idk" AllowFocusOnInteraction="True" x:Name="NameTextBox"/>
+                                <Button x:ConnectionId='9' Style="{StaticResource AccentButtonStyle}" HorizontalAlignment="Stretch"
+                                        Content="Create"                       />
                             </StackPanel>
                         </Flyout>
                     </AppBarButton.Flyout>
@@ -32,19 +33,23 @@
                         <Flyout Placement="BottomEdgeAlignedLeft">
                             <StackPanel Orientation="Vertical" Spacing="12" Width="400">
                                 <StackPanel Orientation="Vertical">
-                                    <TextBox Header="Path" PlaceholderText="C:\User\" AllowFocusOnInteraction="True"/>
+                                    <TextBox x:ConnectionId='6' Header="Path" PlaceholderText="C:\User\" AllowFocusOnInteraction="True"
+                                             x:Name="PathTextBox"/>
                                     <TextBlock Text="or" Padding="12, 0"/>
                                     <Button Content="Select directory" />
                                 </StackPanel>
-                                <TextBox Header="Name" Description="Will be coppied from link if left empty." 
-                                         PlaceholderText="idk" AllowFocusOnInteraction="True"/>
-                                <Button Style="{StaticResource AccentButtonStyle}" HorizontalAlignment="Stretch"
-                                        Content="Create" />
+                                <TextBox x:ConnectionId='4' Header="Name" Description="Will be coppied from link if left empty." 
+                                         PlaceholderText="idk" AllowFocusOnInteraction="True" x:Name="NameTextBox2"/>
+                                <Button x:ConnectionId='5' Style="{StaticResource AccentButtonStyle}" HorizontalAlignment="Stretch"
+                                        Content="Create"                       />
                             </StackPanel>
                         </Flyout>
                     </AppBarButton.Flyout>
                 </AppBarButton>
             </CommandBar>
+            <StackPanel x:ConnectionId='3' Orientation="Vertical" x:Name="StackPanel" Spacing="12">
+                
+            </StackPanel>
         </StackPanel>
 	</ScrollViewer>
 </Page>
