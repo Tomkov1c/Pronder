@@ -16,13 +16,13 @@
                         Margin="-5, 12, 0, 8">
                 <AppBarButton Icon="Link" Label="Add a website">
                     <AppBarButton.Flyout>
-                        <Flyout Placement="BottomEdgeAlignedLeft">
+                        <Flyout x:ConnectionId='8' Placement="BottomEdgeAlignedLeft" x:Name="LinkFlyout">
                             <StackPanel Orientation="Vertical" Spacing="12" Width="400">
-                                <TextBox x:ConnectionId='7' Header="Link" PlaceholderText="https://www." AllowFocusOnInteraction="True" 
+                                <TextBox x:ConnectionId='9' Header="Link" PlaceholderText="https://www." AllowFocusOnInteraction="True" 
                                          x:Name="LinkTextBox"/>
-                                <TextBox x:ConnectionId='8' Header="Name" Description="Will be coppied from link if left empty." 
+                                <TextBox x:ConnectionId='10' Header="Name" Description="Will be coppied from link if left empty." 
                                          PlaceholderText="idk" AllowFocusOnInteraction="True" x:Name="NameTextBox"/>
-                                <Button x:ConnectionId='9' Style="{StaticResource AccentButtonStyle}" HorizontalAlignment="Stretch"
+                                <Button x:ConnectionId='11' Style="{StaticResource AccentButtonStyle}" HorizontalAlignment="Stretch"
                                         Content="Create"                       />
                             </StackPanel>
                         </Flyout>
@@ -30,24 +30,24 @@
                 </AppBarButton>
                 <AppBarButton Icon="Folder" Label="Add a directory">
                     <AppBarButton.Flyout>
-                        <Flyout Placement="BottomEdgeAlignedLeft">
+                        <Flyout x:ConnectionId='4' Placement="BottomEdgeAlignedLeft" x:Name="DirectoryFlyout">
                             <StackPanel Orientation="Vertical" Spacing="12" Width="400">
                                 <StackPanel Orientation="Vertical">
-                                    <TextBox x:ConnectionId='6' Header="Path" PlaceholderText="C:\User\" AllowFocusOnInteraction="True"
+                                    <TextBox x:ConnectionId='7' Header="Path" PlaceholderText="C:\User\" AllowFocusOnInteraction="True"
                                              x:Name="PathTextBox"/>
                                     <TextBlock Text="or" Padding="12, 0"/>
                                     <Button Content="Select directory" />
                                 </StackPanel>
-                                <TextBox x:ConnectionId='4' Header="Name" Description="Will be coppied from link if left empty." 
+                                <TextBox x:ConnectionId='5' Header="Name" Description="Will be coppied from link if left empty." 
                                          PlaceholderText="idk" AllowFocusOnInteraction="True" x:Name="NameTextBox2"/>
-                                <Button x:ConnectionId='5' Style="{StaticResource AccentButtonStyle}" HorizontalAlignment="Stretch"
+                                <Button x:ConnectionId='6' Style="{StaticResource AccentButtonStyle}" HorizontalAlignment="Stretch"
                                         Content="Create"                       />
                             </StackPanel>
                         </Flyout>
                     </AppBarButton.Flyout>
                 </AppBarButton>
             </CommandBar>
-            <StackPanel x:ConnectionId='3' Orientation="Vertical" x:Name="StackPanel" Spacing="12">
+            <StackPanel x:ConnectionId='3' Orientation="Vertical" x:Name="StackPanel" Spacing="4">
                 
             </StackPanel>
         </StackPanel>

@@ -16,7 +16,7 @@
                         Margin="-5, 12, 0, 8">
                 <AppBarButton Icon="Link" Label="Add a website">
                     <AppBarButton.Flyout>
-                        <Flyout Placement="BottomEdgeAlignedLeft">
+                        <Flyout Placement="BottomEdgeAlignedLeft" x:Name="LinkFlyout">
                             <StackPanel Orientation="Vertical" Spacing="12" Width="400">
                                 <TextBox Header="Link" PlaceholderText="https://www." AllowFocusOnInteraction="True" 
                                          x:Name="LinkTextBox"/>
@@ -30,7 +30,7 @@
                 </AppBarButton>
                 <AppBarButton Icon="Folder" Label="Add a directory">
                     <AppBarButton.Flyout>
-                        <Flyout Placement="BottomEdgeAlignedLeft">
+                        <Flyout Placement="BottomEdgeAlignedLeft" x:Name="DirectoryFlyout">
                             <StackPanel Orientation="Vertical" Spacing="12" Width="400">
                                 <StackPanel Orientation="Vertical">
                                     <TextBox Header="Path" PlaceholderText="C:\User\" AllowFocusOnInteraction="True"
@@ -47,7 +47,7 @@
                     </AppBarButton.Flyout>
                 </AppBarButton>
             </CommandBar>
-            <StackPanel Orientation="Vertical" x:Name="StackPanel" Spacing="12">
+            <StackPanel Orientation="Vertical" x:Name="StackPanel" Spacing="4">
                 
             </StackPanel>
         </StackPanel>

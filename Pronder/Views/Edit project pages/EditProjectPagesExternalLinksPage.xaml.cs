@@ -14,6 +14,7 @@ using Microsoft.UI.Xaml;
 using CommunityToolkit.WinUI.Controls;
 using Windows.Security.Cryptography.Core;
 using Windows.UI.Text;
+using Microsoft.UI.Xaml.Controls.Primitives;
 
 namespace Pronder.Views;
 
@@ -41,27 +42,27 @@ public sealed partial class EditProjectPagesExternalLinksPage : Page
 
     private void NewLinkClicked(object sender, RoutedEventArgs e)
     {
-        Link link = new()
-        {
-            Name = NameTextBox.Text,
-            Href = LinkTextBox.Text,
-            Type = "link",
-        };
-        _viewModel._project.Links.Add(link);
-        SaveData();
+        _viewModel.AddNewLink(NameTextBox.Text, LinkTextBox.Text);
+
+        NameTextBox.Text = string.Empty;
+        LinkTextBox.Text = string.Empty;
+
+        LinkFlyout.Hide();
+        LoadData();
     }
 
     private void NewPathClicked(object sender, RoutedEventArgs e)
     {
-        Link path = new()
-        {
-            Name = NameTextBox2.Text,
-            Href = LinkTextBox.Text,
-            Type = "path",
-        };
-        _viewModel._project.Links.Add(path);
-        SaveData();
+        _viewModel.AddNewPath(NameTextBox2.Text, PathTextBox.Text);
+
+        NameTextBox2.Text = string.Empty;
+        PathTextBox.Text = string.Empty;
+
+        DirectoryFlyout.Hide();
+        LoadData();
     }
+
+
 
     void SaveData()
     {
@@ -77,6 +78,7 @@ public sealed partial class EditProjectPagesExternalLinksPage : Page
 
     async void LoadData()
     {
+        StackPanel.Children.Clear();
         List<Link> links = _viewModel._project.Links;
 
         if (links != null)
@@ -101,7 +103,7 @@ public sealed partial class EditProjectPagesExternalLinksPage : Page
         {
             Header = "Name",
         };
-        TextBox nameTextBox = new TextBox() { Text = link.Name, MinWidth = 200};
+        TextBox nameTextBox = new TextBox() { Text = link.Name, MinWidth = 200 };
         name.Content = nameTextBox;
         linkDisplay.Items.Add(name);
 
@@ -119,10 +121,28 @@ public sealed partial class EditProjectPagesExternalLinksPage : Page
             Foreground = (SolidColorBrush)Application.Current.Resources["SystemFillColorCriticalBrush"],
             Background = (SolidColorBrush)Application.Current.Resources["SystemFillColorCriticalBackgroundBrush"],
         };
-        Button deleteButton = new Button() { Content = "Delete"};
+
+        Button deleteButton = new Button() { Content = "Delete" };
+        deleteButton.Tag = link;
+        deleteButton.Click += DeleteButtonClick;
         delete.Content = deleteButton;
         linkDisplay.Items.Add(delete);
 
         return linkDisplay;
     }
-}
+
+
+    private void DeleteButtonClick(object sender, RoutedEventArgs e)
+    {
+        Button button = sender as Button;
+        if (button != null)
+        {
+            Link linkToDelete = button.Tag as Link;
+
+            if (linkToDelete != null)
+                _viewModel._project.Links.Remove(linkToDelete);
+                SaveData();
+            }
+        }
+    }
+

@@ -9,19 +9,12 @@
 
     <ScrollViewer VerticalScrollBarVisibility="Hidden" CornerRadius="{StaticResource ControlCornerRadius}">
         <StackPanel Orientation="Vertical">
-            <Border Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}"
-                    CornerRadius="{StaticResource OverlayCornerRadius}"
-                    VerticalAlignment="Top"
-                    HorizontalAlignment="Center"
-                    Height="400"
-                    Width="auto"
-                    Visibility="Visible"
+            <Border Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}" 
+                    CornerRadius="{StaticResource OverlayCornerRadius}" VerticalAlignment="Top"
+                    HorizontalAlignment="Center" Height="400" Width="auto" Visibility="Visible"
                     x:Name="ProjectBannerParent">
-                <Image Stretch="UniformToFill"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   x:Name="ProjectBanner"
-                   Loaded="insertBanner">
+                <Image Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       x:Name="ProjectBanner" Loaded="insertBanner">
                 </Image>
             </Border>
             <Grid Margin="0, 20, 0, 0" Height="100" VerticalAlignment="Top" x:Name="ProjectBannerAfter">
@@ -31,20 +24,11 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Border x:Name="CardBackground" Background="{ThemeResource ControlFillColorDefaultBrush}"
-                CornerRadius="999"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Left"
-                Height="100"
-                Width="100"
-                Padding="10, 10, 10, 10"
-                Grid.Column="0"    
-                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
-                BorderThickness="1">
-                    <Image Stretch="UniformToFill"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       x:Name="ProjectIcon"
-                       Loaded="insertIcon">
+                        CornerRadius="999" VerticalAlignment="Top" HorizontalAlignment="Left"
+                        Height="100" Width="100" Padding="10, 10, 10, 10" Grid.Column="0"    
+                        BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1">
+                    <Image Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           x:Name="ProjectIcon" Loaded="insertIcon">
                     </Image>
                 </Border>
                 <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Column="1">
@@ -109,10 +93,8 @@
             </SelectorBar>
 
 
-            <Frame IsNavigationStackEnabled="False"
-               x:Name="ContentFrame"
-               CornerRadius="{StaticResource ControlCornerRadius}"
-               MinHeight="550">
+            <Frame IsNavigationStackEnabled="False" x:Name="ContentFrame" CornerRadius="{StaticResource ControlCornerRadius}"
+                   MinHeight="550">
                 <Frame.ContentTransitions>
                     <TransitionCollection>
                         <NavigationThemeTransition  />
@@ -121,10 +103,8 @@
             </Frame>
 
             <!--        Teaching Tips - Help        -->
-            <TeachingTip x:Name="ToggleThemeTeachingTip1"
-                            Target="{x:Bind row}"
-                            Title="Change themes without hassle"
-                            Subtitle="It's easier than ever to see control samples in both light and dark theme!">
+            <TeachingTip x:Name="ToggleThemeTeachingTip1" Target="{x:Bind row}" Title="Change themes without hassle"
+                         Subtitle="It's easier than ever to see control samples in both light and dark theme!">
                 <TeachingTip.IconSource>
                     <SymbolIconSource Symbol="Refresh" />
                 </TeachingTip.IconSource>

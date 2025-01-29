@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-01-28T14:40:28.317</Modified>
+      <Modified>2025-01-29T09:31:27.885</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-01-28T14:15:18.648</Modified>
+      <Modified>2025-01-29T09:21:03.644</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\Pronder.runtimeconfig.json">
       <PackagePath>Pronder.runtimeconfig.json</PackagePath>
@@ -44,7 +44,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\Pronder.dll">
       <PackagePath>Pronder.dll</PackagePath>
-      <Modified>2025-01-28T14:40:27.425</Modified>
+      <Modified>2025-01-29T09:31:27.060</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\appsettings.json">
       <PackagePath>appsettings.json</PackagePath>
@@ -52,7 +52,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\apphost.exe">
       <PackagePath>Pronder.exe</PackagePath>
-      <Modified>2025-01-28T14:40:27.445</Modified>
+      <Modified>2025-01-29T09:31:27.081</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\Pronder.deps.json">
       <PackagePath>Pronder.deps.json</PackagePath>

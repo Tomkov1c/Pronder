@@ -9,19 +9,12 @@
 
     <ScrollViewer VerticalScrollBarVisibility="Hidden" CornerRadius="{StaticResource ControlCornerRadius}">
         <StackPanel Orientation="Vertical">
-            <Border x:ConnectionId='2' Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}"
-                    CornerRadius="{StaticResource OverlayCornerRadius}"
-                    VerticalAlignment="Top"
-                    HorizontalAlignment="Center"
-                    Height="400"
-                    Width="auto"
-                    Visibility="Visible"
+            <Border x:ConnectionId='2' Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}" 
+                    CornerRadius="{StaticResource OverlayCornerRadius}" VerticalAlignment="Top"
+                    HorizontalAlignment="Center" Height="400" Width="auto" Visibility="Visible"
                     x:Name="ProjectBannerParent">
-                <Image x:ConnectionId='17' Stretch="UniformToFill"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   x:Name="ProjectBanner"
-                                        >
+                <Image x:ConnectionId='17' Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       x:Name="ProjectBanner"                      >
                 </Image>
             </Border>
             <Grid x:ConnectionId='3' Margin="0, 20, 0, 0" Height="100" VerticalAlignment="Top" x:Name="ProjectBannerAfter">
@@ -31,20 +24,11 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Border x:ConnectionId='8' x:Name="CardBackground" Background="{ThemeResource ControlFillColorDefaultBrush}"
-                CornerRadius="999"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Left"
-                Height="100"
-                Width="100"
-                Padding="10, 10, 10, 10"
-                Grid.Column="0"    
-                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
-                BorderThickness="1">
-                    <Image x:ConnectionId='16' Stretch="UniformToFill"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       x:Name="ProjectIcon"
-                                          >
+                        CornerRadius="999" VerticalAlignment="Top" HorizontalAlignment="Left"
+                        Height="100" Width="100" Padding="10, 10, 10, 10" Grid.Column="0"    
+                        BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1">
+                    <Image x:ConnectionId='16' Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           x:Name="ProjectIcon"                    >
                     </Image>
                 </Border>
                 <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Column="1">
@@ -109,10 +93,8 @@
             </SelectorBar>
 
 
-            <Frame x:ConnectionId='5' IsNavigationStackEnabled="False"
-               x:Name="ContentFrame"
-               CornerRadius="{StaticResource ControlCornerRadius}"
-               MinHeight="550">
+            <Frame x:ConnectionId='5' IsNavigationStackEnabled="False" x:Name="ContentFrame" CornerRadius="{StaticResource ControlCornerRadius}"
+                   MinHeight="550">
                 <Frame.ContentTransitions>
                     <TransitionCollection>
                         <NavigationThemeTransition  />
@@ -121,10 +103,8 @@
             </Frame>
 
             <!--        Teaching Tips - Help        -->
-            <TeachingTip x:ConnectionId='6' x:Name="ToggleThemeTeachingTip1"
-                                                 
-                            Title="Change themes without hassle"
-                            Subtitle="It's easier than ever to see control samples in both light and dark theme!">
+            <TeachingTip x:ConnectionId='6' x:Name="ToggleThemeTeachingTip1"                       Title="Change themes without hassle"
+                         Subtitle="It's easier than ever to see control samples in both light and dark theme!">
                 <TeachingTip.IconSource>
                     <SymbolIconSource Symbol="Refresh" />
                 </TeachingTip.IconSource>
