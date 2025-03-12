@@ -15,6 +15,8 @@ using CommunityToolkit.WinUI.Controls;
 using Windows.Security.Cryptography.Core;
 using Windows.UI.Text;
 using Microsoft.UI.Xaml.Controls.Primitives;
+using Windows.Storage.AccessCache;
+using Windows.Storage;
 
 namespace Pronder.Views;
 
@@ -140,9 +142,38 @@ public sealed partial class EditProjectPagesExternalLinksPage : Page
             Link linkToDelete = button.Tag as Link;
 
             if (linkToDelete != null)
+            {
                 _viewModel._project.Links.Remove(linkToDelete);
                 SaveData();
             }
         }
     }
+
+    private async void OpenFileDialog(object sender, RoutedEventArgs e)
+    {
+        var senderButton = sender as Button;
+        senderButton.IsEnabled = false;
+
+        FolderPicker openPicker = new Windows.Storage.Pickers.FolderPicker();
+
+        var window = App.MainWindow;
+
+        var hWnd = WinRT.Interop.WindowNative.GetWindowHandle(window);
+
+        WinRT.Interop.InitializeWithWindow.Initialize(openPicker, hWnd);
+
+        openPicker.SuggestedStartLocation = PickerLocationId.Desktop;
+        openPicker.FileTypeFilter.Add("*");
+
+        StorageFolder folder = await openPicker.PickSingleFolderAsync();
+        if (folder != null)
+        {
+            StorageApplicationPermissions.FutureAccessList.AddOrReplace("PickedFolderToken", folder);
+            PathTextBox.Text = folder.Path;
+        }
+
+        senderButton.IsEnabled = true;
+
+    }
+}
 

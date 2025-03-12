@@ -351,6 +351,6 @@ C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\Views\Edit project pages\EditProjectPagesExternalLinksPage.xbf
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\Views\Edit project pages\EditProjectPagesExternalLinksPage.xaml
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\Views\Edit project pages\EditProjectPagesExternalLinksPage.xbf
-C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\mscordaccore_x86_x86_8.0.1224.60305.dll
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\Views\Edit project pages\EditProjectPagesExternalLinksPage.g.i.cs
 C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\obj\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\Views\Edit project pages\EditProjectPagesExternalLinksPage.g.cs
+C:\Users\gamin\OneDrive - Tomkovic\Backup\PC\Dokumenti\Works\Pronder\Pronder\bin\x86\Debug\net8.0-windows10.0.26100.0\win10-x86\mscordaccore_x86_x86_8.0.1224.60305.dll

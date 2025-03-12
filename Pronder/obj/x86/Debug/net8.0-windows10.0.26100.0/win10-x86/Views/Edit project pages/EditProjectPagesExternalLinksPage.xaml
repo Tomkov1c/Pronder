@@ -16,13 +16,13 @@
                         Margin="-5, 12, 0, 8">
                 <AppBarButton Icon="Link" Label="Add a website">
                     <AppBarButton.Flyout>
-                        <Flyout x:ConnectionId='8' Placement="BottomEdgeAlignedLeft" x:Name="LinkFlyout">
+                        <Flyout x:ConnectionId='9' Placement="BottomEdgeAlignedLeft" x:Name="LinkFlyout">
                             <StackPanel Orientation="Vertical" Spacing="12" Width="400">
-                                <TextBox x:ConnectionId='9' Header="Link" PlaceholderText="https://www." AllowFocusOnInteraction="True" 
+                                <TextBox x:ConnectionId='10' Header="Link" PlaceholderText="https://www." AllowFocusOnInteraction="True" 
                                          x:Name="LinkTextBox"/>
-                                <TextBox x:ConnectionId='10' Header="Name" Description="Will be coppied from link if left empty." 
+                                <TextBox x:ConnectionId='11' Header="Name" Description="Will be coppied from link if left empty." 
                                          PlaceholderText="idk" AllowFocusOnInteraction="True" x:Name="NameTextBox"/>
-                                <Button x:ConnectionId='11' Style="{StaticResource AccentButtonStyle}" HorizontalAlignment="Stretch"
+                                <Button x:ConnectionId='12' Style="{StaticResource AccentButtonStyle}" HorizontalAlignment="Stretch"
                                         Content="Create"                       />
                             </StackPanel>
                         </Flyout>
@@ -36,7 +36,7 @@
                                     <TextBox x:ConnectionId='7' Header="Path" PlaceholderText="C:\User\" AllowFocusOnInteraction="True"
                                              x:Name="PathTextBox"/>
                                     <TextBlock Text="or" Padding="12, 0"/>
-                                    <Button Content="Select directory" />
+                                    <Button x:ConnectionId='8' Content="Select directory"                       />
                                 </StackPanel>
                                 <TextBox x:ConnectionId='5' Header="Name" Description="Will be coppied from link if left empty." 
                                          PlaceholderText="idk" AllowFocusOnInteraction="True" x:Name="NameTextBox2"/>
