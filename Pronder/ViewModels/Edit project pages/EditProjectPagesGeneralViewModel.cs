@@ -51,7 +51,7 @@ namespace Pronder.ViewModels
             _description = _project.About;
             _tag = _project.Tag;
 
-            _iconPath = string.IsNullOrEmpty(_project.Icon) ? "ms-appx:///Assets/Icon8/Color/icons8-website-512.png" : _project.Icon;
+            _iconPath = string.IsNullOrEmpty(_project.Icon) ? "" : _project.Icon;
             _bannerPath = string.IsNullOrEmpty(_project.Banner) ? null : _project.Banner;
 
             _isIconExpanderExpanded = !string.IsNullOrEmpty(_project.Icon);

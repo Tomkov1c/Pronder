@@ -34,7 +34,7 @@ public sealed partial class EditProjectPagesGeneralPage : Page
     }
     private async void UpdateDescriptionTextBox(object sender, WindowSizeChangedEventArgs e)
     {
-        await Task.Delay(25);
+        await Task.Delay(15);
         DescriptionTextBox.MinWidth = DescriptionSettingsCard.ActualSize.X - 76;
     }
     private void TextBoxGotFocus(object sender, RoutedEventArgs e)

@@ -22,7 +22,7 @@
                 <Button Padding="8"
                     Width="32"
                     Height="32"
-                    TabIndex="0"
+                    IsTabStop="False"
                     x:Name="AppTitleBarButton"
                     Background="{ThemeResource ControlFillColorTransparentBrush}"
                     BorderBrush="{ThemeResource ControlFillColorTransparentBrush}">
