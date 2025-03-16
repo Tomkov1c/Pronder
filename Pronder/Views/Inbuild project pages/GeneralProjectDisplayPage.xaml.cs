@@ -18,15 +18,14 @@ using System.Drawing;
 using Microsoft.UI;
 using Pronder.Custom;
 using Pronder.Helpers.Mine;
+using Microsoft.UI.Xaml.Navigation;
 
 namespace Pronder.Views;
 
 public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButtonAction
 {
-    public GeneralProjectDisplayViewModel ViewModel
-    {
-        get;
-    }
+    public GeneralProjectDisplayViewModel _viewModel;
+    private Project project;
 
     int previousSelectedIndex;
     public string path;
@@ -35,7 +34,6 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
     EditProjectPopup editProjectPopup;
     public GeneralProjectDisplayPage()
     {
-        ViewModel = App.GetService<GeneralProjectDisplayViewModel>();
         InitializeComponent();
 
         var activeItem = NavigationService.Instance.ActiveItem;
@@ -53,7 +51,23 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
     {
         ToggleThemeTeachingTip1.IsOpen = !ToggleThemeTeachingTip1.IsOpen;
     }
-    
+
+    protected override void OnNavigatedTo(NavigationEventArgs e)
+    {
+        base.OnNavigatedTo(e);
+
+        if (e.Parameter is string path)
+        {
+            _viewModel = new GeneralProjectDisplayViewModel(path);
+            DataContext = _viewModel;
+
+            foreach (var item in _viewModel.ExternalLinks)
+            {
+                ProjectExternalLinksInsert.Items.Add(item);
+            }
+        }
+    }
+
     private void TabSwitch(SelectorBar sender, SelectorBarSelectionChangedEventArgs args)
     {
         SelectorBarItem selectedItem = sender.SelectedItem;
@@ -103,59 +117,9 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
 
     }
 
-    async void insertBanner(object sender, RoutedEventArgs e)
-    {
-        Project project = JsonConvert.DeserializeObject<Project>(File.ReadAllText(path));
-        using (StreamReader file = File.OpenText(path))
-        {
-            JsonSerializer serializer = new JsonSerializer();
-            Project deserialized = (Project)serializer.Deserialize(file, typeof(Project));
-
-            if ((deserialized.Banner != null) && (deserialized.Banner != ""))
-            {
-                var bitmapImage = new BitmapImage();
-                bitmapImage.UriSource = new Uri(deserialized.Banner);
-                ProjectBannerParent.Height = 400;
-                ProjectBannerAfter.Margin = new Thickness(0, 20, 0, 0);
-                ProjectBanner.Source = bitmapImage;
-            }
-            else
-            {
-                ProjectBannerParent.Height = 0;
-                ProjectBannerAfter.Margin = new Thickness(0, 0, 0, 0);
-            }
-        }
-    }
-    async void insertIcon(object sender, RoutedEventArgs e)
-    {
-        Project project = JsonConvert.DeserializeObject<Project>(File.ReadAllText(path));
-        using (StreamReader file = File.OpenText(path))
-        {
-            JsonSerializer serializer = new JsonSerializer();
-            Project deserialized = (Project)serializer.Deserialize(file, typeof(Project));
-
-            if ((deserialized.Icon != null) && (deserialized.Icon != ""))
-            {
-                var bitmapImage = new BitmapImage();
-                bitmapImage.UriSource = new Uri(deserialized.Icon);
-                ProjectIcon.Source = bitmapImage;
-            }
-            else
-            {
-                var bitmapImage = new BitmapImage();
-                bitmapImage = new BitmapImage(new Uri(base.BaseUri, @"/Assets/Icon8/Color/icons8-project-512.png"));
-                ProjectIcon.Source = bitmapImage;
-            }
-        }
-    }
-    // ^ it took me a week to make these 2. I'm not lying. UWP wont set source in the insertData() function so this
-    // needs to be ran when <Image> is loaded. wtf microsoft or its just me ¯\_(ツ)_/¯
-
     async void refreshData()
     {
-        insertBanner(this, null);
-        insertIcon(this, null);
-        importData(this, null);
+        
     }
 
     async void importData(object sender, RoutedEventArgs e)
@@ -163,7 +127,7 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
         var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
         localSettings.Values["currentlyActiveProject"] = path;
 
-        ProjectExternalLinksInsert.Items.Clear();
+        //ProjectExternalLinksInsert.Items.Clear();
 
         Project project = JsonConvert.DeserializeObject<Project>(File.ReadAllText(path));
 
@@ -172,32 +136,10 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
             JsonSerializer serializer = new JsonSerializer();
             Project deserialized = (Project)serializer.Deserialize(file, typeof(Project));
 
-            ProjectTitle.Text = deserialized.Name;
-            ProjectTag.Text = deserialized.Tag;
 
             if (deserialized.Links != null)
             {
-                for (int i = 0; i < deserialized.Links.Count; i++)
-                {
-                    MenuFlyoutItem newItem = new MenuFlyoutItem
-                    {
-                        Text = deserialized.Links[i].Name,
-
-                    };
-                    if (deserialized.Links[i].Type == "link")
-                    {
-                        newItem.Click += externalLinksClickLink;
-                    }
-                    else if (deserialized.Links[i].Type == "path")
-                    {
-                        newItem.Click += externalLinksClickPath;
-                    }
-
-                    newItem.Icon = new ImageIcon { Source = new BitmapImage(new Uri(await new ExternalLinkHelper().GetIconPath(deserialized.Links[i]))), };
-
-                    newItem.Tag = deserialized.Links[i].Href;
-                    ProjectExternalLinksInsert.Items.Add(newItem);
-                }
+                
             }
             else
             {
@@ -207,21 +149,7 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
             SubPageTabBarFirst.IsSelected = true;
         }
 
-        void externalLinksClickLink(object sender, RoutedEventArgs e)
-        {
-            if (sender is MenuFlyoutItem menuItem && menuItem.Tag is string href)
-            {
-                var uri = new Uri(href);
-                var success = Windows.System.Launcher.LaunchUriAsync(uri);
-            }
-        }
-        void externalLinksClickPath(object sender, RoutedEventArgs e)
-        {
-            if (sender is MenuFlyoutItem menuItem && menuItem.Tag is string href)
-            {
-                Process.Start("explorer.exe", menuItem.Tag.ToString());
-            }
-        }
+        
 
     }
 

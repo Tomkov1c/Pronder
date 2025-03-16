@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nZv+sOmDpE4=",
+  "dgSpecHash": "IB/8AJLhOWA=",
   "success": true,
   "projectFilePath": "C:\\Users\\gamin\\OneDrive - Tomkovic\\Backup\\PC\\Dokumenti\\Works\\Pronder\\Pronder\\Pronder.csproj",
   "expectedPackageFiles": [
@@ -46,16 +46,16 @@
     "C:\\Users\\gamin\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\gamin\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
     "C:\\Users\\gamin\\.nuget\\packages\\winuiex\\2.3.4\\winuiex.2.3.4.nupkg.sha512",
-    "C:\\Users\\gamin\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\8.0.12\\microsoft.netcore.app.runtime.win-x86.8.0.12.nupkg.sha512",
-    "C:\\Users\\gamin\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.26100.57\\microsoft.windows.sdk.net.ref.10.0.26100.57.nupkg.sha512",
-    "C:\\Users\\gamin\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\8.0.12\\microsoft.aspnetcore.app.runtime.win-x86.8.0.12.nupkg.sha512",
-    "C:\\Users\\gamin\\.nuget\\packages\\microsoft.netcore.app.runtime.win-arm64\\8.0.12\\microsoft.netcore.app.runtime.win-arm64.8.0.12.nupkg.sha512",
-    "C:\\Users\\gamin\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.12\\microsoft.aspnetcore.app.runtime.win-x64.8.0.12.nupkg.sha512",
-    "C:\\Users\\gamin\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-arm64\\8.0.12\\microsoft.windowsdesktop.app.runtime.win-arm64.8.0.12.nupkg.sha512",
-    "C:\\Users\\gamin\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.12\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.12.nupkg.sha512",
-    "C:\\Users\\gamin\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-arm64\\8.0.12\\microsoft.aspnetcore.app.runtime.win-arm64.8.0.12.nupkg.sha512",
-    "C:\\Users\\gamin\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.12\\microsoft.netcore.app.runtime.win-x64.8.0.12.nupkg.sha512",
-    "C:\\Users\\gamin\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\8.0.12\\microsoft.windowsdesktop.app.runtime.win-x86.8.0.12.nupkg.sha512"
+    "C:\\Users\\gamin\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\8.0.14\\microsoft.netcore.app.runtime.win-x86.8.0.14.nupkg.sha512",
+    "C:\\Users\\gamin\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.26100.56\\microsoft.windows.sdk.net.ref.10.0.26100.56.nupkg.sha512",
+    "C:\\Users\\gamin\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\8.0.14\\microsoft.aspnetcore.app.runtime.win-x86.8.0.14.nupkg.sha512",
+    "C:\\Users\\gamin\\.nuget\\packages\\microsoft.netcore.app.runtime.win-arm64\\8.0.14\\microsoft.netcore.app.runtime.win-arm64.8.0.14.nupkg.sha512",
+    "C:\\Users\\gamin\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.14\\microsoft.aspnetcore.app.runtime.win-x64.8.0.14.nupkg.sha512",
+    "C:\\Users\\gamin\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-arm64\\8.0.14\\microsoft.windowsdesktop.app.runtime.win-arm64.8.0.14.nupkg.sha512",
+    "C:\\Users\\gamin\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.14\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.14.nupkg.sha512",
+    "C:\\Users\\gamin\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-arm64\\8.0.14\\microsoft.aspnetcore.app.runtime.win-arm64.8.0.14.nupkg.sha512",
+    "C:\\Users\\gamin\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.14\\microsoft.netcore.app.runtime.win-x64.8.0.14.nupkg.sha512",
+    "C:\\Users\\gamin\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\8.0.14\\microsoft.windowsdesktop.app.runtime.win-x86.8.0.14.nupkg.sha512"
   ],
   "logs": []
 }

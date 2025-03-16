@@ -192,43 +192,12 @@ public sealed partial class ShellPage : Page
 
     private async void ItemClicked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
     {
-        NavigationService.Instance.ActiveItem = args.InvokedItemContainer as NavigationViewItem;
-
-        /*
-        if (args.InvokedItemContainer.Tag != null)
+        if (args.InvokedItemContainer is NavigationViewItem item && item.Tag != null)
         {
-            string pageTag = args.InvokedItemContainer.Tag.ToString();
+            string pageTag = item.Tag.ToString();
 
-            Uri fileUri = new Uri($"ms-appx:///Assets/pagesList.json");
-            StorageFile jsonFile = await StorageFile.GetFileFromApplicationUriAsync(fileUri);
-
-            string jsonContent = await FileIO.ReadTextAsync(jsonFile);
-                List<PageList> pages = JsonConvert.DeserializeObject<List<PageList>>(jsonContent);
-
-                // Step 2: Find the matching page based on PageID (which is the pageTag here)
-                PageList matchingPage = pages.FirstOrDefault(p => p.PageID == pageTag);
-
-                if (matchingPage == null)
-                {
-                    throw new Exception("Matching page not found in the JSON.");
-                }
-
-                // Step 3: Get the Page Type from the assembly based on the ClassName
-                // We assume all pages are within the same assembly (the app's main assembly)
-                Assembly currentAssembly = typeof(App).GetTypeInfo().Assembly;
-                Type pageType = currentAssembly.GetType(matchingPage.ClassName);
-
-                if (pageType == null)
-                {
-                    throw new Exception($"Page type '{matchingPage.ClassName}' not found.");
-                }
-
-                // Step 4: Navigate to the found page
-        */
-        
-                NavigationFrame.Navigate(typeof(GeneralProjectDisplayPage));
-        /*}
-        */
+            NavigationFrame.Navigate(typeof(GeneralProjectDisplayPage), pageTag);
+        }
     }
     public async void CreateDirectoryAsync()
     {
@@ -314,6 +283,7 @@ public sealed partial class ShellPage : Page
             }
         }
         var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+        /*
         if (localSettings.Values["shellPage_NewProject"] != null)
         {
             foreach (var item in NavigationViewControl.MenuItems)
@@ -324,5 +294,6 @@ public sealed partial class ShellPage : Page
                 }
             }
         }
+        */
     }
 }

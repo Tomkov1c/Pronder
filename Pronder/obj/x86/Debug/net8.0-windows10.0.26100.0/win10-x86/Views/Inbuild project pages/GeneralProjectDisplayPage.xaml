@@ -14,7 +14,7 @@
                     HorizontalAlignment="Center" Height="400" Width="auto" Visibility="Visible"
                     x:Name="ProjectBannerParent">
                 <Image x:ConnectionId='17' Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" 
-                       x:Name="ProjectBanner"                      >
+                       x:Name="ProjectBanner" Source="{Binding BannerPath}">
                 </Image>
             </Border>
             <Grid x:ConnectionId='3' Margin="0, 20, 0, 0" Height="100" VerticalAlignment="Top" x:Name="ProjectBannerAfter">
@@ -28,12 +28,12 @@
                         Height="100" Width="100" Padding="10, 10, 10, 10" Grid.Column="0"    
                         BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1">
                     <Image x:ConnectionId='16' Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"
-                           x:Name="ProjectIcon"                    >
+                           x:Name="ProjectIcon" Source="{Binding IconPath}">
                     </Image>
                 </Border>
                 <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Column="1">
-                    <TextBlock x:ConnectionId='14' x:Name="ProjectTitle" Style="{StaticResource TitleTextBlockStyle}"                    />
-                    <TextBlock x:ConnectionId='15' x:Name="ProjectTag" Style="{StaticResource CaptionTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                    <TextBlock x:ConnectionId='14' x:Name="ProjectTitle" Style="{StaticResource TitleTextBlockStyle}" Text="{Binding Name}"/>
+                    <TextBlock x:ConnectionId='15' x:Name="ProjectTag" Style="{StaticResource CaptionTextBlockStyle}" Text="{Binding Tag}" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="2">
 
