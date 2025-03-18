@@ -38,14 +38,24 @@ public partial class GeneralProjectDisplayViewModel : ObservableRecipient
 
     public GeneralProjectDisplayViewModel(string path)
     {
-        projectPath = path;
+        InitializeAsync(path);
+    }
 
-        _project = JsonConvert.DeserializeObject<Project>(File.ReadAllText(projectPath));
+    private async Task InitializeAsync(string path)
+    {
+        await MainTasksAsync(path);
+        BackgroundTasksAsync();
+    }
+
+    private async Task MainTasksAsync(string path)
+    {
+        this.projectPath = path;
+
+        _project = JsonConvert.DeserializeObject<Project>(File.ReadAllText(path));
 
         _name = _project.Name;
         _description = _project.About;
         _tag = _project.Tag;
-
         _iconPath = string.IsNullOrEmpty(_project.Icon) ? "" : _project.Icon;
         _bannerPath = string.IsNullOrEmpty(_project.Banner) ? null : _project.Banner;
 
@@ -53,30 +63,34 @@ public partial class GeneralProjectDisplayViewModel : ObservableRecipient
         {
             if (e.PropertyName is nameof(Name) or nameof(Description) or nameof(Tag) or nameof(IconPath) or nameof(BannerPath))
             {
-                
+
             }
         };
+    }
 
-        foreach (Link item in _project.Links) 
-        {
-            MenuFlyoutItem menuItem = new();
-            menuItem.Text = item.Name;
-            if (item.Type == "link")
+    private void BackgroundTasksAsync()
+    {
+        if (_project.Links != null)
+            foreach (Link item in _project.Links)
             {
-                menuItem.Command = OpenLinkCommand;
-                menuItem.CommandParameter = item.Href;
-            }
-            else if (item.Type == "path")
-            {
-                menuItem.Command = OpenPathCommand;
-                menuItem.CommandParameter = item.Href;
-            }
+                MenuFlyoutItem menuItem = new();
+                menuItem.Text = item.Name;
+                if (item.Type == "link")
+                {
+                    menuItem.Command = OpenLinkCommand;
+                    menuItem.CommandParameter = item.Href;
+                }
+                else if (item.Type == "path")
+                {
+                    menuItem.Command = OpenPathCommand;
+                    menuItem.CommandParameter = item.Href;
+                }
 
-            //menuItem.Icon = new ImageIcon { Source = new BitmapImage(new Uri(await new ExternalLinkHelper().GetIconPath(deserialized.Links[i]))), };
+                //menuItem.Icon = new ImageIcon { Source = new BitmapImage(new Uri(await new ExternalLinkHelper().GetIconPath(deserialized.Links[i]))), };
 
-            menuItem.Tag = item.Href;
-            ExternalLinks.Add(menuItem);
-        }
+                menuItem.Tag = item.Href;
+                ExternalLinks.Add(menuItem);
+            }
     }
 
     [RelayCommand]

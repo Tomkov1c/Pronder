@@ -1,0 +1,17 @@
+App.xbf
+MainWindow.xbf
+Styles\FontSizes.xbf
+Styles\Icon8Icon.xbf
+Styles\TextBlock.xbf
+Styles\Thickness.xbf
+Views\AboutPage.xbf
+Views\BlankPage.xbf
+Views\Edit project pages\EditProjectPagesExternalLinksPage.xbf
+Views\Edit project pages\EditProjectPagesGeneralPage.xbf
+Views\HomePage.xbf
+Views\Inbuild project pages\GeneralProjectDisplayPage.xbf
+Views\Inbuild project sub pages\ProjectAboutPage.xbf
+Views\Inbuild project sub pages\ProjectToDoPage.xbf
+Views\NewProjectPage.xbf
+Views\SettingsPage.xbf
+Views\ShellPage.xbf
