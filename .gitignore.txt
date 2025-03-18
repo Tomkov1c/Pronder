@@ -1,2 +1,0 @@
-/Pronder/bin
-/.vs
