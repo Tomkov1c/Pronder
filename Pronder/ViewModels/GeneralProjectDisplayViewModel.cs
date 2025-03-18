@@ -17,7 +17,7 @@ namespace Pronder.ViewModels;
 public partial class GeneralProjectDisplayViewModel : ObservableRecipient
 {
     private string projectPath;
-    private Project _project;
+    public Project _project;
 
     [ObservableProperty]
     private string _name;
@@ -70,7 +70,7 @@ public partial class GeneralProjectDisplayViewModel : ObservableRecipient
 
     private void BackgroundTasksAsync()
     {
-        if (_project.Links != null)
+        if (!_project.LinksNullOrEmpty())
             foreach (Link item in _project.Links)
             {
                 MenuFlyoutItem menuItem = new();

@@ -35,17 +35,6 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
     public GeneralProjectDisplayPage()
     {
         InitializeComponent();
-
-        var activeItem = NavigationService.Instance.ActiveItem;
-        ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
-
-        EditProjectPopup.OnProjectEdited += refreshData;
-
-        if ((activeItem != null) && (activeItem.Tag.ToString() != null))
-        {
-            path = activeItem.Tag.ToString();
-            getFiles();
-        }
     }
     void IPerPageHelpButtonAction.HelpButtonAction(object sender, RoutedEventArgs e)
     {
@@ -60,6 +49,9 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
         {
             _viewModel = new GeneralProjectDisplayViewModel(path);
             DataContext = _viewModel;
+
+            var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            localSettings.Values["currentlyActiveProject"] = path;
 
             foreach (var item in _viewModel.ExternalLinks)
             {
@@ -99,58 +91,36 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
 
 
     //mine
-    public async Task getFiles()
-    {
-        Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
-        string projectFolderName = "Projects";
-        StorageFolder projectFolder = await storageFolder.GetFolderAsync(projectFolderName);
-        IReadOnlyList<StorageFile> files = await projectFolder.GetFilesAsync();
-        int filesCount = files.Count;
-        for (int i = 0; i < filesCount; i++)
-        {
-            if (files[i].Name == path)
-            {
-                path = files[i].Path.ToString();
-                break;
-            }
-        }
-
-    }
-
     async void refreshData()
     {
         
     }
 
-    async void importData(object sender, RoutedEventArgs e)
+    private void PageLoaded(object sender, RoutedEventArgs e)
     {
-        var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
-        localSettings.Values["currentlyActiveProject"] = path;
-
-        //ProjectExternalLinksInsert.Items.Clear();
-
-        Project project = JsonConvert.DeserializeObject<Project>(File.ReadAllText(path));
-
-        using (StreamReader file = File.OpenText(path))
+        if (_viewModel._project.LinksNullOrEmpty())
         {
-            JsonSerializer serializer = new JsonSerializer();
-            Project deserialized = (Project)serializer.Deserialize(file, typeof(Project));
-
-
-            if (deserialized.Links != null)
-            {
-                
-            }
-            else
-            {
-                this.ProjectExternalLinks.Visibility = Visibility.Collapsed;
-            }
-            SubPageTabBarFirst.IsSelected = false;
-            SubPageTabBarFirst.IsSelected = true;
+            this.ProjectExternalLinks.Visibility = Visibility.Collapsed;
         }
 
-        
+        if (_viewModel._project.BannerNullOrEmpty())
+        {
+            ProjectBannerParent.Height = 0;
+            ProjectBannerAfter.Margin = new Thickness(0, 0, 0, 0);
+        }
+        else
+        {
+            ProjectBannerParent.Height = 400;
+            ProjectBannerAfter.Margin = new Thickness(0, 20, 0, 0);
+        }
 
+        if (_viewModel._project.IconNullOrEmpty())
+        {
+            var bitmapImage = new BitmapImage();
+            bitmapImage = new BitmapImage(new Uri(base.BaseUri, @"/Assets/Icon8/Color/icons8-project-512.png"));
+            ProjectIcon.Source = bitmapImage;
+        }
+        SubPageTabBarFirst.IsSelected = true;
     }
 
     async void deleteProject(object sender, RoutedEventArgs e)
@@ -186,5 +156,4 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
 
         editProjectPopup = new EditProjectPopup(this.XamlRoot, path);
     }
-
 }

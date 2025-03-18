@@ -32,6 +32,19 @@ namespace Pronder.Models
         public string DateCreated { get; set; }
         public string DateLastViewed { get; set; }
         public string DateLastEdited { get; set; }
+
+        public bool IconNullOrEmpty()
+        {
+            return string.IsNullOrWhiteSpace(Icon) && string.IsNullOrEmpty(Icon);
+        }
+        public bool BannerNullOrEmpty()
+        {
+            return string.IsNullOrWhiteSpace(Banner) && string.IsNullOrEmpty(Banner);
+        }
+        public bool LinksNullOrEmpty()
+        {
+            return Links == null || !Links.Any();
+        }
     }
 
     public class Link
