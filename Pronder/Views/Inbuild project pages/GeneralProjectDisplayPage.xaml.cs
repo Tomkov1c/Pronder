@@ -24,8 +24,8 @@ namespace Pronder.Views;
 
 public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButtonAction
 {
+
     public GeneralProjectDisplayViewModel _viewModel;
-    private Project project;
 
     int previousSelectedIndex;
     public string path;
@@ -35,29 +35,38 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
     public GeneralProjectDisplayPage()
     {
         InitializeComponent();
+
+        EditProjectPopup.OnProjectEdited += RefreshPage;
     }
     void IPerPageHelpButtonAction.HelpButtonAction(object sender, RoutedEventArgs e)
     {
         ToggleThemeTeachingTip1.IsOpen = !ToggleThemeTeachingTip1.IsOpen;
     }
 
-    protected override void OnNavigatedTo(NavigationEventArgs e)
+    protected override async void OnNavigatedTo(NavigationEventArgs e)
     {
         base.OnNavigatedTo(e);
 
         if (e.Parameter is string path)
         {
-            _viewModel = new GeneralProjectDisplayViewModel(path);
-            DataContext = _viewModel;
+            this.path = path;
+            if (_viewModel == null)
+                await InitializeViewModel();
 
             var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
             localSettings.Values["currentlyActiveProject"] = path;
-
-            foreach (var item in _viewModel.ExternalLinks)
-            {
-                ProjectExternalLinksInsert.Items.Add(item);
-            }
         }
+    }
+
+    private Task<string> InitializeViewModel()
+    {
+        DataContext = null;
+        _viewModel = new GeneralProjectDisplayViewModel(this.path);
+        _viewModel.BackgroundTaskFinished += PageLoadedBackgroundTasks;
+        _viewModel.EventsSubscribed();
+        DataContext = _viewModel;
+
+        return Task.FromResult("ViewModel Initialized");
     }
 
     private void TabSwitch(SelectorBar sender, SelectorBarSelectionChangedEventArgs args)
@@ -91,11 +100,6 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
 
 
     //mine
-    async void refreshData()
-    {
-        
-    }
-
     private void PageLoaded(object sender, RoutedEventArgs e)
     {
         if (_viewModel._project.LinksNullOrEmpty())
@@ -121,6 +125,20 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
             ProjectIcon.Source = bitmapImage;
         }
         SubPageTabBarFirst.IsSelected = true;
+    }
+    private void PageLoadedBackgroundTasks()
+    {
+        ProjectExternalLinksInsert.Items.Clear();
+        foreach (var item in _viewModel.ExternalLinks)
+        {
+            ProjectExternalLinksInsert.Items.Add(item);
+        }
+    }
+
+    private void RefreshPage()
+    {
+        InitializeViewModel();
+        PageLoaded(null, null);
     }
 
     async void deleteProject(object sender, RoutedEventArgs e)
@@ -154,6 +172,6 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
         if(editProjectPopup != null)
             editProjectPopup.popup.IsOpen = false;
 
-        editProjectPopup = new EditProjectPopup(this.XamlRoot, path);
+        editProjectPopup = new EditProjectPopup(this.XamlRoot, this.path);
     }
 }

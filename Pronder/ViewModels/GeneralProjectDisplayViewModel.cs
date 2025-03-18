@@ -16,6 +16,9 @@ namespace Pronder.ViewModels;
 
 public partial class GeneralProjectDisplayViewModel : ObservableRecipient
 {
+    public event Action MainTaskFinished;
+    public event Action BackgroundTaskFinished;
+
     private string projectPath;
     public Project _project;
 
@@ -36,9 +39,19 @@ public partial class GeneralProjectDisplayViewModel : ObservableRecipient
 
     public ObservableCollection<MenuFlyoutItem> ExternalLinks { get; } = new();
 
-    public GeneralProjectDisplayViewModel(string path)
+    public GeneralProjectDisplayViewModel(string path, bool instantStart = false)
     {
-        InitializeAsync(path);
+        projectPath = path;
+        if(instantStart)
+        {
+            EventsSubscribed();
+        }
+    }
+
+    public void EventsSubscribed()
+    {
+
+        InitializeAsync(projectPath);
     }
 
     private async Task InitializeAsync(string path)
@@ -66,11 +79,13 @@ public partial class GeneralProjectDisplayViewModel : ObservableRecipient
 
             }
         };
+        MainTaskFinished?.Invoke();
     }
 
     private void BackgroundTasksAsync()
     {
         if (!_project.LinksNullOrEmpty())
+        {
             foreach (Link item in _project.Links)
             {
                 MenuFlyoutItem menuItem = new();
@@ -91,6 +106,8 @@ public partial class GeneralProjectDisplayViewModel : ObservableRecipient
                 menuItem.Tag = item.Href;
                 ExternalLinks.Add(menuItem);
             }
+        }
+        BackgroundTaskFinished?.Invoke();
     }
 
     [RelayCommand]

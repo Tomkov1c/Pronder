@@ -44,7 +44,7 @@ public partial class EditProjectPagesExternalLinksViewModel : ObservableRecipien
             Href = href,
             Type = "link"
         };
-        Project.Links.Add(link);
+        _project.Links.Add(link);
         SaveData();
     }
 
@@ -56,7 +56,7 @@ public partial class EditProjectPagesExternalLinksViewModel : ObservableRecipien
             Href = href,
             Type = "path"
         };
-        Project.Links.Add(path);
+        _project.Links.Add(path);
         SaveData();
     }
 
