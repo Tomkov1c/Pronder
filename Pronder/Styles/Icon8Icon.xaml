@@ -25,4 +25,54 @@
     <x:String x:Key="Rename">F1 M48,48z M0,0z M19.5,4A1.50015,1.50015,0,1,0,19.5,7L22,7 22,41 19.5,41A1.50015,1.50015,0,1,0,19.5,44L23.253906,44A1.50015,1.50015,0,0,0,23.740234,44L27.5,44A1.50015,1.50015,0,1,0,27.5,41L25,41 25,7 27.5,7A1.50015,1.50015,0,1,0,27.5,4L19.5,4z M10.5,10C6.9280619,10,4,12.928062,4,16.5L4,31.5C4,35.071938,6.9280619,38,10.5,38L20,38 20,35 10.5,35C8.5499381,35,7,33.450062,7,31.5L7,16.5C7,14.549938,8.5499381,13,10.5,13L20,13 20,10 10.5,10z M27,10L27,13 36.5,13C38.450062,13,40,14.549938,40,16.5L40,31.5C40,33.450062,38.450062,35,36.5,35L27,35 27,38 36.5,38C40.071938,38,43,35.071938,43,31.5L43,16.5C43,12.928062,40.071938,10,36.5,10L27,10z</x:String>
     <x:String x:Key="Tag">F1 M48,48z M0,0z M28,4C26.408649,4,24.883169,4.6324568,23.757812,5.7578125L5.7578125,23.757812C3.4278601,26.087765,3.4278601,29.912235,5.7578125,32.242188L15.757812,42.242188C16.883169,43.367542 18.408649,44 20,44 21.591351,44 23.116831,43.367543 24.242188,42.242188L42.242188,24.242188C43.367959,23.116416,44,21.589398,44,19.998047L44,9C44,6.2565285,41.743472,4,39,4L28,4z M28,7L39,7C40.116528,7,41,7.8834715,41,9L41,19.998047C41,20.810696,40.695322,21.546865,40.121094,22.121094L22.121094,40.121094C21.546449,40.695738 20.812649,41 20,41 19.187351,41 18.453551,40.695738 17.878906,40.121094L7.8789062,30.121094C6.6988587,28.941046,6.6988586,27.058954,7.8789062,25.878906L25.878906,7.8789062C26.453551,7.3042619,27.187351,7,28,7z M34,11C32.343,11 31,12.343 31,14 31,15.657 32.343,17 34,17 35.657,17 37,15.657 37,14 37,12.343 35.657,11 34,11z</x:String>
     <x:String x:Key="Paint">F1 M48,48z M0,0z M23.5,5C11.772727,5 4,13.625 4,22.5 4,25.910242 6.8712406,29 10.5,29 11.994439,29 13.497579,28.725518 14.785156,28.470703 16.072734,28.215889 17.243398,28 17.5,28 18.873733,28 19.219456,28.3984 19.761719,29.503906 20.303982,30.609413 20.660355,32.421359 21.130859,34.355469 21.601364,36.289578 22.204404,38.393079 23.642578,40.117188 25.080752,41.841295 27.407577,43 30.578125,43 36.519332,43 44,36.672501 44,25.5 44,14.196269 34.803731,5 23.5,5z M23.5,8C33.182269,8 41,15.817731 41,25.5 41,35.313499 34.220918,40 30.578125,40 28.067673,40 26.855154,39.283705 25.947266,38.195312 25.039377,37.106921 24.488621,35.460422 24.046875,33.644531 23.605129,31.828641 23.292377,29.890587 22.455078,28.183594 21.617779,26.4766 19.874267,25 17.5,25 16.467602,25 15.442047,25.284111 14.203125,25.529297 12.964203,25.774482 11.610561,26 10.5,26 8.7427594,26 7,24.049758 7,22.5 7,15.375 13.227273,8 23.5,8z M23.5,11A2.5,2.5,0,0,0,23.5,16A2.5,2.5,0,0,0,23.5,11z M30.5,13A2.5,2.5,0,0,0,30.5,18A2.5,2.5,0,0,0,30.5,13z M34.5,19A2.5,2.5,0,0,0,34.5,24A2.5,2.5,0,0,0,34.5,19z M35.5,26A2.5,2.5,0,0,0,35.5,31A2.5,2.5,0,0,0,35.5,26z M30.5,31A2.5,2.5,0,0,0,30.5,36A2.5,2.5,0,0,0,30.5,31z</x:String>
+
+    <BitmapImage x:Key="Icon83D" UriSource="ms-appx:///Assets/Icon8/Color/icons8-3d-512.png" />
+    <BitmapImage x:Key="Icon8Icons8" UriSource="ms-appx:///Assets/Icon8/Color/icons8-512.png" />
+    <BitmapImage x:Key="Icon8Info" UriSource="ms-appx:///Assets/Icon8/Color/icons8-about-512.png" />
+    <BitmapImage x:Key="Icon8Add" UriSource="ms-appx:///Assets/Icon8/Color/icons8-add-512.png" />
+    <BitmapImage x:Key="Icon8Code" UriSource="ms-appx:///Assets/Icon8/Color/icons8-code-512.png" />
+    <BitmapImage x:Key="Icon8Contact" UriSource="ms-appx:///Assets/Icon8/Color/icons8-contacts-512.png" />
+    <BitmapImage x:Key="Icon8Delete" UriSource="ms-appx:///Assets/Icon8/Color/icons8-delete-512.png" />
+    <BitmapImage x:Key="Icon8Design" UriSource="ms-appx:///Assets/Icon8/Color/icons8-design-512.png" />
+    <BitmapImage x:Key="Icon8Drawing" UriSource="ms-appx:///Assets/Icon8/Color/icons8-drawing-512.png" />
+    <BitmapImage x:Key="Icon8Edit" UriSource="ms-appx:///Assets/Icon8/Color/icons8-edit-512.png" />
+    <BitmapImage x:Key="Icon8ExternalLink" UriSource="ms-appx:///Assets/Icon8/Color/icons8-external-link-512.png" />
+    <BitmapImage x:Key="Icon8FileExplorer" UriSource="ms-appx:///Assets/Icon8/Color/icons8-file-explorer-512.png" />
+    <BitmapImage x:Key="Icon8Folder" UriSource="ms-appx:///Assets/Icon8/Color/icons8-folder-512.png" />
+    <BitmapImage x:Key="Icon8Game" UriSource="ms-appx:///Assets/Icon8/Color/icons8-game-512.png" />
+    <BitmapImage x:Key="Icon8Grid" UriSource="ms-appx:///Assets/Icon8/Color/icons8-grid-512.png" />
+    <BitmapImage x:Key="Icon8Home" UriSource="ms-appx:///Assets/Icon8/Color/icons8-home-512.png" />
+    <BitmapImage x:Key="Icon8Idea" UriSource="ms-appx:///Assets/Icon8/Color/icons8-idea-512.png" />
+    <BitmapImage x:Key="Icon8Lightbulb" UriSource="ms-appx:///Assets/Icon8/Color/icons8-lightbulb-512.png" />
+    <BitmapImage x:Key="Icon8Menu" UriSource="ms-appx:///Assets/Icon8/Color/icons8-menu-512.png" />
+    <BitmapImage x:Key="Icon8Money" UriSource="ms-appx:///Assets/Icon8/Color/icons8-money-bag-512.png" />
+    <BitmapImage x:Key="Icon8Music" UriSource="ms-appx:///Assets/Icon8/Color/icons8-music-512.png" />
+    <BitmapImage x:Key="Icon8Person" UriSource="ms-appx:///Assets/Icon8/Color/icons8-person-512.png" />
+    <BitmapImage x:Key="Icon8Picture" UriSource="ms-appx:///Assets/Icon8/Color/icons8-picture-512.png" />
+    <BitmapImage x:Key="Icon8Project" UriSource="ms-appx:///Assets/Icon8/Color/icons8-project-512.png" />
+    <BitmapImage x:Key="Icon8Save" UriSource="ms-appx:///Assets/Icon8/Color/icons8-save-512.png" />
+    <BitmapImage x:Key="Icon8Settings" UriSource="ms-appx:///Assets/Icon8/Color/icons8-settings-512.png" />
+    <BitmapImage x:Key="Icon8Sketch" UriSource="ms-appx:///Assets/Icon8/Color/icons8-sketch-512.png" />
+    <BitmapImage x:Key="Icon8Tag2" UriSource="ms-appx:///Assets/Icon8/Color/icons8-tag2-512.png" />
+    <BitmapImage x:Key="Icon8Tag" UriSource="ms-appx:///Assets/Icon8/Color/icons8-tag-512.png" />
+    <BitmapImage x:Key="Icon8Text" UriSource="ms-appx:///Assets/Icon8/Color/icons8-text-512.png" />
+    <BitmapImage x:Key="Icon8Todo" UriSource="ms-appx:///Assets/Icon8/Color/icons8-todo-list-512.png" />
+    <BitmapImage x:Key="Icon8Toolbox" UriSource="ms-appx:///Assets/Icon8/Color/icons8-toolbox-512.png" />
+    <BitmapImage x:Key="Icon8Version" UriSource="ms-appx:///Assets/Icon8/Color/icons8-version-512.png" />
+    <BitmapImage x:Key="Icon8Video" UriSource="ms-appx:///Assets/Icon8/Color/icons8-video-512.png" />
+    <BitmapImage x:Key="Icon8Wallpaper" UriSource="ms-appx:///Assets/Icon8/Color/icons8-wallpaper-512.png" />
+    <BitmapImage x:Key="Icon8Website" UriSource="ms-appx:///Assets/Icon8/Color/icons8-website-512.png" />
+
+    <!--    Brands      -->
+    <BitmapImage x:Key="Icon8AppleMusic" UriSource="ms-appx:///Assets/Icon8/Color/icons8-apple-music-512.png" />
+    <BitmapImage x:Key="Icon8Behance" UriSource="ms-appx:///Assets/Icon8/Color/icons8-behance-512.png" />
+    <BitmapImage x:Key="Icon8Facebook" UriSource="ms-appx:///Assets/Icon8/Color/icons8-facebook-512.png" />
+    <BitmapImage x:Key="Icon8Github" UriSource="ms-appx:///Assets/Icon8/Color/icons8-github-512.png" />
+    <BitmapImage x:Key="Icon8Instagram" UriSource="ms-appx:///Assets/Icon8/Color/icons8-instagram-512.png" />
+    <BitmapImage x:Key="Icon8KoFi" UriSource="ms-appx:///Assets/Icon8/Color/icons8-ko-fi-512.png" />
+    <BitmapImage x:Key="Icon8Soundcloud" UriSource="ms-appx:///Assets/Icon8/Color/icons8-soundcloud-512.png" />
+    <BitmapImage x:Key="Icon8Spotify" UriSource="ms-appx:///Assets/Icon8/Color/icons8-spotify-512.png" />
+    <BitmapImage x:Key="Icon8X" UriSource="ms-appx:///Assets/Icon8/Color/icons8-x-512.png" />
+    <BitmapImage x:Key="Icon8Youtube" UriSource="ms-appx:///Assets/Icon8/Color/icons8-youtube-512.png" />
+    <BitmapImage x:Key="Icon8YoutubeMusic" UriSource="ms-appx:///Assets/Icon8/Color/icons8-youtube-music-512.png" />
 </ResourceDictionary>
