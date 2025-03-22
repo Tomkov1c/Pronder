@@ -17,6 +17,7 @@ using System.Drawing;
 using Microsoft.UI;
 using Pronder.Custom;
 using Microsoft.UI.Xaml.Navigation;
+using System.Reflection.Metadata.Ecma335;
 
 namespace Pronder.Views;
 
@@ -28,13 +29,14 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
     int previousSelectedIndex;
     public string path;
 
+    EditPopup editPopup;
+
     public static event Action OnProjectCreated;
-    EditProjectPopup editProjectPopup;
     public GeneralProjectDisplayPage()
     {
         InitializeComponent();
-
-        EditProjectPopup.OnProjectEdited += RefreshPage;
+        editPopup = new EditPopup(this.XamlRoot);
+        EditPopup.OnProjectEdited += RefreshPage;
     }
     void IPerPageHelpButtonAction.HelpButtonAction(object sender, RoutedEventArgs e)
     {
@@ -167,9 +169,10 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
 
     async void editData(object sender, RoutedEventArgs e)
     {
-        if(editProjectPopup != null)
-            editProjectPopup.popup.IsOpen = false;
-
-        editProjectPopup = new EditProjectPopup(this.XamlRoot, this.path);
+        if(!editPopup.IsPopupOpen() && editPopup != null)
+        {
+            editPopup = new EditPopup(this.XamlRoot);
+            editPopup.OpenPopup();
+        }
     }
 }

@@ -9,7 +9,7 @@
     xmlns:mine="using:Pronder.Custom"
     mc:Ignorable="d">
 
-	<ScrollViewer x:Name="ContentArea" Padding="10, 32, 18, 10">
+	<ScrollViewer x:Name="ContentArea" Padding="10, 0, 18, 10">
 		<StackPanel Orientation="Vertical" Padding="0, 42, 0, 12">
 			<TextBlock Text="External links" Style="{StaticResource TitleTextBlockStyle}" Margin="0, 0, 0, -6"/>
             <CommandBar Background="Transparent" IsOpen="False" DefaultLabelPosition="Right" HorizontalAlignment="Left" 

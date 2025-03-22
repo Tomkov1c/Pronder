@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserControl
+    x:Class="Pronder.Custom.EditPopup"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Pronder.Custom"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Popup x:Name="Popup">
+        <Popup.ChildTransitions>
+            <TransitionCollection>
+                <PopupThemeTransition />
+            </TransitionCollection>
+        </Popup.ChildTransitions>
+        <Grid x:Name="ContentGrid">
+            <Border x:Name="Border" HorizontalAlignment="Center" VerticalAlignment="Center"
+                BorderThickness="1" BorderBrush="{ThemeResource SurfaceStrokeColorDefaultBrush}"
+                CornerRadius="{StaticResource OverlayCornerRadius}" MinWidth="800" MinHeight="600"
+                Background="{ThemeResource SolidBackgroundFillColorBaseBrush}">
+
+                <Grid x:Name="MainStackPanel" VerticalAlignment="Stretch">
+                    <StackPanel x:Name="NavPanel" Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                        <NavigationView x:Name="NavView" IsSettingsVisible="False" IsPaneOpen="True"
+                                        IsPaneToggleButtonVisible="False" ExpandedModeThresholdWidth="200"
+                                        OpenPaneLength="200" Width="200" MinHeight="552" IsBackButtonVisible="Collapsed">
+                            <NavigationView.MenuItems>
+                                <NavigationViewItemHeader Content="Edit" Foreground="{ThemeResource TextFillColorPrimaryBrush}"/>
+                                <NavigationViewItem Content="General" Icon="Page2" IsSelected="True" x:Name="FirstNavItem"/>
+                                <NavigationViewItem Content="External links" Icon="Link" />
+                            </NavigationView.MenuItems>
+                        </NavigationView>
+                        <ScrollViewer MinHeight="552" MinWidth="600" VerticalAlignment="Stretch" Height="552" 
+                                      Margin="0, 0, 0 , 72" x:Name="FrameScrollViewer">
+                            <Frame x:Name="NavigationFrame" Margin="0, -2, 0 ,0"/>
+                        </ScrollViewer>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Stretch"
+                                MinWidth="800"
+                                Padding="24" Background="{ThemeResource SolidBackgroundFillColorSecondaryBrush}">
+                        <Button Content="Close" Width="150" Click="CloseButton_Click" VerticalAlignment="Center" HorizontalAlignment="Right">
+                            <Button.KeyboardAccelerators>
+                                <KeyboardAccelerator Key="Escape" />
+                            </Button.KeyboardAccelerators>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+    </Popup>
+</UserControl>

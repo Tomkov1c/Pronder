@@ -21,6 +21,7 @@
 	<Content Remove="Assets\pagesList.json" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Custom\EditPopup.xaml" />
     <None Remove="Custom\ExternalLinkListItem.xaml" />
   </ItemGroup>
 
@@ -45,6 +46,9 @@
 	<None Update="appsettings.json">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
+	<Page Update="Custom\EditPopup.xaml">
+	  <Generator>MSBuild:Compile</Generator>
+	</Page>
 	<Page Update="Custom\ExternalLinkListItem.xaml">
 	  <Generator>MSBuild:Compile</Generator>
 	</Page>

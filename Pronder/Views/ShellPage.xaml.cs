@@ -65,7 +65,7 @@ public sealed partial class ShellPage : Page
         NavigationService.Instance.NavigationView = NavigationViewControl;
         NavigationViewControl.ItemInvoked += ItemClicked;
 
-        EditProjectPopup.OnProjectEdited += importProjects;
+        EditPopup.OnProjectEdited += importProjects;
 
         ViewModel.NavigationService.Frame = NavigationFrame;
         ViewModel.NavigationViewService.Initialize(NavigationViewControl);

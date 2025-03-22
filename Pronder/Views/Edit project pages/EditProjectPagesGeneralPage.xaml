@@ -10,7 +10,7 @@
     Loaded="Loaded"
     Background="Transparent">
 
-    <ScrollViewer x:Name="ContentArea" Padding="10, 32, 18, 10">
+    <ScrollViewer x:Name="ContentArea" Padding="10, 0, 18, 10">
         <StackPanel Orientation="Vertical" Padding="0, 42, 0, 12" Spacing="12">
             <TextBlock Text="General" Style="{StaticResource TitleTextBlockStyle}" Padding="0, 0, 0, 24"/>
 
