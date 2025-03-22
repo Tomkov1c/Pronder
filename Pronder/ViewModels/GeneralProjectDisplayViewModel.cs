@@ -104,7 +104,7 @@ public partial class GeneralProjectDisplayViewModel : ObservableRecipient
                     menuItem.CommandParameter = item.Href;
                 }
 
-                //menuItem.Icon = new ImageIcon { Source = new BitmapImage(new Uri(await new ExternalLinkHelper().GetIconPath(deserialized.Links[i]))), };
+                menuItem.Icon = new ImageIcon { Source = item.IconFinder(), };
 
                 menuItem.Tag = item.Href;
                 ExternalLinks.Add(menuItem);
