@@ -49,6 +49,9 @@
 	<Page Update="Custom\EditPopup.xaml">
 	  <Generator>MSBuild:Compile</Generator>
 	</Page>
+	<Page Update="Custom\EditPopup.xaml">
+	  <Generator>MSBuild:Compile</Generator>
+	</Page>
 	<Page Update="Custom\ExternalLinkListItem.xaml">
 	  <Generator>MSBuild:Compile</Generator>
 	</Page>

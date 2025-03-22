@@ -29,13 +29,10 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
     int previousSelectedIndex;
     public string path;
 
-    EditPopup editPopup;
-
     public static event Action OnProjectCreated;
     public GeneralProjectDisplayPage()
     {
         InitializeComponent();
-        editPopup = new EditPopup(this.XamlRoot);
         EditPopup.OnProjectEdited += RefreshPage;
     }
     void IPerPageHelpButtonAction.HelpButtonAction(object sender, RoutedEventArgs e)
@@ -169,10 +166,10 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
 
     async void editData(object sender, RoutedEventArgs e)
     {
-        if(!editPopup.IsPopupOpen() && editPopup != null)
-        {
-            editPopup = new EditPopup(this.XamlRoot);
-            editPopup.OpenPopup();
-        }
+        var dialog = new EditPopup();
+        dialog.XamlRoot = this.XamlRoot;
+
+        await dialog.ShowAsync();
+
     }
 }

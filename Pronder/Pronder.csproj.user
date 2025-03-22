@@ -7,6 +7,11 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Custom\EditPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="Styles\Icon8Icon.xaml">
       <SubType>Designer</SubType>
     </Page>
