@@ -37,7 +37,7 @@ public partial class GeneralProjectDisplayViewModel : ObservableRecipient
     [ObservableProperty]
     private string? _bannerPath;
 
-    public ObservableCollection<MenuFlyoutItem> ExternalLinks { get; } = new();
+    public ObservableCollection<MenuFlyoutItem> ExternalLinks = new();
 
     public GeneralProjectDisplayViewModel(string path, bool instantStart = false)
     {
