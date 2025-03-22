@@ -9,7 +9,6 @@ using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media.Imaging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Pronder.Helpers.Mine;
 using Pronder.Models;
 using static Pronder.Models.Project;
 

@@ -5,7 +5,6 @@ using Microsoft.UI.Xaml.Media.Imaging;
 using Microsoft.UI.Xaml.Navigation;
 using Newtonsoft.Json;
 using Pronder.Custom;
-using Pronder.Helpers.Mine;
 using Pronder.Models;
 using Pronder.ViewModels;
 using Windows.ApplicationModel.Calls;
@@ -93,8 +92,7 @@ public sealed partial class EditProjectPagesExternalLinksPage : Page
 
     private async Task<SettingsExpander> LinkListItemHelper(Link link)
     {
-        Uri icon = new Uri(await new ExternalLinkHelper().GetIconPath(link));
-        BitmapImage convertedIcon = new BitmapImage() { UriSource = icon };
+        BitmapImage convertedIcon = link.IconFinder();
         SettingsExpander linkDisplay = new SettingsExpander()
         {
             HeaderIcon = new ImageIcon() { Source = convertedIcon },

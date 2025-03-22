@@ -1,5 +1,4 @@
-﻿using ExternalLinkIconListWorkspace;
-using Microsoft.UI.Xaml;
+﻿using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 
 using Pronder.ViewModels;
@@ -63,34 +62,6 @@ public sealed partial class SettingsPage : Page
 
     public async void loadGeometryPath(object sender, RoutedEventArgs e)
     {
-        var icon = sender as Microsoft.UI.Xaml.Shapes.Path;
-        if (icon.Tag == null)
-            return;
-        else
-        {
-            if (icon.Tag == "" || icon.Tag == " ")
-                return;
-        }
-
-        StorageFile jsonFile = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///Assets/Icon8/Outline/list.json"));
-
-        using (IRandomAccessStream stream = await jsonFile.OpenAsync(FileAccessMode.Read))
-        using (StreamReader reader = new StreamReader(stream.AsStreamForRead()))
-        {
-            string json = await reader.ReadToEndAsync();
-            ExternalLinkIconList deserialized = JsonConvert.DeserializeObject<ExternalLinkIconList>(json);
-
-            JsonSerializer serializer = new JsonSerializer();
-
-            for (int i = 0; deserialized.Icons.Count > i; i++)
-            {
-                if (deserialized.Icons[i].Contains.Contains(icon.Tag.ToString()))
-                {
-                    Geometry geometry = (Geometry)XamlBindingHelper.ConvertValue(typeof(Geometry), deserialized.Icons[i].Path);
-                    icon.Data = geometry;
-                    break;
-                }
-            }
-        }
+        
     }
 }

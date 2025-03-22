@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics;
-using ExternalLinkIconListWorkspace;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media.Animation;
@@ -17,7 +16,6 @@ using Windows.UI;
 using System.Drawing;
 using Microsoft.UI;
 using Pronder.Custom;
-using Pronder.Helpers.Mine;
 using Microsoft.UI.Xaml.Navigation;
 
 namespace Pronder.Views;

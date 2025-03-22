@@ -18,7 +18,6 @@ using Newtonsoft.Json;
 using Windows.Storage;
 using Pronder.Classes;
 using Microsoft.UI.Xaml.Media.Imaging;
-using ExternalLinkIconListWorkspace;
 using Microsoft.UI.Input;
 using Windows.Foundation;
 using Windows.Graphics.Display;

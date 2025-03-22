@@ -88,6 +88,9 @@
         ExpandedModeThresholdWidth="1280"
         DisplayModeChanged="NavigationViewControl_DisplayModeChanged"
         Header="{x:Bind ((ContentControl)ViewModel.Selected).Content, Mode=OneWay}">
+            <NavigationView.KeyboardAccelerators>
+                <KeyboardAccelerator Key="S" Modifiers="Control" Invoked="PaneExpendKeyboardAccelerator"/>
+            </NavigationView.KeyboardAccelerators>
             <NavigationView.Transitions>
                 <TransitionCollection>
                     <EntranceThemeTransition IsStaggeringEnabled="True" />
