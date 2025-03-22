@@ -6,6 +6,7 @@ using Microsoft.UI.Xaml.Media;
 using Newtonsoft.Json;
 using Pronder.Models;
 using Pronder.ViewModels;
+using static Pronder.Models.Project;
 namespace Pronder.Views;
 
 public sealed partial class ProjectToDoPage : Page
@@ -220,7 +221,7 @@ public sealed partial class ProjectToDoPage : Page
 
         if (deserialized.Todo == null)
         {
-            deserialized.Todo = new List<Todo>();
+            deserialized.Todo = new List<TodoTask>();
         }
 
         if (NewTodoTextBox.Text == null || NewTodoTextBox.Text == "" || NewTodoTextBox.Text == " ")
@@ -233,7 +234,7 @@ public sealed partial class ProjectToDoPage : Page
         }
 
         // Create a new Todo item
-        Todo newTodo = new Todo
+        TodoTask newTodo = new TodoTask
         {
             Order = deserialized.Todo.Count + 1, // Set the order (adjust as needed)
             Content = NewTodoTextBox.Text, // Set the content of the new task

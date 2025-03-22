@@ -7,6 +7,7 @@ using ABI.System;
 using Pronder.Models;
 using Windows.Security.Cryptography.Core;
 using Windows.Storage;
+using static Pronder.Models.Project;
 
 namespace Pronder.Helpers.Mine
 {

@@ -3,12 +3,13 @@ using System.ComponentModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Newtonsoft.Json;
 using Pronder.Models;
+using static Pronder.Models.Project;
 
 namespace Pronder.ViewModels;
 
 public partial class EditProjectPagesExternalLinksViewModel : ObservableRecipient
 {
-    public ObservableCollection<Link> Links
+    public ObservableCollection<TodoTask> Links
     {
         get; set;
     }
@@ -29,7 +30,7 @@ public partial class EditProjectPagesExternalLinksViewModel : ObservableRecipien
 
     public EditProjectPagesExternalLinksViewModel(string path)
     {
-        Links = new ObservableCollection<Link>();
+        Links = new ObservableCollection<TodoTask>();
         Project = new Project();
 
         ProjectPath = path;

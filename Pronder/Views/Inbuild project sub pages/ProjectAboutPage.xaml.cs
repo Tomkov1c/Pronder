@@ -23,11 +23,7 @@ public sealed partial class ProjectAboutPage : Page
 
     async void importData()
     {
-        Project deserialized;
-        using (StreamReader file = File.OpenText((string)Windows.Storage.ApplicationData.Current.LocalSettings.Values["currentlyActiveProject"]))
-        {
-            deserialized = JsonConvert.DeserializeObject<Project>(file.ReadToEnd());
-        }
+        Project deserialized = Project.GlobalInstance;
 
         DescriptionContnet.Text = deserialized.About;
     }

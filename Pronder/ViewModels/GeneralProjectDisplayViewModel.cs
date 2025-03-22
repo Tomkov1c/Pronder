@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Pronder.Helpers.Mine;
 using Pronder.Models;
+using static Pronder.Models.Project;
 
 namespace Pronder.ViewModels;
 
@@ -65,6 +66,7 @@ public partial class GeneralProjectDisplayViewModel : ObservableRecipient
         this.projectPath = path;
 
         _project = JsonConvert.DeserializeObject<Project>(File.ReadAllText(path));
+        Project.SetGlobalInstance(_project);
 
         _name = _project.Name;
         _description = _project.About;
@@ -79,6 +81,7 @@ public partial class GeneralProjectDisplayViewModel : ObservableRecipient
 
             }
         };
+
         MainTaskFinished?.Invoke();
     }
 
