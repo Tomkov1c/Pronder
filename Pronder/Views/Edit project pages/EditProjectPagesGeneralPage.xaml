@@ -7,11 +7,10 @@
     xmlns:controls="using:CommunityToolkit.WinUI.Controls"
     xmlns:ui="using:CommunityToolkit.WinUI"
     mc:Ignorable="d"
-    Loaded="Loaded"
     Background="Transparent">
 
     <ScrollViewer x:Name="ContentArea" Padding="10, 0, 18, 10">
-        <StackPanel Orientation="Vertical" Padding="0, 42, 0, 12" Spacing="12">
+        <StackPanel Orientation="Vertical" Padding="0, 42, 0, 12" Spacing="4">
             <TextBlock Text="General" Style="{StaticResource TitleTextBlockStyle}" Padding="0, 0, 0, 24"/>
 
             <controls:SettingsCard Header="Name" HeaderIcon="{ui:FontIcon Glyph=&#xE8AC;}" IsEnabled="True">
@@ -20,7 +19,7 @@
             </controls:SettingsCard>
             <controls:SettingsCard Header="Description" x:Name="DescriptionSettingsCard" Description="Describe your project." 
                                    HeaderIcon="{ui:FontIcon Glyph=&#xE8E4;}" 
-                                   IsEnabled="True" ContentAlignment="Vertical">
+                                   IsEnabled="True" ContentAlignment="Vertical" HorizontalContentAlignment="Stretch">
                 <TextBox AutomationProperties.Name="multi-line TextBox" TextWrapping="Wrap"  HorizontalAlignment="Stretch"
                              AcceptsReturn="True" IsSpellCheckEnabled="True" PlaceholderText="E.g., a project manager."
                              x:Name="DescriptionTextBox" FocusEngaged="TextBoxGotFocus" 

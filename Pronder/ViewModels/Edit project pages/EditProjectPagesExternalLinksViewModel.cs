@@ -4,6 +4,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using Newtonsoft.Json;
 using Pronder.Models;
 using static Pronder.Models.Project;
+using static Pronder.Models.ProjectExtraProperties;
 
 namespace Pronder.ViewModels;
 

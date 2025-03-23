@@ -19,7 +19,6 @@ public sealed partial class EditProjectPagesGeneralPage : Page
     public EditProjectPagesGeneralPage()
     {
         InitializeComponent();
-        App.MainWindow.SizeChanged += UpdateDescriptionTextBox;
     }
 
     protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -32,23 +31,12 @@ public sealed partial class EditProjectPagesGeneralPage : Page
             DataContext = _viewModel;
         }
     }
-    private async void UpdateDescriptionTextBox(object sender, WindowSizeChangedEventArgs e)
-    {
-        await Task.Delay(15);
-        DescriptionTextBox.MinWidth = DescriptionSettingsCard.ActualSize.X - 76;
-    }
     private void TextBoxGotFocus(object sender, RoutedEventArgs e)
     {
         TextBox textBox = sender as TextBox;
 
         textBox.SelectionStart = textBox.Text.Length;
         textBox.SelectionLength = 0;
-        UpdateDescriptionTextBox(null, null);
-    }
-
-    private void Loaded(object sender, RoutedEventArgs e)
-    {
-        DescriptionTextBox.MinWidth = DescriptionSettingsCard.ActualSize.X - 76;
     }
 
     private async void SelectAnIcon(object sender, RoutedEventArgs e)

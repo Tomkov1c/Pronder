@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Media.Imaging;
 using Windows.Storage;
+using Pronder.Models;
 
 namespace Pronder.Models
 {
+    // C:\Users\gamin\AppData\Local\Packages\90d93993-b7aa-4fff-9757-12ef0c6c27e0_1116rh51nqx02\LocalState\Projects
     public class Project
     {
         public static Project? GlobalInstance { get; private set; } = null;
@@ -16,114 +19,28 @@ namespace Pronder.Models
         public string Tag { get; set; }
         public string Icon { get; set; }
         public string Banner { get; set; }
-        public List<Link> Links { get; set; } = new();
+        public List<ProjectExtraProperties.Link> Links { get; set; } = new();
         public string About { get; set; }
-        public List<TodoTask> Todo { get; set; } = new();
         public string DateCreated { get; set; }
         public string DateLastViewed { get; set; }
         public string DateLastEdited { get; set; }
 
+        private Dictionary<string, object> ExtraProperties = new Dictionary<string, object>();
+
         public static void SetGlobalInstance(Project project) => GlobalInstance = project;
 
-        public bool IconNullOrEmpty() => string.IsNullOrWhiteSpace(Icon) && string.IsNullOrWhiteSpace(Icon);
-        public bool BannerNullOrEmpty() => string.IsNullOrWhiteSpace(Banner) && string.IsNullOrWhiteSpace(Banner);
+        public bool IconNullOrEmpty() => string.IsNullOrWhiteSpace(Icon);
+        public bool BannerNullOrEmpty() => string.IsNullOrWhiteSpace(Banner);
         public bool LinksNullOrEmpty() => Links is null || !Links.Any();
-    }
 
-    public class Link
-    {
-        public string Name { get; set; }
-        public string Type { get; set; }
-        public string Href { get; set; }
-
-        public BitmapImage IconFinder()
+        public void SetProperty(string key, object value)
         {
-            if (this.Type == "link")
-            {
-                string key;
-                System.Uri uri = new System.Uri(this.Href.ToLower());
-                string domain = uri.Host.StartsWith("www.") ? uri.Host.Substring(4) : uri.Host;
-                string domainName = domain.Split('.')[0];
-
-                switch (domainName)
-                {
-                    case "github":
-                        key = "Github";
-                        break;
-
-                    case "behance":
-                        key = "Behance";
-                        break;
-
-                    case "facebook":
-                        key = "Facebook";
-                        break;
-
-                    case "music.apple":
-                        key = "AppleMusic";
-                        break;
-
-                    case "instagram":
-                        key = "Instagram";
-                        break;
-
-                    case "soundcloud":
-                        key = "Soundcloud";
-                        break;
-
-                    case "spotify":
-                        key = "Spotify";
-                        break;
-
-                    case "x":
-                    case "twitter":
-                        key = "X";
-                        break;
-
-                    case "youtube":
-                        key = "Youtube";
-                        break;
-
-                    case "music.youtube":
-                        key = "YoutubeMusic";
-                        break;
-
-                    case "ko-fi":
-                        key = "KoFi";
-                        break;
-
-                    default:
-                        key = "Website";
-                        break;
-                }
-
-                if(!string.IsNullOrEmpty(key))
-                {
-                    return (BitmapImage)Application.Current.Resources["Icon8" + key];
-                }
-
-
-            }
-            else if (this.Type == "path")
-            {
-                return (BitmapImage)Application.Current.Resources["Icon8Folder"];
-            }
-            return null;
+            ExtraProperties[key] = value;
         }
-    }
 
-    public class TodoTask
-    {
-        public int Order { get; set; }
-        public string Content { get; set; }
-        public bool Done { get; set; }
-        public List<Sub> Sub { get; set; } = new();
-    }
-
-    public class Sub
-    {
-        public int Order { get; set; }
-        public string Content { get; set; }
-        public bool Done { get; set; }
+        public object GetProperty(string key)
+        {
+            return ExtraProperties.TryGetValue(key, out var value) ? value : null;
+        }
     }
 }

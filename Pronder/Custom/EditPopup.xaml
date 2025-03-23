@@ -49,8 +49,8 @@
             </ScrollViewer>
         </Grid>
 
-        <Grid VerticalAlignment="Bottom" HorizontalAlignment="Stretch" MinWidth="800"
-              Padding="24" Background="{ThemeResource SolidBackgroundFillColorSecondaryBrush}">
+        <Grid VerticalAlignment="Bottom" HorizontalAlignment="Stretch" MinWidth="700"
+              Padding="0, 24, 24, 24" Background="{ThemeResource SolidBackgroundFillColorSecondaryBrush}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="150" />

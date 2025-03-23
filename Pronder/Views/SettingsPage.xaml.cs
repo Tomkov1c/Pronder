@@ -59,9 +59,4 @@ public sealed partial class SettingsPage : Page
             localSettings.Values["global.ActiveAppTheme"] = selectedItem.Content.ToString();
         }
     }
-
-    public async void loadGeometryPath(object sender, RoutedEventArgs e)
-    {
-        
-    }
 }
