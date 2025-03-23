@@ -18,6 +18,16 @@
 	<UseWindowsForms>False</UseWindowsForms>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Views\InbuildProjectDisplayPages\**" />
+    <Compile Remove="Views\InbuildProjectDisplaySubPages\**" />
+    <EmbeddedResource Remove="Views\InbuildProjectDisplayPages\**" />
+    <EmbeddedResource Remove="Views\InbuildProjectDisplaySubPages\**" />
+    <None Remove="Views\InbuildProjectDisplayPages\**" />
+    <None Remove="Views\InbuildProjectDisplaySubPages\**" />
+    <Page Remove="Views\InbuildProjectDisplayPages\**" />
+    <Page Remove="Views\InbuildProjectDisplaySubPages\**" />
+  </ItemGroup>
+  <ItemGroup>
 	<Content Remove="Assets\pagesList.json" />
   </ItemGroup>
   <ItemGroup>
@@ -64,11 +74,17 @@
 
   <ItemGroup>
 	<Folder Include="Helpers\NewFolder\" />
-	<Folder Include="Views\InbuildProjectDisplayPages\" />
-	<Folder Include="Views\InbuildProjectDisplaySubPages\" />
   </ItemGroup>
   
   <PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
 	<HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <PRIResource Remove="Views\InbuildProjectDisplayPages\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PRIResource Remove="Views\InbuildProjectDisplaySubPages\**" />
+  </ItemGroup>
 </Project>

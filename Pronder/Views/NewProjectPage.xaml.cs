@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using Pronder.Models;
 using Pronder.ViewModels;
 using Windows.Storage;
+using static Pronder.Models.ProjectExtraProperties;
 
 namespace Pronder.Views;
 
@@ -30,7 +31,6 @@ public sealed partial class NewProjectPage : Page
             Tag = ProjectTagTextbox.Text,
             About = ProjectAboutTextbox.Text,
         };
-
         // Serialize the Project object to a JSON string
         string json = JsonConvert.SerializeObject(project, Formatting.Indented);
 

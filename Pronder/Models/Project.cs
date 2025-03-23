@@ -5,7 +5,9 @@ using System.Reflection;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Media.Imaging;
 using Windows.Storage;
-using Pronder.Models;
+using System.Dynamic;
+using static Pronder.Models.ProjectExtraProperties;
+using Newtonsoft.Json;
 
 namespace Pronder.Models
 {
@@ -19,13 +21,17 @@ namespace Pronder.Models
         public string Tag { get; set; }
         public string Icon { get; set; }
         public string Banner { get; set; }
-        public List<ProjectExtraProperties.Link> Links { get; set; } = new();
         public string About { get; set; }
         public string DateCreated { get; set; }
         public string DateLastViewed { get; set; }
         public string DateLastEdited { get; set; }
 
-        private Dictionary<string, object> ExtraProperties = new Dictionary<string, object>();
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public List<Link> Links { get; set; } = null;
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public List<TodoTask> TodoTasks { get; set; } = null;
+
 
         public static void SetGlobalInstance(Project project) => GlobalInstance = project;
 
@@ -33,14 +39,5 @@ namespace Pronder.Models
         public bool BannerNullOrEmpty() => string.IsNullOrWhiteSpace(Banner);
         public bool LinksNullOrEmpty() => Links is null || !Links.Any();
 
-        public void SetProperty(string key, object value)
-        {
-            ExtraProperties[key] = value;
-        }
-
-        public object GetProperty(string key)
-        {
-            return ExtraProperties.TryGetValue(key, out var value) ? value : null;
-        }
     }
 }
