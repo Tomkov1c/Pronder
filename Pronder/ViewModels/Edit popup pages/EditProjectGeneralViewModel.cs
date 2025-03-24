@@ -8,12 +8,7 @@ namespace Pronder.ViewModels
 {
     public partial class EditProjectPagesGeneralViewModel : ObservableRecipient
     {
-        private Project _project;
-
-        public string? ProjectPath
-        {
-            get; set;
-        }
+        public static Project? _project => Project.GlobalInstance;
 
         [ObservableProperty]
         private string _name;
@@ -44,9 +39,6 @@ namespace Pronder.ViewModels
 
         public EditProjectPagesGeneralViewModel()
         {
-            _project = Project.GlobalInstance;
-            Debug.WriteLine(_project.ToString());
-
             _name = _project.Name;
             _description = _project.About;
             _tag = _project.Tag;
@@ -97,9 +89,9 @@ namespace Pronder.ViewModels
 
         private void SaveProjectToFile()
         {
-            if (!string.IsNullOrEmpty(ProjectPath))
+            if (!string.IsNullOrEmpty(Project.ProjectPath))
             {
-                File.WriteAllText(ProjectPath, JsonConvert.SerializeObject(_project, Formatting.Indented));
+                File.WriteAllText(Project.ProjectPath, JsonConvert.SerializeObject(_project, Formatting.Indented));
             }
         }
     }

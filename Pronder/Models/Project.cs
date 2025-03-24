@@ -14,7 +14,10 @@ namespace Pronder.Models
     // C:\Users\gamin\AppData\Local\Packages\90d93993-b7aa-4fff-9757-12ef0c6c27e0_1116rh51nqx02\LocalState\Projects
     public class Project
     {
+        [JsonIgnore]
         public static Project? GlobalInstance { get; private set; } = null;
+        [JsonIgnore]
+        public static string ProjectPath { get; private set; } = "Default Value";
 
         public string Id { get; set; }
         public string Name { get; set; }
@@ -34,6 +37,9 @@ namespace Pronder.Models
 
 
         public static void SetGlobalInstance(Project project) => GlobalInstance = project;
+
+        public static void SetGlobalString(string value) => ProjectPath = value;
+
 
         public bool IconNullOrEmpty() => string.IsNullOrWhiteSpace(Icon);
         public bool BannerNullOrEmpty() => string.IsNullOrWhiteSpace(Banner);

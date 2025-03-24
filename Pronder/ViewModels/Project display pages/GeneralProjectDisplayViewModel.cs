@@ -52,21 +52,20 @@ public partial class GeneralProjectDisplayViewModel : ObservableRecipient
     public void EventsSubscribed()
     {
 
-        InitializeAsync(projectPath);
+        InitializeAsync();
     }
 
-    private async Task InitializeAsync(string path)
+    private async Task InitializeAsync()
     {
-        await MainTasksAsync(path);
+        await MainTasksAsync();
         BackgroundTasksAsync();
     }
 
-    private async Task MainTasksAsync(string path)
+    private async Task MainTasksAsync()
     {
-        this.projectPath = path;
-
-        _project = JsonConvert.DeserializeObject<Project>(File.ReadAllText(path));
+        _project = JsonConvert.DeserializeObject<Project>(File.ReadAllText(projectPath));
         Project.SetGlobalInstance(_project);
+        Project.SetGlobalString(projectPath);
 
         _name = _project.Name;
         _description = _project.About;
