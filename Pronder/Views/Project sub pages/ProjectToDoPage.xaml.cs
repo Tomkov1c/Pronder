@@ -19,15 +19,9 @@ public sealed partial class ProjectToDoPage : Page
 
     public ProjectToDoPage()
     {
-        _viewModel = new();
+        _viewModel = new ProjectToDoViewModel();
         DataContext = _viewModel;
         InitializeComponent();
-
-        
-        foreach(var item in _viewModel.Tasks)
-        {
-            idk.Children.Add(item);
-        }
         
     }
 }

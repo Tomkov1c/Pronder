@@ -89,10 +89,7 @@ namespace Pronder.ViewModels
 
         private void SaveProjectToFile()
         {
-            if (!string.IsNullOrEmpty(Project.ProjectPath))
-            {
-                File.WriteAllText(Project.ProjectPath, JsonConvert.SerializeObject(_project, Formatting.Indented));
-            }
+            Project.GlobalInstance.SaveToFile();
         }
     }
 }

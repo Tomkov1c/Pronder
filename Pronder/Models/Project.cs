@@ -17,7 +17,7 @@ namespace Pronder.Models
         [JsonIgnore]
         public static Project? GlobalInstance { get; private set; } = null;
         [JsonIgnore]
-        public static string ProjectPath { get; private set; } = "Default Value";
+        public static string ProjectPath { get; private set; } = "";
 
         public string Id { get; set; }
         public string Name { get; set; }
@@ -29,11 +29,8 @@ namespace Pronder.Models
         public string DateLastViewed { get; set; }
         public string DateLastEdited { get; set; }
 
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public List<Link> Links { get; set; } = null;
-
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public List<TodoTask> TodoTasks { get; set; } = null;
+        public List<Link> Links { get; set; } = new();
+        public List<TodoTask> TodoTasks { get; set; } = new();
 
 
         public static void SetGlobalInstance(Project project) => GlobalInstance = project;
@@ -44,6 +41,20 @@ namespace Pronder.Models
         public bool IconNullOrEmpty() => string.IsNullOrWhiteSpace(Icon);
         public bool BannerNullOrEmpty() => string.IsNullOrWhiteSpace(Banner);
         public bool LinksNullOrEmpty() => Links is null || !Links.Any();
+        public bool TodoTasksNullOrEmpty() => TodoTasks == null || TodoTasks.Count <= 0;
+
+        public void SaveToFile()
+        {
+            if (!string.IsNullOrEmpty(ProjectPath))
+            {
+                JsonSerializerSettings settings = new JsonSerializerSettings
+                {
+                    NullValueHandling = NullValueHandling.Ignore,
+                    Formatting = Formatting.Indented
+                };
+                File.WriteAllText(ProjectPath, JsonConvert.SerializeObject(GlobalInstance, settings));
+            }
+        }
 
     }
 }

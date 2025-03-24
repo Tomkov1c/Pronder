@@ -12,41 +12,7 @@
 	<ScrollViewer x:Name="ContentArea" Padding="10, 0, 18, 10">
 		<StackPanel Orientation="Vertical" Padding="0, 42, 0, 12">
 			<TextBlock Text="External links" Style="{StaticResource TitleTextBlockStyle}" Margin="0, 0, 0, -6"/>
-            <CommandBar Background="Transparent" IsOpen="False" DefaultLabelPosition="Right" HorizontalAlignment="Left" 
-                        Margin="-5, 12, 0, 8">
-                <AppBarButton Icon="Link" Label="Add a website">
-                    <AppBarButton.Flyout>
-                        <Flyout Placement="BottomEdgeAlignedLeft" x:Name="LinkFlyout">
-                            <StackPanel Orientation="Vertical" Spacing="12" Width="400">
-                                <TextBox Header="Link" PlaceholderText="https://www." AllowFocusOnInteraction="True" 
-                                         x:Name="LinkTextBox"/>
-                                <TextBox Header="Name" Description="Will be coppied from link if left empty." 
-                                         PlaceholderText="idk" AllowFocusOnInteraction="True" x:Name="NameTextBox"/>
-                                <Button Style="{StaticResource AccentButtonStyle}" HorizontalAlignment="Stretch"
-                                        Content="Create" Click="NewLinkClicked"/>
-                            </StackPanel>
-                        </Flyout>
-                    </AppBarButton.Flyout>
-                </AppBarButton>
-                <AppBarButton Icon="Folder" Label="Add a directory">
-                    <AppBarButton.Flyout>
-                        <Flyout Placement="BottomEdgeAlignedLeft" x:Name="DirectoryFlyout">
-                            <StackPanel Orientation="Vertical" Spacing="12" Width="400">
-                                <StackPanel Orientation="Vertical">
-                                    <TextBox Header="Path" PlaceholderText="C:\User\" AllowFocusOnInteraction="True"
-                                             x:Name="PathTextBox"/>
-                                    <TextBlock Text="or" Padding="12, 0"/>
-                                    <Button Content="Select directory" Click="OpenFileDialog"/>
-                                </StackPanel>
-                                <TextBox Header="Name" Description="Will be coppied from link if left empty." 
-                                         PlaceholderText="idk" AllowFocusOnInteraction="True" x:Name="NameTextBox2"/>
-                                <Button Style="{StaticResource AccentButtonStyle}" HorizontalAlignment="Stretch"
-                                        Content="Create" Click="NewPathClicked"/>
-                            </StackPanel>
-                        </Flyout>
-                    </AppBarButton.Flyout>
-                </AppBarButton>
-            </CommandBar>
+            
             <StackPanel Orientation="Vertical" x:Name="StackPanel" Spacing="4">
                 
             </StackPanel>

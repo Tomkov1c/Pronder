@@ -43,17 +43,35 @@
                 </Button>
             </Grid>
 
-            <StackPanel x:Name="idk" Orientation="Vertical"></StackPanel>
-
-            <ListView  x:Name="MyListView"  SelectionMode="Single"  ItemsSource="{Binding Tasks}">
+            <ListView x:Name="MyListView" SelectionMode="None" ItemsSource="{Binding Tasks}" Margin="0, 24, 0, 0">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel>
-                            <TextBlock Text="{Binding Content}" FontSize="20" />
+                        <StackPanel Orientation="Vertical" Padding="24, 0" Margin="-16, 1" HorizontalAlignment="Stretch" BorderThickness="0, 0, 0, 1" 
+                                    BorderBrush="{ThemeResource ControlFillColorSecondaryBrush}" CornerRadius="0">
+
+                            <StackPanel Orientation="Horizontal" Padding="0, 14" Spacing="4">
+                                <CheckBox CornerRadius="12" MinWidth="0" IsChecked="{Binding Done}" />
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Stretch" Text="{Binding Content}" />
+                            </StackPanel>
+
+                            <ListView ItemsSource="{Binding SubTasks}" Margin="16,0,0,0" SelectionMode="None">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Vertical" Padding="0, 0, 0, 16">
+                                            <StackPanel Orientation="Horizontal" Padding="4, 0" Spacing="4" HorizontalAlignment="Stretch">
+                                                <CheckBox CornerRadius="12" MinWidth="0" IsChecked="{Binding Done}" />
+                                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Stretch" Text="{Binding Content}" />
+                                            </StackPanel>
+
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+
 
         </StackPanel>
     </ScrollViewer>

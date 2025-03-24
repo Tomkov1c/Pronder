@@ -3,39 +3,22 @@ using System.ComponentModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Newtonsoft.Json;
 using Pronder.Models;
-using static Pronder.Models.Project;
 using static Pronder.Models.ProjectExtraProperties;
 
 namespace Pronder.ViewModels;
 
 public partial class EditProjectPagesExternalLinksViewModel : ObservableRecipient
 {
-    public ObservableCollection<TodoTask> Links
+    public static Project? _project => Project.GlobalInstance;
+
+    public ObservableCollection<Link> Links
     {
         get; set;
     }
-    public Project _project;
-    public string? ProjectPath
-    {
-        get; set;
-    }
-    public Project Project
-    {
-        get => _project;
-        set
-        {
-            _project = value;
-            OnPropertyChanged(nameof(Project));
-        }
-    }
 
-    public EditProjectPagesExternalLinksViewModel(string path)
+    public EditProjectPagesExternalLinksViewModel()
     {
-        Links = new ObservableCollection<TodoTask>();
-        Project = new Project();
-
-        ProjectPath = path;
-        _project = JsonConvert.DeserializeObject<Project>(File.ReadAllText(path)) ?? new Project();
+        Links = new ObservableCollection<Link>();
     }
 
     public void AddNewLink(string name, string href)
@@ -64,10 +47,7 @@ public partial class EditProjectPagesExternalLinksViewModel : ObservableRecipien
 
     private void SaveData()
     {
-        if (!string.IsNullOrEmpty(ProjectPath))
-        {
-            File.WriteAllText(ProjectPath, JsonConvert.SerializeObject(_project, Formatting.Indented));
-        }
+        Project.GlobalInstance.SaveToFile();
     }
 
     public event PropertyChangedEventHandler PropertyChanged;

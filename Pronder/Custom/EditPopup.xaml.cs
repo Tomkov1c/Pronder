@@ -25,6 +25,7 @@ public sealed partial class EditPopup : ContentDialog
     public EditPopup()
     {
         App.MainWindow.SizeChanged += UpdatePopupSize;
+        this.XamlRoot = App.MainWindow.Content.XamlRoot;
         this.InitializeComponent();
 
         UpdatePopupSize(null, null);
@@ -43,6 +44,7 @@ public sealed partial class EditPopup : ContentDialog
     private void CloseButton(object sender, RoutedEventArgs e)
     {
         App.MainWindow.SizeChanged -= UpdatePopupSize;
+        OnProjectEdited.Invoke();
         Hide();
     }
 

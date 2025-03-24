@@ -30,6 +30,8 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
     public string path;
 
     public static event Action OnProjectCreated;
+
+    EditPopup editPopup;
     public GeneralProjectDisplayPage()
     {
         InitializeComponent();
@@ -85,8 +87,6 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
                 break;
         }
 
-        // ContentFrame.Navigate(pageType, null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromRight });
-
         var slideNavigationTransitionEffect = currentSelectedIndex - previousSelectedIndex > 0 ? SlideNavigationTransitionEffect.FromRight : SlideNavigationTransitionEffect.FromLeft;
 
         ContentFrame.Navigate(pageType, null, new SlideNavigationTransitionInfo() { Effect = slideNavigationTransitionEffect });
@@ -130,6 +130,8 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
         {
             ProjectExternalLinksInsert.Items.Add(item);
         }
+
+        editPopup = new EditPopup();
     }
 
     private void RefreshPage()
@@ -166,10 +168,6 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
 
     async void editData(object sender, RoutedEventArgs e)
     {
-        var dialog = new EditPopup();
-        dialog.XamlRoot = this.XamlRoot;
-
-        await dialog.ShowAsync();
-
+        await editPopup.ShowAsync();
     }
 }
