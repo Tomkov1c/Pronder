@@ -56,13 +56,7 @@ public class ProjectExtraProperties
         public int Order { get; set; }
         public string Content { get; set; }
         public bool Done { get; set; }
-        public List<TodoSubTask> SubTasks { get; set; } = new();
+        public List<TodoTask> SubTasks { get; set; } = new();
     }
 
-    public class TodoSubTask
-    {
-        public int Order { get; set; }
-        public string Content { get; set; }
-        public bool Done { get; set; }
-    }
 }
