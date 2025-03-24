@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using Newtonsoft.Json;
 using Pronder.Models;
+using System.Diagnostics;
 using System.IO;
 
 namespace Pronder.ViewModels
@@ -41,11 +42,10 @@ namespace Pronder.ViewModels
         [ObservableProperty]
         private string _bannerFileName;
 
-        public EditProjectPagesGeneralViewModel(string path)
+        public EditProjectPagesGeneralViewModel()
         {
-            ProjectPath = path;
-
-            _project = JsonConvert.DeserializeObject<Project>(File.ReadAllText(path)) ?? new Project();
+            _project = Project.GlobalInstance;
+            Debug.WriteLine(_project.ToString());
 
             _name = _project.Name;
             _description = _project.About;

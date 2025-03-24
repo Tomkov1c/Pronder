@@ -18,18 +18,9 @@ public sealed partial class EditProjectPagesGeneralPage : Page
 
     public EditProjectPagesGeneralPage()
     {
+        _viewModel = new EditProjectPagesGeneralViewModel();
+        DataContext = _viewModel;
         InitializeComponent();
-    }
-
-    protected override void OnNavigatedTo(NavigationEventArgs e)
-    {
-        base.OnNavigatedTo(e);
-
-        if (e.Parameter is string path)
-        {
-            _viewModel = new EditProjectPagesGeneralViewModel(path);
-            DataContext = _viewModel;
-        }
     }
     private void TextBoxGotFocus(object sender, RoutedEventArgs e)
     {

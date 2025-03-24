@@ -17,5 +17,6 @@ public partial class ProjectToDoViewModel : ObservableRecipient
     {
         _project = Project.GlobalInstance;
 
+
     }
 }
