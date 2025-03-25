@@ -28,40 +28,49 @@ public partial class ProjectToDoViewModel : ObservableRecipient
         {
             foreach (var task in _project.TodoTasks)
             {
+                ConvertSubtasksToObservable(task);
                 Tasks.Add(task);
             }
         }
     }
-
-
-    private void RemoveTask(TodoTask task)
+    private void ConvertSubtasksToObservable(TodoTask task)
     {
-        Debug.WriteLine("pressed");
-        if (task != null)
+        if (task.SubTasks != null && task.SubTasks.Count > 0)
         {
-            Debug.WriteLine("task != null");
-                Debug.WriteLine("Removing");
-                Tasks.Remove(task);
-                Debug.WriteLine(task.ToString());
+            task.VMSubTasks = new ObservableCollection<TodoTask>();
 
-            foreach (var t in Tasks)
+            foreach (var subTask in task.SubTasks)
             {
-                RemoveTaskFromSubTasks(t, task);
+                ConvertSubtasksToObservable(subTask);
+                task.VMSubTasks.Add(subTask);
             }
         }
     }
 
-    private void RemoveTaskFromSubTasks(TodoTask parentTask, TodoTask taskToRemove)
+
+
+    private void RemoveTask(TodoTask task)
     {
-        var subTaskToRemove = parentTask.SubTasks.FirstOrDefault(t => t == taskToRemove);
-        if (subTaskToRemove != null)
+        Debug.WriteLine("Pressed Remove");
+        RemoveTaskRecursive(Tasks, task);
+    }
+
+    private void RemoveTaskRecursive(ObservableCollection<TodoTask> taskList, TodoTask taskToRemove)
+    {
+        var task = taskList.FirstOrDefault(t => t.Id == taskToRemove.Id);
+        if (task != null)
         {
-            parentTask.SubTasks.Remove(subTaskToRemove);
+            taskList.Remove(task);
+            return;
         }
 
-        foreach (var subTask in parentTask.SubTasks)
+        foreach (var t in taskList)
         {
-            RemoveTaskFromSubTasks(subTask, taskToRemove);
+            if (t.SubTasks != null && t.SubTasks.Count > 0)
+            {
+                RemoveTaskRecursive(t.VMSubTasks, taskToRemove);
+            }
         }
     }
+
 }

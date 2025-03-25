@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Media.Imaging;
+using Newtonsoft.Json;
 
 namespace Pronder.Models;
 public class ProjectExtraProperties
@@ -53,10 +55,21 @@ public class ProjectExtraProperties
 
     public class TodoTask
     {
+        
+        public TodoTask()
+        {
+            Id = Guid.NewGuid();
+        }
         public int Order { get; set; }
         public string Content { get; set; }
         public bool Done { get; set; }
         public List<TodoTask> SubTasks { get; set; } = new();
+
+        [JsonIgnore]
+        public Guid Id;
+
+        [JsonIgnore]
+        public ObservableCollection<TodoTask> VMSubTasks { get; set; } = new();
     }
 
 }
