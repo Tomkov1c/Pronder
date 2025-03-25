@@ -1,4 +1,6 @@
 /Pronder/bin
-/.vs
 /Pronder/obj
+/Pronder.Core/bin
+/Pronder.Core/obj
+/.vs
 debug.log
