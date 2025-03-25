@@ -33,6 +33,7 @@ public partial class ProjectToDoViewModel : ObservableRecipient
             }
         }
     }
+
     private void ConvertSubtasksToObservable(TodoTask task)
     {
         if (task.SubTasks != null && task.SubTasks.Count > 0)
@@ -49,9 +50,9 @@ public partial class ProjectToDoViewModel : ObservableRecipient
 
 
 
+
     private void RemoveTask(TodoTask task)
     {
-        Debug.WriteLine("Pressed Remove");
         RemoveTaskRecursive(Tasks, task);
     }
 

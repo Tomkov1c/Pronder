@@ -27,7 +27,6 @@
                     <ListView.ItemContainerTransitions>
                         <TransitionCollection>
                             <AddDeleteThemeTransition />
-                            <EntranceThemeTransition IsStaggeringEnabled="True" />
                         </TransitionCollection>
                     </ListView.ItemContainerTransitions>
                 </ListView>
@@ -85,7 +84,6 @@
                 <TransitionCollection>
                     <AddDeleteThemeTransition />
                     <RepositionThemeTransition />
-                    <EntranceThemeTransition IsStaggeringEnabled="True" />
                 </TransitionCollection>
             </ListView.ItemContainerTransitions>
         </ListView>
