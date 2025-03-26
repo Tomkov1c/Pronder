@@ -1,46 +1,19 @@
 ﻿using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
-
 using Pronder.Contracts.Services;
 using Pronder.Helpers;
 using Pronder.ViewModels;
-
 using Windows.System;
-
-using Microsoft.UI.Xaml;
-using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
-
 using Newtonsoft.Json;
 using Windows.Storage;
 using Pronder.Classes;
 using Microsoft.UI.Xaml.Media.Imaging;
-using Microsoft.UI.Input;
-using Windows.Foundation;
-using Windows.Graphics.Display;
-using Windows.UI.ViewManagement;
-using WinRT.Interop;
-using Microsoft.UI.Windowing;
-using Windows.Graphics;
-using Microsoft.UI;
-using Windows.ApplicationModel.Core;
-using Windows.ApplicationModel;
-using Windows.UI.WindowManagement;
 using Pronder.Interfaces;
 using Pronder.Models;
-using AppWindow = Windows.UI.WindowManagement.AppWindow;
-using Microsoft.UI.Xaml.Hosting;
-using Newtonsoft.Json.Linq;
-using System.Reflection;
-using Windows.Services.Maps;
 using Pronder.Custom;
 
 namespace Pronder.Views;
-
-// TODO: Update NavigationViewItem titles and icons in ShellPage.xaml.
 public sealed partial class ShellPage : Page
 {
 
@@ -54,8 +27,6 @@ public sealed partial class ShellPage : Page
         ViewModel = viewModel;
         InitializeComponent();
 
-        var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
-        localSettings.Values["shellPage_NewProject"] = null;
         NewProjectPage.OnProjectCreated += importProjects;
         GeneralProjectDisplayPage.OnProjectCreated += importProjects;
 
@@ -66,9 +37,6 @@ public sealed partial class ShellPage : Page
         NavigationViewControl.ItemInvoked += ItemClicked;
 
         EditPopup.OnProjectEdited += importProjects;
-
-        ViewModel.NavigationService.Frame = NavigationFrame;
-        ViewModel.NavigationViewService.Initialize(NavigationViewControl);
 
         App.MainWindow.ExtendsContentIntoTitleBar = true;
         App.MainWindow.SetTitleBar(AppTitleBar);
@@ -200,14 +168,7 @@ public sealed partial class ShellPage : Page
     }
     public async void CreateDirectoryAsync()
     {
-        //C:\Users\gamin\AppData\Local\Packages\90d93993-b7aa-4fff-9757-12ef0c6c27e0_1116rh51nqx02\LocalState
-
-        Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
-
-        storageFolder.CreateFolderAsync("Projects", Windows.Storage.CreationCollisionOption.FailIfExists);
-        storageFolder.CreateFolderAsync("Pages", Windows.Storage.CreationCollisionOption.FailIfExists);
-
-
+        Windows.Storage.ApplicationData.Current.LocalFolder.CreateFolderAsync("Projects", Windows.Storage.CreationCollisionOption.FailIfExists);
     }
 
 
@@ -281,18 +242,5 @@ public sealed partial class ShellPage : Page
 
             }
         }
-        var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
-        /*
-        if (localSettings.Values["shellPage_NewProject"] != null)
-        {
-            foreach (var item in NavigationViewControl.MenuItems)
-            {
-                if (item is NavigationViewItem navItem && navItem.Tag == localSettings.Values["shellPage_NewProject"])
-                {
-                    NavigationFrame.Navigate(typeof(GeneralProjectDisplayPage));
-                }
-            }
-        }
-        */
     }
 }

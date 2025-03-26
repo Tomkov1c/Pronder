@@ -1,51 +1,64 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-
+﻿using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Media.Imaging;
 using Microsoft.UI.Xaml.Navigation;
-
+using Newtonsoft.Json;
 using Pronder.Contracts.Services;
+using Pronder.Models;
 using Pronder.Views;
+using Windows.Storage;
 
 namespace Pronder.ViewModels;
 
 public partial class ShellViewModel : ObservableRecipient
 {
     [ObservableProperty]
-    private bool isBackEnabled;
-
-    [ObservableProperty]
     private object? selected;
 
-    public INavigationService NavigationService
-    {
-        get;
-    }
+    public ObservableCollection<NavigationViewItem> PaneItems = new();
 
-    public INavigationViewService NavigationViewService
+    public async void ImportProjects()
     {
-        get;
-    }
+        StorageFolder projectFolder = await Windows.Storage.ApplicationData.Current.LocalFolder.GetFolderAsync("Projects");
+        IReadOnlyList<StorageFile> files = await projectFolder.GetFilesAsync();
 
-    public ShellViewModel(INavigationService navigationService, INavigationViewService navigationViewService)
-    {
-        NavigationService = navigationService;
-        NavigationService.Navigated += OnNavigated;
-        NavigationViewService = navigationViewService;
-    }
-
-    private void OnNavigated(object sender, NavigationEventArgs e)
-    {
-        IsBackEnabled = NavigationService.CanGoBack;
-
-        if (e.SourcePageType == typeof(SettingsPage))
+        foreach(var item in files)
         {
-            Selected = NavigationViewService.SettingsItem;
-            return;
-        }
+            ProjectBrief project = JsonConvert.DeserializeObject<ProjectBrief>(File.ReadAllText(item.Path));
 
-        var selectedItem = NavigationViewService.GetSelectedItem(e.SourcePageType);
-        if (selectedItem != null)
-        {
-            Selected = selectedItem;
+            var navigationViewItem = new NavigationViewItem()
+            {
+                Content = project.Name,
+            };
+
+
+            if (!string.IsNullOrEmpty(project.Icon))
+            {
+                BitmapIcon bitmapIcon = new BitmapIcon
+                {
+                    UriSource = new Uri(project.Icon),
+                    ShowAsMonochrome = false
+                };
+                navigationViewItem.Icon = bitmapIcon;
+            }
+            else
+            {
+                var icon = new ImageIcon { Source = Application.Current.Resources["Icon8Project"] as BitmapImage, };
+                navigationViewItem.Icon = icon;
+            }
+
+            PaneItems.Add(navigationViewItem);
         }
     }
+}
+
+class ProjectBrief
+{
+    [JsonIgnore]
+    public static string ProjectPath { get; private set; } = "";
+    
+    public string Name { get; set; }
+    public string Icon { get; set; }
 }
