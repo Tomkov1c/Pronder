@@ -27,6 +27,7 @@
                     <ListView.ItemContainerTransitions>
                         <TransitionCollection>
                             <AddDeleteThemeTransition />
+                            <ContentThemeTransition />
                         </TransitionCollection>
                     </ListView.ItemContainerTransitions>
                 </ListView>
@@ -79,7 +80,7 @@
         </Grid>
 
         <ListView x:Name="MainListView" ItemsSource="{Binding Tasks}" ItemTemplateSelector="{StaticResource TaskTemplateSelector}"
-                      SelectionMode="None" Margin="0, 18, 0, 0">
+                      SelectionMode="None" Margin="0, 18, 0, 0" MinHeight="300">
             <ListView.ItemContainerTransitions>
                 <TransitionCollection>
                     <AddDeleteThemeTransition />
