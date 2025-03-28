@@ -69,7 +69,8 @@
                         IsBackButtonVisible="Collapsed" SelectedItem="{x:Bind ViewModel.Selected, Mode=OneWay}" 
                         IsSettingsVisible="False" ExpandedModeThresholdWidth="1280" 
                         DisplayModeChanged="NavigationViewControl_DisplayModeChanged" 
-                        Header="{x:Bind ((ContentControl)ViewModel.Selected).Content, Mode=OneWay}">
+                        Header="{x:Bind ((ContentControl)ViewModel.Selected).Content, Mode=OneWay}"
+                        MenuItemsSource="{Binding PaneItems}">
             <NavigationView.Transitions>
                 <TransitionCollection>
                     <EntranceThemeTransition IsStaggeringEnabled="True" />

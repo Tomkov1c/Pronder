@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Diagnostics;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -19,6 +20,11 @@ public partial class ShellViewModel : ObservableRecipient
 
     public ObservableCollection<NavigationViewItem> PaneItems = new();
 
+    public ShellViewModel()
+    {
+        ImportProjects();
+    }
+
     public async void ImportProjects()
     {
         StorageFolder projectFolder = await Windows.Storage.ApplicationData.Current.LocalFolder.GetFolderAsync("Projects");
@@ -26,6 +32,8 @@ public partial class ShellViewModel : ObservableRecipient
 
         foreach(var item in files)
         {
+            Debug.Write(item.Path);
+
             ProjectBrief project = JsonConvert.DeserializeObject<ProjectBrief>(File.ReadAllText(item.Path));
 
             var navigationViewItem = new NavigationViewItem()
