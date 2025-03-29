@@ -28,7 +28,7 @@ public sealed partial class ProjectToDoPage : Page
     }
 }
 
-public class TaskTemplateSelector : DataTemplateSelector
+class TaskTemplateSelector : DataTemplateSelector
 {
     public DataTemplate TaskWithoutSubtasks { get; set; }
     public DataTemplate TaskWithSubtasks { get; set; }

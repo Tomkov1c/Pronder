@@ -8,8 +8,32 @@
     xmlns:behaviors="using:Pronder.Behaviors"
     xmlns:i="using:Microsoft.Xaml.Interactivity"
     xmlns:local="using:Pronder.ViewModels"
+    xmlns:localviews="using:Pronder.Views"
     Loaded="OnLoaded"
     x:Name="ShellPageName">
+
+    <Page.Resources>
+        <DataTemplate x:Key="GlyphTemplate" x:DataType="local:Pages">
+            <NavigationViewItem Content="{x:Bind Name}" Icon="{x:Bind Icon}" />
+        </DataTemplate>
+
+        <DataTemplate x:Key="SeparatorTemplate">
+            <NavigationViewItemSeparator/>
+        </DataTemplate>
+
+        <DataTemplate x:Key="IconTemplate" x:DataType="local:ProjectBrief">
+            <NavigationViewItem Content="{x:Bind Name}" Tag="{x:Bind ProjectPath}">
+                <NavigationViewItem.Icon>
+                    <ImageIcon Source="{x:Bind Icon}" />
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+        </DataTemplate>
+
+        <localviews:ItemTemplateSelector x:Key="ItemTemplateSelector"
+                                         GlyphTemplate="{StaticResource GlyphTemplate}"
+                                         IconTemplate="{StaticResource IconTemplate}" 
+                                         SeparatorTemplate ="{StaticResource SeparatorTemplate}"/>
+    </Page.Resources>
 
     <Grid>
         <Grid Canvas.ZIndex="1" Height="{Binding ElementName=NavigationViewControl, Path=CompactPaneLength}"
@@ -66,10 +90,11 @@
             </StackPanel>
 
         </Grid>
-        <NavigationView x:Name="NavigationViewControl" ItemInvoked="ItemClicked" Canvas.ZIndex="0" 
+        <NavigationView x:Name="NavigationViewControl" SelectionChanged="ItemClicked" Canvas.ZIndex="0" 
                         IsBackButtonVisible="Collapsed" SelectedItem="{x:Bind _viewModel.Selected, Mode=OneWay}" 
                         IsSettingsVisible="False" ExpandedModeThresholdWidth="1280" 
-                        DisplayModeChanged="NavigationViewControl_DisplayModeChanged">
+                        DisplayModeChanged="NavigationViewControl_DisplayModeChanged"
+                        MenuItemTemplateSelector="{StaticResource ItemTemplateSelector}">
             <NavigationView.Transitions>
                 <TransitionCollection>
                     <EntranceThemeTransition IsStaggeringEnabled="True" />
@@ -79,20 +104,6 @@
             <NavigationView.MenuItemsSource>
                 <Binding Path="PaneItems" Mode="OneWay"/>
             </NavigationView.MenuItemsSource>
-
-            <NavigationView.MenuItems>
-
-            </NavigationView.MenuItems>
-
-            <NavigationView.MenuItemTemplate>
-                <DataTemplate x:DataType="local:ProjectBrief">
-                    <NavigationViewItem Content="{x:Bind Name}" Tag="{x:Bind ProjectPath}">
-                        <NavigationViewItem.Icon>
-                            <ImageIcon Source="{x:Bind Icon}" />
-                        </NavigationViewItem.Icon>
-                    </NavigationViewItem>
-                </DataTemplate>
-            </NavigationView.MenuItemTemplate>
 
             <ScrollView Margin="64, 0, 0, 0" >
                 <Frame x:Name="NavigationFrame" Padding="0, 52, 64, 50"  CornerRadius="{StaticResource ControlCornerRadius}"/>

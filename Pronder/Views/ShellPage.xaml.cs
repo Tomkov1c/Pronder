@@ -105,11 +105,45 @@ public sealed partial class ShellPage : Page
         }
     }
 
-    private async void ItemClicked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
+    private void ItemClicked(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
     {
-        if (args.InvokedItemContainer is NavigationViewItem item && item.Tag != null && !item.IsSelected)
+        if (sender.Tag == args.SelectedItem)
         {
-            NavigationFrame.Navigate(typeof(GeneralProjectDisplayPage), item.Tag.ToString());
+            return;
+        }
+
+        if (args.SelectedItem is ProjectBrief project && !string.IsNullOrEmpty(project.ProjectPath))
+        {
+            NavigationFrame.Navigate(typeof(GeneralProjectDisplayPage), project.ProjectPath);
+        }
+        else if (args.SelectedItem is Pages page && page.PageType != null)
+        {
+            NavigationFrame.Navigate(page.PageType);
+        }
+        sender.Tag = args.SelectedItem;
+    }
+}
+
+class ItemTemplateSelector : DataTemplateSelector
+{
+    public DataTemplate GlyphTemplate { get; set; }
+    public DataTemplate IconTemplate { get; set; }
+
+    public DataTemplate SeparatorTemplate { get; set; }
+
+    protected override DataTemplate SelectTemplateCore(object item)
+    {
+        if (item is Pages)
+        {
+            return GlyphTemplate;
+        }
+        else if(item is ProjectBrief)
+        {
+            return IconTemplate;
+        }
+        else
+        {
+            return SeparatorTemplate;
         }
     }
 }

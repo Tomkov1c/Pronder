@@ -19,21 +19,30 @@ public partial class ShellViewModel : ObservableRecipient
     private object? selected;
     public Action ProjectImported;
 
-    public ObservableCollection<ProjectBrief> PaneItems { get; set; } = new();
+    public ObservableCollection<object> PaneItems { get; set; } = new();
+    private ObservableCollection<Pages> StaticPages { get; set; } = new();
+    private ObservableCollection<ProjectBrief> ProjectPages { get; set; } = new();
+
+    public ShellViewModel()
+    {
+        StaticPages.Add(new Pages() { Icon = new SymbolIcon(Symbol.Home), Name = "Home" });
+
+        foreach (var page in StaticPages) PaneItems.Add(page);
+        PaneItems.Add(new object());
+    }
 
     public async Task ImportProjects()
     {
         Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
-        string projectFolderName = "Projects";
 
         StorageFolder projectFolder;
         try
         {
-            projectFolder = await storageFolder.GetFolderAsync(projectFolderName);
+            projectFolder = await storageFolder.GetFolderAsync("Projects");
         }
         catch (FileNotFoundException)
         {
-            projectFolder = await storageFolder.CreateFolderAsync(projectFolderName);
+            projectFolder = await storageFolder.CreateFolderAsync("Projects");
         }
         IReadOnlyList<StorageFile> files = await projectFolder.GetFilesAsync();
 
@@ -49,8 +58,13 @@ public partial class ShellViewModel : ObservableRecipient
             project.IfNullOrWhiteSpace();
             Debug.WriteLine(JsonConvert.SerializeObject(project).ToString());
 
-            PaneItems.Add(project);
+            ProjectPages.Add(project);
         }
+        
+        // Sort
+        // ProjectPages = new ObservableCollection<ProjectBrief>(ProjectPages.OrderByDescending(p => p.Name));
+        
+        foreach (var project in ProjectPages) PaneItems.Add(project);
     }
 }
 
@@ -71,4 +85,11 @@ public class ProjectBrief
             this.Icon = ((BitmapImage)App.Current.Resources["Icon8Project"]).UriSource.ToString();
         }
     }
+}
+
+public class Pages
+{
+    public Type PageType { get; set; }
+    public string Name { get; set; }
+    public IconElement Icon { get; set; }
 }

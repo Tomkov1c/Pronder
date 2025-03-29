@@ -74,6 +74,7 @@
 
   <ItemGroup>
 	<Folder Include="Helpers\NewFolder\" />
+	<Folder Include="Views\Settings\" />
   </ItemGroup>
   
   <PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
