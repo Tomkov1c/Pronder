@@ -17,56 +17,60 @@ public partial class ShellViewModel : ObservableRecipient
 {
     [ObservableProperty]
     private object? selected;
+    public Action ProjectImported;
 
-    public ObservableCollection<NavigationViewItem> PaneItems = new();
+    public ObservableCollection<ProjectBrief> PaneItems { get; set; } = new();
 
     public ShellViewModel()
     {
         ImportProjects();
     }
 
-    public async void ImportProjects()
+    public async Task ImportProjects()
     {
-        StorageFolder projectFolder = await Windows.Storage.ApplicationData.Current.LocalFolder.GetFolderAsync("Projects");
-        IReadOnlyList<StorageFile> files = await projectFolder.GetFilesAsync();
+        Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+        string projectFolderPath = storageFolder.Path + "\\Projects";
 
-        foreach(var item in files)
+        if (!Directory.Exists(projectFolderPath))
         {
-            Debug.Write(item.Path);
+            Directory.CreateDirectory(projectFolderPath);
+        }
 
-            ProjectBrief project = JsonConvert.DeserializeObject<ProjectBrief>(File.ReadAllText(item.Path));
+        var files = Directory.GetFiles(projectFolderPath);
 
-            var navigationViewItem = new NavigationViewItem()
+        foreach (var item in files)
+        {
+            var projectJson = File.ReadAllText(item);
+            JsonSerializerSettings settings = new JsonSerializerSettings
             {
-                Content = project.Name,
+                NullValueHandling = NullValueHandling.Ignore,
+                Formatting = Formatting.Indented
             };
+            ProjectBrief project = JsonConvert.DeserializeObject<ProjectBrief>(File.ReadAllText(item), settings);
+            project.ProjectPath = item;
+            project.IfNullOrWhiteSpace();
+            Debug.WriteLine(JsonConvert.SerializeObject(project).ToString());
 
-
-            if (!string.IsNullOrEmpty(project.Icon))
-            {
-                BitmapIcon bitmapIcon = new BitmapIcon
-                {
-                    UriSource = new Uri(project.Icon),
-                    ShowAsMonochrome = false
-                };
-                navigationViewItem.Icon = bitmapIcon;
-            }
-            else
-            {
-                var icon = new ImageIcon { Source = Application.Current.Resources["Icon8Project"] as BitmapImage, };
-                navigationViewItem.Icon = icon;
-            }
-
-            PaneItems.Add(navigationViewItem);
+            PaneItems.Add(project);
         }
     }
 }
 
-class ProjectBrief
+public class ProjectBrief
 {
-    [JsonIgnore]
-    public static string ProjectPath { get; private set; } = "";
-    
-    public string Name { get; set; }
-    public string Icon { get; set; }
+    [JsonIgnore] public string ProjectPath { get; set; } = "";
+
+    public string Name
+    {
+        get; set;
+    }
+    public string Icon { get; set; } = ((BitmapImage)App.Current.Resources["Icon8Project"]).UriSource.ToString();
+
+    public void IfNullOrWhiteSpace()
+    {
+        if (string.IsNullOrWhiteSpace(this.Icon) || string.IsNullOrEmpty(this.Icon))
+        {
+            this.Icon = ((BitmapImage)App.Current.Resources["Icon8Project"]).UriSource.ToString();
+        }
+    }
 }

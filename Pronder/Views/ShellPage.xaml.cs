@@ -12,46 +12,32 @@ using Microsoft.UI.Xaml.Media.Imaging;
 using Pronder.Interfaces;
 using Pronder.Models;
 using Pronder.Custom;
+using System.Diagnostics;
 
 namespace Pronder.Views;
 public sealed partial class ShellPage : Page
 {
-
-    public ShellViewModel ViewModel
-    {
-        get;
-    }
+    public ShellViewModel _viewModel = new();
 
     public ShellPage(ShellViewModel viewModel)
     {
-        ViewModel = viewModel;
-        DataContext = viewModel;
+        _viewModel = viewModel;
+        Debug.WriteLine(_viewModel.PaneItems.Count);
+        DataContext = _viewModel;
         InitializeComponent();
 
-        NewProjectPage.OnProjectCreated += importProjects;
-        GeneralProjectDisplayPage.OnProjectCreated += importProjects;
-
-        CreateDirectoryAsync();
-        //importProjects();
-
         NavigationService.Instance.NavigationView = NavigationViewControl;
-        NavigationViewControl.ItemInvoked += ItemClicked;
-
-        EditPopup.OnProjectEdited += importProjects;
 
         App.MainWindow.ExtendsContentIntoTitleBar = true;
         App.MainWindow.SetTitleBar(AppTitleBar);
         App.MainWindow.Activated += MainWindow_Activated;
 
-        themeCheck();
+        //themeCheck();
     }
 
-    private void OnLoaded(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
+    private void OnLoaded(object sender, RoutedEventArgs e)
     {
         TitleBarHelper.UpdateTitleBar(RequestedTheme);
-
-        KeyboardAccelerators.Add(BuildKeyboardAccelerator(VirtualKey.Left, VirtualKeyModifiers.Menu));
-        KeyboardAccelerators.Add(BuildKeyboardAccelerator(VirtualKey.GoBack));
     }
 
     private void MainWindow_Activated(object sender, WindowActivatedEventArgs args)
@@ -70,47 +56,6 @@ public sealed partial class ShellPage : Page
         };
     }
 
-    private static KeyboardAccelerator BuildKeyboardAccelerator(VirtualKey key, VirtualKeyModifiers? modifiers = null)
-    {
-        var keyboardAccelerator = new KeyboardAccelerator() { Key = key };
-
-        if (modifiers.HasValue)
-        {
-            keyboardAccelerator.Modifiers = modifiers.Value;
-        }
-
-        keyboardAccelerator.Invoked += OnKeyboardAcceleratorInvoked;
-
-        return keyboardAccelerator;
-    }
-
-    private static void OnKeyboardAcceleratorInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs args)
-    {
-        var navigationService = App.GetService<INavigationService>();
-
-        var result = navigationService.GoBack();
-
-        args.Handled = result;
-    }
-
-
-    //min
-    void OpenSettingsAcc(object sender, KeyboardAcceleratorInvokedEventArgs e)
-    {
-        openSettings(null, null);
-    }
-    void OpenNewProjectAcc(object sender, KeyboardAcceleratorInvokedEventArgs e)
-    {
-        openNewProject(null, null);
-    }
-    void OpenActivatePageHelpAcc(object sender, KeyboardAcceleratorInvokedEventArgs e)
-    {
-        ActivatePageHelp(null, null);
-    }
-    void OpenAboutAcc(object sender, KeyboardAcceleratorInvokedEventArgs e)
-    {
-        openAbout(null, null);
-    }
     void openSettings(object sender, RoutedEventArgs e)
     {
         NavigationFrame.Navigate(typeof(SettingsPage));
@@ -131,8 +76,6 @@ public sealed partial class ShellPage : Page
         var currentPage = NavigationFrame.Content as IPerPageHelpButtonAction;
         currentPage?.HelpButtonAction(null, null);
     }
-
-
 
     void themeCheck()
     {
@@ -155,93 +98,13 @@ public sealed partial class ShellPage : Page
                 ShellPageName.RequestedTheme = ElementTheme.Default;
             }
         }
-
     }
 
     private async void ItemClicked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
     {
-        if (args.InvokedItemContainer is NavigationViewItem item && item.Tag != null)
+        if (args.InvokedItemContainer is NavigationViewItem item && item.Tag != null && !item.IsSelected)
         {
-            string pageTag = item.Tag.ToString();
-
-            NavigationFrame.Navigate(typeof(GeneralProjectDisplayPage), pageTag);
-        }
-    }
-    public async void CreateDirectoryAsync()
-    {
-        Windows.Storage.ApplicationData.Current.LocalFolder.CreateFolderAsync("Projects", Windows.Storage.CreationCollisionOption.FailIfExists);
-    }
-
-
-    public async void importProjects()
-    {
-        try
-        {
-            var itemsToRemove = new List<NavigationViewItemBase>();
-
-            // Iterate through the primary menu items
-            foreach (var item in NavigationViewControl.MenuItems)
-            {
-                if (item is NavigationViewItem navItem && navItem.Tag != null)
-                {
-                    itemsToRemove.Add(navItem);
-                }
-            }
-
-            // Remove the items that don't have a Tag
-            foreach (var item in itemsToRemove)
-            {
-                NavigationViewControl.MenuItems.Remove(item);
-            }
-        }
-        catch (Exception ex) { }
-        Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
-        string projectFolderName = "Projects";
-        StorageFolder projectFolder = await storageFolder.GetFolderAsync(projectFolderName);
-        IReadOnlyList<StorageFile> files = await projectFolder.GetFilesAsync();
-
-
-        for (int i = 0; i < files.Count; i++)
-        {
-            Project project = JsonConvert.DeserializeObject<Project>(File.ReadAllText(files[i].Path));
-
-            using (StreamReader file = File.OpenText(files[i].Path))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                Project deserialized = (Project)serializer.Deserialize(file, typeof(Project));
-
-                var navigationViewItem = new NavigationViewItem
-                {
-                    Tag = files[i].Path,
-                    Content = deserialized.Name
-                };
-
-                if (!string.IsNullOrEmpty(deserialized.Icon))
-                {
-                    BitmapIcon bitmapIcon = new BitmapIcon
-                    {
-                        // Set the URI of the image
-                        UriSource = new Uri(deserialized.Icon),
-
-                        // Optional: Set whether the icon should be shown as monochrome
-                        ShowAsMonochrome = false
-                    };
-                    navigationViewItem.Icon = bitmapIcon;
-
-
-                }
-                else
-                {
-                    var icon = new ImageIcon
-                    {
-                        Source = new BitmapImage(new Uri(base.BaseUri, @"/Assets/Icon8/Color/icons8-project-512.png")),
-                    };
-                    navigationViewItem.Icon = icon;
-                }
-
-                NavigationViewControl.MenuItems.Add(navigationViewItem);
-
-            }
+            NavigationFrame.Navigate(typeof(GeneralProjectDisplayPage), item.Tag.ToString());
         }
     }
 }
