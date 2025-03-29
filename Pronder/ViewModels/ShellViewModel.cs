@@ -21,33 +21,31 @@ public partial class ShellViewModel : ObservableRecipient
 
     public ObservableCollection<ProjectBrief> PaneItems { get; set; } = new();
 
-    public ShellViewModel()
-    {
-        ImportProjects();
-    }
-
     public async Task ImportProjects()
     {
         Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
-        string projectFolderPath = storageFolder.Path + "\\Projects";
+        string projectFolderName = "Projects";
 
-        if (!Directory.Exists(projectFolderPath))
+        StorageFolder projectFolder;
+        try
         {
-            Directory.CreateDirectory(projectFolderPath);
+            projectFolder = await storageFolder.GetFolderAsync(projectFolderName);
         }
-
-        var files = Directory.GetFiles(projectFolderPath);
+        catch (FileNotFoundException)
+        {
+            projectFolder = await storageFolder.CreateFolderAsync(projectFolderName);
+        }
+        IReadOnlyList<StorageFile> files = await projectFolder.GetFilesAsync();
 
         foreach (var item in files)
         {
-            var projectJson = File.ReadAllText(item);
             JsonSerializerSettings settings = new JsonSerializerSettings
             {
                 NullValueHandling = NullValueHandling.Ignore,
                 Formatting = Formatting.Indented
             };
-            ProjectBrief project = JsonConvert.DeserializeObject<ProjectBrief>(File.ReadAllText(item), settings);
-            project.ProjectPath = item;
+            ProjectBrief project = JsonConvert.DeserializeObject<ProjectBrief>(File.ReadAllText(item.Path), settings);
+            project.ProjectPath = item.Path;
             project.IfNullOrWhiteSpace();
             Debug.WriteLine(JsonConvert.SerializeObject(project).ToString());
 

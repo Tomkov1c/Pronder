@@ -17,12 +17,12 @@ using System.Diagnostics;
 namespace Pronder.Views;
 public sealed partial class ShellPage : Page
 {
-    public ShellViewModel _viewModel = new();
+    public ShellViewModel _viewModel;
 
     public ShellPage(ShellViewModel viewModel)
     {
         _viewModel = viewModel;
-        Debug.WriteLine(_viewModel.PaneItems.Count);
+        importProjects();
         DataContext = _viewModel;
         InitializeComponent();
 
@@ -33,6 +33,11 @@ public sealed partial class ShellPage : Page
         App.MainWindow.Activated += MainWindow_Activated;
 
         //themeCheck();
+    }
+
+    public async void importProjects()
+    {
+        await _viewModel.ImportProjects();
     }
 
     private void OnLoaded(object sender, RoutedEventArgs e)
