@@ -21,16 +21,16 @@ public partial class GeneralProjectDisplayViewModel : ObservableRecipient
     public event Action BackgroundTaskFinished;
 
     private string projectPath;
-    public Project _project;
+    public Project? _project;
 
     [ObservableProperty]
-    private string _name;
+    private string? _name;
 
     [ObservableProperty]
-    private string _description;
+    private string? _description;
 
     [ObservableProperty]
-    private string _tag;
+    private string? _tag;
 
     [ObservableProperty]
     private string? _iconPath;
@@ -63,6 +63,7 @@ public partial class GeneralProjectDisplayViewModel : ObservableRecipient
 
     private async Task MainTasksAsync()
     {
+        Project.RemoveGlobalInstance();
         _project = JsonConvert.DeserializeObject<Project>(File.ReadAllText(projectPath));
         Project.SetGlobalInstance(_project);
         Project.SetGlobalString(projectPath);
@@ -110,6 +111,17 @@ public partial class GeneralProjectDisplayViewModel : ObservableRecipient
             }
         }
         BackgroundTaskFinished?.Invoke();
+        _project = null;
+    }
+
+    public void ClearData()
+    {
+        _project = null;
+        _name = null;
+        _description = null;
+        _tag = null;
+        _iconPath = null;
+        _bannerPath = null;
     }
 
     [RelayCommand]
@@ -117,8 +129,7 @@ public partial class GeneralProjectDisplayViewModel : ObservableRecipient
     {
         try
         {
-            var uri = new Uri(url);
-            var success = Windows.System.Launcher.LaunchUriAsync(uri);
+            Windows.System.Launcher.LaunchUriAsync(new Uri(url));
         }
         catch (Exception ex)
         {

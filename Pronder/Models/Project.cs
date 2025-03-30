@@ -17,7 +17,7 @@ namespace Pronder.Models
         [JsonIgnore]
         public static Project? GlobalInstance { get; private set; } = null;
         [JsonIgnore]
-        public static string ProjectPath { get; private set; } = "";
+        public static string ProjectPath { get; private set; } = null;
 
         public string Id { get; set; }
         public string Name { get; set; }
@@ -29,11 +29,13 @@ namespace Pronder.Models
         public string DateLastViewed { get; set; }
         public string DateLastEdited { get; set; }
 
-        public List<Link> Links { get; set; } = new();
-        public List<TodoTask> TodoTasks { get; set; } = new();
+        public List<Link> Links { get; set; }
+        public List<TodoTask> TodoTasks { get; set; }
 
 
-        public static void SetGlobalInstance(Project project) => GlobalInstance = project;
+        public static void SetGlobalInstance(Project? project) => GlobalInstance = project;
+
+        public static void RemoveGlobalInstance() => GlobalInstance = null;
 
         public static void SetGlobalString(string value) => ProjectPath = value;
 

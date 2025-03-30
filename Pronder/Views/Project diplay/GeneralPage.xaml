@@ -95,7 +95,7 @@
             </SelectorBar>
 
 
-            <Frame IsNavigationStackEnabled="False" x:Name="ContentFrame" CornerRadius="{StaticResource ControlCornerRadius}">
+            <Frame x:Name="ContentFrame" CornerRadius="{StaticResource ControlCornerRadius}">
                 <Frame.ContentTransitions>
                     <TransitionCollection>
                         <NavigationThemeTransition  />

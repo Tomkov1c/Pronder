@@ -63,7 +63,7 @@ public class ProjectExtraProperties
         public int Order { get; set; }
         public string Content { get; set; }
         public bool Done { get; set; }
-        public List<TodoTask> SubTasks { get; set; } = new();
+        public List<TodoTask> SubTasks { get; set; }
 
         [JsonIgnore]
         public Guid Id;

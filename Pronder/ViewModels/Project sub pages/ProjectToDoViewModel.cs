@@ -17,7 +17,6 @@ public partial class ProjectToDoViewModel : ObservableRecipient
     public static Project? _project => Project.GlobalInstance;
     public ObservableCollection<TodoTask> Tasks { get; set; } = new();
 
-
     public ICommand RemoveTaskCommand { get; private set; }
 
     public ProjectToDoViewModel()
@@ -47,9 +46,6 @@ public partial class ProjectToDoViewModel : ObservableRecipient
             }
         }
     }
-
-
-
 
     private void RemoveTask(TodoTask task)
     {

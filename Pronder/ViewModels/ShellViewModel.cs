@@ -25,7 +25,7 @@ public partial class ShellViewModel : ObservableRecipient
 
     public ShellViewModel()
     {
-        StaticPages.Add(new Pages() { Icon = new SymbolIcon(Symbol.Home), Name = "Home" });
+        StaticPages.Add(new Pages() { Icon = new SymbolIcon(Symbol.Home), Name = "Home", PageType = typeof(NewProjectPage) });
 
         foreach (var page in StaticPages) PaneItems.Add(page);
         PaneItems.Add(new object());
@@ -53,17 +53,21 @@ public partial class ShellViewModel : ObservableRecipient
                 NullValueHandling = NullValueHandling.Ignore,
                 Formatting = Formatting.Indented
             };
-            ProjectBrief project = JsonConvert.DeserializeObject<ProjectBrief>(File.ReadAllText(item.Path), settings);
-            project.ProjectPath = item.Path;
-            project.IfNullOrWhiteSpace();
-            Debug.WriteLine(JsonConvert.SerializeObject(project).ToString());
+            using (var fileStream = File.OpenRead(item.Path))
+            using (var reader = new StreamReader(fileStream))
+            {
+                string fileContent = await reader.ReadToEndAsync();
+                ProjectBrief project = JsonConvert.DeserializeObject<ProjectBrief>(fileContent, settings);
+                project.ProjectPath = item.Path;
+                project.IfNullOrWhiteSpace();
 
-            ProjectPages.Add(project);
+                ProjectPages.Add(project);
+            }
+            GC.Collect();
         }
         
         // Sort
         // ProjectPages = new ObservableCollection<ProjectBrief>(ProjectPages.OrderByDescending(p => p.Name));
-        
         foreach (var project in ProjectPages) PaneItems.Add(project);
     }
 }

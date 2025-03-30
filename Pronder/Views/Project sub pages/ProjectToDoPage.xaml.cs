@@ -17,14 +17,15 @@ namespace Pronder.Views;
 
 public sealed partial class ProjectToDoPage : Page
 {
-    public ProjectToDoViewModel _viewModel;
-    string path;
+    public ProjectToDoViewModel _viewModel = new();
 
     public ProjectToDoPage()
     {
-        _viewModel = new ProjectToDoViewModel();
         DataContext = _viewModel;
         InitializeComponent();
+
+        _viewModel = null;
+        GC.Collect();
     }
 }
 

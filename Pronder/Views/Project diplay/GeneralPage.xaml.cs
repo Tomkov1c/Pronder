@@ -56,6 +56,19 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
             localSettings.Values["currentlyActiveProject"] = path;
         }
     }
+    protected override void OnNavigatedFrom(NavigationEventArgs e)
+    {
+        base.OnNavigatedFrom(e);
+
+        EditPopup.OnProjectEdited -= RefreshPage;
+        _viewModel.BackgroundTaskFinished -= PageLoadedBackgroundTasks;
+
+        _viewModel.ClearData();
+        _viewModel = null;
+        path = null;
+
+        GC.Collect();
+    }
 
     private Task<string> InitializeViewModel()
     {
@@ -93,18 +106,24 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
 
         previousSelectedIndex = currentSelectedIndex;
 
+        if (ContentFrame.BackStack.Count > 0)
+        {
+            ContentFrame.BackStack.Clear();
+            GC.Collect();
+        }
+
     }
 
 
     //mine
     private void PageLoaded(object sender, RoutedEventArgs e)
     {
-        if (_viewModel._project.LinksNullOrEmpty())
+        if (Project.GlobalInstance.LinksNullOrEmpty())
         {
             this.ProjectExternalLinks.Visibility = Visibility.Collapsed;
         }
 
-        if (_viewModel._project.BannerNullOrEmpty())
+        if (Project.GlobalInstance.BannerNullOrEmpty())
         {
             ProjectBannerParent.Height = 0;
             ProjectBannerAfter.Margin = new Thickness(0, 0, 0, 0);
@@ -115,7 +134,7 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
             ProjectBannerAfter.Margin = new Thickness(0, 20, 0, 0);
         }
 
-        if (_viewModel._project.IconNullOrEmpty())
+        if (Project.GlobalInstance.IconNullOrEmpty())
         {
             var bitmapImage = new BitmapImage();
             bitmapImage = new BitmapImage(new Uri(base.BaseUri, @"/Assets/Icon8/Color/icons8-project-512.png"));

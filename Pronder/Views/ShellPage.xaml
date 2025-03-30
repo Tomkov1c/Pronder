@@ -106,7 +106,7 @@
             </NavigationView.MenuItemsSource>
 
             <ScrollView Margin="64, 0, 0, 0" >
-                <Frame x:Name="NavigationFrame" Padding="0, 52, 64, 50"  CornerRadius="{StaticResource ControlCornerRadius}"/>
+                <Frame IsNavigationStackEnabled="False" x:Name="NavigationFrame" Padding="0, 52, 64, 50" CornerRadius="{StaticResource ControlCornerRadius}"/>
             </ScrollView>
         </NavigationView>
     </Grid>

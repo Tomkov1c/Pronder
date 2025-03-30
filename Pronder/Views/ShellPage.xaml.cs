@@ -13,15 +13,15 @@ using Pronder.Interfaces;
 using Pronder.Models;
 using Pronder.Custom;
 using System.Diagnostics;
+using Microsoft.UI.Xaml.Media.Animation;
 
 namespace Pronder.Views;
 public sealed partial class ShellPage : Page
 {
-    public ShellViewModel _viewModel;
+    public ShellViewModel _viewModel = new();
 
-    public ShellPage(ShellViewModel viewModel)
+    public ShellPage()
     {
-        _viewModel = viewModel;
         importProjects();
         DataContext = _viewModel;
         InitializeComponent();
@@ -114,13 +114,17 @@ public sealed partial class ShellPage : Page
 
         if (args.SelectedItem is ProjectBrief project && !string.IsNullOrEmpty(project.ProjectPath))
         {
-            NavigationFrame.Navigate(typeof(GeneralProjectDisplayPage), project.ProjectPath);
+            NavigationFrame.Navigate(typeof(GeneralProjectDisplayPage), project.ProjectPath, new EntranceNavigationTransitionInfo());
         }
         else if (args.SelectedItem is Pages page && page.PageType != null)
         {
-            NavigationFrame.Navigate(page.PageType);
+            NavigationFrame.Navigate(page.PageType, null, new EntranceNavigationTransitionInfo());
         }
         sender.Tag = args.SelectedItem;
+        if (NavigationFrame.BackStack.Count > 0)
+        {
+            NavigationFrame.BackStack.Clear();
+        }
     }
 }
 
