@@ -121,4 +121,7 @@
   <data name="Shell_EditProjectPagesExternalLinks.Content" xml:space="preserve">
     <value>EditProjectPagesExternalLinks</value>
   </data>
+  <data name="Shell_SettingsInterface.Content" xml:space="preserve">
+    <value>SettingsInterface</value>
+  </data>
 </root>

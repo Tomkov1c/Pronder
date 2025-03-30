@@ -12,46 +12,14 @@
     <Page.Resources>
         <helpers:EnumToBooleanConverter x:Key="EnumToBooleanConverter" />
     </Page.Resources>
+
     <ScrollViewer VerticalAlignment="Top">
         <StackPanel>
-            <TextBlock Text="Settings" Style="{StaticResource TitleTextBlockStyle}"/>
-            <TextBlock Style="{StaticResource BodyStrongTextBlockStyle}" Text="General" Margin="0, 16, 0, 8"/>
+            <controls:Segmented HorizontalAlignment="Stretch" SelectedIndex="0" Margin="0, 0, 0, 24">
+                <controls:SegmentedItem Content="Interface" Icon="{ui:FontIcon Glyph=&#xEDA4;}" />
+            </controls:Segmented>
 
-            <controls:SettingsCard Header="App theme" HeaderIcon="{ui:FontIcon Glyph=&#xE790;}" >
-                <ComboBox x:Uid="Settings_Theme" x:Name="Settings_Theme_ComboBox" SelectedItem="{x:Bind ViewModel.ElementTheme, Mode=OneWay}" SelectionChanged="themeChange" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Right" Width="250" Grid.Column="2">
-                    <ComboBoxItem x:Uid="Settings_Theme_Light">
-                        <xaml:ElementTheme>Light</xaml:ElementTheme>
-                    </ComboBoxItem>
-                    <ComboBoxItem x:Uid="Settings_Theme_Dark">
-                        <xaml:ElementTheme>Dark</xaml:ElementTheme>
-                    </ComboBoxItem>
-                    <ComboBoxItem x:Uid="Settings_Theme_Default">
-                        <xaml:ElementTheme>Default</xaml:ElementTheme>
-                    </ComboBoxItem>
-                </ComboBox>
-            </controls:SettingsCard>
-
-            <controls:SettingsCard>
-                <controls:SettingsCard.Header>
-                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                        <TextBlock Text="Settings Title" FontSize="16" VerticalAlignment="Center"/>
-                        <Button Margin="10,0,0,0" Width="24" Height="24" Padding="6" VerticalAlignment="Center">
-                            <FontIcon Glyph="&#xEC4A;" FontSize="10" VerticalAlignment="Center"/>
-                        </Button>
-                    </StackPanel>
-                </controls:SettingsCard.Header>
-
-                <TextBlock Text="Some setting description goes here." />
-            </controls:SettingsCard>
-
-
-            <TextBlock Text="Related information" Style="{StaticResource BodyStrongTextBlockStyle}" Margin="0, 40, 0 , 8"/>
-            <StackPanel Orientation="Horizontal">
-                <HyperlinkButton Content="Documentation" Margin="0, 0, 12, 0" HorizontalAlignment="Left" />
-                <HyperlinkButton Content="Report a bug" Margin="0, 0, 12, 0" HorizontalAlignment="Left" />
-                <HyperlinkButton Content="Request a feature" Margin="0, 0, 12, 0" HorizontalAlignment="Left" />
-            </StackPanel>
-
+            <Frame Name="Frame" />
         </StackPanel>
     </ScrollViewer>
 </Page>

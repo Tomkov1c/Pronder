@@ -24,6 +24,7 @@ public class PageService : IPageService
         Configure<SettingsViewModel, SettingsPage>();
         Configure<EditProjectPagesGeneralViewModel, EditProjectPagesGeneralPage>();
         Configure<EditProjectPagesExternalLinksViewModel, EditProjectPagesExternalLinksPage>();
+        Configure<SettingsInterfaceViewModel, SettingsInterfacePage>();
     }
 
     public Type GetPageType(string key)

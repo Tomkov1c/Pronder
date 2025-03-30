@@ -69,6 +69,8 @@ public partial class App : Application
             services.AddSingleton<IFileService, FileService>();
 
             // Views and ViewModels
+            services.AddTransient<SettingsInterfaceViewModel>();
+            services.AddTransient<SettingsInterfacePage>();
             services.AddTransient<EditProjectPagesExternalLinksViewModel>();
             services.AddTransient<EditProjectPagesExternalLinksPage>();
             services.AddTransient<EditProjectPagesGeneralViewModel>();
