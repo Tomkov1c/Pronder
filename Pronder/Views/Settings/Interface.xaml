@@ -22,11 +22,25 @@
                     <ComboBoxItem x:Uid="Settings_Theme_Default">Default</ComboBoxItem>
                 </ComboBox>
             </controls:SettingsCard>
+            <controls:SettingsCard Header="Smoothness" HeaderIcon="{ui:FontIcon Glyph=&#xEC4A;}"
+                                   Description="" />
         </StackPanel>
         <StackPanel Orientation="Vertical" Spacing="4">
             <TextBlock Style="{StaticResource BodyStrongTextBlockStyle}" Text="Pane"/>
+            <controls:SettingsExpander Header="Global pages" HeaderIcon="{ui:FontIcon Glyph=&#xE700;}">
+                <controls:SettingsExpander.Items>
+                    <controls:SettingsCard Header="Home" HeaderIcon="{ui:FontIcon Glyph=&#xE80F;}"/>
+                </controls:SettingsExpander.Items>
+            </controls:SettingsExpander>
             <controls:SettingsCard Header="Order" HeaderIcon="{ui:FontIcon Glyph=&#xE8CB;}"
-                                   Description="Choose the preferred order for displaying projects"/>
+                                   Description="Choose the preferred order for displaying projects">
+                <ComboBox VerticalAlignment="Center" 
+                          HorizontalAlignment="Right" Width="250">
+                    <ComboBoxItem>Alphabetic (A - Z)</ComboBoxItem>
+                    <ComboBoxItem>Alphabetic (Z - A)</ComboBoxItem>
+                    <ComboBoxItem>Recent</ComboBoxItem>
+                </ComboBox>
+            </controls:SettingsCard>
         </StackPanel>
 
     </StackPanel>

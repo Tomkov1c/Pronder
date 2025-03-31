@@ -19,6 +19,7 @@ namespace Pronder.Models
         [JsonIgnore]
         public static string ProjectPath { get; private set; } = null;
 
+        public bool SelfContained { get; set; }
         public string Id { get; set; }
         public string Name { get; set; }
         public string Tag { get; set; }
