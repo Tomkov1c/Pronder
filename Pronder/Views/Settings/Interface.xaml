@@ -34,11 +34,12 @@
             </controls:SettingsExpander>
             <controls:SettingsCard Header="Order" HeaderIcon="{ui:FontIcon Glyph=&#xE8CB;}"
                                    Description="Choose the preferred order for displaying projects">
-                <ComboBox VerticalAlignment="Center" 
-                          HorizontalAlignment="Right" Width="250">
-                    <ComboBoxItem>Alphabetic (A - Z)</ComboBoxItem>
-                    <ComboBoxItem>Alphabetic (Z - A)</ComboBoxItem>
-                    <ComboBoxItem>Recent</ComboBoxItem>
+                <ComboBox VerticalAlignment="Center"  HorizontalAlignment="Right" Width="250" 
+                          SelectedIndex="{Binding SelectedPaneOrderIndex, Mode=TwoWay}">
+                    <ComboBoxItem Tag="AscendingByName">Ascending By Name</ComboBoxItem>
+                    <ComboBoxItem Tag="DescendingByName">Descending By Name</ComboBoxItem>
+                    <ComboBoxItem Tag="AscendingByDateVisited">Ascending By DateVisited</ComboBoxItem>
+                    <ComboBoxItem Tag="DescendingByDateVisited">Descending By DateVisited</ComboBoxItem>
                 </ComboBox>
             </controls:SettingsCard>
         </StackPanel>

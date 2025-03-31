@@ -1,4 +1,5 @@
-﻿using Microsoft.UI.Xaml;
+﻿using System.Windows.Input;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 
 using Pronder.ViewModels;
@@ -8,7 +9,6 @@ namespace Pronder.Views;
 public sealed partial class SettingsInterfacePage : Page
 {
     public SettingsInterfaceViewModel _viewModel;
-
     public SettingsInterfacePage()
     {
         _viewModel = App.GetService<SettingsInterfaceViewModel>();
