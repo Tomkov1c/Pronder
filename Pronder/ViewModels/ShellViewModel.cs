@@ -7,6 +7,7 @@ using Microsoft.UI.Xaml.Media.Imaging;
 using Microsoft.UI.Xaml.Navigation;
 using Newtonsoft.Json;
 using Pronder.Contracts.Services;
+using Pronder.Helpers;
 using Pronder.Models;
 using Pronder.Views;
 using Windows.Storage;
@@ -15,24 +16,28 @@ namespace Pronder.ViewModels;
 
 public partial class ShellViewModel : ObservableRecipient
 {
-    [ObservableProperty]
-    private object? selected;
+    private SettingsHelper localSettings = new();
+
     public Action ProjectImported;
 
+    [ObservableProperty]
+    private object? selected;
+
     public ObservableCollection<object> PaneItems { get; set; } = new();
-    private ObservableCollection<Pages> StaticPages { get; set; } = new();
+    private ObservableCollection<object> StaticPages { get; set; } = new();
     private ObservableCollection<ProjectBrief> ProjectPages { get; set; } = new();
 
     public ShellViewModel()
     {
         StaticPages.Add(new Pages() { Icon = new SymbolIcon(Symbol.Home), Name = "Home", PageType = typeof(NewProjectPage) });
-
-        foreach (var page in StaticPages) PaneItems.Add(page);
-        PaneItems.Add(new object());
+        StaticPages.Add(new object());
     }
 
     public async Task ImportProjects()
     {
+        PaneItems.Clear();
+        ProjectPages.Clear();
+
         Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
 
         StorageFolder projectFolder;
@@ -65,10 +70,26 @@ public partial class ShellViewModel : ObservableRecipient
             }
             GC.Collect();
         }
-        
-        // Sort
-        // ProjectPages = new ObservableCollection<ProjectBrief>(ProjectPages.OrderByDescending(p => p.Name));
+
+        switch (localSettings.Read("PaneProjectsSorted"))
+        {
+            case 0:
+                ProjectPages = new ObservableCollection<ProjectBrief>(ProjectPages.OrderBy(p => p.Name));
+                break;
+            case 1:
+                ProjectPages = new ObservableCollection<ProjectBrief>(ProjectPages.OrderByDescending(p => p.Name));
+                break;
+            case 2:
+                ProjectPages = new ObservableCollection<ProjectBrief>(ProjectPages.OrderBy(p => p.DateLastViewed));
+                break;
+            case 3:
+                ProjectPages = new ObservableCollection<ProjectBrief>(ProjectPages.OrderByDescending(p => p.DateLastViewed));
+                break;
+        }
+
+        foreach (var page in StaticPages) PaneItems.Add(page);
         foreach (var project in ProjectPages) PaneItems.Add(project);
+
     }
 }
 
@@ -76,11 +97,9 @@ public class ProjectBrief
 {
     [JsonIgnore] public string ProjectPath { get; set; } = "";
 
-    public string Name
-    {
-        get; set;
-    }
+    public string Name { get; set; }
     public string Icon { get; set; } = ((BitmapImage)App.Current.Resources["Icon8Project"]).UriSource.ToString();
+    public string DateLastViewed { get; set; }
 
     public void IfNullOrWhiteSpace()
     {

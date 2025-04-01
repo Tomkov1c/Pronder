@@ -68,6 +68,8 @@ public partial class GeneralProjectDisplayViewModel : ObservableRecipient
         Project.SetGlobalInstance(_project);
         Project.SetGlobalString(projectPath);
 
+        _project.DateLastViewed = DateTime.Now.ToString();
+
         _name = _project.Name;
         _description = _project.About;
         _tag = _project.Tag;

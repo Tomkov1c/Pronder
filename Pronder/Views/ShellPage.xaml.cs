@@ -23,7 +23,6 @@ public sealed partial class ShellPage : Page
     public ShellPage()
     {
         importProjects();
-        DataContext = _viewModel;
         InitializeComponent();
 
         NavigationService.Instance.NavigationView = NavigationViewControl;
@@ -32,12 +31,16 @@ public sealed partial class ShellPage : Page
         App.MainWindow.SetTitleBar(AppTitleBar);
         App.MainWindow.Activated += MainWindow_Activated;
 
+        SettingsInterfaceViewModel.OnOrderChanged += importProjects;
+
         //themeCheck();
     }
 
     public async void importProjects()
     {
+        DataContext = null;
         await _viewModel.ImportProjects();
+        DataContext = _viewModel;
     }
 
     private void OnLoaded(object sender, RoutedEventArgs e)

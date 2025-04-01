@@ -104,7 +104,7 @@
             <NavigationView.MenuItemsSource>
                 <Binding Path="PaneItems" Mode="OneWay"/>
             </NavigationView.MenuItemsSource>
-
+            
             <ScrollView Margin="64, 0, 0, 0" >
                 <Frame IsNavigationStackEnabled="False" x:Name="NavigationFrame" Padding="0, 52, 64, 50" CornerRadius="{StaticResource ControlCornerRadius}"/>
             </ScrollView>

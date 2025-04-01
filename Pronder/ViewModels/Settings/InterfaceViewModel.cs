@@ -18,6 +18,8 @@ public partial class SettingsInterfaceViewModel : ObservableRecipient
     private readonly IThemeSelectorService _themeSelectorService;
     private SettingsHelper localsettings = new();
 
+    public static event Action OnOrderChanged;
+
     [ObservableProperty]
     private ElementTheme _elementTheme;
     [ObservableProperty]
@@ -25,9 +27,7 @@ public partial class SettingsInterfaceViewModel : ObservableRecipient
     [ObservableProperty]
     public int _selectedPaneOrderIndex;
 
-
     public ICommand SwitchThemeCommand { get; }
-
 
     public SettingsInterfaceViewModel(IThemeSelectorService themeSelectorService)
     {
@@ -64,7 +64,10 @@ public partial class SettingsInterfaceViewModel : ObservableRecipient
         PropertyChanged += (_, e) =>
         {
             if (e.PropertyName == nameof(SelectedPaneOrderIndex))
+            {
+                OnOrderChanged?.Invoke();
                 ChangeProjectsOrder();
+            }
         };
     }
 
