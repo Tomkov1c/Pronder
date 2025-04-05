@@ -95,13 +95,15 @@
             </SelectorBar>
 
 
-            <Frame x:Name="ContentFrame" CornerRadius="{StaticResource ControlCornerRadius}">
-                <Frame.ContentTransitions>
-                    <TransitionCollection>
-                        <NavigationThemeTransition  />
-                    </TransitionCollection>
-                </Frame.ContentTransitions>
-            </Frame>
+            <ScrollViewer>
+                <Frame x:Name="ContentFrame" CornerRadius="{StaticResource ControlCornerRadius}">
+                    <Frame.ContentTransitions>
+                        <TransitionCollection>
+                            <NavigationThemeTransition  />
+                        </TransitionCollection>
+                    </Frame.ContentTransitions>
+                </Frame>
+            </ScrollViewer>
 
             <!--        Teaching Tips - Help        -->
             <TeachingTip x:Name="ToggleThemeTeachingTip1" Target="{x:Bind row}" Title="Change themes without hassle"
