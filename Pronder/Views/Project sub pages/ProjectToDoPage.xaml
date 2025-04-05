@@ -42,9 +42,30 @@
             </StackPanel>
         </DataTemplate>
 
+        <DataTemplate x:Key="MainTaskTemplate">
+            <controls:SettingsExpander>
+                <controls:SettingsExpander.Header>
+                    <CheckBox CornerRadius="12" MinWidth="0" IsChecked="{Binding Done}" />
+                </controls:SettingsExpander.Header>
+                <controls:SettingsExpander.Items>
+                    <ListView ItemsSource="{Binding VMSubTasks}"
+                              ItemTemplateSelector="{StaticResource TaskTemplateSelector}"
+                              Margin="16,0,0,0" SelectionMode="None">
+                        <ListView.ItemContainerTransitions>
+                            <TransitionCollection>
+                                <AddDeleteThemeTransition />
+                                <ContentThemeTransition />
+                            </TransitionCollection>
+                        </ListView.ItemContainerTransitions>
+                    </ListView>
+                </controls:SettingsExpander.Items>
+            </controls:SettingsExpander>
+        </DataTemplate>
+
         <local:TaskTemplateSelector x:Key="TaskTemplateSelector"
                                     TaskWithoutSubtasks="{StaticResource TaskWithoutSubtasksTemplate}"
-                                    TaskWithSubtasks="{StaticResource TaskWithSubtasksTemplate}" />
+                                    TaskWithSubtasks="{StaticResource TaskWithSubtasksTemplate}" 
+                                    MainTaskTemplate="{StaticResource MainTaskTemplate}"/>
     </Page.Resources>
 
     <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" MinHeight="550">

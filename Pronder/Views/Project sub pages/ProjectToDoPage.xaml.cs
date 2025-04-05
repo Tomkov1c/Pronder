@@ -33,13 +33,27 @@ class TaskTemplateSelector : DataTemplateSelector
 {
     public DataTemplate TaskWithoutSubtasks { get; set; }
     public DataTemplate TaskWithSubtasks { get; set; }
+    public DataTemplate MainTaskTemplate { get; set; }
 
-    protected override DataTemplate SelectTemplateCore(object item)
+    protected override DataTemplate SelectTemplateCore(object item, DependencyObject container)
     {
         if (item is TodoTask task)
         {
-            return (task.SubTasks != null && task.SubTasks.Count > 0) ? TaskWithSubtasks : TaskWithoutSubtasks;
+            var parent = ItemsControl.ItemsControlFromItemContainer(container);
+            
+            // If the parent is the main ListView (root level)
+            if (parent is ListView listView && listView.Name == "MainListView")
+            {
+                return MainTaskTemplate;
+            }
+
+            // Subtasks
+            return (task.SubTasks != null && task.SubTasks.Count > 0)
+                ? TaskWithSubtasks
+                : TaskWithoutSubtasks;
         }
-        return TaskWithoutSubtasks;
+
+        return base.SelectTemplateCore(item, container);
     }
 }
+
