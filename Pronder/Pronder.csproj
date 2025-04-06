@@ -1,21 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-	<OutputType>WinExe</OutputType>
-	<TargetFramework>net9.0-windows10.0.26100.0</TargetFramework>
-	<TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
-	<RootNamespace>Pronder</RootNamespace>
-	<ApplicationIcon>Assets/WindowIcon.ico</ApplicationIcon>
-	<ApplicationManifest>app.manifest</ApplicationManifest>
-	<Platforms>x86;x64;arm64</Platforms>
-	<RuntimeIdentifiers>win-x86;win10-x64;win-arm64</RuntimeIdentifiers>
-	<PublishProfile>Properties\PublishProfiles\win10-$(Platform).pubxml</PublishProfile>
-	<ImplicitUsings>enable</ImplicitUsings>
-	<Nullable>enable</Nullable>
-	<UseWinUI>true</UseWinUI>
-	<UseRidGraph>true</UseRidGraph>
-	<EnableMsixTooling>true</EnableMsixTooling>
-	<SupportedOSPlatformVersion>10.0.22621.0</SupportedOSPlatformVersion>
-	<UseWindowsForms>False</UseWindowsForms>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows10.0.26100.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>Pronder</RootNamespace>
+    <ApplicationIcon>Assets/WindowIcon.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Platforms>x86;x64;arm64</Platforms>
+    <RuntimeIdentifiers>win-x86;win10-x64;win-arm64</RuntimeIdentifiers>
+    <PublishProfile>Properties\PublishProfiles\win10-$(Platform).pubxml</PublishProfile>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseWinUI>true</UseWinUI>
+    <UseRidGraph>true</UseRidGraph>
+    <EnableMsixTooling>true</EnableMsixTooling>
+    <SupportedOSPlatformVersion>10.0.22621.0</SupportedOSPlatformVersion>
+    <UseWindowsForms>False</UseWindowsForms>
+    <EnableDefaultPageItems>True</EnableDefaultPageItems>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Views\InbuildProjectDisplayPages\**" />
@@ -28,62 +29,51 @@
     <Page Remove="Views\InbuildProjectDisplaySubPages\**" />
   </ItemGroup>
   <ItemGroup>
-	<Content Remove="Assets\pagesList.json" />
+    <Content Remove="Assets\pagesList.json" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Custom\EditPopup.xaml" />
     <None Remove="Custom\ExternalLinkListItem.xaml" />
   </ItemGroup>
-
   <ItemGroup>
-	<Manifest Include="$(ApplicationManifest)" />
-  </ItemGroup>
-
-  <ItemGroup>
-	<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
-	<PackageReference Include="CommunityToolkit.WinUI.Controls.Segmented" Version="8.1.240916" />
-	<PackageReference Include="CommunityToolkit.WinUI.Controls.SettingsControls" Version="8.1.240916" />
-	<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
-	<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240627000" />
-	<PackageReference Include="Microsoft.Xaml.Behaviors.WinUI.Managed" Version="2.0.9" />
-	<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-	<PackageReference Include="WinUIEx" Version="2.3.4" />
-  </ItemGroup>
-
-  <ItemGroup>
-	<ProjectReference Include="..\Pronder.Core\Pronder.Core.csproj" />
+    <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
   <ItemGroup>
-	<None Update="appsettings.json">
-	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	</None>
-	<Page Update="Custom\EditPopup.xaml">
-	  <Generator>MSBuild:Compile</Generator>
-	</Page>
-	<Page Update="Custom\EditPopup.xaml">
-	  <Generator>MSBuild:Compile</Generator>
-	</Page>
-	<Page Update="Custom\ExternalLinkListItem.xaml">
-	  <Generator>MSBuild:Compile</Generator>
-	</Page>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="CommunityToolkit.WinUI.Controls.Segmented" Version="8.1.240916" />
+    <PackageReference Include="CommunityToolkit.WinUI.Controls.SettingsControls" Version="8.1.240916" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240627000" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.WinUI.Managed" Version="2.0.9" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="WinUIEx" Version="2.3.4" />
   </ItemGroup>
-
+  <ItemGroup>
+    <ProjectReference Include="..\Pronder.Core\Pronder.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Page Update="Custom\EditPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Custom\ExternalLinkListItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
-	<ProjectCapability Include="Msix" />
+    <ProjectCapability Include="Msix" />
   </ItemGroup>
-
   <ItemGroup>
-	<Folder Include="Helpers\NewFolder\" />
+    <Folder Include="Helpers\NewFolder\" />
   </ItemGroup>
-  
   <PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
-	<HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
+    <HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
   </PropertyGroup>
-  
   <ItemGroup>
     <PRIResource Remove="Views\InbuildProjectDisplayPages\**" />
   </ItemGroup>
-  
   <ItemGroup>
     <PRIResource Remove="Views\InbuildProjectDisplaySubPages\**" />
   </ItemGroup>
