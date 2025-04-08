@@ -7,6 +7,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using Pronder.Custom;
 using Pronder.Models;
 using static Pronder.Models.ProjectExtraProperties;
 
@@ -17,11 +18,15 @@ public partial class ProjectToDoViewModel : ObservableRecipient
     public static Project? _project => Project.GlobalInstance;
     public ObservableCollection<TodoTask> Tasks { get; set; } = new();
 
+    private EditTodoTaskPopup popup;
+
     public ICommand RemoveTaskCommand { get; private set; }
+    public ICommand EditTaskCommand { get; private set; }
 
     public ProjectToDoViewModel()
     {
         RemoveTaskCommand = new RelayCommand<TodoTask>(RemoveTask);
+        EditTaskCommand = new RelayCommand(ShowEditPopup);
 
         if (!_project.TodoTasksNullOrEmpty())
         {
@@ -31,8 +36,9 @@ public partial class ProjectToDoViewModel : ObservableRecipient
                 Tasks.Add(task);
             }
         }
-    }
 
+        popup = new();
+    }
     private void ConvertSubtasksToObservable(TodoTask task)
     {
         if (task.SubTasks != null && task.SubTasks.Count > 0)
@@ -47,6 +53,11 @@ public partial class ProjectToDoViewModel : ObservableRecipient
         }
     }
 
+
+    private async void ShowEditPopup()
+    {
+        await popup.ShowAsync();
+    }
     private void RemoveTask(TodoTask task)
     {
         RemoveTaskRecursive(Tasks, task);

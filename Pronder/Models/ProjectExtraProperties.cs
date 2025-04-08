@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Media.Imaging;
 using Newtonsoft.Json;
+using static Pronder.Models.ProjectExtraProperties;
 
 namespace Pronder.Models;
 public class ProjectExtraProperties
@@ -70,6 +71,7 @@ public class ProjectExtraProperties
 
         [JsonIgnore]
         public ObservableCollection<TodoTask> VMSubTasks { get; set; } = new();
+        public bool TodoTasksNullOrEmpty() => SubTasks == null || SubTasks.Count <= 0;
     }
 
 }

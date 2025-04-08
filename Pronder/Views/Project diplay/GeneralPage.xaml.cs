@@ -31,11 +31,11 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
 
     public static event Action OnProjectCreated;
 
-    EditPopup editPopup;
+    EditProjectPopup editPopup;
     public GeneralProjectDisplayPage()
     {
         InitializeComponent();
-        EditPopup.OnProjectEdited += RefreshPage;
+        EditProjectPopup.OnProjectEdited += RefreshPage;
     }
     void IPerPageHelpButtonAction.HelpButtonAction(object sender, RoutedEventArgs e)
     {
@@ -60,7 +60,7 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
     {
         base.OnNavigatedFrom(e);
 
-        EditPopup.OnProjectEdited -= RefreshPage;
+        EditProjectPopup.OnProjectEdited -= RefreshPage;
         _viewModel.BackgroundTaskFinished -= PageLoadedBackgroundTasks;
 
         _viewModel.ClearData();
@@ -150,7 +150,7 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
             ProjectExternalLinksInsert.Items.Add(item);
         }
 
-        editPopup = new EditPopup();
+        editPopup = new EditProjectPopup();
     }
 
     private void RefreshPage()
