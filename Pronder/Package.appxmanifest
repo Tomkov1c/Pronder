@@ -57,6 +57,17 @@
                   </com:ExeServer>
               </com:ComServer>
           </com:Extension>
+
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="projectfile">
+            <uap:DisplayName>Project File</uap:DisplayName>
+            <uap:Logo>Assets\Icon8\Color\icons8-project-512.png</uap:Logo>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.prond</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        
       </Extensions>
     </Application>
   </Applications>
