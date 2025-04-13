@@ -11,6 +11,11 @@
     mc:Ignorable="d"
     NavigationCacheMode="Enabled">
     <Page.Resources>
+        <TransitionCollection x:Key="ListviewTransitions">
+            <AddDeleteThemeTransition />
+            <ContentThemeTransition />
+        </TransitionCollection>
+
         <DataTemplate x:Key="TaskWithSubtasksTemplate">
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal" Padding="0, 14" Spacing="4">
@@ -27,14 +32,8 @@
 
                 <ListView ItemsSource="{Binding VMSubTasks}"
                           ItemTemplateSelector="{StaticResource TaskTemplateSelector}"
-                          Margin="16,0,0,0" SelectionMode="None">
-                    <ListView.ItemContainerTransitions>
-                        <TransitionCollection>
-                            <AddDeleteThemeTransition />
-                            <ContentThemeTransition />
-                        </TransitionCollection>
-                    </ListView.ItemContainerTransitions>
-                </ListView>
+                          Margin="16,0,0,0" SelectionMode="None"
+                          ItemContainerTransitions="{StaticResource ListviewTransitions}" />
             </StackPanel>
         </DataTemplate>
 
@@ -57,23 +56,17 @@
                 <controls:SettingsExpander.Items>
                     <ListView ItemsSource="{Binding VMSubTasks}"
                               ItemTemplateSelector="{StaticResource TaskTemplateSelector}"
-                              Margin="16,0,0,0" SelectionMode="None">
-                        <ListView.ItemContainerTransitions>
-                            <TransitionCollection>
-                                <AddDeleteThemeTransition />
-                                <ContentThemeTransition />
-                            </TransitionCollection>
-                        </ListView.ItemContainerTransitions>
-                    </ListView>
+                              Margin="16,0,0,0" SelectionMode="None" 
+                              ItemContainerTransitions="{StaticResource ListviewTransitions}" />
                 </controls:SettingsExpander.Items>
                 <controls:SettingsExpander.ContextFlyout>
-                    <CommandBarFlyout Placement="BottomEdgeAlignedLeft" AlwaysExpanded="True">
-                        <AppBarButton Label="Edit" Icon="Edit" ToolTipService.ToolTip="Edit" 
-                                      Command="{Binding DataContext.EditTaskCommand, ElementName=MainListView}"/>
-                        <AppBarButton Label="Delete" Icon="Delete" ToolTipService.ToolTip="Delete" 
-                                      Command="{Binding DataContext.RemoveTaskCommand, ElementName=MainListView}"
-                                      CommandParameter="{Binding}"/>
-                    </CommandBarFlyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Text="Edit" Icon="Edit" ToolTipService.ToolTip="Edit"
+                                        Command="{Binding DataContext.EditTaskCommand, ElementName=MainListView}"/>
+                        <MenuFlyoutItem Text="Delete" Icon="Delete" ToolTipService.ToolTip="Delete" 
+                                        Command="{Binding DataContext.RemoveTaskCommand, ElementName=MainListView}" 
+                                        CommandParameter="{Binding}"/>
+                    </MenuFlyout>
                 </controls:SettingsExpander.ContextFlyout>
             </controls:SettingsExpander>
         </DataTemplate>
@@ -88,11 +81,13 @@
                     </StackPanel>
                 </controls:SettingsCard.Header>
                 <controls:SettingsCard.ContextFlyout>
-                    <CommandBarFlyout Placement="BottomEdgeAlignedLeft" AlwaysExpanded="True">
-                        <AppBarButton Label="Delete" Icon="Delete" ToolTipService.ToolTip="Delete" 
-                              Command="{Binding DataContext.RemoveTaskCommand, ElementName=MainListView}"
-                              CommandParameter="{Binding}"/>
-                    </CommandBarFlyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Text="Edit" Icon="Edit" ToolTipService.ToolTip="Edit"
+                                        Command="{Binding DataContext.EditTaskCommand, ElementName=MainListView}"/>
+                        <MenuFlyoutItem Text="Delete" Icon="Delete" ToolTipService.ToolTip="Delete" 
+                                        Command="{Binding DataContext.RemoveTaskCommand, ElementName=MainListView}" 
+                                        CommandParameter="{Binding}"/>
+                    </MenuFlyout>
                 </controls:SettingsCard.ContextFlyout>
             </controls:SettingsCard>
         </DataTemplate>
@@ -137,18 +132,9 @@
             </Button>
         </Grid>
 
-        <ListView x:Name="MainListView" ItemsSource="{Binding Tasks}" ItemTemplateSelector="{StaticResource TaskTemplateSelector}"
-                  SelectionMode="None" Margin="-6, 18, -2, 0" MinHeight="500">
-            <ListView.ItemContainerTransitions>
-                <TransitionCollection>
-                    <AddDeleteThemeTransition />
-                    <RepositionThemeTransition />
-                </TransitionCollection>
-            </ListView.ItemContainerTransitions>
-        </ListView>
-
-
+        <ListView x:Name="MainListView" ItemsSource="{Binding Tasks}" 
+                  ItemTemplateSelector="{StaticResource TaskTemplateSelector}"
+                  SelectionMode="None" Margin="-6, 18, -2, 0" MinHeight="500"
+                  ItemContainerTransitions="{StaticResource ListviewTransitions}" />
     </StackPanel>
-
-
 </Page>

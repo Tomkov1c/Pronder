@@ -56,7 +56,7 @@ public partial class ProjectToDoViewModel : ObservableRecipient
 
     private async void ShowEditPopup()
     {
-        await popup.ShowAsync();
+        popup.ShowAsync();
     }
     private void RemoveTask(TodoTask task)
     {
