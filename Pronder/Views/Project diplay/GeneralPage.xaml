@@ -56,7 +56,9 @@
                     </Button>
                     
                     <!--    More    -->
-                    <Button HorizontalAlignment="Right" Padding="8" x:Name="row">
+                    <Button HorizontalAlignment="Right" Padding="8" x:Name="row" 
+                            FocusVisualPrimaryBrush="{ThemeResource AccentFillColorDefaultBrush}"
+                            FocusVisualPrimaryThickness="1">
                         <Button.Content>
                             <FontIcon Glyph="&#xE712;"/>
                         </Button.Content>

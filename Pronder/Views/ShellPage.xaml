@@ -94,7 +94,8 @@
                         IsBackButtonVisible="Collapsed" SelectedItem="{x:Bind _viewModel.Selected, Mode=OneWay}" 
                         IsSettingsVisible="False" ExpandedModeThresholdWidth="1280" 
                         DisplayModeChanged="NavigationViewControl_DisplayModeChanged"
-                        MenuItemTemplateSelector="{StaticResource ItemTemplateSelector}">
+                        MenuItemTemplateSelector="{StaticResource ItemTemplateSelector}"
+                        IsFocusEngaged="False">
             <NavigationView.Transitions>
                 <TransitionCollection>
                     <EntranceThemeTransition IsStaggeringEnabled="True" />
