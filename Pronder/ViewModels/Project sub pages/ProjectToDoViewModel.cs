@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Dynamic;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using System.Xml.Linq;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.UI.Xaml;
@@ -20,13 +21,15 @@ public partial class ProjectToDoViewModel : ObservableRecipient
 
     private EditTodoTaskPopup popup;
 
+    private bool _isDoneImporting = false;
+
     public ICommand RemoveTaskCommand { get; private set; }
     public ICommand EditTaskCommand { get; private set; }
 
     public ProjectToDoViewModel()
     {
-        RemoveTaskCommand = new RelayCommand<TodoTask>(RemoveTask);
-        EditTaskCommand = new RelayCommand(ShowEditPopup);
+        RemoveTaskCommand = new RelayCommand<TodoTask?>(RemoveTask);
+        EditTaskCommand = new RelayCommand<TodoTask?>(ShowEditPopup);
 
         if (!_project.TodoTasksNullOrEmpty())
         {
@@ -36,14 +39,17 @@ public partial class ProjectToDoViewModel : ObservableRecipient
                 Tasks.Add(task);
             }
         }
+        Tasks.CollectionChanged += (sender, args) => Save();
 
-        popup = new();
+        _isDoneImporting = true;
     }
-    private void ConvertSubtasksToObservable(TodoTask task)
+    private void ConvertSubtasksToObservable(TodoTask? task)
     {
+        task.PropertyChanged += (s, e) => Save();
         if (task.SubTasks != null && task.SubTasks.Count > 0)
         {
             task.VMSubTasks = new ObservableCollection<TodoTask>();
+            task.VMSubTasks.CollectionChanged += (s, e) => Save();
 
             foreach (var subTask in task.SubTasks)
             {
@@ -52,12 +58,25 @@ public partial class ProjectToDoViewModel : ObservableRecipient
             }
         }
     }
-
-
-    private async void ShowEditPopup()
+    private void Save()
     {
-        popup.ShowAsync();
+        if(_isDoneImporting)
+        {
+            _project.TodoTasks = Tasks.ToList();
+            _project.SaveToFile();
+        }
     }
+
+
+    private async void ShowEditPopup(TodoTask? task)
+    {
+        popup = new(task);
+        await popup.ShowAsync();
+    }
+
+
+
+
     private void RemoveTask(TodoTask task)
     {
         RemoveTaskRecursive(Tasks, task);

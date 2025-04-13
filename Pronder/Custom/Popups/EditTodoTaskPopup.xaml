@@ -7,23 +7,31 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    CloseButtonText="dshfjds"
-    CornerRadius="{StaticResource OverlayCornerRadius}"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    CloseButtonText="Close"
+    Style="{StaticResource DefaultContentDialogStyle}">
     <ContentDialog.Resources>
         <ResourceDictionary>
-            <x:Double x:Key="ContentDialogMaxWidth">1300</x:Double>
-            <x:Double x:Key="ContentDialogMaxHeight">1000</x:Double>
+            <x:Double x:Key="ContentDialogMaxWidth">700</x:Double>
+            <x:Double x:Key="ContentDialogMaxHeight">550</x:Double>
             <x:Double x:Key="ContentDialogMinWidth">700</x:Double>
             <x:Double x:Key="ContentDialogMinHeight">550</x:Double>
-            <Thickness x:Key="ContentDialogPadding">0</Thickness>
-            <SolidColorBrush x:Key="NavigationViewContentGridBorderBrush" Color="Transparent" />
-            <SolidColorBrush x:Key="NavigationViewContentBackground" Color="Transparent" />
 
         </ResourceDictionary>
     </ContentDialog.Resources>
 
-    <StackPanel MinHeight="550" MinWidth="700" MaxHeight="1000" MaxWidth="1300">
-        
-    </StackPanel>
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="32" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <CheckBox CornerRadius="10" Grid.Column="0" VerticalAlignment="Top" 
+                  IsChecked="{Binding Task.Done, Mode=TwoWay}"/>
+        <StackPanel Orientation="Vertical" Grid.Column="1" VerticalAlignment="Top" 
+                    HorizontalAlignment="Stretch">
+            <TextBox Text="{Binding Task.Content, Mode=TwoWay}" TextWrapping="Wrap" 
+                     AcceptsReturn="True" IsSpellCheckEnabled="True" />
+        </StackPanel>
+
+    </Grid>
+   
 </ContentDialog>

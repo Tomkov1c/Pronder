@@ -16,30 +16,22 @@ using Pronder.ViewModels;
 using Pronder.Views;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using static Pronder.Models.ProjectExtraProperties;
 
 namespace Pronder.Custom;
 public sealed partial class EditTodoTaskPopup : ContentDialog
 {
     public static event Action OnTodoTaskEdited;
 
-    private EditTodoTaskPopupViewModel _viewmodel = new();
+    private EditTodoTaskPopupViewModel _viewmodel;
 
-    public EditTodoTaskPopup()
+    public EditTodoTaskPopup(TodoTask? task)
     {
-        App.MainWindow.SizeChanged += UpdatePopupSize;
         this.XamlRoot = App.MainWindow.Content.XamlRoot;
+
+        _viewmodel = new(task);
+        DataContext = _viewmodel;
+
         this.InitializeComponent();
-
-        UpdatePopupSize(null, null);
-    }
-
-    private void UpdatePopupSize(object sender, WindowSizeChangedEventArgs e)
-    {
-        var windowsWidth = Math.Max(App.MainWindow.Bounds.Width, 300);
-        var windowsHeight = Math.Max(App.MainWindow.Bounds.Height, 200);
-
-
-        //MainGrid.Width = windowsWidth - 200;
-        //MainGrid.Height = windowsHeight - 300;
     }
 }

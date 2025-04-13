@@ -19,15 +19,21 @@ namespace Pronder.Views;
 
 public sealed partial class ProjectToDoPage : Page
 {
-    public ProjectToDoViewModel _viewModel = new();
+    public ProjectToDoViewModel _viewModel;
 
     public ProjectToDoPage()
     {
-        DataContext = _viewModel;
+        ReloadDataContect();
         InitializeComponent();
 
         _viewModel = null;
         GC.Collect();
+    }
+
+    private void ReloadDataContect()
+    {
+        _viewModel = new();
+        DataContext = _viewModel;
     }
 }
 
