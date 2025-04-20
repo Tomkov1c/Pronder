@@ -22,11 +22,26 @@ public partial class ProjectToDoViewModel : ObservableRecipient
 
     private bool _isDoneImporting = false;
 
+    public ICommand AddTaskCommand { get; private set; }
     public ICommand RemoveTaskCommand { get; private set; }
     public ICommand EditTaskCommand { get; private set; }
+    private string _newTaskTitle;
+    public string NewTaskTitle
+    {
+        get => _newTaskTitle;
+        set
+        {
+            if (_newTaskTitle != value)
+            {
+                _newTaskTitle = value;
+                OnPropertyChanged();
+            }
+        }
+    }
 
     public ProjectToDoViewModel()
     {
+        AddTaskCommand = new RelayCommand<TodoTask?>(AddTask);
         RemoveTaskCommand = new RelayCommand<TodoTask?>(RemoveTask);
         EditTaskCommand = new RelayCommand<TodoTask?>(ShowEditPopup);
 
@@ -57,30 +72,28 @@ public partial class ProjectToDoViewModel : ObservableRecipient
         }
         task.PropertyChanged += (s, e) => Save();
     }
-    private void Save()
+
+    private void AddTask(TodoTask? task)
     {
-        if(_isDoneImporting)
+        TodoTask newTask = new()
         {
-            _project.TodoTasks = Tasks.ToList();
-            _project.SaveToFile();
+            Content = NewTaskTitle,
+        };
+
+        if(task != null)
+        {
+            task.VMSubTasks.Add(newTask);
+        }else
+        {
+            Tasks.Add(newTask);
         }
+
+        NewTaskTitle = "";
     }
-
-
-    private async void ShowEditPopup(TodoTask? task)
-    {
-        popup = new(task);
-        await popup.ShowAsync();
-    }
-
-
-
-
     private void RemoveTask(TodoTask? task)
     {
         RemoveTaskRecursive(Tasks, task);
     }
-
     private void RemoveTaskRecursive(ObservableCollection<TodoTask>? taskList, TodoTask? taskToRemove)
     {
         var task = taskList.FirstOrDefault(t => t.Id == taskToRemove.Id);
@@ -97,6 +110,20 @@ public partial class ProjectToDoViewModel : ObservableRecipient
                 RemoveTaskRecursive(t.VMSubTasks, taskToRemove);
                 t.SubTasks = t.VMSubTasks.ToList();
             }
+        }
+    }
+    private async void ShowEditPopup(TodoTask? task)
+    {
+        popup = new(task);
+        await popup.ShowAsync();
+    }
+
+    private void Save()
+    {
+        if (_isDoneImporting)
+        {
+            _project.TodoTasks = Tasks.ToList();
+            _project.SaveToFile();
         }
     }
 
