@@ -4,7 +4,6 @@ using Newtonsoft.Json;
 using Pronder.Models;
 using Pronder.ViewModels;
 using Windows.Storage;
-using static Pronder.Models.ProjectExtraProperties;
 
 namespace Pronder.Views;
 

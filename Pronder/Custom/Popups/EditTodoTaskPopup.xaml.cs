@@ -16,7 +16,7 @@ using Pronder.ViewModels;
 using Pronder.Views;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using static Pronder.Models.ProjectExtraProperties;
+using Pronder.Models;
 
 namespace Pronder.Custom;
 public sealed partial class EditTodoTaskPopup : ContentDialog

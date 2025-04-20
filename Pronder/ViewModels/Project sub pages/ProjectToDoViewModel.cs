@@ -10,7 +10,6 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Pronder.Custom;
 using Pronder.Models;
-using static Pronder.Models.ProjectExtraProperties;
 
 namespace Pronder.ViewModels;
 

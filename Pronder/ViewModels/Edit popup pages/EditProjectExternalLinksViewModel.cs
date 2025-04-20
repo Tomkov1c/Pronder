@@ -3,7 +3,6 @@ using System.ComponentModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Newtonsoft.Json;
 using Pronder.Models;
-using static Pronder.Models.ProjectExtraProperties;
 
 namespace Pronder.ViewModels;
 

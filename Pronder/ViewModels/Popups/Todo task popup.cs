@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 using CommunityToolkit.Mvvm.ComponentModel;
-using static Pronder.Models.ProjectExtraProperties;
+using Pronder.Models;
 
 namespace Pronder.ViewModels;
 

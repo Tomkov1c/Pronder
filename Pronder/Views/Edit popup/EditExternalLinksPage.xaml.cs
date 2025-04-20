@@ -17,7 +17,6 @@ using Microsoft.UI.Xaml.Controls.Primitives;
 using Windows.Storage.AccessCache;
 using Windows.Storage;
 using static Pronder.Models.Project;
-using static Pronder.Models.ProjectExtraProperties;
 
 namespace Pronder.Views;
 

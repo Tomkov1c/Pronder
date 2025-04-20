@@ -14,7 +14,6 @@ using Pronder.Models;
 using Pronder.ViewModels;
 using Windows.ApplicationModel.Contacts;
 using static Pronder.Models.Project;
-using static Pronder.Models.ProjectExtraProperties;
 namespace Pronder.Views;
 
 public sealed partial class ProjectToDoPage : Page

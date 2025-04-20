@@ -19,19 +19,22 @@
         </ResourceDictionary>
     </ContentDialog.Resources>
 
-    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="32" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <CheckBox CornerRadius="10" Grid.Column="0" VerticalAlignment="Top" 
-                  IsChecked="{Binding Task.Done, Mode=TwoWay}"/>
-        <StackPanel Orientation="Vertical" Grid.Column="1" VerticalAlignment="Top" 
-                    HorizontalAlignment="Stretch">
-            <TextBox Text="{Binding Task.Content, Mode=TwoWay}" TextWrapping="Wrap" 
-                     AcceptsReturn="True" IsSpellCheckEnabled="True" />
-        </StackPanel>
+    <StackPanel Orientation="Vertical" Spacing="16">
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="32" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <CheckBox CornerRadius="10" Grid.Column="0" VerticalAlignment="Top" 
+              IsChecked="{Binding Task.Done, Mode=TwoWay}"/>
+            <TextBox Text="{Binding Task.Content, Mode=TwoWay}" IsSpellCheckEnabled="True" 
+                     TextWrapping="Wrap"
+                     Grid.Column="1" HorizontalAlignment="Stretch"/>
 
-    </Grid>
+        </Grid>
+        <ScrollViewer>
+            
+        </ScrollViewer>
+    </StackPanel>
    
 </ContentDialog>

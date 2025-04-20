@@ -6,7 +6,7 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Media.Imaging;
 using Windows.Storage;
 using System.Dynamic;
-using static Pronder.Models.ProjectExtraProperties;
+using Pronder.Models;
 using Newtonsoft.Json;
 
 namespace Pronder.Models
