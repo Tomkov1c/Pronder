@@ -15,7 +15,124 @@
             <AddDeleteThemeTransition />
             <ContentThemeTransition />
         </TransitionCollection>
+
+        <!--    Main        -->
+        <DataTemplate x:Key="MainTaskTemplate">
+            <controls:SettingsCard Margin="-10, 0, -10, 5">
+                <controls:SettingsCard.Header>
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <CheckBox CornerRadius="12" MinWidth="0" IsChecked="{Binding Done}" 
+                  VerticalAlignment="Center"/>
+                        <TextBlock Text="{Binding Content, Mode=OneWay}" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </controls:SettingsCard.Header>
+                <controls:SettingsCard.ContextFlyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Text="Add" Icon="Add" ToolTipService.ToolTip="Add"
+                                        Command="{Binding DataContext.AddTaskCommand, ElementName=MainListView}"
+                                        CommandParameter="{Binding}">
+                            <MenuFlyoutItem.KeyboardAccelerators>
+                                <KeyboardAccelerator Key="A" />
+                            </MenuFlyoutItem.KeyboardAccelerators>
+                        </MenuFlyoutItem>
+                        <MenuFlyoutItem Text="Edit" Icon="Edit" ToolTipService.ToolTip="Edit"
+                                Command="{Binding DataContext.EditTaskCommand, ElementName=MainListView}"
+                                CommandParameter="{Binding}" >
+                            <MenuFlyoutItem.KeyboardAccelerators>
+                                <KeyboardAccelerator Key="E" />
+                            </MenuFlyoutItem.KeyboardAccelerators>
+                        </MenuFlyoutItem>
+                        <MenuFlyoutItem Text="Delete" Icon="Delete" ToolTipService.ToolTip="Delete" 
+                                Command="{Binding DataContext.RemoveTaskCommand, ElementName=MainListView}" 
+                                CommandParameter="{Binding}">
+                            <MenuFlyoutItem.KeyboardAccelerators>
+                                <KeyboardAccelerator Key="Delete" />
+                            </MenuFlyoutItem.KeyboardAccelerators>
+                        </MenuFlyoutItem>
+                    </MenuFlyout>
+                </controls:SettingsCard.ContextFlyout>
+            </controls:SettingsCard>
+        </DataTemplate>
+
+        <DataTemplate x:Key="MainTaskTemplateWithSubtasks">
+            <controls:SettingsExpander Margin="-10, 0, -10, 5">
+                <controls:SettingsExpander.Header>
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <CheckBox CornerRadius="12" MinWidth="0" IsChecked="{Binding Done, Mode=TwoWay}" 
+                          VerticalAlignment="Center"/>
+                        <TextBlock Text="{Binding Content, Mode=OneWay}" VerticalAlignment="Center"
+                           TextTrimming="CharacterEllipsis" 
+                           HorizontalAlignment="Stretch"/>
+                    </StackPanel>
+                </controls:SettingsExpander.Header>
+                <controls:SettingsExpander.Items>
+                    <ListView ItemsSource="{Binding VMSubTasks}"
+                      ItemTemplateSelector="{StaticResource TaskTemplateSelector}"
+                      Margin="16,0,0,0" SelectionMode="None" 
+                      ItemContainerTransitions="{StaticResource ListviewTransitions}" />
+                </controls:SettingsExpander.Items>
+                <controls:SettingsExpander.ContextFlyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Text="Add" Icon="Add" ToolTipService.ToolTip="Add"
+                                        Command="{Binding DataContext.AddTaskCommand, ElementName=MainListView}"
+                                        CommandParameter="{Binding}">
+                            <MenuFlyoutItem.KeyboardAccelerators>
+                                <KeyboardAccelerator Key="A" />
+                            </MenuFlyoutItem.KeyboardAccelerators>
+                        </MenuFlyoutItem>
+                        <MenuFlyoutItem Text="Edit" Icon="Edit" ToolTipService.ToolTip="Edit"
+                                Command="{Binding DataContext.EditTaskCommand, ElementName=MainListView}"
+                                CommandParameter="{Binding}">
+                            <MenuFlyoutItem.KeyboardAccelerators>
+                                <KeyboardAccelerator Key="E" />
+                            </MenuFlyoutItem.KeyboardAccelerators>
+                        </MenuFlyoutItem>
+                        <MenuFlyoutItem Text="Delete" Icon="Delete" ToolTipService.ToolTip="Delete" 
+                                Command="{Binding DataContext.RemoveTaskCommand, ElementName=MainListView}" 
+                                CommandParameter="{Binding}">
+                            <MenuFlyoutItem.KeyboardAccelerators>
+                                <KeyboardAccelerator Key="Delete" />
+                            </MenuFlyoutItem.KeyboardAccelerators>
+                        </MenuFlyoutItem>
+                    </MenuFlyout>
+                </controls:SettingsExpander.ContextFlyout>
+            </controls:SettingsExpander>
+        </DataTemplate>
         
+        <!--            -->
+        <!--    Sub     -->
+        <DataTemplate x:Key="TaskWithoutSubtasksTemplate">
+            <StackPanel Orientation="Horizontal" Padding="0, 14">
+                <CheckBox CornerRadius="12" MinWidth="0" IsChecked="{Binding Done}" />
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Stretch" Text="{Binding Content}" />
+                <StackPanel.ContextFlyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Text="Add" Icon="Add" ToolTipService.ToolTip="Add"
+                                        Command="{Binding DataContext.AddTaskCommand, ElementName=MainListView}"
+                                        CommandParameter="{Binding}">
+                            <MenuFlyoutItem.KeyboardAccelerators>
+                                <KeyboardAccelerator Key="A" />
+                            </MenuFlyoutItem.KeyboardAccelerators>
+                        </MenuFlyoutItem>
+                        <MenuFlyoutItem Text="Edit" Icon="Edit" ToolTipService.ToolTip="Edit"
+                                Command="{Binding DataContext.EditTaskCommand, ElementName=MainListView}"
+                                CommandParameter="{Binding}">
+                            <MenuFlyoutItem.KeyboardAccelerators>
+                                <KeyboardAccelerator Key="E" />
+                            </MenuFlyoutItem.KeyboardAccelerators>
+                        </MenuFlyoutItem>
+                        <MenuFlyoutItem Text="Delete" Icon="Delete" ToolTipService.ToolTip="Delete" 
+                                Command="{Binding DataContext.RemoveTaskCommand, ElementName=MainListView}" 
+                                CommandParameter="{Binding}">
+                            <MenuFlyoutItem.KeyboardAccelerators>
+                                <KeyboardAccelerator Key="Delete" />
+                            </MenuFlyoutItem.KeyboardAccelerators>
+                        </MenuFlyoutItem>
+                    </MenuFlyout>
+                </StackPanel.ContextFlyout>
+            </StackPanel>
+        </DataTemplate>
+
         <DataTemplate x:Key="TaskWithSubtasksTemplate">
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal" Padding="0, 14" Spacing="4">
@@ -23,6 +140,13 @@
                     <TextBlock VerticalAlignment="Center" HorizontalAlignment="Stretch" Text="{Binding Content}" />
                     <StackPanel.ContextFlyout>
                         <MenuFlyout>
+                            <MenuFlyoutItem Text="Add" Icon="Add" ToolTipService.ToolTip="Add"
+                                            Command="{Binding DataContext.AddTaskCommand, ElementName=MainListView}"
+                                            CommandParameter="{Binding}">
+                                <MenuFlyoutItem.KeyboardAccelerators>
+                                    <KeyboardAccelerator Key="A" />
+                                </MenuFlyoutItem.KeyboardAccelerators>
+                            </MenuFlyoutItem>
                             <MenuFlyoutItem Text="Edit" Icon="Edit" ToolTipService.ToolTip="Edit"
                                             Command="{Binding DataContext.EditTaskCommand, ElementName=MainListView}"
                                             CommandParameter="{Binding}">
@@ -46,99 +170,6 @@
                           Margin="16,0,0,0" SelectionMode="None"
                           ItemContainerTransitions="{StaticResource ListviewTransitions}" />
             </StackPanel>
-        </DataTemplate>
-
-        <DataTemplate x:Key="TaskWithoutSubtasksTemplate">
-            <StackPanel Orientation="Horizontal" Padding="0, 14">
-                <CheckBox CornerRadius="12" MinWidth="0" IsChecked="{Binding Done}" />
-                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Stretch" Text="{Binding Content}" />
-                <StackPanel.ContextFlyout>
-                    <MenuFlyout>
-                        <MenuFlyoutItem Text="Edit" Icon="Edit" ToolTipService.ToolTip="Edit"
-                                        Command="{Binding DataContext.EditTaskCommand, ElementName=MainListView}"
-                                        CommandParameter="{Binding}">
-                            <MenuFlyoutItem.KeyboardAccelerators>
-                                <KeyboardAccelerator Key="E" />
-                            </MenuFlyoutItem.KeyboardAccelerators>
-                        </MenuFlyoutItem>
-                        <MenuFlyoutItem Text="Delete" Icon="Delete" ToolTipService.ToolTip="Delete" 
-                                        Command="{Binding DataContext.RemoveTaskCommand, ElementName=MainListView}" 
-                                        CommandParameter="{Binding}">
-                            <MenuFlyoutItem.KeyboardAccelerators>
-                                <KeyboardAccelerator Key="Delete" />
-                            </MenuFlyoutItem.KeyboardAccelerators>
-                        </MenuFlyoutItem>
-                    </MenuFlyout>
-                </StackPanel.ContextFlyout>
-            </StackPanel>
-        </DataTemplate>
-
-        <DataTemplate x:Key="MainTaskTemplateWithSubtasks">
-            <controls:SettingsExpander Margin="-10, 0, -10, 5">
-                <controls:SettingsExpander.Header>
-                    <StackPanel Orientation="Horizontal" Spacing="8">
-                        <CheckBox CornerRadius="12" MinWidth="0" IsChecked="{Binding Done, Mode=TwoWay}" 
-                                  VerticalAlignment="Center"/>
-                        <TextBlock Text="{Binding Content, Mode=OneWay}" VerticalAlignment="Center"
-                                   TextTrimming="CharacterEllipsis" 
-                                   HorizontalAlignment="Stretch"/>
-                    </StackPanel>
-                </controls:SettingsExpander.Header>
-                <controls:SettingsExpander.Items>
-                    <ListView ItemsSource="{Binding VMSubTasks}"
-                              ItemTemplateSelector="{StaticResource TaskTemplateSelector}"
-                              Margin="16,0,0,0" SelectionMode="None" 
-                              ItemContainerTransitions="{StaticResource ListviewTransitions}" />
-                </controls:SettingsExpander.Items>
-                <controls:SettingsExpander.ContextFlyout>
-                    <MenuFlyout>
-                        <MenuFlyoutItem Text="Edit" Icon="Edit" ToolTipService.ToolTip="Edit"
-                                        Command="{Binding DataContext.EditTaskCommand, ElementName=MainListView}"
-                                        CommandParameter="{Binding}">
-                            <MenuFlyoutItem.KeyboardAccelerators>
-                                <KeyboardAccelerator Key="E" />
-                            </MenuFlyoutItem.KeyboardAccelerators>
-                        </MenuFlyoutItem>
-                        <MenuFlyoutItem Text="Delete" Icon="Delete" ToolTipService.ToolTip="Delete" 
-                                        Command="{Binding DataContext.RemoveTaskCommand, ElementName=MainListView}" 
-                                        CommandParameter="{Binding}">
-                            <MenuFlyoutItem.KeyboardAccelerators>
-                                <KeyboardAccelerator Key="Delete" />
-                            </MenuFlyoutItem.KeyboardAccelerators>
-                        </MenuFlyoutItem>
-                    </MenuFlyout>
-                </controls:SettingsExpander.ContextFlyout>
-            </controls:SettingsExpander>
-        </DataTemplate>
-
-        <DataTemplate x:Key="MainTaskTemplate">
-            <controls:SettingsCard Margin="-10, 0, -10, 5">
-                <controls:SettingsCard.Header>
-                    <StackPanel Orientation="Horizontal" Spacing="8">
-                        <CheckBox CornerRadius="12" MinWidth="0" IsChecked="{Binding Done}" 
-                          VerticalAlignment="Center"/>
-                        <TextBlock Text="{Binding Content, Mode=OneWay}" VerticalAlignment="Center"/>
-                    </StackPanel>
-                </controls:SettingsCard.Header>
-                <controls:SettingsCard.ContextFlyout>
-                    <MenuFlyout>
-                        <MenuFlyoutItem Text="Edit" Icon="Edit" ToolTipService.ToolTip="Edit"
-                                        Command="{Binding DataContext.EditTaskCommand, ElementName=MainListView}"
-                                        CommandParameter="{Binding}" >
-                            <MenuFlyoutItem.KeyboardAccelerators>
-                                <KeyboardAccelerator Key="E" />
-                            </MenuFlyoutItem.KeyboardAccelerators>
-                        </MenuFlyoutItem>
-                        <MenuFlyoutItem Text="Delete" Icon="Delete" ToolTipService.ToolTip="Delete" 
-                                        Command="{Binding DataContext.RemoveTaskCommand, ElementName=MainListView}" 
-                                        CommandParameter="{Binding}">
-                            <MenuFlyoutItem.KeyboardAccelerators>
-                                <KeyboardAccelerator Key="Delete" />
-                            </MenuFlyoutItem.KeyboardAccelerators>
-                        </MenuFlyoutItem>
-                    </MenuFlyout>
-                </controls:SettingsCard.ContextFlyout>
-            </controls:SettingsCard>
         </DataTemplate>
 
         <local:TaskTemplateSelector x:Key="TaskTemplateSelector"

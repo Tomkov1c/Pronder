@@ -59,19 +59,41 @@ public partial class ProjectToDoViewModel : ObservableRecipient
     }
     private void ConvertSubtasksToObservable(TodoTask? task)
     {
+        task.VMSubTasks = new ObservableCollection<TodoTask>();
+
         if (task.SubTasks != null && task.SubTasks.Count > 0)
         {
-            task.VMSubTasks = new ObservableCollection<TodoTask>();
-
             foreach (TodoTask? subTask in task.SubTasks)
             {
                 ConvertSubtasksToObservable(subTask);
                 task.VMSubTasks.Add(subTask);
                 task.VMSubTasks.CollectionChanged += (s, e) => Save();
             }
+        }else
+        {
+            task.SubTasks = new List<TodoTask>();
+            task.VMSubTasks.CollectionChanged += (s, e) => Save();
         }
         task.PropertyChanged += (s, e) => Save();
     }
+    private TodoTask? FindTask(ObservableCollection<TodoTask> taskList, TodoTask taskToFind)
+    {
+        foreach (var task in taskList)
+        {
+            if (task.Id == taskToFind.Id)
+            {
+                return task;
+            }
+
+            if (task.VMSubTasks != null && task.VMSubTasks.Count > 0)
+            {
+                var result = FindTask(task.VMSubTasks, taskToFind);
+            }
+        }
+
+        return null;
+    }
+
 
     private void AddTask(TodoTask? task)
     {
@@ -82,24 +104,26 @@ public partial class ProjectToDoViewModel : ObservableRecipient
 
         if(task != null)
         {
-            task.VMSubTasks.Add(newTask);
+            FindTask(Tasks, task).SubTasks.Add(newTask);
+            FindTask(Tasks, task).VMSubTasks.Add(newTask);
         }else
         {
             Tasks.Add(newTask);
+            _project.TodoTasks = Tasks.ToList();
         }
 
         NewTaskTitle = "";
     }
-    private void RemoveTask(TodoTask? task)
+    private void RemoveTask(TodoTask? taskToRemove)
     {
-        RemoveTaskRecursive(Tasks, task);
+        FindAndRemoveTask(taskToRemove, Tasks);
     }
-    private void RemoveTaskRecursive(ObservableCollection<TodoTask>? taskList, TodoTask? taskToRemove)
+    private void FindAndRemoveTask(TodoTask? taskToRemove, ObservableCollection<TodoTask> taskList)
     {
-        var task = taskList.FirstOrDefault(t => t.Id == taskToRemove.Id);
-        if (task != null)
+        var match = taskList.FirstOrDefault(t => t.Id == taskToRemove.Id);
+        if (match != null)
         {
-            taskList.Remove(task);
+            taskList.Remove(match);
             return;
         }
 
@@ -107,7 +131,7 @@ public partial class ProjectToDoViewModel : ObservableRecipient
         {
             if (t.SubTasks != null && t.SubTasks.Count > 0)
             {
-                RemoveTaskRecursive(t.VMSubTasks, taskToRemove);
+                FindAndRemoveTask(taskToRemove, t.VMSubTasks);
                 t.SubTasks = t.VMSubTasks.ToList();
             }
         }
@@ -122,6 +146,10 @@ public partial class ProjectToDoViewModel : ObservableRecipient
     {
         if (_isDoneImporting)
         {
+            if(!_project.TodoTasksNullOrEmpty())
+            {
+                _project.TodoTasks = new List<TodoTask>();
+            }
             _project.TodoTasks = Tasks.ToList();
             _project.SaveToFile();
         }
