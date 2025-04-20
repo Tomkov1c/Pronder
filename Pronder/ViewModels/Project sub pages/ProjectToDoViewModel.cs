@@ -102,11 +102,26 @@ public partial class ProjectToDoViewModel : ObservableRecipient
             Content = NewTaskTitle,
         };
 
-        if(task != null)
+        if (task != null)
         {
-            FindTask(Tasks, task).SubTasks.Add(newTask);
-            FindTask(Tasks, task).VMSubTasks.Add(newTask);
-        }else
+            var parentTask = FindTask(Tasks, task);
+
+            bool hasNoSubtasksBefore = parentTask.SubTasks.Count == 0;
+
+            parentTask.SubTasks.Add(newTask);
+            parentTask.VMSubTasks.Add(newTask);
+
+            if (hasNoSubtasksBefore)
+            {
+                int index = Tasks.IndexOf(parentTask);
+                if (index >= 0)
+                {
+                    Tasks.RemoveAt(index);
+                    Tasks.Insert(index, parentTask);
+                }
+            }
+        }
+        else
         {
             Tasks.Add(newTask);
             _project.TodoTasks = Tasks.ToList();
@@ -114,6 +129,9 @@ public partial class ProjectToDoViewModel : ObservableRecipient
 
         NewTaskTitle = "";
     }
+
+
+
     private void RemoveTask(TodoTask? taskToRemove)
     {
         FindAndRemoveTask(taskToRemove, Tasks);
