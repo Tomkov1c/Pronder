@@ -22,11 +22,22 @@
                     <CheckBox CornerRadius="12" MinWidth="0" IsChecked="{Binding Done}" />
                     <TextBlock VerticalAlignment="Center" HorizontalAlignment="Stretch" Text="{Binding Content}" />
                     <StackPanel.ContextFlyout>
-                        <CommandBarFlyout Placement="BottomEdgeAlignedLeft" AlwaysExpanded="True">
-                            <AppBarButton Label="Delete Sub" Icon="Delete" ToolTipService.ToolTip="Delete" 
-                                          Command="{Binding DataContext.RemoveTaskCommand, ElementName=MainListView}"
-                                          CommandParameter="{Binding}"/>
-                        </CommandBarFlyout>
+                        <MenuFlyout>
+                            <MenuFlyoutItem Text="Edit" Icon="Edit" ToolTipService.ToolTip="Edit"
+                                            Command="{Binding DataContext.EditTaskCommand, ElementName=MainListView}"
+                                            CommandParameter="{Binding}">
+                                <MenuFlyoutItem.KeyboardAccelerators>
+                                    <KeyboardAccelerator Key="E" />
+                                </MenuFlyoutItem.KeyboardAccelerators>
+                            </MenuFlyoutItem>
+                            <MenuFlyoutItem Text="Delete" Icon="Delete" ToolTipService.ToolTip="Delete" 
+                                            Command="{Binding DataContext.RemoveTaskCommand, ElementName=MainListView}" 
+                                            CommandParameter="{Binding}">
+                                <MenuFlyoutItem.KeyboardAccelerators>
+                                    <KeyboardAccelerator Key="Delete" />
+                                </MenuFlyoutItem.KeyboardAccelerators>
+                            </MenuFlyoutItem>
+                        </MenuFlyout>
                     </StackPanel.ContextFlyout>
                 </StackPanel>
 
@@ -41,6 +52,24 @@
             <StackPanel Orientation="Horizontal" Padding="0, 14">
                 <CheckBox CornerRadius="12" MinWidth="0" IsChecked="{Binding Done}" />
                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Stretch" Text="{Binding Content}" />
+                <StackPanel.ContextFlyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Text="Edit" Icon="Edit" ToolTipService.ToolTip="Edit"
+                                        Command="{Binding DataContext.EditTaskCommand, ElementName=MainListView}"
+                                        CommandParameter="{Binding}">
+                            <MenuFlyoutItem.KeyboardAccelerators>
+                                <KeyboardAccelerator Key="E" />
+                            </MenuFlyoutItem.KeyboardAccelerators>
+                        </MenuFlyoutItem>
+                        <MenuFlyoutItem Text="Delete" Icon="Delete" ToolTipService.ToolTip="Delete" 
+                                        Command="{Binding DataContext.RemoveTaskCommand, ElementName=MainListView}" 
+                                        CommandParameter="{Binding}">
+                            <MenuFlyoutItem.KeyboardAccelerators>
+                                <KeyboardAccelerator Key="Delete" />
+                            </MenuFlyoutItem.KeyboardAccelerators>
+                        </MenuFlyoutItem>
+                    </MenuFlyout>
+                </StackPanel.ContextFlyout>
             </StackPanel>
         </DataTemplate>
 

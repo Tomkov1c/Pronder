@@ -8,6 +8,7 @@ using Windows.Storage;
 using System.Dynamic;
 using Pronder.Models;
 using Newtonsoft.Json;
+using System.Diagnostics;
 
 namespace Pronder.Models
 {
@@ -56,6 +57,9 @@ namespace Pronder.Models
                     Formatting = Formatting.Indented
                 };
                 File.WriteAllText(ProjectPath, JsonConvert.SerializeObject(GlobalInstance, settings));
+            }else
+            {
+                Debug.WriteLine("No path: " + ProjectPath);
             }
         }
 

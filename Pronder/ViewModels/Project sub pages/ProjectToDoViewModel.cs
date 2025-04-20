@@ -44,18 +44,18 @@ public partial class ProjectToDoViewModel : ObservableRecipient
     }
     private void ConvertSubtasksToObservable(TodoTask? task)
     {
-        task.PropertyChanged += (s, e) => Save();
         if (task.SubTasks != null && task.SubTasks.Count > 0)
         {
             task.VMSubTasks = new ObservableCollection<TodoTask>();
-            task.VMSubTasks.CollectionChanged += (s, e) => Save();
 
-            foreach (var subTask in task.SubTasks)
+            foreach (TodoTask? subTask in task.SubTasks)
             {
                 ConvertSubtasksToObservable(subTask);
                 task.VMSubTasks.Add(subTask);
+                task.VMSubTasks.CollectionChanged += (s, e) => Save();
             }
         }
+        task.PropertyChanged += (s, e) => Save();
     }
     private void Save()
     {
@@ -63,6 +63,9 @@ public partial class ProjectToDoViewModel : ObservableRecipient
         {
             _project.TodoTasks = Tasks.ToList();
             _project.SaveToFile();
+
+            Debug.WriteLine("Saved");
+            Debug.WriteLine(Tasks.ToList);
         }
     }
 
@@ -76,17 +79,18 @@ public partial class ProjectToDoViewModel : ObservableRecipient
 
 
 
-    private void RemoveTask(TodoTask task)
+    private void RemoveTask(TodoTask? task)
     {
         RemoveTaskRecursive(Tasks, task);
     }
 
-    private void RemoveTaskRecursive(ObservableCollection<TodoTask> taskList, TodoTask taskToRemove)
+    private void RemoveTaskRecursive(ObservableCollection<TodoTask>? taskList, TodoTask? taskToRemove)
     {
         var task = taskList.FirstOrDefault(t => t.Id == taskToRemove.Id);
         if (task != null)
         {
             taskList.Remove(task);
+            Debug.WriteLine("Removed");
             return;
         }
 
@@ -95,6 +99,7 @@ public partial class ProjectToDoViewModel : ObservableRecipient
             if (t.SubTasks != null && t.SubTasks.Count > 0)
             {
                 RemoveTaskRecursive(t.VMSubTasks, taskToRemove);
+                t.SubTasks = t.VMSubTasks.ToList();
             }
         }
     }
