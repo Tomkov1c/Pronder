@@ -57,9 +57,6 @@ namespace Pronder.Models
                     Formatting = Formatting.Indented
                 };
                 File.WriteAllText(ProjectPath, JsonConvert.SerializeObject(GlobalInstance, settings));
-            }else
-            {
-                Debug.WriteLine("No path: " + ProjectPath);
             }
         }
 

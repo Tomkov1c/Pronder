@@ -63,9 +63,6 @@ public partial class ProjectToDoViewModel : ObservableRecipient
         {
             _project.TodoTasks = Tasks.ToList();
             _project.SaveToFile();
-
-            Debug.WriteLine("Saved");
-            Debug.WriteLine(Tasks.ToList);
         }
     }
 
@@ -90,7 +87,6 @@ public partial class ProjectToDoViewModel : ObservableRecipient
         if (task != null)
         {
             taskList.Remove(task);
-            Debug.WriteLine("Removed");
             return;
         }
 
