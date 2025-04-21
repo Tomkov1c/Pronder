@@ -99,7 +99,7 @@ public partial class ProjectToDoViewModel : ObservableRecipient
     {
         TodoTask newTask = new()
         {
-            Content = NewTaskTitle,
+            Content = !(string.IsNullOrWhiteSpace(NewTaskTitle) && string.IsNullOrEmpty(NewTaskTitle)) ? NewTaskTitle : "New task",
         };
 
         if (task != null)
