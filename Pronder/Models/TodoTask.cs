@@ -12,10 +12,7 @@ namespace Pronder.Models;
 public class TodoTask : INotifyPropertyChanged
 {
     [JsonIgnore]
-    public Guid Id
-    {
-        get; private set;
-    }
+    public Guid Id { get; private set; }
 
     public TodoTask()
     {
