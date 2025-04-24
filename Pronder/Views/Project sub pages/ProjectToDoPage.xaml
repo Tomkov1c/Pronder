@@ -200,7 +200,11 @@
                 <Button.Flyout>
                     <Flyout Placement="BottomEdgeAlignedRight">
                         <StackPanel Orientation="Horizontal" Spacing="12">
-                            <TextBox  Width="300" x:Name="NewTaskContentTextBox" Text="{Binding NewTaskTitle, Mode=TwoWay}" />
+                            <TextBox  Width="300" x:Name="NewTaskContentTextBox" Text="{Binding NewTaskTitle, Mode=TwoWay}" >
+                                <TextBox.KeyboardAccelerators>
+                                    <KeyboardAccelerator Key="Enter" Invoked="EnterPressed" />
+                                </TextBox.KeyboardAccelerators>
+                            </TextBox>
                             <Button Content="Add" Style="{StaticResource AccentButtonStyle}" 
                                     Command="{Binding AddTaskCommand}">
                                 <Button.KeyboardAccelerators>

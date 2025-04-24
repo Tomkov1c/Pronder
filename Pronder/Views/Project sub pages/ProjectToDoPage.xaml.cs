@@ -25,7 +25,6 @@ public sealed partial class ProjectToDoPage : Page
         ReloadDataContect();
         InitializeComponent();
 
-        _viewModel = null;
         GC.Collect();
     }
 
@@ -33,6 +32,12 @@ public sealed partial class ProjectToDoPage : Page
     {
         _viewModel = new();
         DataContext = _viewModel;
+    }
+
+    private void EnterPressed(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs args)
+    {
+        _viewModel.NewTaskTitle = NewTaskContentTextBox.Text;
+        _viewModel.AddTaskCommand.Execute(null);
     }
 }
 
