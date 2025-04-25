@@ -30,11 +30,21 @@
             </Grid.ColumnDefinitions>
             <NavigationView x:Name="NavView" IsSettingsVisible="False" IsPaneOpen="True" SelectionChanged="NavSelectionChanged"
                             IsPaneToggleButtonVisible="False" ExpandedModeThresholdWidth="200" Grid.Column="0"
-                            OpenPaneLength="200" Width="200" IsBackButtonVisible="Collapsed" Margin="0, 0, 0 , 80">
+                            OpenPaneLength="200" Width="200" IsBackButtonVisible="Collapsed" Margin="0, 0, 0, 80">
                 <NavigationView.MenuItems>
                     <NavigationViewItemHeader Content="Edit" Foreground="{ThemeResource TextFillColorPrimaryBrush}"/>
                     <NavigationViewItem Content="General" Icon="Page2" IsSelected="True" x:Name="FirstNavItem"/>
                     <NavigationViewItem Content="External links" Icon="Link" />
+                    <NavigationViewItem Content="Subpages" Icon="Repair">
+                        <NavigationViewItem.MenuItems>
+                            <NavigationViewItem Content="Todo List">
+                                <NavigationViewItem.Icon>
+                                    <ImageIcon Source="ms-appx:///Assets/Icon8/Color/icons8-todo-list-512.png"/>
+                                </NavigationViewItem.Icon>
+                            </NavigationViewItem>
+                        </NavigationViewItem.MenuItems>
+                    </NavigationViewItem>
+
                 </NavigationView.MenuItems>
             </NavigationView>
             <ScrollViewer HorizontalAlignment="Stretch"
