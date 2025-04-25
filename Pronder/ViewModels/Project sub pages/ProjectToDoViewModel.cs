@@ -185,6 +185,7 @@ public partial class ProjectToDoViewModel : ObservableRecipient
             if (index >= 0)
             {
                 list.RemoveAt(index);
+                ConvertSubtasksToObservable(taskToRefresh);
                 list.Insert(index, taskToRefresh);
                 return true;
             }
@@ -197,6 +198,7 @@ public partial class ProjectToDoViewModel : ObservableRecipient
                     if (subIndex >= 0)
                     {
                         t.VMSubTasks.RemoveAt(subIndex);
+                        ConvertSubtasksToObservable(taskToRefresh);
                         t.VMSubTasks.Insert(subIndex, taskToRefresh);
                         t.SubTasks = t.VMSubTasks.ToList();
                         return true;
@@ -212,6 +214,7 @@ public partial class ProjectToDoViewModel : ObservableRecipient
 
         TryRefresh(Tasks);
     }
+
     private void Save()
     {
         if (_isDoneImporting)
