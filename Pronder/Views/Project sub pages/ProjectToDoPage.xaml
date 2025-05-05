@@ -186,10 +186,10 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="auto" />
             </Grid.ColumnDefinitions>
-            <controls:Segmented  SelectedIndex="0" SelectionMode="Single" HorizontalAlignment="Left" Grid.Column="0">
+            <!--<controls:Segmented  SelectedIndex="0" SelectionMode="Single" HorizontalAlignment="Left" Grid.Column="0">
                 <controls:SegmentedItem Icon="{ui:FontIcon Glyph=&#xEA3A;}" IsSelected="True"/>
                 <controls:SegmentedItem Icon="{ui:FontIcon Glyph=&#xE930;}" />
-            </controls:Segmented>
+            </controls:Segmented>-->
             <Button HorizontalAlignment="Right" Grid.Column="2">
                 <Button.Content>
                     <StackPanel Orientation="Horizontal" Spacing="8">
