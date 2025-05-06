@@ -83,6 +83,8 @@ public partial class App : Application
             services.AddTransient<AboutPage>();
             services.AddTransient<GeneralProjectDisplayViewModel>();
             services.AddTransient<GeneralProjectDisplayPage>();
+            services.AddTransient<ProjectBudgetViewModel>();
+            services.AddTransient<ProjectBudgetPage>();
             services.AddTransient<ProjectToDoViewModel>();
             services.AddTransient<ProjectToDoPage>();
             services.AddTransient<ProjectAboutViewModel>();

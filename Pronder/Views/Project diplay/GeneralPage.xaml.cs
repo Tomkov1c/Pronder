@@ -95,6 +95,9 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
             case 1:
                 pageType = typeof(ProjectToDoPage);
                 break;
+            case 2:
+                pageType = typeof(ProjectBudgetPage);
+                break;
             default:
                 pageType = typeof(ProjectAboutPage);
                 break;

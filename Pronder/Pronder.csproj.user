@@ -2,7 +2,11 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup />
-  <ItemGroup />
+  <ItemGroup>
+    <Page Update="Views\Project sub pages\ProjectBudgetPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
   <ItemGroup>
     <Page Update="Custom\Popups\EditTodoTaskPopup.xaml">
       <SubType>Designer</SubType>

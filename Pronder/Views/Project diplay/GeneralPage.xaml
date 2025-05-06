@@ -94,6 +94,11 @@
                         <ImageIcon Source="/Assets/Icon8/Color/icons8-todo-list-512.png" Width="20" Margin="0, 0, 0, 0"/>
                     </SelectorBarItem.Icon>
                 </SelectorBarItem>
+                <SelectorBarItem Text="Budget" >
+                    <SelectorBarItem.Icon>
+                        <ImageIcon Source="/Assets/Icon8/Color/icons8-money-bag-512.png" Width="20" Margin="0, 0, 0, 0"/>
+                    </SelectorBarItem.Icon>
+                </SelectorBarItem>
             </SelectorBar>
 
 
