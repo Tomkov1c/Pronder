@@ -15,10 +15,8 @@ namespace Pronder.Models
     // C:\Users\gamin\AppData\Local\Packages\90d93993-b7aa-4fff-9757-12ef0c6c27e0_1116rh51nqx02\LocalState\Projects
     public class Project
     {
-        [JsonIgnore]
-        public static Project? GlobalInstance { get; private set; } = null;
-        [JsonIgnore]
-        public static string ProjectPath { get; private set; } = null;
+        [JsonIgnore] public static Project? GlobalInstance { get; private set; } = null;
+        [JsonIgnore] public static string ProjectPath { get; private set; } = null;
 
         public bool SelfContained { get; set; }
         public string Id { get; set; }
@@ -33,6 +31,7 @@ namespace Pronder.Models
 
         public List<Link> Links { get; set; }
         public List<TodoTask> TodoTasks { get; set; }
+        public Budget Budget { get; set; }
 
 
         public static void SetGlobalInstance(Project? project) => GlobalInstance = project;
@@ -54,7 +53,7 @@ namespace Pronder.Models
                 JsonSerializerSettings settings = new JsonSerializerSettings
                 {
                     NullValueHandling = NullValueHandling.Ignore,
-                    Formatting = Formatting.Indented
+                    Formatting = Formatting.Indented,
                 };
                 File.WriteAllText(ProjectPath, JsonConvert.SerializeObject(GlobalInstance, settings));
             }

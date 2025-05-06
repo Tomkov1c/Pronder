@@ -6,9 +6,77 @@
     xmlns:local="using:Pronder.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:CommunityToolkit.WinUI.Controls"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" MinHeight="550">
-        
+    <Page.Resources>
+        <TransitionCollection x:Key="ListviewTransitions">
+            <AddDeleteThemeTransition />
+            <ContentThemeTransition />
+        </TransitionCollection>
+
+        <DataTemplate x:Key="ItemTemplate">
+            <Grid Background="{Binding Background}" Padding="16" Margin="0, 0, 0, 4"
+                  CornerRadius="{StaticResource ControlCornerRadius}" HorizontalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                
+                <StackPanel Orientation="Vertical" Grid.Column="0">
+                    <TextBlock Text="{Binding Name}" Style="{StaticResource BodyTextBlockStyle}"/>
+                    <TextBlock Text="{Binding Description}" Style="{StaticResource CaptionTextBlockStyle}"/>
+                </StackPanel>
+                <TextBlock Text="{Binding Amount}" HorizontalAlignment="Right" VerticalAlignment="Center"
+                           Grid.Column="1" Style="{StaticResource SubtitleTextBlockStyle}"/>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+    
+    
+    <StackPanel Orientation="Vertical" MinHeight="550" Spacing="12" >
+        <Button HorizontalAlignment="Right" VerticalAlignment="Top" Command="{Binding AddItemCommand}">
+            <Button.Content>
+                <StackPanel Orientation="Horizontal" Spacing="8">
+                    <FontIcon Glyph="&#xE710;" FontSize="18"/>
+                    <TextBlock Text="Add"/>
+                </StackPanel>
+            </Button.Content>
+            <!--<Button.Flyout>
+                <Flyout Placement="BottomEdgeAlignedRight">
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <TextBox  Width="300" x:Name="NewTaskContentTextBox" Text="{Binding NewTaskTitle, Mode=TwoWay}" >
+                            <TextBox.KeyboardAccelerators>
+                                <KeyboardAccelerator Key="Enter" />
+                            </TextBox.KeyboardAccelerators>
+                        </TextBox>
+                        <Button Content="Add" Style="{StaticResource AccentButtonStyle}" >
+                            <Button.KeyboardAccelerators>
+                                <KeyboardAccelerator Key="Enter" />
+                            </Button.KeyboardAccelerators>
+                        </Button>
+                    </StackPanel>
+                </Flyout>
+            </Button.Flyout>-->
+        </Button>
+        <Grid HorizontalAlignment="Stretch" ColumnSpacing="16">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="350" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Top"
+                        Height="300" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                        CornerRadius="{StaticResource OverlayCornerRadius}">
+                <TextBlock Text="{Binding InitialBudget}" HorizontalAlignment="Center"
+                           Style="{StaticResource DisplayTextBlockStyle}"/>
+
+            </StackPanel>
+            <ListView Grid.Column="1" ItemsSource="{Binding Items, Mode=TwoWay}" 
+                      ItemTemplate="{StaticResource ItemTemplate}"
+                      ItemContainerTransitions="{StaticResource ListviewTransitions}"
+                      HorizontalAlignment="Stretch" VerticalAlignment="Top" 
+                      SelectionMode="None"/>
+        </Grid>
     </StackPanel>
 </Page>
