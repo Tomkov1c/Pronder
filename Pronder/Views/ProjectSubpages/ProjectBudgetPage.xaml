@@ -16,19 +16,29 @@
         </TransitionCollection>
 
         <DataTemplate x:Key="ItemTemplate">
-            <Grid Background="{Binding Background}" Padding="16" Margin="0, 0, 0, 4"
-                  CornerRadius="{StaticResource ControlCornerRadius}" HorizontalAlignment="Stretch">
+            <Grid Padding="16" Margin="0, 0, 0, 4" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                  CornerRadius="{StaticResource ControlCornerRadius}" HorizontalAlignment="Stretch"
+                  BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" MinWidth="75"/>
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" MinWidth="75"/>
                 </Grid.ColumnDefinitions>
+                <Grid.ContextFlyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Icon="Delete" Text="Delete" Command="{Binding DataContext.RemoveItemCommand, ElementName=ItemList}"
+                                        CommandParameter="{Binding}" />
+                    </MenuFlyout>
+                </Grid.ContextFlyout>
                 
-                <StackPanel Orientation="Vertical" Grid.Column="0">
+                <TextBlock Text="{Binding Amount}" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           Grid.Column="0" Style="{StaticResource SubtitleTextBlockStyle}" Foreground="{Binding Foreground}"/>
+                <StackPanel Orientation="Vertical" Grid.Column="1">
                     <TextBlock Text="{Binding Name}" Style="{StaticResource BodyTextBlockStyle}"/>
                     <TextBlock Text="{Binding Description}" Style="{StaticResource CaptionTextBlockStyle}"/>
                 </StackPanel>
-                <TextBlock Text="{Binding Amount}" HorizontalAlignment="Right" VerticalAlignment="Center"
-                           Grid.Column="1" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                <TextBlock Text="Sample" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="2" HorizontalAlignment="Right" 
+                           VerticalAlignment="Center" Foreground="{ThemeResource TextFillColorTertiaryBrush}"/>
             </Grid>
         </DataTemplate>
     </Page.Resources>
@@ -67,16 +77,21 @@
 
             <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Top"
                         Height="300" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
-                        CornerRadius="{StaticResource OverlayCornerRadius}">
+                        CornerRadius="{StaticResource OverlayCornerRadius}" BorderThickness="1"
+                        BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
                 <TextBlock Text="{Binding InitialBudget}" HorizontalAlignment="Center"
+                           Style="{StaticResource DisplayTextBlockStyle}"/>
+                <TextBlock Text="{Binding CurrentBudget}" HorizontalAlignment="Center"
                            Style="{StaticResource DisplayTextBlockStyle}"/>
 
             </StackPanel>
-            <ListView Grid.Column="1" ItemsSource="{Binding Items, Mode=TwoWay}" 
+            <ListView x:Name="ItemList"
+                      Grid.Column="1" ItemsSource="{Binding Items, Mode=TwoWay}" 
                       ItemTemplate="{StaticResource ItemTemplate}"
                       ItemContainerTransitions="{StaticResource ListviewTransitions}"
                       HorizontalAlignment="Stretch" VerticalAlignment="Top" 
-                      SelectionMode="None"/>
+                      SelectionMode="None"
+                      MinHeight="300"/>
         </Grid>
     </StackPanel>
 </Page>

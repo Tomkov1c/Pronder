@@ -13,17 +13,20 @@ namespace Pronder.ViewModels;
 public partial class ProjectBudgetViewModel : ObservableRecipient
 {
     public ICommand AddItemCommand { get; private set; }
+    public ICommand RemoveItemCommand { get; private set; }
 
     public static Project? _project => Project.GlobalInstance;
 
     public ObservableCollection<BudgetItem> Items { get; set; } = new();
 
-
-    public string InitialBudget => _project.Budget.InitialBudget.ToString();
+    
+    public string InitialBudget { get; set; } = _project.Budget.InitialBudget.ToString();
+    public double CurrentBudget { get; set; } = _project.Budget.InitialBudget;
 
     public ProjectBudgetViewModel()
     {
         AddItemCommand = new RelayCommand(AddItem);
+        RemoveItemCommand = new RelayCommand<BudgetItem?>(RemoveItem);
 
         if (!_project.Budget.ItemsNullOrEmpty())
         {
@@ -31,11 +34,15 @@ public partial class ProjectBudgetViewModel : ObservableRecipient
             {
                 if(item.DoesDecrease)
                 {
-                    item.Background = Application.Current.Resources["SystemFillColorCriticalBackgroundBrush"] as SolidColorBrush;
+                    CurrentBudget -= item.Amount;
+                    item.Foreground = Application.Current.Resources["SystemFillColorCriticalBrush"] as SolidColorBrush;
                 }else
                 {
-                    item.Background = Application.Current.Resources["SystemFillColorSuccessBackgroundBrush"] as SolidColorBrush;
+                    CurrentBudget += item.Amount;
+                    item.Foreground = Application.Current.Resources["SystemFillColorSuccessBrush"] as SolidColorBrush;
                 }
+
+
                 Items.Add(item);
             }
         }
@@ -57,14 +64,32 @@ public partial class ProjectBudgetViewModel : ObservableRecipient
         };
         if (newItem.DoesDecrease)
         {
-            newItem.Background = Application.Current.Resources["SystemFillColorCriticalBackgroundBrush"] as SolidColorBrush;
+            CurrentBudget -= newItem.Amount;
+            newItem.Foreground = Application.Current.Resources["SystemFillColorCriticalBrush"] as SolidColorBrush;
         }
         else
         {
-            newItem.Background = Application.Current.Resources["SystemFillColorSuccessBackgroundBrush"] as SolidColorBrush;
+            CurrentBudget += newItem.Amount;
+            newItem.Foreground = Application.Current.Resources["SystemFillColorSuccessBrush"] as SolidColorBrush;
         }
         Items.Add(newItem);
     }
+    private void RemoveItem(BudgetItem? itemToRemove)
+    {
+        foreach (BudgetItem item in Items)
+        {
+            if (item.Id == itemToRemove.Id)
+            {
+                Items.Remove(itemToRemove);
+
+                return;
+            }
+        }
+    }
+
+
+
+
 
     private void Save()
     {
