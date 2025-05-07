@@ -62,6 +62,46 @@ public partial class ProjectBudgetViewModel : ObservableRecipient
         }
     }
 
+
+    private string _newItemName;
+    public string NewItemName
+    {
+        get => _newItemName;
+        set
+        {
+            _newItemName = value; OnPropertyChanged();
+        }
+    }
+    private string _newItemDescription;
+    public string NewItemDescription
+    {
+        get => _newItemDescription;
+        set
+        {
+            _newItemDescription = value; OnPropertyChanged();
+        }
+    }
+    private double _newItemAmount;
+    public double NewItemAmount
+    {
+        get => _newItemAmount;
+        set
+        {
+            _newItemAmount = value; OnPropertyChanged();
+        }
+    }
+    private int _selectedItemTypeIndex;
+    public int SelectedItemTypeIndex
+    {
+        get => _selectedItemTypeIndex;
+        set
+        {
+            _selectedItemTypeIndex = value; OnPropertyChanged();
+        }
+    }
+
+
+
     public ProjectBudgetViewModel()
     {
         AddItemCommand = new RelayCommand(AddItem);
@@ -95,15 +135,22 @@ public partial class ProjectBudgetViewModel : ObservableRecipient
 
     private void AddItem()
     {
-        BudgetItem newItem = new()
+        bool isExpense = SelectedItemTypeIndex == 0;
+
+        var newItem = new BudgetItem
         {
-            Amount = 69,
-            Currency = "€",
-            DoesDecrease = true,
-            Name = "Lorem",
-            Description = "mcdonalds",
+            Name = NewItemName,
+            Description = NewItemDescription,
+            Amount = NewItemAmount,
+            DoesDecrease = isExpense,
+
             Date = DateTime.Now.AddSeconds(-DateTime.Now.Second).AddMilliseconds(-DateTime.Now.Millisecond)
         };
+        NewItemName = null;
+        NewItemDescription = null;
+        NewItemAmount = 0;
+        SelectedItemTypeIndex = 0;
+
         if (newItem.DoesDecrease)
         {
             CurrentBudget -= newItem.Amount;

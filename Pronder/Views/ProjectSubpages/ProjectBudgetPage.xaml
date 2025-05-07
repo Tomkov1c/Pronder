@@ -7,6 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:CommunityToolkit.WinUI.Controls"
+    xmlns:ui="using:CommunityToolkit.WinUI"
     mc:Ignorable="d">
 
     <Page.Resources>
@@ -35,39 +36,45 @@
                            Grid.Column="0" Style="{StaticResource SubtitleTextBlockStyle}" Foreground="{Binding Foreground}"/>
                 <StackPanel Orientation="Vertical" Grid.Column="1">
                     <TextBlock Text="{Binding Name}" Style="{StaticResource BodyTextBlockStyle}"/>
-                    <TextBlock Text="{Binding Description}" Style="{StaticResource CaptionTextBlockStyle}"/>
+                    <TextBlock Text="{Binding Description}" Style="{StaticResource CaptionTextBlockStyle}" 
+                               Foreground="{ThemeResource TextFillColorTertiaryBrush}"/>
                 </StackPanel>
                 <TextBlock Text="{Binding Date}" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="2" HorizontalAlignment="Right" 
-                           VerticalAlignment="Center" Foreground="{ThemeResource TextFillColorTertiaryBrush}"/>
+                           VerticalAlignment="Center" Foreground="{ThemeResource TextFillColorDisabledBrush}"/>
             </Grid>
         </DataTemplate>
     </Page.Resources>
     
     
     <StackPanel Orientation="Vertical" MinHeight="550" Spacing="12" >
-        <Button HorizontalAlignment="Right" VerticalAlignment="Top" Command="{Binding AddItemCommand}">
+        <Button HorizontalAlignment="Right" VerticalAlignment="Top">
             <Button.Content>
                 <StackPanel Orientation="Horizontal" Spacing="8">
                     <FontIcon Glyph="&#xE710;" FontSize="18"/>
                     <TextBlock Text="Add"/>
                 </StackPanel>
             </Button.Content>
-            <!--<Button.Flyout>
+            <Button.Flyout>
                 <Flyout Placement="BottomEdgeAlignedRight">
-                    <StackPanel Orientation="Horizontal" Spacing="12">
-                        <TextBox  Width="300" x:Name="NewTaskContentTextBox" Text="{Binding NewTaskTitle, Mode=TwoWay}" >
-                            <TextBox.KeyboardAccelerators>
-                                <KeyboardAccelerator Key="Enter" />
-                            </TextBox.KeyboardAccelerators>
-                        </TextBox>
-                        <Button Content="Add" Style="{StaticResource AccentButtonStyle}" >
+                    <StackPanel Orientation="Vertical" Spacing="12">
+                        <controls:Segmented HorizontalAlignment="Stretch" 
+                                            SelectedIndex="{Binding SelectedItemTypeIndex, Mode=TwoWay}">
+                            <controls:SegmentedItem Content="Expense" Icon="{ui:FontIcon Glyph=&#xE73C;}"/>
+                            <controls:SegmentedItem Content="Income" Icon="{ui:FontIcon Glyph=&#xE710;}"/>
+                        </controls:Segmented>
+                        <TextBox Width="300" Text="{Binding NewItemName, Mode=TwoWay}" PlaceholderText="Name"/>
+                        <TextBox Width="300" Text="{Binding NewItemDescription, Mode=TwoWay}" PlaceholderText="Description"/>
+                        <NumberBox Width="300" Text="{Binding NewItemAmount, Mode=TwoWay}" PlaceholderText="Amount"/>
+
+                        <Button Content="Add" Style="{StaticResource AccentButtonStyle}" Command="{Binding AddItemCommand}"
+                                Margin="0, 12, 0, 0" HorizontalAlignment="Stretch">
                             <Button.KeyboardAccelerators>
-                                <KeyboardAccelerator Key="Enter" />
+                                <KeyboardAccelerator Key="Enter" Invoked="EnterPressed"/>
                             </Button.KeyboardAccelerators>
                         </Button>
                     </StackPanel>
                 </Flyout>
-            </Button.Flyout>-->
+            </Button.Flyout>
         </Button>
         <Grid HorizontalAlignment="Stretch" ColumnSpacing="16">
             <Grid.ColumnDefinitions>

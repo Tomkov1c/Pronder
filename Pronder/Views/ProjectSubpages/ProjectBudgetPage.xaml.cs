@@ -17,11 +17,17 @@ namespace Pronder.Views;
 
 public sealed partial class ProjectBudgetPage : Page
 {
-    ProjectBudgetViewModel _viewmodel = new();
+    ProjectBudgetViewModel _viewModel = new();
 
     public ProjectBudgetPage()
     {
-        DataContext = _viewmodel;
+        DataContext = _viewModel;
         this.InitializeComponent();
+    }
+
+    private void EnterPressed(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs args)
+    {
+        //_viewModel.NewTaskTitle = NewTaskContentTextBox.Text;
+        _viewModel.AddItemCommand.Execute(null);
     }
 }
