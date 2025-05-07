@@ -27,19 +27,21 @@
                 </Grid.ColumnDefinitions>
                 <Grid.ContextFlyout>
                     <MenuFlyout>
+                        <MenuFlyoutItem Icon="Edit" Text="Edit" Command="{Binding DataContext.EditItemCommand, ElementName=ItemList}"
+                                        CommandParameter="{Binding}" />
                         <MenuFlyoutItem Icon="Delete" Text="Delete" Command="{Binding DataContext.RemoveItemCommand, ElementName=ItemList}"
                                         CommandParameter="{Binding}" />
                     </MenuFlyout>
                 </Grid.ContextFlyout>
-                
-                <TextBlock Text="{Binding Amount}" HorizontalAlignment="Center" VerticalAlignment="Center"
+
+                <TextBlock Text="{Binding Amount, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center"
                            Grid.Column="0" Style="{StaticResource SubtitleTextBlockStyle}" Foreground="{Binding Foreground}"/>
                 <StackPanel Orientation="Vertical" Grid.Column="1">
-                    <TextBlock Text="{Binding Name}" Style="{StaticResource BodyTextBlockStyle}"/>
-                    <TextBlock Text="{Binding Description}" Style="{StaticResource CaptionTextBlockStyle}" 
+                    <TextBlock Text="{Binding Name, Mode=TwoWay}" Style="{StaticResource BodyTextBlockStyle}"/>
+                    <TextBlock Text="{Binding Description, Mode=TwoWay}" Style="{StaticResource CaptionTextBlockStyle}" 
                                Foreground="{ThemeResource TextFillColorTertiaryBrush}"/>
                 </StackPanel>
-                <TextBlock Text="{Binding Date}" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="2" HorizontalAlignment="Right" 
+                <TextBlock Text="{Binding Date, Mode=TwoWay}" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="2" HorizontalAlignment="Right" 
                            VerticalAlignment="Center" Foreground="{ThemeResource TextFillColorDisabledBrush}"/>
             </Grid>
         </DataTemplate>

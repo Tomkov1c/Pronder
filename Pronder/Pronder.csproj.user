@@ -4,7 +4,7 @@
   <ItemGroup />
   <ItemGroup />
   <ItemGroup>
-    <Page Update="Custom\Popups\EditTodoTaskPopup.xaml">
+    <Page Update="Custom\Popups\EditTodoTask.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\Icon8Icon.xaml">

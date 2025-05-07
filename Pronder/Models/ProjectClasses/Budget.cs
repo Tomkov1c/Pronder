@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.UI.Xaml.Media;
 using Newtonsoft.Json;
 
@@ -16,23 +17,56 @@ public class Budget
     public bool ItemsNullOrEmpty() => Items == null || Items.Count <= 0;
 }
 
-public class BudgetItem
+public class BudgetItem : ObservableObject
 {
     public BudgetItem()
     {
         Id = Guid.NewGuid();
     }
 
-    public double Amount { get; set; }
-    public string Currency { get; set; }
-    public bool DoesDecrease { get; set; }
+    private double amount;
+    public double Amount
+    {
+        get => amount;
+        set => SetProperty(ref amount, value);
+    }
 
-    public string Name { get; set; }
-    public string Description { get; set; }
+    private string currency;
+    public string Currency
+    {
+        get => currency;
+        set => SetProperty(ref currency, value);
+    }
 
-    public DateTime Date { get; set; }
+    private bool doesDecrease;
+    public bool DoesDecrease
+    {
+        get => doesDecrease;
+        set => SetProperty(ref doesDecrease, value);
+    }
 
-    
+    private string name;
+    public string Name
+    {
+        get => name;
+        set => SetProperty(ref name, value);
+    }
+
+    private string description;
+    public string Description
+    {
+        get => description;
+        set => SetProperty(ref description, value);
+    }
+
+    private DateTime date;
+    public DateTime Date
+    {
+        get => date;
+        set => SetProperty(ref date, value);
+    }
+
+
     [JsonIgnore] public Guid Id { get; private set; }
     [JsonIgnore] public SolidColorBrush Foreground { get; set; }
 }
