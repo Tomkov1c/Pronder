@@ -21,7 +21,46 @@ public partial class ProjectBudgetViewModel : ObservableRecipient
 
     
     public string InitialBudget { get; set; } = _project.Budget.InitialBudget.ToString();
-    public double CurrentBudget { get; set; } = _project.Budget.InitialBudget;
+
+    private double _currentBudget = _project.Budget.InitialBudget;
+    public double CurrentBudget
+    {
+        get => _currentBudget;
+        set
+        {
+            if (_currentBudget != value)
+            {
+                _currentBudget = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+    private Visibility _noItems;
+    public Visibility NoItems
+    {
+        get => _noItems;
+        set
+        {
+            if (_noItems != value)
+            {
+                _noItems = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+    private Visibility _negateNoItems;
+    public Visibility NegateNoItems
+    {
+        get => _negateNoItems;
+        set
+        {
+            if (_negateNoItems != value)
+            {
+                _negateNoItems = value;
+                OnPropertyChanged();
+            }
+        }
+    }
 
     public ProjectBudgetViewModel()
     {
@@ -48,6 +87,8 @@ public partial class ProjectBudgetViewModel : ObservableRecipient
         }
 
         Items.CollectionChanged += (s, e) => Save();
+        NoItems = Items.Any() ? Visibility.Collapsed : Visibility.Visible;
+        NegateNoItems = Items.Any() ? Visibility.Visible : Visibility.Collapsed;
     }
 
 
@@ -60,7 +101,8 @@ public partial class ProjectBudgetViewModel : ObservableRecipient
             Currency = "€",
             DoesDecrease = true,
             Name = "Lorem",
-            Description = "mcdonalds"
+            Description = "mcdonalds",
+            Date = DateTime.Now.AddSeconds(-DateTime.Now.Second).AddMilliseconds(-DateTime.Now.Millisecond)
         };
         if (newItem.DoesDecrease)
         {
@@ -80,6 +122,14 @@ public partial class ProjectBudgetViewModel : ObservableRecipient
         {
             if (item.Id == itemToRemove.Id)
             {
+                if (itemToRemove.DoesDecrease)
+                {
+                    CurrentBudget += itemToRemove.Amount;
+                }
+                else
+                {
+                    CurrentBudget -= itemToRemove.Amount;
+                }
                 Items.Remove(itemToRemove);
 
                 return;
@@ -98,6 +148,8 @@ public partial class ProjectBudgetViewModel : ObservableRecipient
             _project.Budget.Items = new List<BudgetItem>();
         }
         _project.Budget.Items = Items.ToList();
+        NoItems = Items.Any() ? Visibility.Collapsed : Visibility.Visible;
+        NegateNoItems = Items.Any() ? Visibility.Visible : Visibility.Collapsed;
         _project.SaveToFile();
     }
 }

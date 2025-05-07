@@ -21,7 +21,6 @@ public class BudgetItem
     public BudgetItem()
     {
         Id = Guid.NewGuid();
-        Date = DateTime.Now;
     }
 
     public double Amount { get; set; }
@@ -31,9 +30,9 @@ public class BudgetItem
     public string Name { get; set; }
     public string Description { get; set; }
 
-    public DateTime Date { get; private set; }
+    public DateTime Date { get; set; }
 
     
-    [JsonIgnore] public SolidColorBrush Foreground { get; set; }
     [JsonIgnore] public Guid Id { get; private set; }
+    [JsonIgnore] public SolidColorBrush Foreground { get; set; }
 }

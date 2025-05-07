@@ -37,7 +37,7 @@
                     <TextBlock Text="{Binding Name}" Style="{StaticResource BodyTextBlockStyle}"/>
                     <TextBlock Text="{Binding Description}" Style="{StaticResource CaptionTextBlockStyle}"/>
                 </StackPanel>
-                <TextBlock Text="Sample" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="2" HorizontalAlignment="Right" 
+                <TextBlock Text="{Binding Date}" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="2" HorizontalAlignment="Right" 
                            VerticalAlignment="Center" Foreground="{ThemeResource TextFillColorTertiaryBrush}"/>
             </Grid>
         </DataTemplate>
@@ -75,23 +75,51 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Top"
-                        Height="300" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
-                        CornerRadius="{StaticResource OverlayCornerRadius}" BorderThickness="1"
-                        BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
-                <TextBlock Text="{Binding InitialBudget}" HorizontalAlignment="Center"
-                           Style="{StaticResource DisplayTextBlockStyle}"/>
-                <TextBlock Text="{Binding CurrentBudget}" HorizontalAlignment="Center"
-                           Style="{StaticResource DisplayTextBlockStyle}"/>
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top"
+                  Height="300" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                  CornerRadius="{StaticResource OverlayCornerRadius}" BorderThickness="1"
+                  BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Stretch" Orientation="Vertical" Grid.Row="0">
+                    <TextBlock Text="Remaining budget" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}"
+                               Foreground="{ThemeResource TextFillColorTertiaryBrush}" Grid.Column="0"/>
+                    <TextBlock Text="{Binding CurrentBudget, Mode=OneWay}" HorizontalAlignment="Center"
+                               Style="{StaticResource DisplayTextBlockStyle}"/>
 
+                </StackPanel>
+               
+
+                <Grid VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Grid.Row="1"
+                      Padding="16, 24" BorderThickness="0, 1, 0, 0" BorderBrush="{ThemeResource ControlFillColorSecondaryBrush}"
+                      Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}" Visibility="{Binding NegateNoItems}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Initial budget" HorizontalAlignment="Left" Style="{StaticResource CaptionTextBlockStyle}"
+                               Foreground="{ThemeResource TextFillColorTertiaryBrush}" Grid.Column="0"/>
+                    <TextBlock Text="{Binding InitialBudget}" HorizontalAlignment="Right"
+                               Style="{StaticResource BodyTextBlockStyle}" Grid.Column="1"/>
+                </Grid>
+
+            </Grid>
+            <StackPanel Orientation="Vertical" Grid.Column="1">
+                <ListView x:Name="ItemList"
+                          ItemsSource="{Binding Items, Mode=TwoWay}" 
+                          ItemTemplate="{StaticResource ItemTemplate}"
+                          ItemContainerTransitions="{StaticResource ListviewTransitions}"
+                          HorizontalAlignment="Stretch" VerticalAlignment="Top" 
+                          SelectionMode="None"
+                          MinHeight="525" Margin="-12, 0" Visibility="{Binding NegateNoItems}"/>
+                <TextBlock HorizontalAlignment="Center" Text="Budget hasnt been spent" 
+                           Foreground="{ThemeResource TextFillColorTertiaryBrush}"
+                           Style="{StaticResource CaptionTextBlockStyle}" Visibility="{Binding NoItems}"/>
+                
             </StackPanel>
-            <ListView x:Name="ItemList"
-                      Grid.Column="1" ItemsSource="{Binding Items, Mode=TwoWay}" 
-                      ItemTemplate="{StaticResource ItemTemplate}"
-                      ItemContainerTransitions="{StaticResource ListviewTransitions}"
-                      HorizontalAlignment="Stretch" VerticalAlignment="Top" 
-                      SelectionMode="None"
-                      MinHeight="300"/>
         </Grid>
     </StackPanel>
 </Page>
