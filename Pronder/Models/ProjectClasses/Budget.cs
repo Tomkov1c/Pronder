@@ -68,5 +68,11 @@ public class BudgetItem : ObservableObject
 
 
     [JsonIgnore] public Guid Id { get; private set; }
-    [JsonIgnore] public SolidColorBrush Foreground { get; set; }
+    [JsonIgnore] private SolidColorBrush foreground;
+    [JsonIgnore] public SolidColorBrush Foreground
+    {
+        get => foreground;
+        set => SetProperty(ref foreground, value);
+    }
+
 }

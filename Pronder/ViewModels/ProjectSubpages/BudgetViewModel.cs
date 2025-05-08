@@ -207,6 +207,20 @@ public partial class ProjectBudgetViewModel : ObservableRecipient
         _project.Budget.Items = Items.ToList();
         NoItems = Items.Any() ? Visibility.Collapsed : Visibility.Visible;
         NegateNoItems = Items.Any() ? Visibility.Visible : Visibility.Collapsed;
+
+        CurrentBudget = Convert.ToDouble(InitialBudget);
+        foreach (BudgetItem item in Items)
+        {
+            if (item.DoesDecrease)
+            {
+                CurrentBudget -= item.Amount;
+            }
+            else
+            {
+                CurrentBudget += item.Amount;
+            }
+        }
+
         _project.SaveToFile();
     }
 }
