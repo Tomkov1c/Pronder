@@ -60,6 +60,7 @@ public sealed partial class EditProjectPopup : ContentDialog
             {
                 "General" => typeof(EditProjectPagesGeneralPage),
                 "External links" => typeof(EditProjectPagesExternalLinksPage),
+                "Budget" => typeof(EditProjectPagesBudgetPage),
                 _ => null
             };
 

@@ -10,5 +10,8 @@
     <Page Update="Styles\Icon8Icon.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\Edit\BudgetPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 </Project>

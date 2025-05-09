@@ -35,11 +35,16 @@
                     <NavigationViewItemHeader Content="Edit" Foreground="{ThemeResource TextFillColorPrimaryBrush}"/>
                     <NavigationViewItem Content="General" Icon="Page2" IsSelected="True" x:Name="FirstNavItem"/>
                     <NavigationViewItem Content="External links" Icon="Link" />
-                    <NavigationViewItem Content="Subpages" Icon="Repair">
+                    <NavigationViewItem Content="Subpages" Icon="Repair" IsExpanded="True">
                         <NavigationViewItem.MenuItems>
                             <NavigationViewItem Content="Todo List">
                                 <NavigationViewItem.Icon>
                                     <ImageIcon Source="ms-appx:///Assets/Icon8/Color/icons8-todo-list-512.png"/>
+                                </NavigationViewItem.Icon>
+                            </NavigationViewItem>
+                            <NavigationViewItem Content="Budget">
+                                <NavigationViewItem.Icon>
+                                    <ImageIcon Source="ms-appx:///Assets/Icon8/Color/icons8-money-bag-512.png"/>
                                 </NavigationViewItem.Icon>
                             </NavigationViewItem>
                         </NavigationViewItem.MenuItems>
