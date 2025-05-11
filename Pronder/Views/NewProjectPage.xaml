@@ -4,181 +4,85 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:CommunityToolkit.WinUI.Controls"
     mc:Ignorable="d">
 
     <ScrollViewer>
-        <StackPanel Orientation="Vertical">
-            <Grid Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
-                    Padding="24, 16"
-                    CornerRadius="{StaticResource ControlCornerRadius}"
-                    Margin="0, 0, 0, 16">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto" />
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <FontIcon Glyph="&#xE8AC;"
-                      Margin="0, 0, 16, 0"
-                      FontSize="17"
-                      Grid.Column="0"/>
-                <StackPanel Orientation="Vertical"
-                        Margin="8, 0, 0, 0"
-                        Grid.Column="1">
-                    <TextBlock Text="Name"
-                           Style="{StaticResource BodyStrongTextBlockStyle}"/>
-                    <TextBlock Text="Name you new or already existing project."
-                           Style="{StaticResource CaptionTextBlockStyle}"
-                           Foreground="{ThemeResource TextFillColorTertiaryBrush}"/>
-                </StackPanel>
-                <TextBox PlaceholderText="Name"
-                     Width="250"
-                     HorizontalAlignment="Right"
-                     Grid.Column="2"
-                     x:Name="ProjectNameTextbox"/>
-            </Grid>
-            <Grid Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
-              Padding="24, 16"
-              CornerRadius="{StaticResource ControlCornerRadius}"
-              Margin="0, 0, 0, 16">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto" />
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <FontIcon Glyph="&#xEB41;"
-                              Margin="0, 0, 16, 0"
-                              FontSize="17"
-                              Grid.Column="0"/>
-                <StackPanel Orientation="Vertical"
-                                Margin="8, 0, 0, 0"
-                                Grid.Column="1">
-                    <TextBlock Text="Tag"
-                                   Style="{StaticResource BodyStrongTextBlockStyle}"/>
-                    <TextBlock Text="What category does your project fall under (ex. Graphic Design, Fullstack Application, ...)"
-                                   Style="{StaticResource CaptionTextBlockStyle}"
-                                   Foreground="{ThemeResource TextFillColorTertiaryBrush}"/>
-                </StackPanel>
-                <TextBox PlaceholderText="Tag"
-                     Width="250"
-                     HorizontalAlignment="Right"
-                     Grid.Column="2"
-                     x:Name="ProjectTagTextbox"/>
-            </Grid>
-            <StackPanel Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
-              Padding="24, 16"
-              CornerRadius="{StaticResource ControlCornerRadius}"
-              Margin="0, 0, 0, 16">
-                <StackPanel Orientation="Horizontal">
-                    <FontIcon Glyph="&#xE8E4;"
-                          Margin="0, 0, 16, 0"
-                          FontSize="17"
-                          Grid.Column="0"/>
-                    <StackPanel Orientation="Vertical"
-                            Margin="8, 0, 0, 0"
-                            Grid.Column="1"
-                            VerticalAlignment="Center">
-                        <TextBlock Text="Description"
-                               Style="{StaticResource BodyStrongTextBlockStyle}"/>
-                        <TextBlock Text="Describe your project."
-                               Style="{StaticResource CaptionTextBlockStyle}"
-                               Foreground="{ThemeResource TextFillColorTertiaryBrush}"/>
-                    </StackPanel>
-                </StackPanel>
-                <TextBox PlaceholderText="Description"
-                     Width="auto"
-                     Margin="0, 24, 0 ,0"
-                     TextWrapping="Wrap"
-                     AcceptsReturn="True"
-                     HorizontalAlignment="Stretch"
-                     Grid.Column="2"
-                     x:Name="ProjectAboutTextbox"/>
-            </StackPanel>
-            <Grid Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
-              Padding="24, 16"
-              CornerRadius="{StaticResource ControlCornerRadius}"
-              Margin="0, 0, 0, 16">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto" />
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <FontIcon Glyph="&#xE8B9;"
-                      Margin="0, 0, 16, 0"
-                      FontSize="17"
-                      Grid.Column="0"/>
-                <StackPanel Orientation="Vertical"
-                        Margin="8, 0, 0, 0"
-                        Grid.Column="1">
-                    <TextBlock Text="Icon"
-                       Style="{StaticResource BodyStrongTextBlockStyle}"/>
-                    <TextBlock Text="Give your project an icon so it can be easaly spoted from the side bar."
-                       Style="{StaticResource CaptionTextBlockStyle}"
-                       Foreground="{ThemeResource TextFillColorTertiaryBrush}"/>
-                </StackPanel>
-                <Button HorizontalAlignment="Right"
-                    Margin="0, 0, 10, 0"
-                    Padding="8"
-                    Grid.Column="2"
-                    x:Name="ProjectIconPathButton">
-                    <Button.Content>
-                        <StackPanel Orientation="Horizontal">
-                            <FontIcon Glyph="&#xEC50;" FontSize="15"/>
-                            <TextBlock Text="Pick a file"
-                   Style="{StaticResource BodyTextBlockStyle}"
-                   Margin="8, 0, 0, 0"/>
-                        </StackPanel>
-                    </Button.Content>
-                </Button>
-            </Grid>
-            <Grid Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
-              Padding="24, 16"
-              CornerRadius="{StaticResource ControlCornerRadius}"
-              Margin="0, 0, 0, 16">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto" />
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <FontIcon Glyph="&#xE7FB;"
-                      Margin="0, 0, 16, 0"
-                      FontSize="17"
-                      Grid.Column="0"/>
-                <StackPanel Orientation="Vertical"
-                        Margin="8, 0, 0, 0"
-                        Grid.Column="1">
-                    <TextBlock Text="Banner"
-                           Style="{StaticResource BodyStrongTextBlockStyle}"/>
-                    <TextBlock Text="Give your project a banner."
-                           Style="{StaticResource CaptionTextBlockStyle}"
-                           Foreground="{ThemeResource TextFillColorTertiaryBrush}"/>
-                </StackPanel>
-                <Button HorizontalAlignment="Right"
-                    Margin="0, 0, 10, 0"
-                    Padding="8"
-                    Grid.Column="2"
-                    x:Name="ProjectBannerPathButton">
-                    <Button.Content>
-                        <StackPanel Orientation="Horizontal">
-                            <FontIcon Glyph="&#xEC50;" FontSize="15"/>
-                            <TextBlock Text="Pick a file"
-                                   Style="{StaticResource BodyTextBlockStyle}"
+        <StackPanel Orientation="Vertical" Spacing="8">
+            <InfoBar IsOpen="False" Severity="Error" Title="Error" IsClosable="False"
+                     Message="The project must have a name at least." x:Name="InfoBar"/>
+            <StackPanel Orientation="Vertical" Spacing="4">
+                <StackPanel.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </StackPanel.Transitions>
+                <controls:SettingsCard Header="Name"
+                                       Description="Name you new or already existing project">
+                    <controls:SettingsCard.HeaderIcon>
+                        <FontIcon FontFamily="{StaticResource Icon8Outline}" Glyph="&#xe907;"/>
+                    </controls:SettingsCard.HeaderIcon>
+                    <TextBox PlaceholderText="Name" Width="250" Text="{Binding Name, Mode=TwoWay}"
+                             x:Name="NameTextBox"/>
+                </controls:SettingsCard>
+                <controls:SettingsCard Header="Tag"
+                                       Description="What is your project">
+                    <controls:SettingsCard.HeaderIcon>
+                        <FontIcon FontFamily="{StaticResource Icon8Outline}" Glyph="&#xe906;"/>
+                    </controls:SettingsCard.HeaderIcon>
+                    <TextBox PlaceholderText="Tag" Width="250" Text="{Binding Tag, Mode=TwoWay}"/>
+                </controls:SettingsCard>
+                <controls:SettingsCard Header="Description"
+                                       Description="Describe your project" ContentAlignment="Vertical" 
+                                       HorizontalContentAlignment="Stretch">
+                    <controls:SettingsCard.HeaderIcon>
+                        <FontIcon FontFamily="{StaticResource Icon8Outline}" Glyph="&#xe905;"/>
+                    </controls:SettingsCard.HeaderIcon>
+                    <TextBox PlaceholderText="Description" TextWrapping="Wrap" AcceptsReturn="True"
+                             Text="{Binding Description, Mode=TwoWay}"/>
+                </controls:SettingsCard>
+                <controls:SettingsCard Header="Icon"
+                                       Description="Give your project an icon so it can be easaly spoted from the side bar" >
+                    <controls:SettingsCard.HeaderIcon>
+                        <FontIcon FontFamily="{StaticResource Icon8Outline}" Glyph="&#xe904;"/>
+                    </controls:SettingsCard.HeaderIcon>
+                    <Button HorizontalAlignment="Right" Margin="0, 0, 10, 0" Padding="8"
+                            Command="{Binding OpenFilePickerCommand}" CommandParameter="Icon">
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <FontIcon Glyph="&#xEC50;" FontSize="15"/>
+                                <TextBlock Text="Pick a file" Style="{StaticResource BodyTextBlockStyle}"
+                                           Margin="8, 0, 0, 0"/>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                </controls:SettingsCard>
+                <controls:SettingsCard Header="Banner"
+                                       Description="Give your project a banner" >
+                    <controls:SettingsCard.HeaderIcon>
+                        <FontIcon FontFamily="{StaticResource Icon8Outline}" Glyph="&#xe903;"/>
+                    </controls:SettingsCard.HeaderIcon>
+                    <Button HorizontalAlignment="Right" Margin="0, 0, 10, 0" Padding="8" 
+                            Command="{Binding OpenFilePickerCommand}" CommandParameter="Banner">
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <FontIcon Glyph="&#xEC50;" FontSize="15"/>
+                                <TextBlock Text="Pick a file" Style="{StaticResource BodyTextBlockStyle}"
+                                           Margin="8, 0, 0, 0"/>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                </controls:SettingsCard>
+
+                <Button HorizontalAlignment="Stretch" Style="{StaticResource AccentButtonStyle}" Padding="8, 8" Command="{Binding CreateProjectCommand}"
+                        Click="CreateClicked" Margin="0, 12">
+                    <StackPanel Orientation="Horizontal">
+                        <FontIcon Glyph="&#xE710;" FontSize="15"/>
+                        <TextBlock Text="Create" Style="{StaticResource BodyTextBlockStyle}"
                                    Margin="8, 0, 0, 0"/>
-                        </StackPanel>
-                    </Button.Content>
+                    </StackPanel>
                 </Button>
-            </Grid>
-            <Button HorizontalAlignment="Stretch"
-                Style="{StaticResource AccentButtonStyle}"
-                Margin="0, 16"
-                Padding="8, 8"
-                Click="createNewProject">
-                <StackPanel Orientation="Horizontal">
-                    <FontIcon Glyph="&#xE710;" FontSize="15"/>
-                    <TextBlock Text="Create"
-                           Style="{StaticResource BodyTextBlockStyle}"
-                           Margin="8, 0, 0, 0"/>
-                </StackPanel>
-            </Button>
+            </StackPanel>
         </StackPanel>
     </ScrollViewer>
 </Page>

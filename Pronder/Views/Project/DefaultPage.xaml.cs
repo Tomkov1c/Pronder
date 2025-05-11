@@ -29,7 +29,7 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
     int previousSelectedIndex;
     public string path;
 
-    public static event Action OnProjectCreated;
+    public static event Action OnProjectDeleted;
 
     EditProjectPopup editPopup;
     public GeneralProjectDisplayPage()
@@ -184,8 +184,10 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
         if (result == ContentDialogResult.Primary)
         {
             File.Delete(path);
-            OnProjectCreated?.Invoke();
+            OnProjectDeleted?.Invoke();
         }
+
+
     }
 
     async void editData(object sender, RoutedEventArgs e)

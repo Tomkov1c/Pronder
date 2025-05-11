@@ -40,6 +40,9 @@ public partial class ShellViewModel : ObservableRecipient
          
         StaticPages.Add(new Pages() { Icon = new SymbolIcon(Symbol.Home), Name = "Home", PageType = typeof(HomePage) });
         StaticPages.Add(new object());
+
+        NewProjectViewModel.OnProjectCreated += () => ImportProjects();
+        GeneralProjectDisplayPage.OnProjectDeleted += () => ImportProjects();
     }
 
     public async Task ImportProjects()
