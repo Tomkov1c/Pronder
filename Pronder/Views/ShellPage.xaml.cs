@@ -18,18 +18,18 @@ using Microsoft.UI.Xaml.Media.Animation;
 namespace Pronder.Views;
 public sealed partial class ShellPage : Page
 {
-    public ShellViewModel _viewModel = new();
+    public ShellViewModel _viewModel;
 
     public ShellPage()
     {
-        importProjects();
         InitializeComponent();
-
-        NavigationService.Instance.NavigationView = NavigationViewControl;
+        _viewModel = new(new NavigationService(NavigationFrame, NavigationViewControl));
+        importProjects();
 
         App.MainWindow.ExtendsContentIntoTitleBar = true;
         App.MainWindow.SetTitleBar(AppTitleBar);
-        App.MainWindow.Activated += MainWindow_Activated;
+        App.AppTitlebar = AppTitleBarText as UIElement;
+        TitleBarHelper.UpdateTitleBar(RequestedTheme);
 
         SettingsInterfaceViewModel.OnOrderChanged += importProjects;
 
@@ -43,42 +43,6 @@ public sealed partial class ShellPage : Page
         DataContext = _viewModel;
     }
 
-    private void OnLoaded(object sender, RoutedEventArgs e)
-    {
-        TitleBarHelper.UpdateTitleBar(RequestedTheme);
-    }
-
-    private void MainWindow_Activated(object sender, WindowActivatedEventArgs args)
-    {
-        App.AppTitlebar = AppTitleBarText as UIElement;
-    }
-
-    private void NavigationViewControl_DisplayModeChanged(NavigationView sender, NavigationViewDisplayModeChangedEventArgs args)
-    {
-        AppTitleBarParent.Margin = new Thickness()
-        {
-            Left = 48,
-            Top = AppTitleBar.Margin.Top,
-            Right = AppTitleBar.Margin.Right,
-            Bottom = AppTitleBar.Margin.Bottom
-        };
-    }
-
-    void openSettings(object sender, RoutedEventArgs e)
-    {
-        NavigationFrame.Navigate(typeof(SettingsPage));
-        NavigationViewControl.SelectedItem = null;
-    }
-    void openNewProject(object sender, RoutedEventArgs e)
-    {
-        NavigationFrame.Navigate(typeof(NewProjectPage));
-        NavigationViewControl.SelectedItem = null;
-    }
-    void openAbout(object sender, RoutedEventArgs e)
-    {
-        NavigationFrame.Navigate(typeof(AboutPage));
-        NavigationViewControl.SelectedItem = null;
-    }
     void ActivatePageHelp(object sender, RoutedEventArgs e)
     {
         var currentPage = NavigationFrame.Content as IPerPageHelpButtonAction;

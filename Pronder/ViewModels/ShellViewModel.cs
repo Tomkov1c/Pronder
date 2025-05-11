@@ -1,11 +1,14 @@
 ﻿using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media.Imaging;
 using Microsoft.UI.Xaml.Navigation;
 using Newtonsoft.Json;
+using Pronder.Classes;
 using Pronder.Contracts.Services;
 using Pronder.Helpers;
 using Pronder.Models;
@@ -16,20 +19,26 @@ namespace Pronder.ViewModels;
 
 public partial class ShellViewModel : ObservableRecipient
 {
+    private NavigationService? _navigationService;
+    private NavigationView? _navigationView;
+    public ICommand NavigateToPageCommand { get; private set; }
+
     private SettingsHelper localSettings = new();
 
     public Action ProjectImported;
 
-    [ObservableProperty]
-    private object? selected;
+    [ObservableProperty] private object? selected;
 
     public ObservableCollection<object> PaneItems { get; set; } = new();
     private ObservableCollection<object> StaticPages { get; set; } = new();
     private ObservableCollection<ProjectBrief> ProjectPages { get; set; } = new();
 
-    public ShellViewModel()
+    public ShellViewModel(NavigationService? navigationService)
     {
-        StaticPages.Add(new Pages() { Icon = new SymbolIcon(Symbol.Home), Name = "Home", PageType = typeof(NewProjectPage) });
+        _navigationService = navigationService;
+        NavigateToPageCommand = new RelayCommand<string>(NavigateToPage);
+         
+        StaticPages.Add(new Pages() { Icon = new SymbolIcon(Symbol.Home), Name = "Home", PageType = typeof(HomePage) });
         StaticPages.Add(new object());
     }
 
@@ -90,6 +99,11 @@ public partial class ShellViewModel : ObservableRecipient
         foreach (var page in StaticPages) PaneItems.Add(page);
         foreach (var project in ProjectPages) PaneItems.Add(project);
 
+    }
+
+    private void NavigateToPage(string? pageName)
+    {
+        _navigationService.NavigateTo(pageName);
     }
 }
 

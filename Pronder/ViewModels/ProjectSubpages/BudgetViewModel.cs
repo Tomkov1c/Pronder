@@ -24,9 +24,9 @@ public partial class ProjectBudgetViewModel : ObservableRecipient
 
     private EditBudgetPopup popup;
 
-    public string InitialBudget { get; set; } = _project.Budget.InitialBudget.ToString();
+    public string InitialBudget { get; set; }
 
-    private double _currentBudget = _project.Budget.InitialBudget;
+    private double _currentBudget;
     public double CurrentBudget
     {
         get => _currentBudget;
@@ -112,7 +112,7 @@ public partial class ProjectBudgetViewModel : ObservableRecipient
         RemoveItemCommand = new RelayCommand<BudgetItem?>(RemoveItem);
         EditItemCommand = new RelayCommand<BudgetItem?>(EditItem);
 
-        if (!_project.Budget.ItemsNullOrEmpty())
+        if (_project.Budget != null && !_project.Budget.ItemsNullOrEmpty())
         {
             foreach (BudgetItem item in _project.Budget.Items)
             {
@@ -134,6 +134,17 @@ public partial class ProjectBudgetViewModel : ObservableRecipient
         Items.CollectionChanged += (s, e) => Save();
         NoItems = Items.Any() ? Visibility.Collapsed : Visibility.Visible;
         NegateNoItems = Items.Any() ? Visibility.Visible : Visibility.Collapsed;
+
+        if (_project.Budget == null)
+        {
+            _project.Budget = new();
+        }
+        if (_project.Budget.InitialBudget == null)
+        {
+            _project.Budget.InitialBudget = 0;
+        }
+        InitialBudget = _project.Budget.InitialBudget.ToString();
+        _currentBudget = _project.Budget.InitialBudget;
     }
 
 

@@ -1,24 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Media.Animation;
 
 namespace Pronder.Classes
 {
-    class NavigationService
+    public class NavigationService
     {
-        private static NavigationService _instance;
-        public static NavigationService Instance => _instance ?? (_instance = new NavigationService());
+        public readonly Frame? _frame;
+        public readonly NavigationView? _view;
 
-        public NavigationView NavigationView
+        public NavigationService(Frame? frame, NavigationView? view)
         {
-            get; set;
+            _frame = frame;
+            _view = view;
         }
-        public NavigationViewItem ActiveItem
+
+        public void NavigateTo(string? pageName)
         {
-            get; set;
+            var fullTypeName = $"Pronder.Views.{pageName}";
+            var pageType = Type.GetType(fullTypeName);
+
+            if (pageType != null)
+            {
+                _view.SelectedItem = null;
+                _frame.Navigate(pageType, null, new DrillInNavigationTransitionInfo());
+            }
+            else
+            {
+                Debug.WriteLine($"Page not found: {fullTypeName}");
+            }
         }
     }
 }

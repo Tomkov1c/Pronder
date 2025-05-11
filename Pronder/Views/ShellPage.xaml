@@ -9,7 +9,6 @@
     xmlns:i="using:Microsoft.Xaml.Interactivity"
     xmlns:local="using:Pronder.ViewModels"
     xmlns:localviews="using:Pronder.Views"
-    Loaded="OnLoaded"
     x:Name="ShellPageName">
 
     <Page.Resources>
@@ -39,7 +38,7 @@
         <Grid Canvas.ZIndex="1" Height="{Binding ElementName=NavigationViewControl, Path=CompactPaneLength}"
               HorizontalAlignment="Stretch" IsHitTestVisible="True" VerticalAlignment="Top"
               x:Name="AppTitleBarParent" >
-            <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="0, 0, 0, 0">
+            <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="48, 0, 0, 0">
                 <Button Padding="8" Width="32" Height="32" IsTabStop="False" x:Name="AppTitleBarButton"
                         Background="{ThemeResource ControlFillColorTransparentBrush}"
                         BorderBrush="{ThemeResource ControlFillColorTransparentBrush}">
@@ -48,36 +47,36 @@
                     </Button.Content>
                     <Button.Flyout>
                         <MenuFlyout Placement="BottomEdgeAlignedLeft">
-                            <MenuFlyoutItem Text="New project" Width="250" Click="openNewProject" Icon="Add">
-                                <ToolTipService.ToolTip>
-                                    <ToolTip Content="Create a new project." />
-                                </ToolTipService.ToolTip>
+                            <MenuFlyoutItem Text="New project" Width="250" Icon="Add" ToolTipService.ToolTip="Create a new project"
+                                            Command="{Binding NavigateToPageCommand}" CommandParameter="NewProjectPage">
                                 <MenuFlyoutItem.KeyboardAccelerators>
                                     <KeyboardAccelerator Modifiers="Control, Shift" Key="N"/>
                                 </MenuFlyoutItem.KeyboardAccelerators>
                             </MenuFlyoutItem>
-                            <MenuFlyoutSeparator />
-                            <MenuFlyoutItem Text="About" Click="openAbout">
+                            
+                            <!--<MenuFlyoutSeparator />
+                            
+                            <MenuFlyoutItem Text="About" ToolTipService.ToolTip="About the app."
+                                            Command="{Binding NavigateToPageCommand}" CommandParameter="AboutPage">
                                 <MenuFlyoutItem.Icon>
                                     <FontIcon Glyph="&#xE946;" />
                                 </MenuFlyoutItem.Icon>
-                                <ToolTipService.ToolTip>
-                                    <ToolTip Content="About the app." />
-                                </ToolTipService.ToolTip>
                             </MenuFlyoutItem>
-                            <MenuFlyoutItem Text="Help" Click="ActivatePageHelp" Icon="Help">
-                                <ToolTipService.ToolTip>
-                                    <ToolTip Content="Get more inforamtion about the current page." />
-                                </ToolTipService.ToolTip>
+                            
+                            <MenuFlyoutItem Text="Help" Click="ActivatePageHelp" Icon="Help" 
+                                            ToolTipService.ToolTip="Get more inforamtion about the current page.">
                                 <MenuFlyoutItem.KeyboardAccelerators>
                                     <KeyboardAccelerator Key="F1"/>
                                 </MenuFlyoutItem.KeyboardAccelerators>
-                            </MenuFlyoutItem>
+                            </MenuFlyoutItem>-->
+                            
                             <MenuFlyoutSeparator />
-                            <MenuFlyoutItem Text="Settings" Click="openSettings" Icon="Setting">
-                                <ToolTipService.ToolTip>
-                                    <ToolTip Content="Open settings." />
-                                </ToolTipService.ToolTip>
+
+                            <MenuFlyoutItem Text="Settings" Icon="Setting" ToolTipService.ToolTip="Open settings"
+                                            Command="{Binding NavigateToPageCommand}" CommandParameter="SettingsPage"> 
+                                <MenuFlyoutItem.KeyboardAccelerators>
+                                    <KeyboardAccelerator Key="F12"/>
+                                </MenuFlyoutItem.KeyboardAccelerators>
                             </MenuFlyoutItem>
                         </MenuFlyout>
                     </Button.Flyout>
@@ -93,7 +92,6 @@
         <NavigationView x:Name="NavigationViewControl" SelectionChanged="ItemClicked" Canvas.ZIndex="0" 
                         IsBackButtonVisible="Collapsed" SelectedItem="{x:Bind _viewModel.Selected, Mode=OneWay}" 
                         IsSettingsVisible="False" ExpandedModeThresholdWidth="1280" 
-                        DisplayModeChanged="NavigationViewControl_DisplayModeChanged"
                         MenuItemTemplateSelector="{StaticResource ItemTemplateSelector}"
                         IsFocusEngaged="False">
             <NavigationView.Transitions>
