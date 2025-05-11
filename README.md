@@ -12,6 +12,9 @@
 <p align="center">
   <strong>This project is in early development!</strong>
 </p>
+<p align="center">
+    <img alt="Screenshot" title="Screenshot" src=".github/screenshot.png">
+</p>
 
 ## Table of Contents
 
