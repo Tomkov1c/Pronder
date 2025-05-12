@@ -1,58 +1,85 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Media;
 using Newtonsoft.Json;
+using Pronder.Classes;
 using Pronder.Models;
 
 namespace Pronder.ViewModels;
 
 public partial class EditProjectPagesExternalLinksViewModel : ObservableRecipient
 {
+    public ICommand AddItemCommand { get; private set; }
+    public ICommand RemoveItemCommand { get; private set; }
+
     public static Project? _project => Project.GlobalInstance;
 
-    public ObservableCollection<Link> Links
+    public ObservableCollection<Link> Links { get; set; } = new();
+
+    private int _selectedItemTypeIndex;
+    public int SelectedItemTypeIndex
     {
-        get; set;
+        get => _selectedItemTypeIndex;
+        set
+        {
+            _selectedItemTypeIndex = value; OnPropertyChanged();
+        }
     }
+
+    [ObservableProperty] public string newItemName;
+    [ObservableProperty] public string newItemHref;
 
     public EditProjectPagesExternalLinksViewModel()
     {
-        Links = new ObservableCollection<Link>();
-    }
+        AddItemCommand = new RelayCommand(AddItem);
+        RemoveItemCommand = new RelayCommand<Link?>(RemoveItem);
 
-    public void AddNewLink(string name, string href)
-    {
-        Link link = new Link()
+        Links.CollectionChanged += (e, s) => Save();
+
+        foreach (Link link in _project.Links)
         {
-            Name = name,
-            Href = href,
-            Type = "link"
-        };
-        _project.Links.Add(link);
-        SaveData();
+            link.PropertyChanged += (e, s) => Save();
+            link.Icon = link.IconFinder();
+            Links.Add(link);
+        }
     }
 
-    public void AddNewPath(string name, string href)
+    private void AddItem()
     {
-        Link path = new Link()
+        var newItem = new Link
         {
-            Name = name,
-            Href = href,
-            Type = "path"
+            Name = NewItemName,
+            Href = NewItemHref,
+            Type = SelectedItemTypeIndex == 0 ? "link" : "path",
         };
-        _project.Links.Add(path);
-        SaveData();
+        NewItemName = null;
+        NewItemHref = null;
+        SelectedItemTypeIndex = 0;
+
+        newItem.Icon = newItem.IconFinder();
+        Links.Add(newItem);
+    }
+    private void RemoveItem(Link? itemToRemove)
+    {
+        foreach (Link item in Links)
+        {
+            if (item.Id == itemToRemove.Id)
+            {
+                Links.Remove(itemToRemove);
+
+                return;
+            }
+        }
     }
 
-    private void SaveData()
-    {
-        Project.GlobalInstance.SaveToFile();
-    }
 
-    public event PropertyChangedEventHandler PropertyChanged;
-
-    protected virtual void OnPropertyChanged(string propertyName)
+    private void Save()
     {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        _project.Links = Links.ToList();
+        _project.SaveToFile();
     }
 }

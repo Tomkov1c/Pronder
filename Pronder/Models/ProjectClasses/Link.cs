@@ -3,23 +3,42 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media.Imaging;
+using Newtonsoft.Json;
 
 namespace Pronder.Models;
-public class Link
+public class Link : ObservableObject
 {
+    private string name;
     public string Name
     {
-        get; set;
+        get => name;
+        set => SetProperty(ref name, value);
     }
+
+    private string type;
     public string Type
     {
-        get; set;
+        get => type;
+        set => SetProperty(ref type, value);
     }
+
+    private string href;
     public string Href
     {
-        get; set;
+        get => href;
+        set => SetProperty(ref href, value);
+    }
+
+    [JsonIgnore] public Guid Id { get; set; } 
+    [JsonIgnore] public BitmapImage Icon { get; set; } 
+
+    public Link()
+    {
+        Id = new Guid();
     }
 
     public BitmapImage IconFinder()

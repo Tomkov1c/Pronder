@@ -66,15 +66,15 @@
     <BitmapImage x:Key="Icon8Website" UriSource="ms-appx:///Assets/Icon8/Color/icons8-website-512.png" />
 
     <!--    Brands      -->
-    <BitmapImage x:Key="Icon8AppleMusic" UriSource="ms-appx:///Assets/Icon8/Color/icons8-apple-music-512.png" />
-    <BitmapImage x:Key="Icon8Behance" UriSource="ms-appx:///Assets/Icon8/Color/icons8-behance-512.png" />
-    <BitmapImage x:Key="Icon8Facebook" UriSource="ms-appx:///Assets/Icon8/Color/icons8-facebook-512.png" />
-    <BitmapImage x:Key="Icon8Github" UriSource="ms-appx:///Assets/Icon8/Color/icons8-github-512.png" />
-    <BitmapImage x:Key="Icon8Instagram" UriSource="ms-appx:///Assets/Icon8/Color/icons8-instagram-512.png" />
-    <BitmapImage x:Key="Icon8KoFi" UriSource="ms-appx:///Assets/Icon8/Color/icons8-ko-fi-512.png" />
-    <BitmapImage x:Key="Icon8Soundcloud" UriSource="ms-appx:///Assets/Icon8/Color/icons8-soundcloud-512.png" />
-    <BitmapImage x:Key="Icon8Spotify" UriSource="ms-appx:///Assets/Icon8/Color/icons8-spotify-512.png" />
-    <BitmapImage x:Key="Icon8X" UriSource="ms-appx:///Assets/Icon8/Color/icons8-x-512.png" />
-    <BitmapImage x:Key="Icon8Youtube" UriSource="ms-appx:///Assets/Icon8/Color/icons8-youtube-512.png" />
-    <BitmapImage x:Key="Icon8YoutubeMusic" UriSource="ms-appx:///Assets/Icon8/Color/icons8-youtube-music-512.png" />
+    <BitmapImage x:Key="Icon8AppleMusic" UriSource="ms-appx:///Assets/Icon8/Color/Brands/icons8-apple-music-512.png" />
+    <BitmapImage x:Key="Icon8Behance" UriSource="ms-appx:///Assets/Icon8/Color/Brands/icons8-behance-512.png" />
+    <BitmapImage x:Key="Icon8Facebook" UriSource="ms-appx:///Assets/Icon8/Color/Brands/icons8-facebook-512.png" />
+    <BitmapImage x:Key="Icon8Github" UriSource="ms-appx:///Assets/Icon8/Color/Brands/icons8-github-512.png" />
+    <BitmapImage x:Key="Icon8Instagram" UriSource="ms-appx:///Assets/Icon8/Color/Brands/icons8-instagram-512.png" />
+    <BitmapImage x:Key="Icon8KoFi" UriSource="ms-appx:///Assets/Icon8/Color/Brands/icons8-ko-fi-512.png" />
+    <BitmapImage x:Key="Icon8Soundcloud" UriSource="ms-appx:///Assets/Icon8/Color/Brands/icons8-soundcloud-512.png" />
+    <BitmapImage x:Key="Icon8Spotify" UriSource="ms-appx:///Assets/Icon8/Color/Brands/icons8-spotify-512.png" />
+    <BitmapImage x:Key="Icon8X" UriSource="ms-appx:///Assets/Icon8/Color/Brands/icons8-x-512.png" />
+    <BitmapImage x:Key="Icon8Youtube" UriSource="ms-appx:///Assets/Icon8/Color/Brands/icons8-youtube-512.png" />
+    <BitmapImage x:Key="Icon8YoutubeMusic" UriSource="ms-appx:///Assets/Icon8/Color/Brands/icons8-youtube-music-512.png" />
 </ResourceDictionary>

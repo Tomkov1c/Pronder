@@ -190,8 +190,8 @@ public sealed partial class GeneralProjectDisplayPage : Page, IPerPageHelpButton
 
     }
 
-    async void editData(object sender, RoutedEventArgs e)
+    void editData(object sender, RoutedEventArgs e)
     {
-        await editPopup.ShowAsync();
+        editPopup.ShowAsync();
     }
 }

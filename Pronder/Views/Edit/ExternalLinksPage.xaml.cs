@@ -22,11 +22,10 @@ namespace Pronder.Views;
 
 public sealed partial class EditProjectPagesExternalLinksPage : Page
 {
-    public EditProjectPagesExternalLinksViewModel _viewModel;
+    public EditProjectPagesExternalLinksViewModel _viewModel = new();
 
     public EditProjectPagesExternalLinksPage()
     {
-        _viewModel = new EditProjectPagesExternalLinksViewModel();
         DataContext = _viewModel;
         InitializeComponent();
     }

@@ -9,13 +9,72 @@
     xmlns:mine="using:Pronder.Custom"
     mc:Ignorable="d">
 
+    <Page.Resources>
+        <DataTemplate x:Key="LinkDataTemplate">
+            <controls:SettingsExpander Header="{Binding Name}" Margin="0, 0, 0, 4">
+                <controls:SettingsExpander.HeaderIcon>
+                    <ImageIcon Source="{Binding Icon}" />
+                </controls:SettingsExpander.HeaderIcon>
+                <controls:SettingsExpander.Items>
+                    <controls:SettingsCard Header="Name">
+                        <TextBox Text="{Binding Name, Mode=TwoWay}" Width="300"/>
+                    </controls:SettingsCard>
+                    <controls:SettingsCard Header="Path/Link">
+                        <TextBox Text="{Binding Href, Mode=TwoWay}" Width="300"/>
+                    </controls:SettingsCard>
+                </controls:SettingsExpander.Items>
+                <controls:SettingsExpander.ContextFlyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Icon="Delete" Text="Delete" Command="{Binding DataContext.RemoveItemCommand, ElementName=MainListView}"
+                                        CommandParameter="{Binding}" />
+                    </MenuFlyout>
+                </controls:SettingsExpander.ContextFlyout>
+                <controls:SettingsExpander.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </controls:SettingsExpander.Transitions>
+            </controls:SettingsExpander>
+        </DataTemplate>
+    </Page.Resources>
+
 	<ScrollViewer x:Name="ContentArea" Padding="10, 0, 18, 10">
 		<StackPanel Orientation="Vertical" Padding="0, 42, 0, 12">
 			<TextBlock Text="External links" Style="{StaticResource TitleTextBlockStyle}" Margin="0, 0, 0, -6"/>
-            
-            <StackPanel Orientation="Vertical" x:Name="StackPanel" Spacing="4">
-                
-            </StackPanel>
+            <Button HorizontalAlignment="Right" VerticalAlignment="Top">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <FontIcon Glyph="&#xE710;" FontSize="18"/>
+                        <TextBlock Text="Add"/>
+                    </StackPanel>
+                </Button.Content>
+                <Button.Flyout>
+                    <Flyout Placement="BottomEdgeAlignedRight">
+                        <StackPanel Orientation="Vertical" Spacing="12">
+                            <controls:Segmented HorizontalAlignment="Stretch" 
+                                                SelectedIndex="{Binding SelectedItemTypeIndex, Mode=TwoWay}">
+                                <controls:SegmentedItem Content="Link" Icon="{ui:FontIcon Glyph=&#xE71B;}"/>
+                                <controls:SegmentedItem Content="Path" Icon="{ui:FontIcon Glyph=&#xE8B7;}"/>
+                            </controls:Segmented>
+                            <TextBox Width="300" Text="{Binding NewItemName, Mode=TwoWay}" PlaceholderText="Name"
+                                     TextWrapping="Wrap" AcceptsReturn="True"/>
+                            <TextBox Width="300" Text="{Binding NewItemHref, Mode=TwoWay}" PlaceholderText="Link/Path"
+                                     TextWrapping="Wrap" AcceptsReturn="True"/>
+
+                            <Button Content="Add" Style="{StaticResource AccentButtonStyle}" Command="{Binding AddItemCommand}"
+                                    Margin="0, 12, 0, 0" HorizontalAlignment="Stretch" />
+                        </StackPanel>
+                    </Flyout>
+                </Button.Flyout>
+            </Button>
+
+            <ListView x:Name="MainListView" ItemsSource="{Binding Links, Mode=TwoWay}" Margin="-16, 8, -13, 0"
+                      SelectionMode="None" MinHeight="300" ItemTemplate="{StaticResource LinkDataTemplate}">
+                <TransitionCollection>
+                    <EntranceThemeTransition IsStaggeringEnabled="True" />
+                    <ContentThemeTransition />
+                </TransitionCollection>
+            </ListView>
         </StackPanel>
 	</ScrollViewer>
 </Page>
