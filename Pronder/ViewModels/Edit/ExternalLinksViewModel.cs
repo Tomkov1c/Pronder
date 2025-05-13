@@ -39,7 +39,10 @@ public partial class EditProjectPagesExternalLinksViewModel : ObservableRecipien
         RemoveItemCommand = new RelayCommand<Link?>(RemoveItem);
 
         Links.CollectionChanged += (e, s) => Save();
-
+        if(_project.Links == null)
+        {
+            _project.Links = new();
+        }
         foreach (Link link in _project.Links)
         {
             link.PropertyChanged += (e, s) => Save();
