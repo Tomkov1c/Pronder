@@ -1,8 +1,0 @@
-[
-    {
-      "PageID": "GeneralProjectDisplayPage",
-      "DisplayName": "General",
-      "CsFile": "GeneralProjectDisplayPage.cs",
-      "ClassName": "Pronder.Views.GeneralProjectDisplayPage"
-    }
-]
