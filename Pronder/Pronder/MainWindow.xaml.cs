@@ -1,46 +1,45 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
-using Microsoft.UI.Xaml.Navigation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using Microsoft.UI.Xaml.Media.Animation;
+using Pronder.Interfaces;
+using Pronder.Views;
+using System;
+using Windows.Gaming.Input;
 
 namespace Pronder
 {
     public sealed partial class MainWindow : Window
     {
+        private static Frame _MainWindowFrame = null;
+
         public MainWindow()
         {
             InitializeComponent();
 
             this.ExtendsContentIntoTitleBar = true;
-            this.SetTitleBar(titleBar);
-            
+            this.SetTitleBar(AppTitleBar);
 
-            titleBar.PaneToggleRequested += (sender, args) =>
+            _MainWindowFrame = MainWindowFrame;
+
+            ChangeToPage(typeof(HomePage));
+
+            AppTitleBar.PaneToggleRequested += (sender, args) =>
             {
-                nvSample.IsPaneOpen = !nvSample.IsPaneOpen;
+                OnPaneExpandButtonPressed();
             };
-
-            titleBar.BackRequested += TitleBar_BackRequested;
         }
 
-        private void TitleBar_BackRequested(TitleBar sender, object args)
+
+        public static void ChangeToPage(Type pageType, object? additionalData = null)
         {
-            if (contentFrame.CanGoBack)
+            _MainWindowFrame.Navigate(pageType, additionalData, new DrillInNavigationTransitionInfo());
+        }
+
+        private void OnPaneExpandButtonPressed()
+        {
+            if (_MainWindowFrame?.Content is INavigationViewInterface navController)
             {
-                contentFrame.GoBack();
-            }
-            else
-            {
+                navController.TogglePane();
             }
         }
     }
