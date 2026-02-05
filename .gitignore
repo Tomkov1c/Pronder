@@ -1,11 +1,16 @@
-/Pronder/bin
-/Pronder/obj
-/Pronder.Core/bin
-/Pronder.Core/obj
-/.vs
+# Build outputs
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio
+.vs/
+
+# User-specific files
 *Tom-Laptop
 *Tom-PC
 debug.log
-/Pronder/Pronder/bin/x64/Debug/net8.0-windows10.0.19041.0
-/Pronder/Pronder/obj
-/Pronder/Pronder/bin/x64/Debug/net9.0-windows10.0.19041.0
+
+# AppPackages (if you have them)
+AppPackages/
