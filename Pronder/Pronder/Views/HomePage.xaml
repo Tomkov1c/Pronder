@@ -13,8 +13,9 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <NavigationView x:Name="PagePanel" Grid.Row="1" IsPaneToggleButtonVisible="False" IsBackButtonVisible="Collapsed">
-            <StackPanel Orientation="Vertical" Padding="32, 32, 0, 0">
+        <NavigationView x:Name="PagePanel" Grid.Row="1" IsPaneToggleButtonVisible="False" IsBackButtonVisible="Collapsed"
+                        PaneDisplayMode="Left" IsPaneOpen="False">
+            <StackPanel Orientation="Vertical" Padding="32, 32, 32, 64">
                 <Grid ColumnSpacing="8">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />

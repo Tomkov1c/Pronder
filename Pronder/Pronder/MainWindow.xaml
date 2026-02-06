@@ -23,13 +23,38 @@
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Row="0" Grid.Column="0">
-            <TitleBar x:Name="AppTitleBar" x:Uid="AppName" IsBackButtonVisible="True" IsPaneToggleButtonVisible="True">
-                <TitleBar.IconSource>
-                    <ImageIconSource ImageSource="ms-appx:///Assets/Icon.png" />
-                </TitleBar.IconSource>
+            <TitleBar x:Name="AppTitleBar" x:Uid="AppName" IsBackButtonVisible="false" IsPaneToggleButtonVisible="True"
+                      HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center">
+                <TitleBar.LeftHeader>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                Spacing="6">
+                        <Button Height="42" Background="Transparent" BorderBrush="Transparent">
+                            <Button.Content>
+                                <ImageIcon Source="ms-appx:///Images/StoreLogo.png" Width="16"/>
+                            </Button.Content>
+                            <Button.Flyout>
+                                <MenuFlyout Placement="BottomEdgeAlignedLeft">
+                                    <MenuFlyoutItem x:Uid="AppTitleBar-AppIcon-Menu-Home">
+                                        <MenuFlyoutItem.Icon>
+                                            <ImageIcon Source="ms-appx:///Assets/Icon8/Color/icons8-home-512.png" />
+                                        </MenuFlyoutItem.Icon>
+                                        <MenuFlyoutItem.KeyboardAccelerators>
+                                            <KeyboardAccelerator Key="T" Modifiers="Control"/>
+                                        </MenuFlyoutItem.KeyboardAccelerators>
+                                    </MenuFlyoutItem>
+                                    <MenuFlyoutItem x:Uid="AppTitleBar-AppIcon-Menu-Ideas">
+                                        <MenuFlyoutItem.Icon>
+                                            <ImageIcon Source="ms-appx:///Assets/Icon8/Color/icons8-lightbulb-512.png" />
+                                        </MenuFlyoutItem.Icon>
+                                    </MenuFlyoutItem>
+                                </MenuFlyout>
+                            </Button.Flyout>
+                        </Button>
+                    </StackPanel>
+                </TitleBar.LeftHeader>
                 <TitleBar.Content>
-                    <AutoSuggestBox MaxWidth="360" Width="360" MinWidth="100" HorizontalAlignment="Stretch" VerticalAlignment="Center" 
-                                    PlaceholderText="Search.." QueryIcon="Find" />
+                    <AutoSuggestBox PlaceholderText="Search.." QueryIcon="Find"
+                                    Width="260" HorizontalAlignment="Center" />
                 </TitleBar.Content>
             </TitleBar>
         </Grid>
