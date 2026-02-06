@@ -120,10 +120,16 @@
   <data name="AppName.Title" xml:space="preserve">
     <value>Pronder</value>
   </data>
+  <data name="AppTitleBar-AppIcon-Menu-AppSettings.Text" xml:space="preserve">
+    <value>App Settings</value>
+  </data>
   <data name="AppTitleBar-AppIcon-Menu-Home.Text" xml:space="preserve">
     <value>Home</value>
   </data>
   <data name="AppTitleBar-AppIcon-Menu-Ideas.Text" xml:space="preserve">
     <value>Ideas</value>
+  </data>
+  <data name="AppTitleBar-SearchBar.PlaceholderText" xml:space="preserve">
+    <value>Search</value>
   </data>
 </root>

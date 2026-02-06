@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Pronder.Helpers"
     xmlns:views="using:Pronder.Views"
+    xmlns:settings="using:Pronder.Views.SettingsPages"
     xmlns:windowex="using:WinUIEx"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -54,13 +55,20 @@
                                             <ImageIcon Source="ms-appx:///Assets/Icon8/Color/icons8-lightbulb-512.png" />
                                         </MenuFlyoutItem.Icon>
                                     </MenuFlyoutItem>
+                                    <MenuFlyoutSeparator />
+                                    <MenuFlyoutItem x:Uid="AppTitleBar-AppIcon-Menu-AppSettings"
+                                                    local:NavigationHelper.NavigateTo="settings:AppSettingsPage">
+                                        <MenuFlyoutItem.Icon>
+                                            <ImageIcon Source="ms-appx:///Assets/Icon8/Color/icons8-settings-512.png" />
+                                        </MenuFlyoutItem.Icon>
+                                    </MenuFlyoutItem>
                                 </MenuFlyout>
                             </Button.Flyout>
                         </Button>
                     </StackPanel>
                 </TitleBar.LeftHeader>
                 <TitleBar.Content>
-                    <AutoSuggestBox PlaceholderText="Search.." QueryIcon="Find"
+                    <AutoSuggestBox x:Uid="AppTitleBar-SearchBar" QueryIcon="Find"
                                     Width="260" HorizontalAlignment="Center" />
                 </TitleBar.Content>
             </TitleBar>
