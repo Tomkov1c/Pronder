@@ -1,9 +1,12 @@
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media.Animation;
+using Pronder.Helpers;
 using Pronder.Interfaces;
 using Pronder.Views;
 using System;
+using System.Linq;
+using System.Security.AccessControl;
 using Windows.Gaming.Input;
 
 namespace Pronder
@@ -21,18 +24,12 @@ namespace Pronder
 
             _MainWindowFrame = MainWindowFrame;
 
-            ChangeToPage(typeof(HomePage));
+            _MainWindowFrame.Navigate(typeof(HomePage), null, new DrillInNavigationTransitionInfo());
 
             AppTitleBar.PaneToggleRequested += (sender, args) =>
             {
                 OnPaneExpandButtonPressed();
             };
-        }
-
-
-        public static void ChangeToPage(Type pageType, object? additionalData = null)
-        {
-            _MainWindowFrame.Navigate(pageType, additionalData, new DrillInNavigationTransitionInfo());
         }
 
         private void OnPaneExpandButtonPressed()
@@ -42,5 +39,17 @@ namespace Pronder
                 navController.TogglePane();
             }
         }
+
+        private void MenuFlyout_Opening(object sender, object e)
+        {
+            if (sender is MenuFlyout flyout)
+            {
+                foreach (var item in flyout.Items.OfType<MenuFlyoutItem>())
+                {
+                    NavigationHelper.SetFrame(item, _MainWindowFrame);
+                }
+            }
+        }
+
     }
 }
