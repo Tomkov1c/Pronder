@@ -8,10 +8,11 @@ using System;
 using System.Linq;
 using System.Security.AccessControl;
 using Windows.Gaming.Input;
+using WinUIEx;
 
 namespace Pronder
 {
-    public sealed partial class MainWindow : Window
+    public sealed partial class MainWindow : WindowEx
     {
         private static Frame _MainWindowFrame = null;
 
