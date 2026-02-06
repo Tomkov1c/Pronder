@@ -13,9 +13,10 @@
     <ApplicationLanguages>en-US</ApplicationLanguages>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="Views\BasicProjectPage.xaml" />
+    <None Remove="Custom\CustomContentDialog.xaml" />
     <None Remove="Views\HomePage.xaml" />
     <None Remove="Views\IdeasPage.xaml" />
+    <None Remove="Views\SettingsPages\AppSettingsPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,7 +34,19 @@
     <Folder Include="Assets\" />
     <Folder Include="Handlers\" />
     <Folder Include="ViewModels\" />
-    <Folder Include="Views\ProjectPages\" />
+    <Folder Include="Views\ProjectSubPages\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Views\SettingsPages\AppSettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Custom\CustomContentDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 
   <ItemGroup>
@@ -43,7 +56,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Update="Views\BasicProjectPage.xaml">
+    <Page Update="Views\ProjectPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
