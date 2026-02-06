@@ -27,7 +27,8 @@
 
         <Grid Grid.Row="0" Grid.Column="0">
             <TitleBar x:Name="AppTitleBar" x:Uid="AppName" IsBackButtonVisible="false" IsPaneToggleButtonVisible="True"
-                      HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center">
+                      HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" 
+                      PaneToggleRequested="OnPaneExpandButtonPressed">
                 <TitleBar.LeftHeader>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"
                                 Spacing="6">
@@ -37,7 +38,7 @@
                             </Button.Content>
                             <Button.Flyout>
                                 <MenuFlyout Placement="BottomEdgeAlignedLeft"
-                                            Opening="MenuFlyout_Opening">
+                                            Opening="OnMenuFlyoutOpening">
                                     <MenuFlyoutItem x:Uid="AppTitleBar-AppIcon-Menu-Home"
                                                     local:NavigationHelper.NavigateTo="views:HomePage">
                                         <MenuFlyoutItem.Icon>

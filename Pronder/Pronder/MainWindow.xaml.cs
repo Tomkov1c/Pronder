@@ -14,7 +14,6 @@ namespace Pronder
 {
     public sealed partial class MainWindow : WindowEx
     {
-        private static Frame _MainWindowFrame = null;
 
         public MainWindow()
         {
@@ -23,34 +22,24 @@ namespace Pronder
             this.ExtendsContentIntoTitleBar = true;
             this.SetTitleBar(AppTitleBar);
 
-            _MainWindowFrame = MainWindowFrame;
-
-            _MainWindowFrame.Navigate(typeof(HomePage), null, new DrillInNavigationTransitionInfo());
-
-            AppTitleBar.PaneToggleRequested += (sender, args) =>
-            {
-                OnPaneExpandButtonPressed();
-            };
+            MainWindowFrame.Navigate(typeof(HomePage), null, new DrillInNavigationTransitionInfo());
         }
 
-        private void OnPaneExpandButtonPressed()
-        {
-            if (_MainWindowFrame?.Content is INavigationViewInterface navController)
-            {
-                navController.TogglePane();
-            }
-        }
-
-        private void MenuFlyout_Opening(object sender, object e)
+        private void OnMenuFlyoutOpening(object sender, object e)
         {
             if (sender is MenuFlyout flyout)
             {
                 foreach (var item in flyout.Items.OfType<MenuFlyoutItem>())
                 {
-                    NavigationHelper.SetFrame(item, _MainWindowFrame);
+                    NavigationHelper.SetFrame(item, MainWindowFrame);
                 }
             }
         }
 
+        private void OnPaneExpandButtonPressed(Microsoft.UI.Xaml.Controls.TitleBar sender, object args)
+        {
+            if (MainWindowFrame?.Content is INavigationViewInterface navController)
+                navController.TogglePane();
+        }
     }
 }
