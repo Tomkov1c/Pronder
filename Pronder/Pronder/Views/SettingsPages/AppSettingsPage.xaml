@@ -6,9 +6,22 @@
     xmlns:local="using:Pronder.Views.SettingsPages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
 
     <Grid>
-
+        <NavigationView x:Name="PagePanel" Grid.Row="1" IsPaneToggleButtonVisible="False" IsBackButtonVisible="Collapsed"
+                        PaneDisplayMode="Left" IsPaneOpen="True" IsSettingsVisible="False" OpenPaneLength="300">
+            <NavigationView.MenuItems>
+                <NavigationViewItem x:Uid="AppSettings-Panel-General">
+                    <NavigationViewItem.Icon>
+                        <ImageIcon Source="ms-appx:///Assets/Icon8/Color/icons8-about-512.png"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+            <StackPanel Orientation="Vertical" Padding="32, 32, 32, 64">
+                
+            </StackPanel>
+        </NavigationView>
     </Grid>
 </Page>
