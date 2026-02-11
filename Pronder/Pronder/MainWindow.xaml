@@ -56,6 +56,16 @@
                                         </MenuFlyoutItem.Icon>
                                     </MenuFlyoutItem>
                                     <MenuFlyoutSeparator />
+                                    <MenuFlyoutItem x:Uid="AppTitleBar-AppIcon-Menu-New"
+                                                    local:NavigationHelper.NavigateTo="views:IdeasPage">
+                                        <MenuFlyoutItem.Icon>
+                                            <ImageIcon Source="ms-appx:///Assets/Icon8/Color/icons8-add-512.png" />
+                                        </MenuFlyoutItem.Icon>
+                                        <MenuFlyoutItem.KeyboardAccelerators>
+                                            <KeyboardAccelerator Modifiers="Control,Shift" Key="N" />
+                                        </MenuFlyoutItem.KeyboardAccelerators>
+                                    </MenuFlyoutItem>
+                                    <MenuFlyoutSeparator />
                                     <MenuFlyoutItem x:Uid="AppTitleBar-AppIcon-Menu-AppSettings"
                                                     local:NavigationHelper.NavigateTo="settings:AppSettingsPage">
                                         <MenuFlyoutItem.Icon>
@@ -74,6 +84,6 @@
             </TitleBar>
         </Grid>
 
-        <Frame x:Name="MainWindowFrame" Grid.Row="1" Grid.Column="0"/>
+        <Frame x:Name="MainWindowFrame" Grid.Row="1" Grid.Column="0" CacheSize="0"/>
     </Grid>
 </windowex:WindowEx>
