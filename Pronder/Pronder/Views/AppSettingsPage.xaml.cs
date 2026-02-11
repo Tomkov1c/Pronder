@@ -14,7 +14,7 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using Pronder.Interfaces;
 
-namespace Pronder.Views.SettingsPages;
+namespace Pronder.Views;
 
 public sealed partial class AppSettingsPage : Page, INavigationViewInterface
 {
