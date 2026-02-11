@@ -14,3 +14,4 @@ debug.log
 
 # AppPackages (if you have them)
 AppPackages/
+*.cache
