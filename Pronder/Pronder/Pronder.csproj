@@ -33,7 +33,7 @@
 
   <ItemGroup>
     <Folder Include="Assets\" />
-    <Folder Include="Handlers\" />
+    <Folder Include="Misc\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\ProjectSubPages\" />
   </ItemGroup>
