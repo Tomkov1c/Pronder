@@ -1,4 +1,5 @@
-﻿using Pronder.Interfaces;
+﻿using Pronder.FileSchemes;
+using Pronder.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,6 +8,7 @@ using System.Reflection;
 using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Devices.Geolocation;
 
 namespace Pronder.Handlers
 {
@@ -14,15 +16,21 @@ namespace Pronder.Handlers
     {
         public static readonly byte[] Magic = { 0x70, 0x72, 0x6F, 0x6E, 0x64 };
 
+        public static readonly string DefaultSaveDirectory = Path.Combine(
+            Windows.Storage.ApplicationData.Current.LocalFolder.Path,
+            "Projects"
+        );
+
         public static void Write(string path, IBinaryScheme scheme, object data)
         {
-            var versionField = scheme.GetType().GetField("Version", BindingFlags.Public | BindingFlags.Static);
+            var versionField = scheme.GetType().GetField("SchemeVersion", BindingFlags.Public | BindingFlags.Static);
             if (versionField == null)
-                throw new InvalidOperationException($"{scheme.GetType().Name} is missing a static Version field.");
+                throw new InvalidOperationException($"{scheme.GetType().Name} is missing a static SchemeVersion field.");
 
-            ushort version = (ushort)(versionField.GetValue(null) ?? 
-                   throw new InvalidOperationException($"{scheme.GetType().Name} has a null Version field."));
+            ushort version = (ushort)(versionField.GetValue(null) ??
+                   throw new InvalidOperationException($"{scheme.GetType().Name} has a null SchemeVersion field."));
 
+            Directory.CreateDirectory(Path.GetDirectoryName(path)!); // ← ensures folder exists
             using var fs = File.OpenWrite(path);
             using var writer = new BinaryWriter(fs);
             writer.Write(Magic);
@@ -45,6 +53,17 @@ namespace Pronder.Handlers
             return scheme.Deserialize(reader);
         }
 
+        public static void Create(string fileName, IBinaryScheme scheme, object data)
+        {
+            Directory.CreateDirectory(DefaultSaveDirectory);
+            string path = Path.Combine(DefaultSaveDirectory, fileName);
+
+            if (File.Exists(path))
+                throw new InvalidOperationException($"File already exists: {path}");
+
+            Write(path, scheme, data);
+        }
+
         public static IBinaryScheme FindSchemeForVersion(ushort fileVersion)
         {
             var schemeType = typeof(IBinaryScheme);
@@ -54,16 +73,15 @@ namespace Pronder.Handlers
                 .Where(t => schemeType.IsAssignableFrom(t) && !t.IsInterface && !t.IsAbstract)
                 .FirstOrDefault(t =>
                 {
-                    var versionField = t.GetField("Version", BindingFlags.Public | BindingFlags.Static);
+                    var versionField = t.GetField("SchemeVersion", BindingFlags.Public | BindingFlags.Static);
                     if (versionField == null) return false;
-
                     return (ushort)(versionField.GetValue(null) ?? 0) == fileVersion;
                 });
 
             if (match == null)
                 throw new InvalidOperationException($"No scheme found for version {fileVersion}.");
 
-            return (IBinaryScheme)(Activator.CreateInstance(match) ?? 
+            return (IBinaryScheme)(Activator.CreateInstance(match) ??
                    throw new InvalidOperationException($"Failed to create instance of {match.Name}."));
         }
     }
