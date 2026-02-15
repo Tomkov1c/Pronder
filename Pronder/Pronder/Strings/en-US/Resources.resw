@@ -138,4 +138,7 @@
   <data name="AppTitleBar-SearchBar.PlaceholderText" xml:space="preserve">
     <value>Search</value>
   </data>
+  <data name="ProndFileType" xml:space="preserve">
+    <value>Pronder File</value>
+  </data>
 </root>
