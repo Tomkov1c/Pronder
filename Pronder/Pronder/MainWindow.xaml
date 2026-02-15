@@ -56,7 +56,7 @@
                                     </MenuFlyoutItem>
                                     <MenuFlyoutSeparator />
                                     <MenuFlyoutItem x:Uid="AppTitleBar-AppIcon-Menu-New"
-                                                    local:NavigationHelper.NavigateTo="views:IdeasPage">
+                                                    local:NavigationHelper.NavigateTo="views:NewProjectPage">
                                         <MenuFlyoutItem.Icon>
                                             <ImageIcon Source="ms-appx:///Assets/Icon8/Color/icons8-add-512.png" />
                                         </MenuFlyoutItem.Icon>

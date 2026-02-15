@@ -16,6 +16,7 @@
     <None Remove="Custom\CustomContentDialog.xaml" />
     <None Remove="Views\HomePage.xaml" />
     <None Remove="Views\IdeasPage.xaml" />
+    <None Remove="Views\NewProjectPage.xaml" />
     <None Remove="Views\SettingsPages\AppSettingsPage.xaml" />
   </ItemGroup>
 
@@ -36,6 +37,12 @@
     <Folder Include="Misc\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\ProjectSubPages\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Views\NewProjectPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 
   <ItemGroup>
