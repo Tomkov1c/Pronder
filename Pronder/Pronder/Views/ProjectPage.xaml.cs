@@ -5,6 +5,7 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using Pronder.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,19 +14,19 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
-// To learn more about WinUI, the WinUI project structure,
-// and more about our project templates, see: http://aka.ms/winui-project-info.
-
 namespace Pronder.Views
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    public sealed partial class ProjectPage : Page
+    public sealed partial class ProjectPage : Page, INavigationViewInterface
     {
         public ProjectPage()
         {
             InitializeComponent();
         }
+
+        public void ClosePane() { PagePanel.IsPaneOpen = false; }
+
+        public void OpenPane() { PagePanel.IsPaneOpen = true; }
+
+        public void TogglePane() { PagePanel.IsPaneOpen = !PagePanel.IsPaneOpen; }
     }
 }

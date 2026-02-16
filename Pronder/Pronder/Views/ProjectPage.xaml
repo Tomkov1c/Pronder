@@ -9,6 +9,27 @@
     mc:Ignorable="d">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
+        <NavigationView x:Name="PagePanel" Grid.Row="1" IsPaneToggleButtonVisible="False" IsBackButtonVisible="Collapsed"
+                        PaneDisplayMode="Left" IsPaneOpen="True" IsSettingsVisible="False" OpenPaneLength="200">
+            <NavigationView.PaneCustomContent>
+                <StackPanel Orientation="Horizontal" Padding="6, 4, 0, 16">
+                    <Border >
+                        <Image Source="ms-appx:///Assets/Icon8/Color/icons8-project-512.png" MaxWidth="36"/>
+                    </Border>
+                    <TextBlock Text="Body Strong" Style="{StaticResource BodyStrongTextBlockStyle}"
+                               VerticalAlignment="Center" Padding="6, 0, 0, 0"/>
+                </StackPanel>
+            </NavigationView.PaneCustomContent>
+            <NavigationView.MenuItems>
+                <NavigationViewItem Icon="Accept" Content="sdkfjsjd" />
+            </NavigationView.MenuItems>
+            
+            
+            <Frame x:Name="ContentFrame" />
+        </NavigationView>
     </Grid>
 </Page>
