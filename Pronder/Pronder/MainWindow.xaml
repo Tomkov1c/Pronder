@@ -89,6 +89,6 @@
             </TitleBar>
         </Grid>
 
-        <Frame x:Name="MainWindowFrame" Grid.Row="1" Grid.Column="0" CacheSize="0"/>
+        <Frame x:Name="MainWindowFrame" Grid.Row="1" Grid.Column="0" CacheSize="0" Navigated="OnFrameNavigated"/>
     </Grid>
 </windowex:WindowEx>
