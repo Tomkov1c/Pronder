@@ -138,6 +138,15 @@
   <data name="AppTitleBar-SearchBar.PlaceholderText" xml:space="preserve">
     <value>Search</value>
   </data>
+  <data name="ProjectPage-Pane-Home.Content" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="ProjectPage-Pane-Settings.Content" xml:space="preserve">
+    <value>Project settings</value>
+  </data>
+  <data name="ProjectPage-Pane-ToDo.Content" xml:space="preserve">
+    <value>Todo List</value>
+  </data>
   <data name="ProndFileType" xml:space="preserve">
     <value>Pronder File</value>
   </data>

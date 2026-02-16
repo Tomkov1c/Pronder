@@ -29,9 +29,26 @@
                                Text="Pronder" TextWrapping="Wrap"/>
                 </Grid>
             </NavigationView.PaneHeader>
+
             <NavigationView.MenuItems>
-                <NavigationViewItem Icon="Accept" Content="sdkfjsjd" />
+                <NavigationViewItem x:Uid="ProjectPage-Pane-Home">
+                    <NavigationViewItem.Icon>
+                        <ImageIcon Source="ms-appx:///Assets/Icon8/Color/icons8-home-512.png" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem x:Uid="ProjectPage-Pane-ToDo">
+                    <NavigationViewItem.Icon>
+                        <ImageIcon Source="ms-appx:///Assets/Icon8/Color/icons8-todo-list-512.png" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
             </NavigationView.MenuItems>
+            <NavigationView.FooterMenuItems>
+                <NavigationViewItem x:Uid="ProjectPage-Pane-Settings" >
+                    <NavigationViewItem.Icon>
+                        <ImageIcon Source="ms-appx:///Assets/Icon8/Color/icons8-settings-512.png" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.FooterMenuItems>
             
             
             <Frame x:Name="ContentFrame" />
