@@ -26,13 +26,6 @@ namespace Pronder
             MainWindowFrame.Navigate(typeof(HomePage), null, new DrillInNavigationTransitionInfo());
         }
 
-        private void OnMenuFlyoutOpening(object sender, object e)
-        {
-            if (sender is MenuFlyout flyout)
-                foreach (var item in flyout.Items.OfType<MenuFlyoutItem>())
-                    NavigationHelper.SetFrame(item, MainWindowFrame);
-        }
-
         private void OnPaneExpandButtonPressed(Microsoft.UI.Xaml.Controls.TitleBar sender, object args)
         {
             if (MainWindowFrame?.Content is INavigationViewInterface navController)

@@ -37,10 +37,10 @@
                                 <ImageIcon Source="ms-appx:///Images/StoreLogo.png" Width="16"/>
                             </Button.Content>
                             <Button.Flyout>
-                                <MenuFlyout Placement="BottomEdgeAlignedLeft"
-                                            Opening="OnMenuFlyoutOpening">
+                                <MenuFlyout Placement="BottomEdgeAlignedLeft">
                                     <MenuFlyoutItem x:Uid="AppTitleBar-AppIcon-Menu-Home"
-                                                    local:NavigationHelper.NavigateTo="views:HomePage">
+                                                    local:NavigationHelper.NavigateTo="views:HomePage"
+                                                    local:NavigationHelper.Frame="{x:Bind MainWindowFrame}">
                                         <MenuFlyoutItem.Icon>
                                             <ImageIcon Source="ms-appx:///Assets/Icon8/Color/icons8-home-512.png" />
                                         </MenuFlyoutItem.Icon>
@@ -49,14 +49,16 @@
                                         </MenuFlyoutItem.KeyboardAccelerators>
                                     </MenuFlyoutItem>
                                     <MenuFlyoutItem x:Uid="AppTitleBar-AppIcon-Menu-Ideas"
-                                                    local:NavigationHelper.NavigateTo="views:IdeasPage">
+                                                    local:NavigationHelper.NavigateTo="views:IdeasPage"
+                                                    local:NavigationHelper.Frame="{x:Bind MainWindowFrame}">
                                         <MenuFlyoutItem.Icon>
                                             <ImageIcon Source="ms-appx:///Assets/Icon8/Color/icons8-lightbulb-512.png" />
                                         </MenuFlyoutItem.Icon>
                                     </MenuFlyoutItem>
                                     <MenuFlyoutSeparator />
                                     <MenuFlyoutItem x:Uid="AppTitleBar-AppIcon-Menu-New"
-                                                    local:NavigationHelper.NavigateTo="views:NewProjectPage">
+                                                    local:NavigationHelper.NavigateTo="views:NewProjectPage"
+                                                    local:NavigationHelper.Frame="{x:Bind MainWindowFrame}">
                                         <MenuFlyoutItem.Icon>
                                             <ImageIcon Source="ms-appx:///Assets/Icon8/Color/icons8-add-512.png" />
                                         </MenuFlyoutItem.Icon>
@@ -66,13 +68,16 @@
                                     </MenuFlyoutItem>
                                     <MenuFlyoutSeparator />
                                     <MenuFlyoutItem x:Uid="AppTitleBar-AppIcon-Menu-AppSettings"
-                                                    local:NavigationHelper.NavigateTo="views:AppSettingsPage">
+                                                    local:NavigationHelper.NavigateTo="views:AppSettingsPage"
+                                                    local:NavigationHelper.Frame="{x:Bind MainWindowFrame}">
                                         <MenuFlyoutItem.Icon>
                                             <ImageIcon Source="ms-appx:///Assets/Icon8/Color/icons8-settings-512.png" />
                                         </MenuFlyoutItem.Icon>
                                     </MenuFlyoutItem>
                                     <MenuFlyoutSeparator />
-                                    <MenuFlyoutItem Text="Project page" local:NavigationHelper.NavigateTo="views:ProjectPage">
+                                    <MenuFlyoutItem Text="Project page" 
+                                                    local:NavigationHelper.NavigateTo="views:ProjectPage"
+                                                    local:NavigationHelper.Frame="{x:Bind MainWindowFrame}">
                                         <MenuFlyoutItem.Icon>
                                             <ImageIcon Source="ms-appx:///Assets/Icon8/Color/icons8-project-512.png" />
                                         </MenuFlyoutItem.Icon>
