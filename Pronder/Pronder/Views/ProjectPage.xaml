@@ -14,16 +14,21 @@
         </Grid.RowDefinitions>
 
         <NavigationView x:Name="PagePanel" Grid.Row="1" IsPaneToggleButtonVisible="False" IsBackButtonVisible="Collapsed"
-                        PaneDisplayMode="Left" IsPaneOpen="True" IsSettingsVisible="False" OpenPaneLength="200">
-            <NavigationView.PaneCustomContent>
-                <StackPanel Orientation="Horizontal" Padding="6, 4, 0, 16">
-                    <Border >
-                        <Image Source="ms-appx:///Assets/Icon8/Color/icons8-project-512.png" MaxWidth="36"/>
+                        PaneDisplayMode="Left" IsPaneOpen="True" IsSettingsVisible="False">
+            <NavigationView.PaneHeader>
+                <Grid Padding="6, 12, 0, 24" ColumnSpacing="12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="48" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Border>
+                        <Image Source="ms-appx:///Assets/Icon8/Color/icons8-project-512.png" Grid.Column="0"/>
                     </Border>
-                    <TextBlock Text="Body Strong" Style="{StaticResource BodyStrongTextBlockStyle}"
-                               VerticalAlignment="Center" Padding="6, 0, 0, 0"/>
-                </StackPanel>
-            </NavigationView.PaneCustomContent>
+                    <TextBlock Style="{StaticResource BodyStrongTextBlockStyle}"
+                               VerticalAlignment="Center" HorizontalAlignment="Stretch" Grid.Column="1" 
+                               Text="Pronder" TextWrapping="Wrap"/>
+                </Grid>
+            </NavigationView.PaneHeader>
             <NavigationView.MenuItems>
                 <NavigationViewItem Icon="Accept" Content="sdkfjsjd" />
             </NavigationView.MenuItems>
