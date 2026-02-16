@@ -71,6 +71,12 @@
                                             <ImageIcon Source="ms-appx:///Assets/Icon8/Color/icons8-settings-512.png" />
                                         </MenuFlyoutItem.Icon>
                                     </MenuFlyoutItem>
+                                    <MenuFlyoutSeparator />
+                                    <MenuFlyoutItem Text="Project page" local:NavigationHelper.NavigateTo="views:ProjectPage">
+                                        <MenuFlyoutItem.Icon>
+                                            <ImageIcon Source="ms-appx:///Assets/Icon8/Color/icons8-project-512.png" />
+                                        </MenuFlyoutItem.Icon>
+                                    </MenuFlyoutItem>
                                 </MenuFlyout>
                             </Button.Flyout>
                         </Button>
