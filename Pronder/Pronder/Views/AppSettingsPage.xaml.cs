@@ -16,25 +16,10 @@ using Pronder.Interfaces;
 
 namespace Pronder.Views;
 
-public sealed partial class AppSettingsPage : Page, INavigationViewInterface
+public sealed partial class AppSettingsPage : Page
 {
     public AppSettingsPage()
     {
         InitializeComponent();
-    }
-
-    public void ClosePane()
-    {
-        PagePanel.IsPaneOpen = false;
-    }
-
-    public void OpenPane()
-    {
-        PagePanel.IsPaneOpen = true;
-    }
-
-    public void TogglePane()
-    {
-        PagePanel.IsPaneOpen = !PagePanel.IsPaneOpen;
     }
 }
